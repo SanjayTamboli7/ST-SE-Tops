@@ -2,8 +2,11 @@
 
 void main()
 {
+
+	// Variable declaration
 	int a, b, c;
 	
+	// Accept values
 	printf("\n\t Enter value for A : ");
 	scanf("%d", &a);
 	printf("\n\t Enter value for B : ");
@@ -13,6 +16,7 @@ void main()
 	
 	printf("\n\t A = %d, B = %d, C = %d", a, b, c);
 	
+	// Find out greatest of 3 numbers
 	if (a > b)
 	{
 		if (a > c)
