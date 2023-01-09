@@ -6,6 +6,6 @@ void main()
  	while(i<=10) // Condition 
  	{
  		printf("\n i = %d", i)	;
- 		i++; // updation (increment)
+ 		i++; // updation (increment )
 	}
  }
