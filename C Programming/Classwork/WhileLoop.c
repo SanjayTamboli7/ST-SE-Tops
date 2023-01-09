@@ -2,10 +2,10 @@
 
 void main()
  {
- 	int i=1;
- 	while(i<=10)
+ 	int i=1; // Initialization
+ 	while(i<=10) // Condition 
  	{
  		printf("\n i = %d", i)	;
- 		i++;
+ 		i++; // updation (increment)
 	}
  }
