@@ -24,7 +24,24 @@ void main()
 						rollno[j] = t;
 					}
 			}
-		printf("\n\t =================== Before sort ==================");
+		printf("\n\t =================== Ascentding order ==================");
+		for(i=0;i<5;i++)
+			{
+				printf("\n\t Enter value for rollno[%d] : %d", i, rollno[i]);
+			}
+		for(i=0;i<5;i++)	
+			{
+				for(j=i+1;j<5;j++)
+					{
+						if(rollno[i]>rollno[j])
+							{
+								t = rollno[i];
+								rollno[i]=rollno[j];
+								rollno[j]=t;							
+							}
+					}
+			}
+		printf("\n\t =================== Descentding order ==================");
 		for(i=0;i<5;i++)
 			{
 				printf("\n\t Enter value for rollno[%d] : %d", i, rollno[i]);
