@@ -8,7 +8,7 @@ void f1()
 
 void f2()
 	{
-		printf("\n\t Function 2 called.")
+		printf("\n\t Function 2 called.");
 	}
 
 void main()
