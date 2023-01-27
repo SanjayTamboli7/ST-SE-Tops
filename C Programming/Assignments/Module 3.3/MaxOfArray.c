@@ -11,6 +11,7 @@ int findmaxinarray(int arnumf[10])
 						maxnum = arnumf[i];
 					}
 			}
+		printf("\n\t Maximum = %d", maxnum);	
 		return maxnum;
 	}
 
@@ -20,8 +21,8 @@ void main()
 		
 		for(i=0;i<10;i++)
 			{
-				printf("\n\t Enter value for arnum[%d] : ", i);
+				printf("\t Enter value for arnum[%d] : ", i);
 				scanf("%d", &arnum[i]);
 			}
-			
+		maxnum = findmaxinarray(arnum);
 	}
