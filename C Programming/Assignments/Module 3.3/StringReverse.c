@@ -1,21 +1,25 @@
 #include <stdio.h>
 #include <string.h>
-#include <conio.h>
 
-// find reverse of string using recursion. Complete this program. 
+// find reverse of string using recursion.
 
-char reversestr(char fname[20])
+void reversestr(char *str, int index, int n)
 	{
-		
-		reversestr(fname);
+		if(index == n)   			   // return if we reached at last index or at the end of the string
+		    {
+		        return;
+		    }
+		char temp = str[index]; 	  // storing each character starting from index 0 in function call stack;
+    	reversestr(str, index+1, n); // calling recursive function by increasing index everytime
+    	printf("%c", temp);          // printing each stored character while recurring back
 	}
 
 void main()
 	{
-		char name[20];
+		char name[20], length;
 		
 		printf("\n\t Enter Name : ");
 		gets(name);
-		printf("\n\t Name : %s", name);
-		reversestr(name);
+		length = strlen(name);
+		reversestr(name, 0, length);
 	}
