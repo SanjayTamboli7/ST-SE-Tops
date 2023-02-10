@@ -1,0 +1,1 @@
+multipleinheritance - rewrite it with accept from users and pass as parameters.
