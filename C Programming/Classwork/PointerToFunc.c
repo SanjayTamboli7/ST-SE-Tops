@@ -10,6 +10,7 @@ void swap(int *x, int *y)
 void main()
 	{
 		int a = 5, b = 15;
+		
 		printf("\n\t Value of A = %d, B = %d", a, b);
 		swap(&a, &b);
 		printf("\n\t Value of A = %d, B = %d", a, b);

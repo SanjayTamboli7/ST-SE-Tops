@@ -23,7 +23,8 @@ class ExtraMarks
 		
 	ExtraMarks()
 	{
-		sp = 55;
+		cout<<"\nEnter SP :";
+		cin>>sp;
 	}
 };
 class Result : public Student,public ExtraMarks
