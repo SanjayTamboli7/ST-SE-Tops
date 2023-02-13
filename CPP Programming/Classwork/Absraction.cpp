@@ -21,7 +21,7 @@ class Start: public FanDemo
 					cout << endl;
 					cout << "Ac started";
 				}
-			void OnButton()
+			void OnButton() // Function definition
 				{
 					cout << endl;
 					cout << "Fan is rotating";
