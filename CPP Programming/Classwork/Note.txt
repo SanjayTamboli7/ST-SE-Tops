@@ -1,0 +1,120 @@
+
+	
+	1) C -> Procedural Oriented Programming Language. (POPL)
+
+	    C++ -> POPL and OOPL (Object Oriented Programming Language)
+
+		C++ -> C + Class
+
+
+	2) C does not support Method overloading
+
+	  C++ suports method overloading.
+
+	3) C contains 32 keywords
+
+	 C++ contains 63/64 keywords.
+
+	
+
+
+
+	OOP : (Object Oriented Programming) Language.
+
+	Features or Pillars of OOP.
+
+	There are 4 important features in OOP.
+
+	1) Encapsulation
+	2) Inheritance
+	3) Polymorphism
+	4) Data Abstraction.
+
+
+
+
+	1) Encapsulation : It is a wrapper class in which all data members and member functions
+		              are wrapped in a single class.
+
+			example : Capsule.
+
+
+	Class : It is a collection of data-members (variables) and member-functions(functions).
+
+	syntax :
+
+		class class-name
+		{
+			access-specifier:
+				//datamembers;
+		};
+
+	Object : It is an instance of a class.
+
+	Why do we create an object?
+
+	- To access the members of the class.
+
+	Lifecycle of an object.
+
+	1) Creation
+	2) Utilization
+	3) Destruction
+	
+	e.g papercup 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
