@@ -33,10 +33,10 @@ class batsman:public cricket
 			void display_data()
 				{
 					cout << endl;
-					cout << "Enter player name : " << name;
+					cout << "player name : " << name;
 					cout << endl;
 					cout << "Total run   : " << total_run;
-					avg_run = total_run / 10;
+					avg_run = (double)total_run / 10;
 					cout << endl;
 					cout << "Average run : "<< avg_run ;
 					cout << endl;
@@ -46,9 +46,8 @@ class batsman:public cricket
 
 int main()
 	{
-		cricket crcktobj;
-		crcktobj.collect_data();
-		batsman batsobj;
-		batsobj.display_data();
+		batsman crcktobj;
+		crcktobj.collect_data();		
+		crcktobj.display_data();
 		return 0;
 	}
