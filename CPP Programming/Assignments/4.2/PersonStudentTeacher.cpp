@@ -24,10 +24,14 @@ class person
 class student:public person
 	{
 		public: 
-			int _percent;
-			void SetStudentData(int percent)
+			double _percent;
+			void SetStudentData(double percent)
 				{
 					_percent = percent;
+				}
+			double ReadStudentData()
+				{
+					return _percent;
 				}
 	};
 class salary:public person
@@ -38,11 +42,16 @@ class salary:public person
 				{
 					_salary = salary;
 				}
+			int ReadSalaryData()
+				{
+					return _salary;
+				}
 	};
 int main()
 	{
 		string person_name;
-		int person_age, percent, salary1;		
+		int person_age, salary1;		
+		double percent;
 		person prsnobj;
 		student studobj;
 		salary salaryobj;
@@ -59,7 +68,12 @@ int main()
 		cin >> salary1;
 		salaryobj.SetSalaryData(salary1);
 		cout << endl;
-		cout << "Person Name : " << prsnobj.ReadPersonName();
-		cout << "Person Age  : " << prsnobj.ReadPersonAge();
+		cout << "Person Name       : " << prsnobj.ReadPersonName();
+		cout << endl;
+		cout << "Person Age        : " << prsnobj.ReadPersonAge();
+		cout << endl;
+		cout << "Person Percentage : " << studobj.ReadStudentData();
+		cout << endl; 
+		cout << "Person Salary     : " << salaryobj.ReadSalaryData();
 		return 0;
 	}
