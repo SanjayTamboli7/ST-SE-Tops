@@ -45,8 +45,11 @@ int main()
 		cout << "   Circle radius : ";
 		cin >> Radius;
 
+		cout << endl;
 		cout << "  Triangle area : " << objarea.FindArea(1, TB, TH);
+		cout << endl;
 		cout << " Rectangle area : " << objarea.FindArea(2, RAL, RAW);
+		cout << endl;
 		cout << "    Circle area : " << objarea.FindArea(Radius);
 
 		return 0;
