@@ -1,0 +1,18 @@
+.bdy
+{
+    background-color: black; 
+    color: yellow;
+}
+.hdr1
+{
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.prg1
+{
+    text-align: justify; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: medium; 
+    margin-left: 50px; 
+    margin-right: 50px;
+}
