@@ -1,0 +1,21 @@
+.ClsH1
+    {
+        text-align: center; 
+        background-color: yellowgreen; 
+        color: aqua;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+.button:hover
+    {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;       
+    }
+.ClsDiv
+    {
+        margin-left: 100px; 
+        margin-top: 100px; 
+        width: 400px; 
+        height: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+    }

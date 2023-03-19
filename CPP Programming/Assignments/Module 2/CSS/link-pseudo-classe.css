@@ -1,0 +1,35 @@
+.ClsH1
+{
+    text-align: center; 
+    background-color: yellowgreen; 
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* unvisited link */
+a:link 
+{
+    color: red;
+}
+/* visited link */
+a:visited 
+{
+    color: green;
+}
+/* mouse over link */
+a:hover 
+{
+    color: hotpink;
+}
+/* selected link */
+a:active 
+{
+    color: yellow;
+}
+.ClsDiv
+{
+    margin-left: 100px; 
+    margin-top: 100px; 
+    width: 340px; 
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
