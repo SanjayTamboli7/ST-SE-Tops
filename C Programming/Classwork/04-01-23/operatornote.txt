@@ -1,0 +1,10 @@
+
+	Operators in C Programming.
+
+	1) Arithmetic Operator.   +,-,/,*   / - it returns Quotient
+	2) Assignment Operator.  =,<=,>=,==
+	3) Logical Operator.  &&, ||, !
+	4) Ternary Operator. ?:
+	5) Unary Operator.  ++ (increment by 1), -- (decrement by 1)
+	6) Modulus Operator.   %
+			    it returns remainder.	
