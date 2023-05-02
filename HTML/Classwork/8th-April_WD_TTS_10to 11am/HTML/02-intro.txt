@@ -1,0 +1,24 @@
+ ==> start tag
+www.mytra.com
+
+HTML ==> structure
+CSS ==> how your website looks
+Javascript == how your website behaves
+
+Website: collection of multiple webpages
+
+==> it's cost effective of marketing
+
+.com/.net/.info/.org ===> Domains
+www ==> world wide web(global Server)
+
+http/s==> hypertext transfer protocol
+s => secure connection
+
+URL => uniform resource locator
+
+===> close tag browers : opera,safari,chrome etc.. (to run a website)
+ ===> start tag
+===> close tag
+text
+==> element Basic Structure: doctype: declaration of HTML5 doc Meta:SEO purpose SEO ==> search engine optimization => refresh rate (to redirect on any page after given time) utf-8 ==> unicode trancode format HTML : Hypertext markup language Markup language: it consists of tags and attributes

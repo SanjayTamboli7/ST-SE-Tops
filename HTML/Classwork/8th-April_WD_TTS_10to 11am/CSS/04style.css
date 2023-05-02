@@ -1,0 +1,33 @@
+h1,p,b
+{
+    background: red;
+}
+
+p 
+{
+    background: green;
+}
+b 
+{
+    background: blue;
+}
+
+.x 
+{
+    background: green;
+}
+
+#x 
+{
+    background: yellow;
+}
+
+.t 
+{
+    color:white;
+}
+
+#t 
+{
+    color:#fff;
+}

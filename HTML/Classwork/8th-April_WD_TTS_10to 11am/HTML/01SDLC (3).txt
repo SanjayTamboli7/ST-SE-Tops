@@ -1,0 +1,25 @@
+SDLC: System Development Life Cycle
+
+1. Requirement
+2. Analysis
+3. Design : WD / GD
+
+html-5,css-3,Javascript,jQuery,Bootstrap,PSD TO HTML,Wordpress, Shopify
+
+STATIC 
+
+4. Devlopment (Dynamic) => WEB APP
+
+BE: php, python,java,.net(c,c++,DBMS)
+
+FE: React js, Angular js (javascript)
+
+
+5. Testing
+
+6. Maintainance
+
+
+
+
+

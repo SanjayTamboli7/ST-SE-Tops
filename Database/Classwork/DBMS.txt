@@ -1,0 +1,448 @@
+DFD : Data Flow Diagram
+
+
+Amazon
+
+Admin
+
+==> login
+==> manage(add/delete/create) users
+==> manage cates
+==> manage subcates
+==> manage products
+==> view cart (t)
+==> view payment (t)
+==> view order (t)
+==> view feedback (t)
+==>  view inquiry(t)
+User
+
+==> Reister (t)
+==> login
+
+==> view cates (t)
+==> view subcates (t)
+==> view products (t)
+==> add to cart (t)
+==> payment (t)
+==> order (t)
+==> feedback (t)
+==> inquiry(t)
+
+DBMS 
+
+
+RDBMS :
+
+DBMS :
+
+datatypes:
+
+int
+char/varchar/text
+date
+time
+datetime
+timestamp
+
+
+
+SQL : Stucture Query Language
+
+DDL:Data Definition language
+
+==> create
+
+create database databseNAme;
+
+use Amazon;
+
+CREATE TABLE test123
+(
+	x int,
+    y varchar(20),
+    z datetime,
+    a timestamp
+
+)
+==> alter
+
+
+alter table tableName add colname type(size);
+
+alter table tableName CHANGE old-colname new-col type(size);
+
+ALTER TABLE category add  PRIMARY key (cate_id);
+
+
+==> drop
+
+drop table tablename (deletes the whole table along with its records)
+
+==> truncate
+
+truncate table tableName;(deletes  records not the table itself)
+
+DML: Data Manipulation language
+
+
+==> insert
+
+insert into tableName (col1,col2,...,colN) values ('val1','val2',..,'valN');
+==> update
+
+UPDATE TABLEnAME SET COLNAME ="VALUE"
+
+UPDATE TABLEnAME SET COLNAME ="VALUE" WHERE COLNAME = 'VALUE'
+
+UPDATE TABLEnAME SET COLNAME ="VALUE"
+
+ WHERE COLNAME = 'VALUE' AND COLNAME = 'VALUE'
+
+UPDATE TABLEnAME SET COLNAME ="VALUE"
+
+ WHERE COLNAME = 'VALUE' OR COLNAME = 'VALUE'
+
+UPDATE TABLEnAME SET COLNAME ="VALUE"
+
+ WHERE COLNAME >= 'VALUE' 
+
+==> delete
+
+DELETE FROM TABLEnAME  (SAME AS tRUNCATE)
+
+DELETE FROM TABLEnAME  WHERE COL = 'VAL';
+
+CONSTRAINTS:
+
+primary key
+==> to identify records/tuples uniquely 
+=> there must be only 1 primary key per table
+==> can not accept NULL values
+
+
+unique key
+
+==> to identify records/tuples uniquely 
+=> there can be more than 1 unique key per table
+foreigh key
+==> can accept NULL values
+
+
+Foreign Key:
+
+==> to create relations between tables
+==> it refers to the primary key of another table
+
+
+Composite Key: 
+set of two cols from which we can indentify a record uniquely.
+
+
+order_id   prd_id  prd_name
+ord11		x
+ord12 		y
+ord13		x
+
+
+
+
+
+
+DQL: Data Query language
+
+SELECT : to fetch/ retrieve data from database tables
+
+select * from tableName
+
+select colname from tableName
+
+select colname1,col2,col3 from tableName
+
+select CUST_NAME from customer
+
+
+select colname1,col2,col3 from tableName where colname ="value
+
+Group By:
+
+
+select colname1 from tableName GROUP BY colname ="value"
+
+SELECT CUST_COUNTRY FROM `customer` GROUP BY CUST_COUNTRY;
+
+SELECT colname from tablename ORDER by colname asc;
+SELECT name from student ORDER by name;
+
+
+SELECT colname from tablename ORDER by colname desc
+
+
+DISTINCT:
+
+SELECT DISTINCT colName FROM tablename 
+
+SELECT DISTINCT prd_name FROM `products` 
+
+LIKE: 
+
+to search
+
+	select colname from tablename where colname like 's%';
+
+
+	==>return the records that stats with letter s
+
+	
+
+select colname from tablename where colname like '%s';
+
+
+
+==>return the records that ends with letter s
+
+
+select colname from tablename where colname like '%s%';
+
+==>return the records that contain s at any position
+
+
+select colname from tablename where colname like '_s%';
+
+==>return the records that contain s at second position
+
+
+select colname from tablename where colname like '__s%';
+
+==>return the records that contain s at third position
+
+
+Alias:
+
+SELECT  colname  AS alias from  tablename
+
+SELECT  CUST_COUNTRY  AS Total_Countries from  customer
+
+SELECT sum(colname) as alias FROM tablebname
+SELECT max(colname) as alias FROM tablebname
+SELECT min(colname) as alias FROM tablebname
+SELECT avg(colname) as alias FROM tablebname
+
+SELECT name FROM student WHERE rollNumber= (SELECT max(rollNumber) FROM student)
+
+
+
+CREATE table products
+
+
+(
+	prd_id int PRIMARY KEY AUTO_INCREMENT,
+    prd_name varchar(50),
+    prd_price varchar(20),
+    
+    subcate_id int,
+    cate_id int,
+    
+    FOREIGN key(subcate_id) REFERENCES subcategory(subcate_id),
+    
+    FOREIGN key(cate_id) REFERENCES category(cate_id)
+    
+
+)
+
+BETWEEN operator:
+
+SELECT colname FROM tableName WHERE colname BETWEEN val1 and val2
+
+SELECT prd_name,prd_price FROM `products` WHERE prd_price BETWEEN 2500 and 5000
+
+
+
+JOIN : to fetch data from more than 1 table
+
+	1. inner join(join)
+
+table1 (pk)
+table2 (fk)
+
+	select * from table1 join(inner Join) table2
+
+	on table1.pk = table2.fk
+
+	select cate_name,subcategory.subcate_name from category 
+
+	join subcategory
+
+	on category.cate_id = subcategory.cate_id
+
+	SELECT cate_name,subcategory.subcate_name FROM `category` JOIN subcategory ON 			category.cate_id = subcategory.cate_id;	
+
+
+
+
+	select * from table1 
+
+	join table2
+
+	join table3
+
+
+	2. left join
+	3. right join
+	4. outer join
+
+	VIEW : to create copy of ur table
+
+	create view view-name 
+	as
+	select * from tablename
+
+to add primary key and auto_increment after creating table
+
+ALTER TABLE tablename ADD PRIMARY KEY(colName) , CHANGE oldCol newCol type AUTO_INCREMENT;
+
+to add foreign key  after creating table
+
+
+alter table tablename add colname type ,
+add foreign key(colname) references tablename(pk)
+
+alter table students add test int ,add CONSTRAINT foreign key(test) references employee(EmployeeId)
+
+Having Clause:
+
+select colname,sum(col) from tablename
+group by colnbame
+having condtion
+order by colname asc/desc;
+
+SELECT employee.Department,sum(Salary) from  employee 
+GROUP BY Department
+HAVING sum(Salary)> 50000
+ORDER BY Department desc;
+
+
+
+select * from tablename LIMIT value;	
+SELECT * from products LIMIT 3;
+
+select * from tablename limit x offset y
+
+return x entries but skip y no of entries
+
+SELECT * from products LIMIT 5 OFFSET 2 ;
+
+to get last 3 records
+
+
+SELECT * from products order by prd_id desc LIMIT 3 ;
+
+
+"SELECT user_id FROM `users` UNION SELECT prd_id from products;";
+
+"SELECT user_id FROM `users` UNION ALL SELECT prd_id from products;";
+
+TRIGGER:
+
+whenever out tables shared and what need to know what changes hacs been made
+
+then we have to use triggers (DML)
+
+
+insert-trigger:
+
+
+DELIMITER $$
+
+CREATE TRIGGER triggerName TIME(after/before) EVENT(insert/update/delete) ON tableName1 for each row
+
+BEGIN
+
+	INSERT INTO tableName2(col1,col2) values(new.col(tablename1) ,"val2");
+
+END
+
+
+DELIMITER $$
+
+CREATE TRIGGER insert_trigger after insert ON users for each row
+
+BEGIN
+
+	INSERT INTO triggertbl (username,action_performed) values(new.username,'Record Inserted');
+
+END
+
+update_trigger:
+
+
+
+DELIMITER $$
+
+CREATE TRIGGER triggerName after update  ON tableName1 for each row
+
+BEGIN
+
+	INSERT INTO tableName2(col1,col2) values(new.col(tablename1) ,"val2");
+
+END
+
+
+DELIMITER $$
+
+CREATE TRIGGER update_trigger after update ON users for each row
+
+BEGIN
+
+	INSERT INTO triggertbl (username,action_performed) values(new.username,'Record Updated');
+
+END
+
+
+delete trigger :
+
+
+DELIMITER $$
+
+CREATE TRIGGER delete_trigger after delete ON users for each row
+
+BEGIN
+
+	INSERT INTO triggertbl (username,action_performed) values(old.username,'Record Deleted');
+
+END
+
+
+
+
+
+DCL: Data Control language
+TCL: Transaction Contol language
+
+DCL:
+
+Grant: to give persmisson for accessing your database 
+
+revoke : to withdraw the permission give by Grant 
+
+grant insert on XYZ to user
+
+TCL :
+
+id name
+1  x 
+2  y
+
+
+Commit (save)
+
+rollback (undo)
+
+savepoint
+
+
+
+
+
+
+

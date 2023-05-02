@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+   <!-- Name :<input type="text" value="" required pattern="[a-zA-Z]+" title="Only letters..!"><br><br> -->
+
+   Name :<input type="text" value="" required pattern="[a-zA-Z]{3,5}" title="min 3 and max 5 letters..!"><br><br>
+
+   <!-- Mobile: <input type="text" placeholder="Enter Mobile..." required pattern="[0-9]+" title="Only digits...!"><br><br> -->
+
+   Mobile: <input type="text" placeholder="Enter Mobile..." required pattern="[0-9]{10}" title="Only 10 digits...!"><br><br>
+
+
+
+   Email: <input type="email" placeholder="Enter Email..."><br><br>
+   Password: <input type="password" maxlength="8"><br><br>
+
+   Select Country:
+
+   <select>
+       <option hidden>--- Select Country ---</option>
+        <option>India</option>
+        <option>USA</option>
+        <option disabled>UAE</option>
+        <!-- <option selected>Australia</option> -->
+   </select>
+
+
+
+        <br><br>
+   Date: <input type="date"><br><br>
+   B'date: <input type="datetime-local"><br><br>
+   COLOR: <input type="color"><br><br>
+   Range: <input type="range"><br><br>
+
+   Gender: 
+   <input type="radio" name="gender">Male
+   <input type="radio" name="gender" checked>Female
+  
+  <br><br>
+
+
+  Languages: 
+   <input type="checkbox">Gujarati
+   <input type="checkbox">Hindi
+   <input type="checkbox" checked>Kannada
+   <input type="checkbox">English
+
+  
+  <br><br>
+
+  <input type="file" multiple><br><br>
+
+  <textarea rows="5" cols="30"></textarea><br><br>
+
+
+   <input type="submit" value="Register">
+
+   <input type="Reset" value="XYZ"><br><br>
+
+
+</form>
+ 
+
+    
+
+
+    
+</body>
+</html>
