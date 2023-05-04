@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p::first-line 
+        {
+            background: coral;
+        }
+        h1::first-letter 
+        {
+            background: blue;
+            color:white;
+        }
+        ::selection
+        {
+            background: #000;
+            color:#fff;
+        }
+
+        h2::before 
+        {
+            content: "hi ";
+        }
+
+        h2::after 
+        {
+            content: " hello";
+        }
+
+        h3::after 
+        {
+            content: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW12A5r?ver=7d93);
+        }
+
+        h3::before 
+        {
+            content: '\2614';
+        }
+    </style>
+</head>
+<body>
+
+
+    <h3>Dhruv</h3>
+
+    <h2>Heena</h2>
+
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cumque cum, incidunt placeat officiis impedit ipsa autem hic distinctio consequuntur totam iste temporibus veniam mollitia odit. Tempore iure consequatur dolorum?
+    </p>
+    
+</body>
+</html>

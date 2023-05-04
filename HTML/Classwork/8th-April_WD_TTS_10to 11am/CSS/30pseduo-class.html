@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        /* tagName/.className/#idName:pseudo-className
+        {
+            property:value;
+        } */
+
+      
+        h1 
+        {
+            height: 100px;
+            width: 100px;
+            background: lightcoral;
+        }
+
+        h1:hover 
+        {
+            background: red;
+            border: 2px solid ;
+        }
+        a:visited 
+        {
+            color:green;
+        }
+        a:hover 
+        {
+            color: pink;
+            background: lightseagreen;
+        }
+
+        p:first-child 
+        {
+            background: lightblue;
+        }
+
+        p:last-child 
+        {
+            background: coral;
+        }
+
+        p:nth-child(2)
+        {
+            background: red;
+        }
+
+
+        input 
+        {
+            border: none;
+            box-shadow: 0 0 10px #000 inset;
+        }
+
+        input:focus 
+        {
+            box-shadow: 0 0 0px red inset;
+            outline: none;
+            border-bottom: 2px solid red;
+            border-radius: 10px;
+            color:blue;
+        }
+
+      
+
+        
+    </style>
+</head>
+<body>
+
+    <input type="text">
+
+        <div class="x">
+            <p>para</p>
+            <p>para</p>
+            <p>para</p>
+            <p>para</p>
+        </div>  
+
+        <div class="x">
+            <p>para</p>
+            <p>para</p>
+            <p>para</p>
+            <p>para</p>
+        </div>
+
+
+    <h1></h1>
+
+    <a href="">Home</a>
+    <a href="">Test</a>
+    
+</body>
+</html>
