@@ -1,0 +1,8 @@
+/* @import "path/filename.type";
+    @import url('path/filename.type');
+*/
+
+/* @import "style1.css"; */
+
+@import url('style1.css');
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table Image</title>
+    <style>
+        .NormalCell
+            {
+                text-align: center;
+                font-weight: normal;
+                color: black;
+            }
+    </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div style="width: 825px;"><h1 style="font-size: Large; text-align: center;">Time Table</h1></div>
+    <table border="5px" style="text-align: center; font-weight: bold; color: black; border:  solid;">
+        <!-- <th style="font-weight: bold; color: black;"> -->
+            <td>Day / Period</td>
+            <td>I <br> 9:30-10:20</td>
+            <td>II <br> 10:20-11:10</td>
+            <td>III <br> 11:10-12:00</td>
+            <td>12:00 12:40</td>
+            <td>IV <br> 12:40-1:30</td>
+            <td>V <br> 1:30-2:20</td>
+            <td>VI <br> 2:20-3:10</td>
+            <td>VII <br> 3:10-4:00</td>
+        </th>
+        <tr>
+            <td>Monday</td>
+            <td class=NormalCell>English</td>
+            <td class=NormalCell>Maths</td>
+            <td class=NormalCell>Chemistry</td>
+            <td rowspan="6" class=NormalCell style="font-weight: bold; text-orientation:upright; writing-mode: vertical-lr;" >Lunch</td>
+            <td colspan="3" class=NormalCell>Lab</td>
+            <td class=NormalCell>Physics</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td class=NormalCell colspan="3">LAB</td>
+            <td class=NormalCell>English</td>
+            <td class=NormalCell>Chemistry</td>
+            <td class=NormalCell>Maths</td>
+            <td class=NormalCell>Sports</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td class=NormalCell>Maths</td>
+            <td class=NormalCell>Physics</td>
+            <td class=NormalCell>English</td>
+            <td class=NormalCell>Chemistry</td>
+            <td class=NormalCell colspan="3">Library</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td class=NormalCell>Physics</td>
+            <td class=NormalCell>English</td>
+            <td class=NormalCell>Chemistry</td>
+            <td colspan="3" class=NormalCell>Lab</td>
+            <td class=NormalCell>Maths</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td colspan="3" class=NormalCell>Lab</td>
+            <td class=NormalCell>Maths</td>
+            <td class=NormalCell>Chemistry</td>
+            <td class=NormalCell>English</td>
+            <td class=NormalCell>Physics</td>
+        </tr>
+        <tr>
+            <td>Saturdayday</td>
+            <td class=NormalCell>English</td>
+            <td class=NormalCell>Chemistry</td>
+            <td class=NormalCell>Maths</td>
+            <td colspan="3" class=NormalCell>Seminar</td>
+            <td class=NormalCell>Sports</td>
+        </tr>
+        </table>
+</body>
+</html>

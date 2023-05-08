@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Using-Table</title>
+    <style>
+        .parent 
+            {
+                height: 500px; 
+                width: 800px; 
+                background-color: whitesmoke; 
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        .child 
+            {
+                display: inline-block;
+                height: 500px; 
+            }
+    </style>
+</head>
+<body>
+    <div class='parent'>
+        <div class='child' style="width: 400px; background-color: aliceblue;">
+            <table>
+                <tr><td colspan="3"><h1 style="text-align: center;">You are on your way to amazing logo!</h1></td></tr>
+                <tr><td colspan="3"><p style="text-align: center;">Sign up to save your progress</p></td></tr>
+                <tr align="center"> 
+                    <td><button type="submit"><img src="Twitter.jpg" style="background-color: rgb(90, 168, 241);"></button></td>
+                    <td><button type="submit"><img src="Facebook.jpg" style=background-color: rgb(90, 168, 241);"></button></td>
+                    <td><button type="submit"><img src="Google-Plus.jpg" style="background-color: rgb(90, 168, 241);"></button></td>
+                </tr>
+                <tr><td colspan="3"></td></tr>
+                <tr>
+                    <td style="margin-left: 200px;"><hr></td>
+                    <td>Or</td>
+                    <td style="margin-left: -200px; margin-right: 200px;"><hr></td>
+                </tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3" align="center"><input type="text" placeholder="Full Name"> </td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3" align="center"><input type="email" placeholder="Email ID"> </td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3" align="center"><input type="password" placeholder="Password"> </td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3"></td></tr>
+                <tr><td colspan="3" align="center"><button type="submit"><img src="FinishMyLogo.jpg"></button></td></tr>
+            </table>
+        </div>
+        <div class='child' style="width: 396px; background-image: linear-gradient(blue, skyblue); margin: auto;">
+            <table  style="margin: auto; padding-top: 20%; color: white;">
+                <tr>
+                    <td rowspan="2"><img src="View-Your-Logo.jpg"></td>
+                    <td><h3>View your logos</h3></td>
+                </tr>
+                <tr>
+                    <td>and keep generating more designs</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="Save-Your_Favourite.jpg"></td>
+                    <td><h3>Save Your Favourites</h3></td>
+                </tr>
+                <tr>
+                    <td>and see how they look on business cards, T-shirts and other products</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="Customize-Your-Logos.jpg"></td>
+                    <td><h3>Customize Your Logos</h3></td>
+                </tr>
+                <tr>
+                    <td>by changing fonts, colors, icons, spacing and more</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
