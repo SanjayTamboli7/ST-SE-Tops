@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <style>
+        .x
+            {
+                height: 80px;
+                width: 200px;
+                background: blue;
+                position: relative;
+                overflow: hidden;
+                z-index: 0;
+                border-radius: 50px;
+            }
+        .y
+            {
+                height: 80px;
+                width: 200px;
+                background: coral;
+                position: absolute;
+                top: 0px;
+                left:-100px;
+                transition: 1s;
+                z-index: -1;
+            }
+        .x:hover .y
+            {
+                left:0;
+
+            }
+    </style>
+</head>
+<body>
+    <div class="x">
+
+    </div>
+</body>
+</html>

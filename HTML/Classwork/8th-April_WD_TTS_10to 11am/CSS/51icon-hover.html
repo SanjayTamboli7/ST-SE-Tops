@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main 
+        {
+            height: 80px;
+            width: 80px;
+            background: #000;
+            margin: 100px auto;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .effect 
+        {
+            height: 80px;
+            width: 80px;
+            background: coral;
+            transition: 1s;
+            transform: scale(0);
+        }
+
+        .main:hover .effect 
+        {
+            /* height: 80px;
+            width: 80px; */
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="effect"></div>
+
+
+    </div>
+    
+</body>
+</html>

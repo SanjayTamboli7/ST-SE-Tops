@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card 
+        {
+            /* height: 350px; */
+            width: 200px;
+            background: gray;
+            border: 2px solid;
+            margin: 100px auto;
+            position: relative;
+            text-align: center;
+            line-height: 50px;
+        }
+        .prd-img 
+        {
+            /* height: 250px; */
+            width: 200px;
+            background: lightblue;
+        }
+        .prd-view
+        {
+            /* height: 50px; */
+            width: 200px;
+            background: lightcoral;
+            position: absolute;
+            top:0;
+            left:0;
+            transition: 1s;
+            opacity: 0;
+            text-transform: uppercase;
+        }
+        .prd-info
+        {
+            /* height: 100px; */
+            width: 200px;
+            background: cornflowerblue;
+        }
+        p 
+        {margin: 0;}
+
+        .card:hover .prd-view 
+        {
+            top:200px;
+            /* display: block; */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        
+        <div class="prd-img">
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+
+        <div class="prd-view">
+            Quick View
+        </div>
+
+        <div class="prd-info">
+            <p>Formal Blue Shirt</p>
+            <p>$45.99 $69.71</p>            <button>ADD TO CART</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>

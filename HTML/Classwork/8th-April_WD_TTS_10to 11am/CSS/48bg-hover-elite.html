@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{box-sizing: border-box;}
+        .banner
+        {
+            height: 280px;
+            width: 500px;
+           
+            /* padding: 25px 0; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: .31s;
+
+            position: relative;
+
+            margin: 20px;
+
+            /* text-align: center; */
+        }
+
+        .banner:hover 
+        {
+            background-position: 0px 0;
+        }
+
+        .effect 
+        {
+            height: 200px;
+            width: 85%;
+            /* background: gray; */
+            border: 4px solid #fff;
+            padding: 120px 0 0 200px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            font-family: cursive;
+            color:#fff;
+
+            /* display: none; */
+            opacity: 0;
+
+            /* margin:100px auto; */
+            /* margin: auto; */
+            /* transform: translate(-50%,-50%); */
+            transition: .3s;
+
+            transform: translateX(-10px);
+
+        }
+
+        .banner:hover .effect 
+        {
+            /* display: block; */
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        p 
+        {
+            font-size: 25px;
+            color:#fff;
+            position: absolute;
+            top:40%;
+            left:60%;
+            margin: 0;
+
+        }
+
+        .bg1
+        {
+            background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom2.jpg);
+            background-size: cover;
+            
+            background-position: -20px 0;
+            
+            border: 20px solid rgba(255,255,255,.34);
+           background-origin: border-box;
+        }
+
+        .bg2 
+        {
+            background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom1.jpg);
+            
+            background-position: -20px 0;
+
+        background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner bg1">
+
+        <p>Fall Ahead</p> 
+
+        <div class="effect">
+            New Arrivals
+        </div>
+
+    </div>
+
+
+    <div class="banner bg2">
+
+        <p>Fall Ahead</p> 
+
+        <div class="effect">
+            New Arrivals
+        </div>
+
+    </div>
+
+
+    
+    
+</body>
+</html>

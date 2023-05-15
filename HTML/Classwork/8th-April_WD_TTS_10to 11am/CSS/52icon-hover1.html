@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main 
+        {
+            height: 80px;
+            width: 80px;
+            background: gray;
+            margin: 100px auto;
+
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            text-align: center;
+            line-height: 80px;
+            position: relative;
+            z-index: 0;
+        }
+        .effect 
+        {
+            height: 80px;
+            width: 80px;
+            background: cornflowerblue;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: -1;
+            transform: scale(0);
+            transition: .41s;
+
+
+        }
+        .fa-user 
+        {
+            color:lightblue;
+            font-size: 25px;
+
+        }
+
+        .main:hover .effect 
+        {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <i class="fa-solid fa-gift"></i>
+
+    <div class="main">
+       
+        <i class="fa fa-user"></i>
+        <div class="effect"></div>
+
+    </div>
+    
+</body>
+</html>

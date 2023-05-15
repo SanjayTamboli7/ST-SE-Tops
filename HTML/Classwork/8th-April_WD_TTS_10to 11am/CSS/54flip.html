@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main 
+        {
+            height: 300px;
+            width: 200px;
+            margin: 80px auto;
+            position: relative;
+            box-shadow: 0 0 10px #000;
+        }
+        .front,.back
+        {
+            height: 300px;
+            width: 200px;
+            background: rgba(0,0,0,.3);
+            position: absolute;
+            top:0;
+            left:0;
+            transition: 1s;
+            backface-visibility: hidden;
+        }
+        .front 
+        {
+            transform: rotateY(180deg);
+        }
+        .back 
+        {        
+            transform: rotateY(0deg);
+        }
+        .main:hover .front 
+        {
+            transform: rotateY(0deg);
+        }
+        .main:hover .back 
+        {
+            transform: rotateY(180deg);
+        }
+        span
+        {
+            background: #000;
+            color:#fff;
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <span>New</span>
+
+    <div class="main">
+        <div class="front">
+            <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel omnis impedit, nesciunt, voluptatem optio eveniet debitis molestias cumque similique voluptatibus fugiat sint vitae unde dolorem minus possimus illum! Earum, dignissimos. -->
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+        <div class="back">
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+    </div>
+    
+</body>
+</html>
