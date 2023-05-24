@@ -1,0 +1,153 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header 
+{
+    height: 100px;
+    background: skyblue;
+    display: flex;
+}
+.header .logo
+{
+    height: 50px;
+    background: orange;
+    text-align: center;
+    padding-top: 30px;
+}
+.SearchLogoShare
+{
+    height: 50px;
+    background-color: white;
+    border: 1px;
+    border-color: rgb(241, 235, 235);
+    margin-left: 2%;
+    margin-top: 2%;
+    display: flex;
+}
+.SearchInput
+{
+    height: 50px;
+}
+.SearchButton
+{
+    height: 50px;
+}
+.Elogo
+{
+    height: 50px;
+    background-color: White; 
+    color: black; 
+    display: inline; 
+    text-align: center;    
+    margin-left: 300px;
+}
+.Share
+{
+    height: 50px;
+    background-color: White; 
+    color: black; 
+    display: inline; 
+    text-align: center;    
+    margin-left: 300px;
+}
+.header .cname
+{
+    height: 100px;
+    width: 80%;
+    background: cyan;
+}
+.ContactInfo
+{
+    /* height: 30px; */
+    width: 24.64%;
+    background: black;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
+.Anew
+{
+    height: 20px;
+    width: 24.64%;
+    background: black;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+.nav 
+{
+    height: 50px;
+    background: yellowgreen;
+    text-align: center;
+    line-height: 50px;
+    position:fixed;
+    width: 100%;
+}
+li 
+{
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+a 
+{
+    text-decoration: none;
+    color:#000;
+    background: linear-gradient(lightblue,lightcoral);
+}
+.line 
+{
+    height: 5px;
+    width: 0px;
+    background: #000;
+    position: absolute;
+    top:100%;
+    left:0;
+    transition: 1s;
+}
+li:hover .line 
+{
+    width:100%;
+}
+.slider 
+{
+    height: 500px;
+    background: gray;
+}
+.content 
+{
+    height: 300px;
+    background: darkgoldenrod;
+    display: flex;
+}
+.content .p1
+{
+    height: 300px;
+    width: 25%;
+    background: darkcyan;
+    border: 2px solid;
+}
+.content .p1 .sections
+{
+    height: 100px;
+    background: red;
+    border: 2px solid;
+}
+.footer 
+{
+    height: 150px;
+    background: black;
+}
+.TopButton
+{
+    height: 40px;
+    width: 40px;
+    background: lightblue;
+    position: fixed;
+    bottom:10%;
+    right:5%;
+}

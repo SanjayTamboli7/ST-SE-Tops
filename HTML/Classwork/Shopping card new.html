@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+    <style>
+        .Card
+            {
+                height: 400px;
+                width: 260px;
+                margin: 100px auto;
+                position: relative;
+            }
+            .Front, .Back
+            {
+                height: 400px;
+                width: 260px;
+                background: rgba(0,0,0,.3);
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 1s;
+                backface-visibility: hidden;
+            }
+        .Front
+            {
+                transform: rotateY(180deg);
+            }
+        .Back
+            {
+                transform: rotateY(0deg);
+            }
+        .Card:hover .Front
+            {
+                transform: rotateY(0deg);
+            }
+        .Card:hover .Back
+            {
+                transform: rotateY(180deg);
+            }
+        .QuickView
+            {
+                height: 50px;
+                width: 260px;
+                background: lightblue;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 1s;
+                opacity: 0;
+                text-align: center;
+                line-height: 50px;
+            }
+        .Card:hover .QuickView
+            {
+                top: 271px;
+                opacity: 1;
+            }
+        .New
+            {
+                background-color: coral;
+                display: inline;
+                margin-left: 88%;
+            }
+        .Ttl
+            {
+                font-family: cursive;
+                font-weight: bold;
+                color: coral;
+                text-align: center;
+            }
+        .Price
+            {
+                font-family: cursive;
+                color: black;
+                text-align: center;
+            }
+        .Btn
+            {
+                align-items: center;
+            }
+    </style>    
+</head>
+<body>
+    <div class="Card">
+        <div class="New">New</div>
+        <div class="Front">
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+        <div class="Back">
+            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="" height="100%" width="100%">
+        </div>
+        <!-- <div class="QuickView">Quick View</div><br>
+        <div class="Ttl">Formal Blue Shirt</div>
+        <div class="Price"><b>$ 45.99</b>&nbsp;&nbsp;&nbsp;<s>$ 61.99</s></div>
+        <div><button>Add To Cart</button></div> -->
+    </div>
+</body>
+</html>

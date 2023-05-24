@@ -1,0 +1,165 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+.header 
+{
+    height: 100px;
+    width: 100%;
+    background: lightblue;
+    display: flex;
+
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+
+.header .logo
+{
+    height: 100px;
+    width: 20%;
+    background: darkorange;
+}
+
+.header .cname
+{
+    height: 100px;
+    width: 80%;
+    background: darkcyan;
+}
+
+.nav 
+{
+    margin-top: 100px;
+    height: 50px;
+    background: coral;
+    text-align: center;
+    line-height: 50px;
+}
+
+  /* ul
+        {
+            text-align: center;
+        } */
+
+        /* body 
+        {
+            margin: 0;
+        }
+        .nav ul 
+        {
+            margin: 0;
+            padding: 0;
+        } */
+
+        li 
+        {
+            /* border:2px solid; */
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+           
+        }
+
+        a 
+        {
+            text-decoration: none;
+            color:#000;
+            background: linear-gradient(lightblue,lightcoral);
+            /* padding: 9px 12px; */
+        }
+
+        .line 
+        {
+            height: 5px;
+            width: 0px;
+            background: #000;
+            position: absolute;
+            top:100%;
+            left:0;
+            transition: 1s;
+        }
+
+        li:hover .line 
+        {
+            width:100%;
+        }
+.slider 
+{
+    height: 500px;
+    background: gray;
+}
+
+.content 
+{
+    height: 300px;
+    background: darkgoldenrod;
+    display: flex;
+}
+.content .p1
+{
+    height: 300px;
+    width: 25%;
+    background: darkcyan;
+    border: 2px solid;
+}
+.content .p1 img 
+{
+    object-fit: cover;
+    object-fit: contain;
+    object-fit: scale-down;
+}
+
+.content .bg 
+{
+    background: url(../images/bottom3.jpg);
+    background-size: 100% 100%;
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    background-position: center;
+}
+
+.content .p1 .sections
+{
+    height: 100px;
+    /* width: 25%; */
+    background: red;
+    border: 2px solid;
+}
+/* 
+.content .p2
+{
+    height: 300px;
+    width: 25%;
+    background: darkkhaki;
+}
+
+.content .p3
+{
+    height: 300px;
+    width: 25%;
+    background: darkred;
+}
+
+.content .p4
+{
+    height: 300px;
+    width: 25%;
+    background: darkgreen;
+} */
+
+.footer 
+{
+    height: 150px;
+    background: darkolivegreen;
+}
+
+.btn 
+{
+    height: 50px;
+    width: 100px;
+    background: lightblue;
+    position: fixed;
+    bottom:10%;
+    right:5%;
+}

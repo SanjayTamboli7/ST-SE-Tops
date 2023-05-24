@@ -10,10 +10,12 @@
         {
             height: 300px;
             width: 200px;
+            /* background: gray; */
             margin: 80px auto;
             position: relative;
             box-shadow: 0 0 10px #000;
         }
+
         .front,.back
         {
             height: 300px;
@@ -24,6 +26,9 @@
             left:0;
             transition: 1s;
             backface-visibility: hidden;
+
+          
+            
         }
         .front 
         {
@@ -31,12 +36,15 @@
         }
         .back 
         {        
+
             transform: rotateY(0deg);
         }
+
         .main:hover .front 
         {
             transform: rotateY(0deg);
         }
+
         .main:hover .back 
         {
             transform: rotateY(180deg);
