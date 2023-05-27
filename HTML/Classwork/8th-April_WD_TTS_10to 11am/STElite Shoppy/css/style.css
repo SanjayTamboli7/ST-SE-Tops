@@ -304,13 +304,32 @@ li:hover .line
 .slider .bannerInfo 
 {
     height: 300px;
-    width: 600px;
+    width: 600px; 
     background: rgba(0,0,0,.34);
     margin:auto;
     text-align: center;
     line-height: 80px;
     font-size: 45px;
     color: #fff;
+}
+.slider .bannerInfo .shopnow
+{
+    height: 80px;
+    width: 200px;
+    background: green;
+    text-align: center;
+    line-height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: cursive;
+    margin: 100px auto;
+    outline: 5px solid yellowgreen;
+    transition: 0.4s;
+}
+.shopnow:hover
+{
+    outline: 5px solid green;
+    outline-offset: 10px;
 }
 .slider .bannerInfo p:nth-child(2)
 {
