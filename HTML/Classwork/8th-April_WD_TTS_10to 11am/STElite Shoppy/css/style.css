@@ -195,19 +195,59 @@
 }
 .menswear:hover .submenuman
 {
-    height: 300px;
-    width: 600px;
+    height: 200px;
+    width: 535px;
     display: flex;
     text-align: left;
     opacity: 1;
+    transition: 1s;
+}
+.menswear .submenuman .imaje
+{
+    height: 200px;
+    width: 300px;
 }
 .menswear .submenuman .menucol
 {
     width: 115px;
     background-color: black;
-    margin-left: 10px;
-    border: 2px solid black;
+    margin-left: 2px;
+    border: 2px solid white;
+    font-family: cursive;
 }
+/* Womans submenu starts here */
+.nav .links .submenuwoman
+{
+    background-color: white;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.womenswear:hover .submenuwoman
+{
+    height: 200px;
+    width: 535px;
+    display: flex;
+    text-align: left;
+    opacity: 1;
+    transition: 1s;
+}
+.womenswear .submenuwoman .imajje
+{
+    height: 200px;
+    width: 300px;
+}
+.womenswear .submenuwoman .womenucol
+{
+    width: 115px;
+    background-color: black;
+    margin-left: 2px;
+    border: 2px solid white;
+    font-family: cursive;
+}
+/* Womans submenu ends here */
 .nav .links li 
 {
     display: inline;
