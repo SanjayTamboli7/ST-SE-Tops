@@ -109,7 +109,7 @@
 .subheader .logo .fa-shopping-bag 
 {
     position: absolute;
-    top: 95px;px;
+    top: 95px;
     left: 335px;
     color: #2fdab8;
 }
@@ -117,11 +117,52 @@
 {
     height: 150px;
     width: 33.33%;
+    display: flex;
+    /* background: lightblue; */
 }
 .subheader .socialLinks i 
 {
-    background: #3b5998;
+    height: 50px;
+    width: 50px;
+    /* background: #3b5998; */
     padding: 15px;
+}
+.subheader .socialLinks a
+{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    /* transform-style: preserve-3d; */
+}
+.subheader .socialLinks .front
+{
+    height: 50px;
+    width: 50px;
+    background: lightblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateX(0deg) translateZ(50px);
+}
+.subheader .socialLinks .back
+{
+    height: 50px;
+    width: 50px;
+    background: lightcoral;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateX(90deg) translateZ(50px);
+}
+.subheader .socialLinks a:hover 
+{
+    transform: rotateX(-90deg) translateZ(50px);
 }
 .nav 
 {
@@ -129,7 +170,6 @@
     text-align: center;
     display: flex;
     padding: 0 30px;    
-    /* line-height: 50px; */
 }
 .nav .links
 {
@@ -199,7 +239,6 @@ li:hover .line
 {
     font-size: 16px;
 }
-/* 24-May-2023 work starts here */
 .banner
 {
     height: 280px;
@@ -234,15 +273,6 @@ li:hover .line
     opacity: 1;
     transform: translateX(0px);
 }
-/* p 
-{
-    font-size: 25px;
-    color:#fff;
-    position: absolute;
-    top:40%;
-    left:60%;
-    margin: 0;
-} */
 .bg1
 {
     background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom2.jpg);
@@ -258,35 +288,3 @@ li:hover .line
     background-size: cover;
 }
 /* For social media starts here */
-.main 
-{
-    height: 80px;
-    width: 80px;
-    background: gray;
-    margin: 100px auto;
-    text-align: center;
-    line-height: 80px;
-    position: relative;
-    z-index: 0;
-}
-.affect 
-{
-    height: 80px;
-    width: 80px;
-    background: cornflowerblue;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -1;
-    transform: scale(0);
-    transition: .41s;
-}
-.fa-user 
-{
-    color:lightblue;
-    font-size: 25px;
-}
-.main:hover .affect 
-{
-    transform: scale(1);
-}

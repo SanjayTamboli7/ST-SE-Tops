@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div 
+        {
+            height: 200px;
+            width: 200px;
+            background: lightblue;
+
+            animation-name: KuchhBhi;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        /* @keyframes animationName 
+        {
+            from{property:value;}
+            to{property:value;}
+        } */
+
+        /* @keyframes KuchhBhi 
+        {
+            from{background:lightblue;}
+            to{background:coral}
+        } */
+
+        @keyframes KuchhBhi 
+        {
+            0%{background:lightblue;}
+            20%{background:red;}
+            40%{background:green;transform: translate(100px,200px) rotate(360deg) scale(0);}
+            60%{background:#fff;box-shadow: 0 0 20px #000;border-radius: 50%;}
+            80%{background:url(https://www.newswire.com/files/3a/d4/08f6844d24e655ae6da003faa87e.jpg);background-size: 100% 100%;}
+            100%{background:coral}
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+    </div>
+    
+</body>
+</html>

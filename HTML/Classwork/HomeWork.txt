@@ -11,5 +11,15 @@ Form using table (See task folder)
 Form using flex / div
 Listen to all recordings and create rules, ifs and buts
 
+25-May-2023
+
+Inner circle, outer circle with hover effect
+
+26-May-2023
+
+Display H E L L O word character by character 
+Display H E L L O word character by character with underline
+
+
 
 
