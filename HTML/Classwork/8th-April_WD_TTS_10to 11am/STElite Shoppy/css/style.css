@@ -175,7 +175,29 @@
 {
     width: 80%;
     display: flex;
-    align-items: center;    
+    align-items: center;
+    position: relative;
+}
+.nav .links .submenuman
+{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.nav .links .submenuman .imaje
+{
+    height: 100px; 
+    width: 100px;
+    text-align: left;
+}
+.nav:hover .submenuman
+{
+    opacity: 1;
 }
 .nav .links li 
 {
@@ -287,4 +309,3 @@ li:hover .line
     background-position: -20px 0;
     background-size: cover;
 }
-/* For social media starts here */
