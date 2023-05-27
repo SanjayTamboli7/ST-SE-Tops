@@ -118,6 +118,7 @@
     height: 150px;
     width: 33.33%;
     display: flex;
+    padding-top: 50px;
     /* background: lightblue; */
 }
 .subheader .socialLinks i 
@@ -131,12 +132,17 @@
 {
     height: 50px;
     width: 50px;
-    display: inline-block;
+    display: block;
     position: relative;
     top: 0;
     left: 0;
+    line-height: 50px;
     transition: 1s;
-    /* transform-style: preserve-3d; */
+    transform-style: preserve-3d;
+}
+.subheader .socialLinks p
+{
+    margin: -51px 10px;
 }
 .subheader .socialLinks .front
 {
@@ -147,22 +153,22 @@
     top: 0;
     left: 0;
     backface-visibility: hidden;
-    transform: rotateX(0deg) translateZ(50px);
+    transform: rotateX(90deg) translateZ(20px);
 }
 .subheader .socialLinks .back
 {
     height: 50px;
     width: 50px;
-    background: lightcoral;
+    background: white;
     position: absolute;
     top: 0;
     left: 0;
     backface-visibility: hidden;
-    transform: rotateX(90deg) translateZ(50px);
+    transform: rotateX(0deg) translateZ(20px);
 }
 .subheader .socialLinks a:hover 
 {
-    transform: rotateX(-90deg) translateZ(50px);
+    transform: rotateX(-90deg) translateZ(0px);
 }
 .nav 
 {
@@ -180,8 +186,6 @@
 }
 .nav .links .submenuman
 {
-    height: 200px;
-    width: 200px;
     background-color: white;
     position: absolute;
     top: 25px;
@@ -189,15 +193,20 @@
     opacity: 0;
     transition: 1s;
 }
-.nav .links .submenuman .imaje
+.menswear:hover .submenuman
 {
-    height: 100px; 
-    width: 100px;
+    height: 300px;
+    width: 600px;
+    display: flex;
     text-align: left;
-}
-.nav:hover .submenuman
-{
     opacity: 1;
+}
+.menswear .submenuman .menucol
+{
+    width: 115px;
+    background-color: black;
+    margin-left: 10px;
+    border: 2px solid black;
 }
 .nav .links li 
 {
@@ -246,6 +255,12 @@ li:hover .line
     background-size: 100% 100%;
     padding-top: 80px;    
 }
+.fallahead
+{
+    display: flex; 
+    width: 100%;
+    align-content: center;
+}
 .slider .bannerInfo 
 {
     height: 300px;
@@ -271,6 +286,20 @@ li:hover .line
     transition: .31s;
     position: relative;
     margin: 20px;
+}
+.fallahead
+{
+    justify-content: center;
+    align-items: center;
+}
+.fallahead .banner h3
+{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    letter-spacing: 5px;
 }
 .banner:hover 
 {
