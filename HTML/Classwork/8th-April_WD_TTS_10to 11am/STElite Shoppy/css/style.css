@@ -314,21 +314,21 @@ li:hover .line
 }
 .slider .bannerInfo .shopnow
 {
-    height: 80px;
-    width: 200px;
-    background: green;
+    height: 40px;
+    width: 150px;
+    background: #2fdab8;
     text-align: center;
-    line-height: 80px;
+    line-height: 40px;
     font-size: 22px;
     font-weight: bold;
     font-family: cursive;
-    margin: 100px auto;
-    outline: 5px solid yellowgreen;
+    margin: 25px auto;
+    outline: 5px solid #2fdab8;
     transition: 0.4s;
 }
 .shopnow:hover
 {
-    outline: 5px solid green;
+    outline: 5px solid #2fdab8;
     outline-offset: 10px;
 }
 .slider .bannerInfo p:nth-child(2)
@@ -396,4 +396,74 @@ li:hover .line
     background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom1.jpg);
     background-position: -20px 0;
     background-size: cover;
+}
+.section6
+{
+    width: 100%;
+    display: flex;
+}
+.section6 .section6left
+{
+    width: 50%;
+}
+.section6 .section6right
+{
+    width: 50%;
+    background-color: #2fdab8;
+}
+.section6 .section6right .savethisweek
+{
+    height: 85%;
+    width: 90%;
+    background-color: white;
+    margin-top: 10%;
+}
+.section6 .section6right .savethisweek .ttl
+{
+    text-transform: uppercase;
+    line-height: 125px;
+    margin-left: 30px;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #212121;
+    letter-spacing: 2px;
+}
+.section6 .section6right .savethisweek .para
+{
+    margin-top: -40px;
+    margin-left: 30px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    color: #545454;
+}
+.section6 .section6right .savethisweek .custeventaward
+{
+    margin-top: 50px;
+    margin-left: 30px;
+    height: 100px;
+    width: 90%;
+    display: flex;
+    border-color: aquamarine;
+}
+.section6 .section6right .savethisweek .custeventaward .customers
+{
+    margin: auto;
+    width:33.33%;
+    color: #2fdab8;
+    background-color: #545454;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section6 .section6right .savethisweek .custeventaward .events
+{
+    width:33.33%;    
+    background-color: white;
+}
+.section6 .section6right .savethisweek .custeventaward .awards
+{
+    width:33.33%;    
+    background-color: #545454;
 }
