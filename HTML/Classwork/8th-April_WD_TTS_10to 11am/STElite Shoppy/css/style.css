@@ -476,13 +476,7 @@ li:hover .line
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.trending
-{
-    width: 100%;
-    display: flex;
-    background-color: beige;
-}
-.trending .ttl
+.trendttl
 {
     font-size: 2.2em;
     font-weight: 700;
@@ -492,20 +486,31 @@ li:hover .line
     margin-bottom: 1em;
     text-transform: uppercase;
 }
-.trending .maindv
+.trendimgs
 {
-    width: 80%;
-    background-color: lightpink;
+    width: 100%;
     display: flex;
-    position: relative;
+    border: 2px solid coral;
+    display: flex;
+    padding-left: 10%;
 }
-.trending .maindv .vrtdv1
+.trendimgs .vrtdv1
 {
-    background-color: black;
-    position: absolute;
+    width: 30%;
+    background-color: blue;
+    border: 2px solid pink;
+    padding-right: 2%;
 }
-.trending .maindv .vrtdv2
+.trendimgs .vrtdv2
 {
-    background-color: black;
-    position: absolute;
+    width: 55%;
+    background-color: cyan;
+    border: 2px solid green;
+}
+.trendimgs .vrtdv2 .twoimgs
+{
+    height: auto;
+    background-color: red;
+    border: 2px solid yellow;
+    padding-bottom: 2%;
 }
