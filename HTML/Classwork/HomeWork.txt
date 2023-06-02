@@ -20,6 +20,12 @@ Inner circle, outer circle with hover effect
 Display H E L L O word character by character 
 Display H E L L O word character by character with underline
 
+31-May-2023
+
+https://demo01.houzez.co/?_ga=2.14093367.1420156375.1685509456-1358854538.1685509456
+
+Create layout for above page using flex and grid.
+
 
 
 

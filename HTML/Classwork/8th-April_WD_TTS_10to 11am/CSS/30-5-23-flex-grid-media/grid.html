@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}        
+        .row 
+        {
+            background: lightgreen;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px;
+        }
+        .col,.nestedCol,.v
+        {
+            border: 2px solid;
+        }
+        .colX 
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .nestedColX 
+        {
+            display: grid;
+            grid-template-rows:20px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">col 1</div>
+        <div class="col colX">
+            <div class="nestedCol">1</div>
+            <div class="nestedCol nestedColX">
+                <div class="v">UP</div>
+                <div class="v">DOWN</div>
+            </div>
+            <div class="nestedCol">3</div>
+        </div>
+        <div class="col">col 3</div>
+        <div class="col">col 4</div>
+    </div>    
+</body>
+</html>

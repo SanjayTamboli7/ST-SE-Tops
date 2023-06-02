@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houzez flex</title>
+    <style>
+        .hdr
+            {
+                height: 50px;
+                width: 100%;
+                border: 2px solid lightblue;
+                display: flex;
+            }
+        .logo
+            {
+                width: 25%;
+                text-align: center;
+                color: black;
+                border: 2px solid lightcyan;
+                text-align: left;
+            }
+        .hmenu
+            {
+                width: 50%;
+                text-align: center;
+                color: black;
+                border: 2px solid lightcoral;
+                display: flex;
+
+            }
+        .hmenu .name
+            {
+                margin: 10px auto;
+                width: 20%;
+            }
+        .hmenu .btn
+            {
+                width: 25%;
+                color: black;
+                border: 2px solid lightgreen;
+            }
+        .bnr
+            {
+                height: auto;
+                width: 100%;
+            }
+        .takeinput
+            {
+                height: 100px;
+                width: 100%;
+                display: flex;
+            }
+        .takeinput .col
+            {
+                width: 20%;
+            }
+    </style>
+</head>
+<body>
+    <div class="hdr">
+        <div class="logo">
+            logo
+        </div>
+        <div class="hmenu">
+            <div class="name">Home</div>
+            <div class="name">Properties</div>
+            <div class="name">Property</div>
+            <div class="name">Realtors</div>
+            <div class="name">Others</div>
+            <div class="name">(800) 987 6543</div>
+        </div>
+        <div class="btn">
+            <button>Create a listing</button>
+        </div>
+    </div>
+    <div class="bnr">
+        <img src="../houzez-banner.jpg" alt="">
+    </div>
+    <div class="takeinput">
+        <div class="col">
+            Looking For <br>
+            <input type="text">
+        </div>
+        <div class="col">
+            Location <br>
+            <input type="text">
+        </div>
+        <div class="col">
+            Property Size <br>
+            <input type="text">
+        </div>
+        <div class="col">
+            Your Budget <br>
+            <input type="text">
+        </div>
+        <div class="col">
+            <button>Search</button>
+        </div>
+    </div>
+</body>
+</html>

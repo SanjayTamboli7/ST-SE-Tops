@@ -451,7 +451,6 @@ li:hover .line
     margin: auto;
     width:33.33%;
     color: #2fdab8;
-    background-color: #545454;
     text-align: center;
     font-size: 0.9em;
     letter-spacing: 2px;
@@ -459,11 +458,54 @@ li:hover .line
 }
 .section6 .section6right .savethisweek .custeventaward .events
 {
+    margin: auto;
     width:33.33%;    
-    background-color: white;
+    color: #2fdab8;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .section6 .section6right .savethisweek .custeventaward .awards
 {
+    margin: auto;
     width:33.33%;    
-    background-color: #545454;
+    color: #2fdab8;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.trending
+{
+    width: 100%;
+    display: flex;
+    background-color: beige;
+}
+.trending .ttl
+{
+    font-size: 2.2em;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #000;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+.trending .maindv
+{
+    width: 80%;
+    background-color: lightpink;
+    display: flex;
+    position: relative;
+}
+.trending .maindv .vrtdv1
+{
+    background-color: black;
+    position: absolute;
+}
+.trending .maindv .vrtdv2
+{
+    background-color: black;
+    position: absolute;
 }
