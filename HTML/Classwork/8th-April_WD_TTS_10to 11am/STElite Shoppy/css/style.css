@@ -497,10 +497,10 @@ li:hover .line
 .trendimgs .vrtdv1
 {
     height: 95%;
-    width: 30%;
+    /* width: 30%; */
     background-color: white;
-/* 
     position: relative;
+/* 
     background: url(https://shoppingforfun.in/images/bb1.jpg);
     background-size: cover;
     background-position: -20px 0;
@@ -512,16 +512,28 @@ li:hover .line
     border: 2px solid pink; 
     */
 }
-
+/* 
+.trendimgs .vrtdv1 img
+{
+    width: 100%;
+    height: 150%;
+}
+ */
 .trendimgs .vrtdv1 h3
 {
     color: black;
     font-weight: bold;
-    /* position: absolute;  */
+    position: absolute; 
     top: 1%;
     left: 1%;
     letter-spacing: 5px;
     display: inline;
+}
+.trendimgs .vrtdv1 .up_to
+{
+    position: absolute; 
+    top: 0;
+    left: 0;
 }
 .trendimgs.vrtdv1:hover
 {
