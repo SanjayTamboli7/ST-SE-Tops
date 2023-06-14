@@ -1,0 +1,27 @@
+https://demo.goodlayers.com/traveltour/main4/
+
+https://fontawesome.com/v4/icons/
+
+Submenus are pending.
+
+Features  >
+About     >
+Our Services
+Contact   >
+Portfolio >
+Gallery 
+Team      >
+Price Table
+Maintenance
+Coming Soon
+404 Page
+
+<div class="tourmaster-thumbnail-ribbon gdlr-core-outer-frame-element" style="color: #ffffff;background-color: #f97150;"><div class="tourmaster-thumbnail-ribbon-cornor" style="border-right-color: rgba(249, 113, 80, 0.5);"></div>Best Seller</div>
+<div class="tourmaster-thumbnail-ribbon gdlr-core-outer-frame-element" style="color: #ffffff;background-color: #f97150;"><div class="tourmaster-thumbnail-ribbon-cornor" style="border-right-color: rgba(249, 113, 80, 0.5);"></div>Best Seller</div>
+
+<div class="tourmaster-thumbnail-ribbon gdlr-core-outer-frame-element" style="color: #ffffff;background-color: #f97150;">
+    <div class="tourmaster-thumbnail-ribbon-cornor" style="border-right-color: rgba(249, 113, 80, 0.5);">
+    </div>Best Seller
+</div>
+
+<span>Venice, Rome and Milan – 9 Days 8 Nights</span>

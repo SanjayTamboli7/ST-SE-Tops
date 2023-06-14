@@ -170,13 +170,12 @@
 .desteeport
 {
     margin: auto;
-    width: 80%;
+    border: 2px solid yellow;
     background: linear-gradient(rgba(249, 114, 81, 1), rgba(255, 152, 108, 1));
     display: flex;
     flex-wrap: wrap;
 }
 /* Following class takes care of destination section */
-/* All h3 classes for desteeport can be merged into one. */
 .desteeport .destination
 {
     margin: auto;
@@ -223,72 +222,21 @@
 .populardestination
 {
     margin: auto;
-    padding-top: 2%;
-    padding-left: 2%;
-    background-color: white;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
     display: flex;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.tours
-{
-    color: white;
-    background-color: #f97150;
-    position: absolute;
-    top: 40px;
-    left: 700px;
-} 
-.populardestination .row2
-{
-    width: 381px; 
-    height: 381px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 /* Following class takes care of popular tour section */
 .populartour
 {
     margin: auto;
-    padding-top: 2%;
-    padding-left: 2%;
-    background-color: white;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
     display: flex;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.populartour .row1
-{
-    padding-right: 2%;
-    width: 386px; 
-    height: 193px;
-    flex-wrap: nowrap;
-}
-.populartour .row2
-{
-    width: 386px; 
-    height: 193px;
-    flex-wrap: nowrap;
-}
-.populartour .bolt
-{
-    padding-left: 40px;
-    color: #f97150;
-}
-.ptours
-{
-    color: white;
-    background-color: #f97150;
-    position: absolute;
-    top: 205px;
-    left: 40px;
-} 
-.populartour h3
-{
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0px;
-    text-transform: none;
+    flex-wrap: wrap;
 }
 /* Following parent class takes care of summer deal / discount section */
 .summerdeal

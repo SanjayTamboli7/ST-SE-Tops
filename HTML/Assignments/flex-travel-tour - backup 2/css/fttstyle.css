@@ -13,6 +13,7 @@
     font-size: 16px;    
     color: #94999f;
     background-color: white;
+    /* border: 2px solid red; */
     padding-top: 0.35%;
     text-align: center;
     display: flex;
@@ -22,29 +23,47 @@
 .topbar .phone
 {
     margin: auto;
+    /* color: black; */
+    /* background-color: yellow; */
+    /* border: 2px solid orange;  */
+    /* Remove upper border once entire bar is fixed. */
 }
 /* Following class takes care of email address image and email address */
 .topbar .emailadd
 {
     margin: auto;
+    /* color: black; */
+    /* background-color: orange; */
+    /* border: 2px solid orange; */
+    /* Remove upper border once entire bar is fixed. */
 }
 /* Following class takes care of social media images */
 .topbar .socialmedia
 {
     margin: auto;
     margin-left: 30%;
+    /* color: black; */
+    /* background-color: yellow; */
+    /* border: 2px solid orange; */
 }
 /* Following class takes care of image & login  */
 .topbar .login
 {
     margin: auto;
     padding-left: 2%;
+    /* color: black; */
+    /* background-color: orange; */     
+    /* border: 2px solid orange; */
     border-left: 1px solid lightgrey;
+
 }
 /* Following class takes care of image & signup */
 .topbar .signup
 {
     margin: auto;
+    /* color: black; */
+    /* background-color: yellow; */
+    /* border: 2px solid orange; */
 }
 /* Following parent class takes care of logo, navigation bar & search image */
 .logonavbarsrch
@@ -62,12 +81,18 @@
 .logonavbarsrch .logo
 {
     margin: auto;
+    /* color: black;
+    background-color: orange;
+    border: 2px solid yellow; */
 }
 /* Following class takes care of navigation bar */
 .logonavbarsrch .logonavbar
 {
     margin: auto;
     padding-left: 5%;
+    /* color: black;
+    background-color: yellow;
+    border: 2px solid orange; */
 }
 /* Following class takes care of li in navigation bar */
 .logonavbarsrch .logonavbar li
@@ -98,26 +123,39 @@
 .logonavbarsrch .srch
 {
     margin: auto;
+    /* color: black;
+    background-color: orange;
+    border: 2px solid yellow; */
 }
 /* Following parent class takes care of main slider */
 .sldr
 {
     height: 697.156px;
     width: 1225px;
+    /* color: blue;
+    background-color: yellowgreen;
+    border: 2px solid red; */
     padding-top: 15px;
     text-align: center;
+    /* Addition starts here */
     /* background-image: url(&quot;https://a6e8z9v6.stackpathcdn.com/traveltour/main4/wp-content/uploads/2019/03/bgtravel.jpg&quot;); */
     background-image: url(https://a6e8z9v6.stackpathcdn.com/traveltour/main4/wp-content/uploads/2019/03/bgtravel.jpg);
     /* background-size: cover;  */
     background-position: center top;
+    /* data-parallax-speed="0.2"; */
+    /* Addition ends here */
 }
 /* Following class takes care of main title on main slider */
 .sldrmainttl
 {
     margin: auto;
     margin-top: 10%;
+    /* line-height: 10%; */
+    /* padding-top: 10%; */
     font-size: 40px; 
     color: rgb(255, 255, 255);
+    /* background-color: yellow; */
+    /* border: 2px solid orange; */
     text-transform: none; 
 }
 /* Following class takes care of sub title on main slider */
@@ -128,167 +166,127 @@
     color: #ffffff;
     font-size: 21px;
     font-style: normal;
+    /* background-color: orange;
+    border: 2px solid yellow; */
 }
+/* Following class takes care of main title on main slider
+.sldr .ttl .mainttl
+{
+    margin: auto;
+    margin-top: 10%;
+    line-height: 10%;
+    padding-top: 10%;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+} */
+/* Following class takes care of main title on main slider
+.sldr .ttl .mainttl
+{
+    margin: auto;
+    margin-top: 10%;
+    line-height: 10%;
+    padding-top: 10%;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+} */
+/* Following class takes care of sub title on main slider
+.sldr .ttl .subttl
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+} */
 /* Following class takes care of search bar on main slider */
 .srchonsldr
 {
-    height: 9%;
-    width: 62.5%;
     margin: auto;
-    margin-top: 5%;
+    
     color: black;
-    background-color: white;
+    background-color: yellow;
+    border: 2px solid orange;
     display: flex;
     flex-wrap: wrap;
 }
 /* Following class takes care of keywords search on main slider */
-.srchonsldr input
+.sldr .srchonsldr .sldrsrch
 {
     margin: auto;
-    height: 80%;
-    width: 80%;
-    margin-top: 5%;
-    margin-left: 10%;
-    text-align: center;    
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
 }
 /* Following class takes care of duration & destination search on main slider */
-.srchonsldr select
+.sldr .srchonsldr .dnarrow
 {
     margin: auto;
-    height: 80%;
-    width: 100%;
-    margin-top: 7%;
-    margin-left: 10%;
-    text-align: center;    
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
 }
-.srchonsldr btn
+/* Following class takes care of search button on main slider */
+.sldr .srchonsldr .srchbtn
 {
     margin: auto;
-    text-align: center;    
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
 }
 /* Following parent class takes care of destination, guarantee and supoort section at the end of main slider */
 .desteeport
 {
     margin: auto;
-    width: 80%;
-    background: linear-gradient(rgba(249, 114, 81, 1), rgba(255, 152, 108, 1));
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
     display: flex;
     flex-wrap: wrap;
 }
 /* Following class takes care of destination section */
-/* All h3 classes for desteeport can be merged into one. */
 .desteeport .destination
 {
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 1.25%;
-}
-.desteeport .destination h3
-{
-    margin-top: 1%;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
 }
 /* Following class takes care of guarantee section */
 .desteeport .guarantee
 {
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-.desteeport .guarantee h3
-{
-    margin-top: 1%;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
 }
 /* Following class takes care of support section */
 .desteeport .support
 {
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-.desteeport .support h3
-{
-    margin-top: 1%;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
 }
 /* Following class takes care of popular destination section */
 .populardestination
 {
     margin: auto;
-    padding-top: 2%;
-    padding-left: 2%;
-    background-color: white;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
     display: flex;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.tours
-{
-    color: white;
-    background-color: #f97150;
-    position: absolute;
-    top: 40px;
-    left: 700px;
-} 
-.populardestination .row2
-{
-    width: 381px; 
-    height: 381px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 /* Following class takes care of popular tour section */
 .populartour
 {
     margin: auto;
-    padding-top: 2%;
-    padding-left: 2%;
-    background-color: white;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
     display: flex;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-.populartour .row1
-{
-    padding-right: 2%;
-    width: 386px; 
-    height: 193px;
-    flex-wrap: nowrap;
-}
-.populartour .row2
-{
-    width: 386px; 
-    height: 193px;
-    flex-wrap: nowrap;
-}
-.populartour .bolt
-{
-    padding-left: 40px;
-    color: #f97150;
-}
-.ptours
-{
-    color: white;
-    background-color: #f97150;
-    position: absolute;
-    top: 205px;
-    left: 40px;
-} 
-.populartour h3
-{
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0px;
-    text-transform: none;
+    flex-wrap: wrap;
 }
 /* Following parent class takes care of summer deal / discount section */
 .summerdeal
