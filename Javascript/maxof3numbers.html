@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max of 3 Numbers</title>
+</head>
+<body>
+    <script>
+        // Turnary syntax :
+        // (condition) ? result 1 : result 2;
+        document.write("Max of 2 Numbers without comaparision operators");
+        document.write("<br>");
+        // var num1 = 10, num2 = 20, num3 = 30;
+        // var num1 = 20, num2 = 30, num3 = 10;
+        var num1 = 30, num2 = 10, num3 = 20;
+        result = (num1>num2) ? num1 : num2;
+        document.write(result);
+        document.write("<br>");
+        document.write("Max of 3 Numbers without comaparision operators");
+        document.write("<br>");
+        result1 = (num1>num2) ? (num1>num3 ? num1 : (num3>num2 ? num3 : num2 )) : (num2>num3 ? num2 : num3);
+        document.write(result1);
+        document.write("<br>");
+        // var num1 = 10, num2 = 20, num3 = 30;
+        // var num1 = 20, num2 = 30, num3 = 10;
+        var num1 = 30, num2 = 10, num3 = 20;
+        document.write("Max of 3 Numbers with comaparision operators");
+        document.write("<br>");
+        // result1 = (num1>num2) ? (num1>num3 ? num1 : (num3>num2 ? num3 : num2 )) : (num2>num3 ? num2 : num3);
+        result1 = ((num1 > num2 && num1 > num3) ? num1 : (num2 > num1 && num2 > num3 ? num2 : num3 ));
+        document.write(result1);
+        document.write("<br>");
+    </script>
+</body>
+</html>
