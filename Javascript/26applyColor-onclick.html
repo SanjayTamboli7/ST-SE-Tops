@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x 
+        {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="h" onmouseenter="addColor()" onmouseleave="removeColor()">Hello</h1>
+
+    <button onclick="addColor()">Add Color</button>
+
+    <button onclick="removeColor()">Remove Color</button>
+
+    <button onclick="addRemoveColor()">Add-Remove Color</button>
+    
+
+    <script>
+       t =  document.getElementById('h');
+       
+       function addColor()
+       {
+        // t.style.color = "red";
+        t.classList.add('x');
+        t.innerHTML = "Sanjay"
+        // t.className = "x";
+       }
+
+       function removeColor()
+       {
+        // t.style.color = "";
+        // t.className = "";
+        t.innerHTML ="Heena"
+        t.classList.remove('x');
+       }
+
+       function addRemoveColor()
+       {
+       
+        // t.style.color ="red";
+        // t.classList.toggle('x');
+        if(t.style.color == "red")
+        {
+            t.style.color =""
+        }
+        else
+        {
+            t.style.color ="red";
+        }
+       }
+
+
+
+
+    </script>
+    
+</body>
+</html>

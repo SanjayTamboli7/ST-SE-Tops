@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .xyz 
+        {
+            height: 100px;
+            width: 200px;
+            background: linear-gradient(red,blue);
+            font-size: 34px;
+            font-family: cursive;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="x">hello</h1>
+
+    <script >
+
+        h1_tag = document.getElementById('x');
+
+        h1_tag.classList.add('xyz');
+         h1_tag.classList.remove('xyz');
+        // h1_tag.classList.toggle('xyz');
+
+        h1_tag.className = "xyz";
+
+        h1_tag.className ="";
+        h1_tag.className = "xyz";
+        console.log(h1_tag);
+
+
+    </script>
+    
+</body>
+</html>

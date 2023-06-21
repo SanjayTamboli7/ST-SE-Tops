@@ -30,6 +30,9 @@ Create layout for above page using flex and grid.
 
 Task 1 --> Task 2023-Jun-6.mp4
 
+20-Jun-2023
 
+Show / hide paragraph, image
+when you type value in text box should appear in another box. 
 
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Para</title>
+</head>
+<body>
+    <p id="id_para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque omnis quo laborum iste maiores est beatae praesentium ea nemo doloribus sed architecto, quam sit enim ullam tempore eaque ipsa corporis! <br><br>
+    </p>
+    <button onclick="hide_para()">Hide Para</button>
+    <button onclick="show_para()">Show Para</button>
+    <script>
+        let paraval="";
+        paraval=document.getElementById("id_para").innerHTML;
+        function hide_para()
+            {
+                document.getElementById("id_para").innerHTML="";
+            }
+        function show_para()
+            {
+                document.getElementById("id_para").innerHTML = paraval;
+            }
+    </script>
+</body>
+</html>

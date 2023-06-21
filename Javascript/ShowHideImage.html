@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Image</title>
+</head>
+<body>
+    <img id="id-img" src="SeaShore.jpg" alt=""><br><br>
+    <button onclick="hide_img()">Hide Image</button>
+    <button onclick="show_img()">Show Image</button>
+    <script>
+        let vid_img = "";
+        vid_img = document.getElementById("id-img").innerHTML;
+        hide_img()
+            {
+                // document.getElementById("id-img").innerHTML="";
+                vid_img.innerHTML = "";
+            }
+        show_img()
+            {
+                // document.getElementById("id-img").innerHTML=vid_img;
+                vid_img.innerHTML.img="SeaShore.jpg";
+            }
+    </script>
+</body>
+</html>
