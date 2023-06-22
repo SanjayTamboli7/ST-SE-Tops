@@ -3,7 +3,6 @@ embed audio, video using embed, ifrmae
 Form with get and post method
 Complete assessment and assignment
 Practice April last week example...
-Download all the files from Nirav's folder.
 
 1-May-2023
 
@@ -29,10 +28,3 @@ Create layout for above page using flex and grid.
 6-Jun-2023
 
 Task 1 --> Task 2023-Jun-6.mp4
-
-20-Jun-2023
-
-Show / hide paragraph, image
-when you type value in text box should appear in another box. 
-
-
