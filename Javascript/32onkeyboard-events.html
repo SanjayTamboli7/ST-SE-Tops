@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="inp" onkeypress="getText()"> -->
+
+    <input type="text" id="inp" onkeyup="getText()">
+    <textarea id="txt"></textarea>
+
+    <button onclick="getText()">Get Text</button>
+
+    <script>
+        input_tag = document.getElementById('inp');
+        txt_tag = document.getElementById('txt');
+
+       
+function getText()
+{
+    txt_tag.innerHTML = input_tag.value
+}
+        
+    </script>
+    
+</body>
+</html>

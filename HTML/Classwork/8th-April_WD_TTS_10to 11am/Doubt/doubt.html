@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main 
+        {
+            height: 300px;
+            width: 200px;
+            background: gray;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .innerDiv 
+        {
+            height: 280px;
+            width: 180px;
+            background: #000;
+            position: absolute;
+            top:50%;
+            left:50%;
+           
+
+            transform: translate(-50%,-50%);
+        }
+
+        .effect 
+        {
+            height: 500px;
+            width: 400px;
+            background: linear-gradient(rgba(0,0,0,1),blue,red,#fff,magenta);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+           
+            transition: 1s;
+        }
+
+        .main:hover .effect 
+        {
+            transform:translate(-50%,-50%) rotate(360deg);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+       
+        <div class="effect"></div>
+        <div class="innerDiv"></div>
+    </div>
+    
+</body>
+</html>

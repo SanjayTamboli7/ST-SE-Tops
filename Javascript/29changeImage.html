@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="1.jpg" alt="" id="i1" height="300px" width="100%" onclick="changeImg()">
+
+    <script>
+        img1 = document.getElementById('i1');
+
+        // function changeImg()
+        // {
+        //     //img1.src = "2.jpg";
+        //     console.log(img1.src );//http://127.0.0.1:5500/1.jpg
+           
+            
+        //     if(img1.src == "http://127.0.0.1:5500/1.jpg")
+        //     {
+        //         img1.src = "2.jpg";
+        //     }
+           
+        // }
+
+        function changeImg()
+        {
+            //img1.src = "2.jpg";
+            console.log(img1.src );//http://127.0.0.1:5500/1.jpg
+           
+            
+            if(img1.src.match("1.jpg"))
+            {
+                img1.src = "2.jpg";
+            }
+            else if(img1.src.match("2.jpg"))
+            {
+                img1.src = "3.jpg";
+            }
+            else if(img1.src.match("3.jpg"))
+            {
+                img1.src = "4.jpg";
+            }
+           
+            else 
+            {
+                img1.src = "1.jpg";
+            }
+
+            setTimeout("changeImg()",1000)
+           
+        }
+
+        changeImg()
+
+
+        
+       
+    </script>
+    
+</body>
+</html>

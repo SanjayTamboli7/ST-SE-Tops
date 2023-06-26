@@ -237,12 +237,14 @@
     background-color: #f97150;
     position: absolute;
     top: 40px;
-    left: 700px;
+    left: 610px;
 } 
 .populardestination .row2
 {
-    width: 381px; 
-    height: 381px;
+    /* width: 381px; 
+    height: 381px; */
+    width: 32%;
+    height: 75%;
     flex-wrap: nowrap;
 }
 /* Following class takes care of popular tour section */
@@ -260,13 +262,13 @@
 .populartour .row1
 {
     padding-right: 2%;
-    width: 386px; 
+    width: 350px; 
     height: 193px;
     flex-wrap: nowrap;
 }
 .populartour .row2
 {
-    width: 386px; 
+    width: 350px;
     height: 193px;
     flex-wrap: nowrap;
 }
@@ -308,28 +310,58 @@
 .summerdeal
 {
     margin: auto;
-    color: black;
-    background-color: orange;
+    /* color: black; */
+    background-color: white;
     border: 2px solid yellow;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding-left: 10%;
 }
 /* Following class takes care of left side of summer deal / discount section */
 .summerdeal .leftside
 {
-    /* margin: auto; Instead of margin left side padding is required. */
-    height: 100px;
-    width: 100px;
-    color: black;
-    background-color: green;
-    border: 2px solid red;
+    height: 40%;
+    width: 40%;
+    background-color: #f97150;
+    /* border: 2px solid red; */
+}
+/* Following class takes care of left side of summer deal / discount section / Enjoy your summer deals */
+.summerdeal .leftside .esd 
+{
+    font-size: 20px ;
+    font-weight: 700 ;
+    font-style: normal ;
+    color: #fed7c8;
+    text-align: center;
+}
+.summerdeal .leftside h3
+{
+    font-size: 31px ;
+    font-weight: 700 ;
+    letter-spacing: 0px ;
+    text-transform: none ;
+    color: white;
+}
+/* <!-- Sanjay starts from here --> */
+
+.summerdeal .leftside .learnmore
+{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 9px 24px 11px 24px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #1e354c ;
 }
 /* Following class takes care of right side of summer deal / discount section */
 .summerdeal .righttside
 {
     /* margin: auto; */
-    height: 100px;
-    width: 100px;
+    /* height: 100px; */
+    width: 40%;
     color: black;
     background-color: red;
     border: 2px solid green;

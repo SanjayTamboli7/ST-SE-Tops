@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <form  onsubmit=" return validate()">
+    Name: <input type="text" id="nm" >
+    <span id="nmErr"></span>
+    
+    <br><br>
+
+    <!-- nirav.patel@tops-int.com -->
+    Email: <input type="text" name="" id=""><br><br>
+
+    mobile: <input type="text" name="" id="mb"><br><br>
+
+    Password: <input type="text" id="pwd"><br><br>
+
+    Confirm Password: <input type="text" id="cpwd" ><br><br>
+
+    <!-- <input type="submit" onclick=" return validate()"> -->
+
+    <input type="submit">
+   </form>
+
+    
+
+    <script>
+
+        name1 = document.getElementById('nm');
+        nmSpan = document.getElementById('nmErr');
+     
+
+
+        mobile = document.getElementById('mb');
+        pass = document.getElementById('pwd');
+        cpass = document.getElementById('cpwd');
+
+        //==>  /^exp$/
+       
+
+    //    nm_exp = /^[a-zA-Z]+$/;
+
+    nm_exp = /^[a-zA-Z]{2,5}$/;
+        
+
+        console.log(name1);
+        console.log(name1.value);
+
+       function validate()
+       {
+            if(name1.value=='')
+            {
+                // alert("name is required..!");
+                nmSpan.innerHTML = "*Name is required...!";
+                nmSpan.style.color ="red";
+                return false;
+            }
+
+            else 
+            {   
+                nmSpan.innerHTML ="";
+             
+            }
+
+            if(!nm_exp.test(name1.value))
+            {
+                alert("min 2 and max 5 only alphabets..!");
+                return false;
+            }
+
+            if(mobile.value=='')
+            {
+                alert("Mobile is required..!");
+                return false;
+            }
+
+            if(pass.value=='')
+            {
+                alert("Password is required..!");
+                return false;
+            }
+
+            if(pass.value != cpass.value)
+            {
+                alert("Passwords do not match..!");
+                return false;
+            }
+       }
+    </script>
+    
+</body>
+</html>

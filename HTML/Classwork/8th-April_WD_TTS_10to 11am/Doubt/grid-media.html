@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row
+        {
+            background: lightblue;
+            /* display: flex; */
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+        }
+        .col 
+        {
+            border: 2px solid;
+            padding: 35px;
+            /* width: 25%;
+            height: 200px; */
+        }
+
+        .x 
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .y 
+        {
+            display: grid;
+            grid-template-rows: 40px 20px 100px;
+        }
+
+        .bgCol 
+        {
+            background: url(https://th.bing.com/th/id/OIP.h25CudydH-QJpuUsnCMLdQHaEK?pid=ImgDet&rs=);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 35px;
+        }
+
+        .col img 
+        {
+            object-fit: contain;
+        }
+
+        @media(max-width:500px)
+        {
+            .row,.x{grid-template-columns: 1fr;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias magnam nesciunt. Ratione obcaecati mollitia ipsam aliquam iusto modi aperiam, itaque omnis, et eligendi nobis, necessitatibus asperiores corporis aspernatur soluta.</div>
+        <div class="col">3</div>
+        <div class="col x">
+
+            <div class="col">
+                <img src="https://th.bing.com/th/id/OIP.h25CudydH-QJpuUsnCMLdQHaEK?pid=ImgDet&rs=1" alt="" height="100%" width="100%"> 
+            </div>
+            <div class="col bgCol">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa et amet, similique labore nobis dolore, quas voluptas blanditiis placeat numquam doloribus aliquam magni officia sapiente asperiores dolorum tempora. Molestiae, exercitationem.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa et amet, similique labore nobis dolore, quas voluptas blanditiis placeat numquam doloribus aliquam magni officia sapiente asperiores dolorum tempora. Molestiae, exercitationem.
+
+                v
+            </div>
+            <div class="col y">
+                <div class="col">12</div>
+                <div class="col">12</div>
+                <div class="col">12</div>
+            </div>
+            <div class="col">1</div>
+
+            <div class="col">1</div>
+            <div class="col">1</div>
+            <div class="col">1</div>
+            <div class="col">1</div>
+        </div>
+    </div>
+    
+</body>
+</html>
