@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print 1 To 5</title>
+</head>
+<body>
+    <script>
+        ctr=0;
+        function print1to5()
+            {
+                if (ctr<=5)
+                    {
+                        ctr++;
+                        document.write(ctr);
+                        document.write("<br>");
+                    }
+                    print1to5();
+            }
+            print1to5();
+    </script>
+</body>
+</html>
