@@ -39,3 +39,19 @@ GitHub signup page
 
 Accept two numbers and arithmatic operators.
 Based on arithmatic operators, display the result in another box. 
+
+4-Jul-2023
+
+Create calculator design only...
+
+Click on any element and display in the bar.
+
+6-Jul-2023
+
+Use Fadetwo using fade example of class 6-Jul-2023
+Open menu using JQuery
+
+Difference between Margin and Translate: Margin moves the affected element, where translate overwrites the affected element.
+Difference between CSS and Animate: Animation is more smooth then CSS.
+
+

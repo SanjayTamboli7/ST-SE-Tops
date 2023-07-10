@@ -1,0 +1,512 @@
+/* Regular css for Flex - Travel Tour website */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+/* Following parent class takes care of phone no, email ID, social media, login and signup */
+.topbar
+{
+    height: 50px;
+    width: 1225px;
+    font-size: 16px;    
+    color: #94999f;
+    background-color: white;
+    padding-top: 0.35%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of phone no and image */
+.topbar .phone
+{
+    margin: auto;
+}
+/* Following class takes care of email address image and email address */
+.topbar .emailadd
+{
+    margin: auto;
+}
+/* Following class takes care of social media images */
+.topbar .socialmedia
+{
+    margin: auto;
+    margin-left: 30%;
+}
+/* Following class takes care of image & login  */
+.topbar .login
+{
+    margin: auto;
+    padding-left: 2%;
+    border-left: 1px solid lightgrey;
+}
+/* Following class takes care of image & signup */
+.topbar .signup
+{
+    margin: auto;
+}
+/* Following parent class takes care of logo, navigation bar & search image */
+.logonavbarsrch
+{
+    margin-top: 1%;
+    height: 50px;
+    width: 1225px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of logo */
+.logonavbarsrch .logo
+{
+    margin: auto;
+}
+/* Following class takes care of navigation bar */
+.logonavbarsrch .logonavbar
+{
+    margin: auto;
+    padding-left: 5%;
+}
+/* Following class takes care of li in navigation bar */
+.logonavbarsrch .logonavbar li
+{
+    display: inline;
+    position: relative;           
+}
+.logonavbarsrch .logonavbar a
+{
+    text-decoration: none;
+}
+.logonavbarsrch .logonavbar .line 
+{
+    height: 5px;
+    width: 0px;
+    background: #000;
+    position: absolute;
+    top:100%;
+    left:0;
+    transition: 1s;
+}
+/* li:hover .line  */
+.logonavbarsrch.logonavbar li:hover .logonavbarsrch.logonavbar.line
+{
+    width:100%;
+}
+/* Following class takes care of navigation bar */
+.logonavbarsrch .srch
+{
+    margin: auto;
+}
+/* Following parent class takes care of main slider */
+.sldr
+{
+    height: 697.156px;
+    width: 1225px;
+    padding-top: 15px;
+    text-align: center;
+    /* background-image: url(&quot;https://a6e8z9v6.stackpathcdn.com/traveltour/main4/wp-content/uploads/2019/03/bgtravel.jpg&quot;); */
+    background-image: url(https://a6e8z9v6.stackpathcdn.com/traveltour/main4/wp-content/uploads/2019/03/bgtravel.jpg);
+    /* background-size: cover;  */
+    background-position: center top;
+}
+/* Following class takes care of main title on main slider */
+.sldrmainttl
+{
+    margin: auto;
+    margin-top: 10%;
+    font-size: 40px; 
+    color: rgb(255, 255, 255);
+    text-transform: none; 
+}
+/* Following class takes care of sub title on main slider */
+.sldrsubttl
+{
+    margin: auto;
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 21px;
+    font-style: normal;
+}
+/* Following class takes care of search bar on main slider */
+.srchonsldr
+{
+    height: 9%;
+    width: 62.5%;
+    margin: auto;
+    margin-top: 5%;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of keywords search on main slider */
+.srchonsldr input
+{
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    text-align: center;    
+}
+/* Following class takes care of duration & destination search on main slider */
+.srchonsldr select
+{
+    margin: auto;
+    height: 80%;
+    width: 100%;
+    margin-top: 7%;
+    margin-left: 10%;
+    text-align: center;    
+}
+.srchonsldr btn
+{
+    margin: auto;
+    text-align: center;    
+}
+/* Following parent class takes care of destination, guarantee and supoort section at the end of main slider */
+.desteeport
+{
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(rgba(249, 114, 81, 1), rgba(255, 152, 108, 1));
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of destination section */
+/* All h3 classes for desteeport can be merged into one. */
+.desteeport .destination
+{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 1.25%;
+}
+.desteeport .destination h3
+{
+    margin-top: 1%;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* Following class takes care of guarantee section */
+.desteeport .guarantee
+{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.desteeport .guarantee h3
+{
+    margin-top: 1%;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* Following class takes care of support section */
+.desteeport .support
+{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.desteeport .support h3
+{
+    margin-top: 1%;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* Following class takes care of popular destination section */
+.populardestination
+{
+    margin: auto;
+    padding-top: 2%;
+    padding-left: 2%;
+    background-color: white;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.tours
+{
+    color: white;
+    background-color: #f97150;
+    position: absolute;
+    top: 40px;
+    left: 610px;
+} 
+.populardestination .row2
+{
+    /* width: 381px; 
+    height: 381px; */
+    width: 32%;
+    height: 75%;
+    flex-wrap: nowrap;
+}
+/* Following class takes care of popular tour section */
+.populartour
+{
+    margin: auto;
+    padding-top: 2%;
+    padding-left: 2%;
+    background-color: white;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.populartour .row1
+{
+    padding-right: 2%;
+    width: 350px; 
+    height: 193px;
+    flex-wrap: nowrap;
+}
+.populartour .row2
+{
+    width: 350px;
+    height: 193px;
+    flex-wrap: nowrap;
+}
+.populartour .bolt
+{
+    padding-left: 40px;
+    color: #f97150;
+}
+.ptours
+{
+    color: white;
+    background-color: #f97150;
+    position: absolute;
+    top: 205px;
+    left: 40px;
+} 
+.populartour h3
+{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+.populartour .star
+{
+    width: 50%;
+    display: inline;
+}
+.populartour .price
+{
+    width: 40%;
+    margin-left: 30%;
+    color: grey;
+    font-size: smaller;
+    background-color: white;
+    display: inline;
+}
+/* Following parent class takes care of summer deal / discount section */
+.summerdeal
+{
+    margin: auto;
+    /* color: black; */
+    background-color: white;
+    border: 2px solid yellow;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10%;
+}
+/* Following class takes care of left side of summer deal / discount section */
+.summerdeal .leftside
+{
+    height: 40%;
+    width: 40%;
+    background-color: #f97150;
+    /* border: 2px solid red; */
+}
+/* Following class takes care of left side of summer deal / discount section / Enjoy your summer deals */
+.summerdeal .leftside .esd 
+{
+    font-size: 20px ;
+    font-weight: 700 ;
+    font-style: normal ;
+    color: #fed7c8;
+    text-align: center;
+}
+.summerdeal .leftside h3
+{
+    font-size: 31px ;
+    font-weight: 700 ;
+    letter-spacing: 0px ;
+    text-transform: none ;
+    color: white;
+}
+/* <!-- Sanjay starts from here --> */
+
+.summerdeal .leftside .learnmore
+{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 9px 24px 11px 24px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #1e354c ;
+}
+/* Following class takes care of right side of summer deal / discount section */
+.summerdeal .righttside
+{
+    /* margin: auto; */
+    /* height: 100px; */
+    width: 40%;
+    color: black;
+    background-color: red;
+    border: 2px solid green;
+}
+/* Following class takes care of summer our recommended section */
+.recommend
+{
+    margin: auto;
+    color: black;
+    background-color: Yellow;
+    border: 2px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following parent class takes care of travel highlight section */
+/* This section will have background image. */
+.travelhighlight
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+    text-align: center;
+}
+/* Following class takes care of main title in travel highlight section */
+.travelhighlight .thlmainttl
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+}
+/* Following class takes care of sub title in travel highlight section */
+.travelhighlight .thlsubttl
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+}
+/* Following class takes care of video player image in travel highlight section */
+.travelhighlight .vdoplayimg
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+}
+/* Following class takes care of customer review title and background image */
+.crttl
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+}
+/* Following parent class takes care of customer review section */
+.customereview
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of customer feedback in customer review section */
+.customereview .feedback
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+}
+/* Following parent class takes care of browse tour by category and news letter section */
+.tourcategory
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of browse tour by category section */
+.tourcategory .browse
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+}
+/* Following class takes care of news letter section */
+.tourcategory .newsletter
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+}
+/* Following class takes care of recent article section */
+.recentarticle
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following parent class takes care of feature title section */
+.featurettl
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+}
+/* Following class takes care of feature section */
+.feature
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of footer section */
+.footer
+{
+    margin: auto;
+    color: black;
+    background-color: orange;
+    border: 2px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Following class takes care of copy right section */
+.copyright
+{
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    border: 2px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+}

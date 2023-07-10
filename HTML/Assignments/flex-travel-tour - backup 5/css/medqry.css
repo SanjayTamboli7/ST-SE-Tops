@@ -1,0 +1,79 @@
+@media only screen and (max-width:500px)
+{
+    .topbar
+    {
+        width: 50%;
+    }
+    .logonavbarsrch
+    {
+        width: 50%;
+    }
+    .sldr
+    {
+        width: 50%;
+    }
+    .sldrmainttl
+    {
+        width: 50%;
+    }
+    .sldrsubttl
+    {
+        width: 50%;
+    }
+    .srchonsldr
+    {
+        width: 50%;
+    }
+    .desteeport
+    {
+        width: 50%;
+    }
+    .populardestination
+    {
+        width: 50%;        
+    }
+    .populartour
+    {
+        width: 50%;        
+    }
+    .summerdeal
+    {
+        width: 50%;        
+    }
+    .recommend
+    {
+        width: 50%;        
+    }
+    .travelhighlight        
+    {
+        width: 50%;        
+    }
+    .customereview
+    {
+        width: 50%;        
+    }
+    .tourcategory
+    {
+        width: 50%;        
+    }
+    .recentarticle
+    {
+        width: 50%;        
+    }
+    .featurettl
+    {
+        width: 50%;        
+    }
+    .feature
+    {
+        width: 50%;        
+    }
+    .footer
+    {
+        width: 50%;        
+    }
+    .copyright
+    {
+        width: 50%;        
+    }
+}
