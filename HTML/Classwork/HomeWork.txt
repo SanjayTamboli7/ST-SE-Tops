@@ -54,4 +54,7 @@ Open menu using JQuery
 Difference between Margin and Translate: Margin moves the affected element, where translate overwrites the affected element.
 Difference between CSS and Animate: Animation is more smooth then CSS.
 
+10-Jul-2023 
+
+Study and apply all options in bootstrap 5.0.
 

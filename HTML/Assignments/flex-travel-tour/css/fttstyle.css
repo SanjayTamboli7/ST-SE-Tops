@@ -306,26 +306,28 @@
 .summerdeal .leftside
 {
     height: 360px; 
-    width: 45%;
+    width: 40%;
     background-color: #f97150;
+    padding-top: 7.5%;
 }
 /* Following class takes care of left side of summer deal / discount section / Enjoy your summer deals */
 .summerdeal .leftside .esd 
 {
-    font-size: 20px ;
-    font-weight: 700 ;
-    font-style: normal ;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
     color: #fed7c8;
-    margin-left: 20%;
+    padding-left: 25%;
 }
 .summerdeal .leftside h3
 {
-    font-size: 31px ;
-    font-weight: 700 ;
-    letter-spacing: 0px ;
-    text-transform: none ;
+    font-size: 31px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: none;
     color: white;
-    margin-left: 14%;
+    /* margin-left: 14%; */
+    padding-left: 20%;
 }
 .summerdeal .leftside .learnmore
 {
@@ -443,11 +445,13 @@
 /* Following parent class takes care of customer review section */
 .customereview
 {
-    margin: auto;
     color: black;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    column-gap: 1%;
+    row-gap: 1%;
+    
 }
 /* Following parent class takes care of browse tour by category and news letter section */
 .tourcategory
@@ -455,8 +459,9 @@
     margin: auto;
     color: black;
     background-color: #e1e1e1;
-    border: 2px solid yellow;
     display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 /* Following class takes care of browse tour by category section */
 .tourcategory .browse
@@ -466,7 +471,6 @@
     font-weight: 700;
     letter-spacing: 0px;
     background-color: 2px solid yellow;
-    /* border: coral; */
 }
 /* Following class takes care of news letter section */
 .tourcategory .newsletter
@@ -480,7 +484,6 @@
     margin: auto;
     color: black;
     background-color: #e1e1e1;
-    border: 2px solid yellow;
     display: flex;
 }
 .tournlcols .brwcol
@@ -490,7 +493,6 @@
     font-weight: 350;
     letter-spacing: 0px;
     background-color: 2px solid yellow;
-    /* border: coral; */
     display: flex;
 }
 .tournlcols .nlcol
@@ -558,8 +560,6 @@
     position: absolute;
     top: 80%;
     left: 0%;
-    /* color: white; */
-    /* padding-left: 45%; */
 }
 .recentarticle a
 {
@@ -575,23 +575,36 @@
     text-decoration: none;
     position: absolute;
     top: 90%;
-    left: 10%;
+    left: 9%;
 }
 /* Following parent class takes care of feature title section */
 .featurettl
 {
     margin: auto;
     color: black;
-    background-color: orange;
-    border: 2px solid yellow;
+    background-color: white;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: none;
+    text-align: center;
+    padding-top: 1%;
+}
+.featurettl .subttl 
+{
+    color: gray;
+    font-size: 18px;
+    font-weight: 350;
+    letter-spacing: 0px;
+    text-transform: none;
+    text-align: center;
+    padding-top: 1%;
 }
 /* Following class takes care of feature section */
 .feature
 {
     margin: auto;
-    color: black;
-    background-color: yellow;
-    border: 2px solid orange;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
 }
@@ -600,18 +613,53 @@
 {
     margin: auto;
     color: black;
-    background-color: orange;
-    border: 2px solid yellow;
+    background-color: #222;
     display: flex;
     flex-wrap: wrap;
+    column-gap: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.footer .colortitle
+{
+    font-size: 17px;
+    font-weight: 800;
+    color: #f97150;
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+.footer .phoneimg
+{
+    margin-right: 10px; 
+    font-size: 17px;
+    color: #ffffff;
+    margin-right: 8px;
+}
+.footer h3
+{
+    color: #fff;
+}
+.footer a
+{
+    font-size: 18px; 
+    color: #c7c7c7;
+    text-decoration: none;
+}
+.footer p
+{
+    width: 50%;
+    color: #fff;
 }
 /* Following class takes care of copy right section */
 .copyright
 {
     margin: auto;
-    color: black;
-    background-color: yellow;
-    border: 2px solid orange;
+    color: gray;
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
+    column-gap: 60%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
