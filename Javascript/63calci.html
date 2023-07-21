@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container 
+        {
+            height: 100vh;
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+        .calculator 
+        {
+            background: lightgreen;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+            gap: 20px;
+            padding: 10px;
+        }
+
+        input 
+        {
+            grid-column: span 4;
+            height: 80px;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+        input:focus 
+        {
+            outline: none;
+        }
+
+        .symbol 
+        {
+            height: 80px;
+            width: 80px;
+            text-align: center;
+            line-height: 80px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="calculator">
+            <input type="text" id="op">
+
+            <div class="symbol" onclick="del()">DEL</div>
+            <div class="symbol" onclick="wipe()">AC</div>
+            <div class="symbol" onclick=" getOp('%')">%</div>
+            <div class="symbol" onclick=" getOp('/')">/</div>
+
+            <div class="symbol" onclick=" getOp('1')">1</div>
+            <div class="symbol" onclick=" getOp('2')">2</div>
+            <div class="symbol" onclick=" getOp('3')">3</div>
+            <div class="symbol" onclick=" getOp('+')">+</div>
+
+            <div class="symbol" onclick=" getOp('4')">4</div>
+            <div class="symbol" onclick=" getOp('5')">5</div>
+            <div class="symbol" onclick=" getOp('6')">6</div>
+            <div class="symbol" onclick=" getOp('-')">-</div>
+            
+
+            <div class="symbol" onclick=" getOp('7')">7</div>
+            <div class="symbol" onclick=" getOp('8')">8</div>
+            <div class="symbol" onclick=" getOp('9')">9</div>
+            <div class="symbol" onclick=" getOp('*')">*</div>
+
+            <div class="symbol" onclick=" getOp('0')">0</div>
+            <div class="symbol" onclick="calc()">=</div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        output = document.getElementById('op');
+
+        function del()
+        {
+            output.value =   output.value.slice(0,-1)
+        }
+
+        function wipe()
+        {
+            output.value="";
+        }
+
+        output.value="";
+
+        function getOp(t)//3
+        {
+            console.log(t);
+            output.value = output.value+ t;// 1 + 3
+        }
+
+        function calc()
+        {
+            output.value = eval(output.value)//1+3
+        }
+    </script>
+    
+</body>
+</html>

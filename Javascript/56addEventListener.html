@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="x">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id assumenda aspernatur amet repudiandae maxime laudantium soluta officia, in earum reiciendis officiis necessitatibus, non itaque dolor ut aperiam debitis enim optio!
+    </p>
+
+    <button id="btn">Add Color</button>
+
+    <script>
+        p_tag = document.querySelector('.x');
+
+        btn_tag=document.querySelector('#btn');
+
+        // varName.addEventListener("event",functionName);
+
+        //btn_tag.addEventListener("mouseenter",addColor)
+
+        // p_tag.addEventListener("click",addColor)
+
+        // function addColor()
+        // {
+        //     p_tag.style.color ="red";
+        // }
+
+        // p_tag.addEventListener("click",function addColor()
+        // {
+        //     p_tag.style.color ="red";
+        // })
+
+        p_tag.addEventListener("click", ()=>
+        {
+            p_tag.style.color ="red";
+        })
+
+
+        
+    </script>
+    
+</body>
+</html>

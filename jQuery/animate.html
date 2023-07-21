@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        h1 
+        {
+            height: 200px;
+            width: 200px;
+            background: cornflowerblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+
+    </h1>
+    <button>Animate</button>
+    <script>
+        // $('h1').css('height',"200px");
+        // $('h1').css('width',"200px");
+        // $('h1').css('background',"lightblue");
+
+        $('button').click(function(){
+            $('h1').animate({"left":"200px"});
+        })
+
+      
+
+
+    </script>
+    
+</body>
+</html>

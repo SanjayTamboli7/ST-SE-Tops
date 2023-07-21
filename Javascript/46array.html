@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Array : used to store multiple values in a single variable
+
+    var/let/const varName = [val1,val2,...,valN];
+
+    document.write(varName); // val1,val2,...,valN;
+
+
+    Array INDEX/KEY/POSITION always starts with ZERO.
+
+    varName[0] = val1
+    varName[1] = val2
+    ... 
+    varName[N] = valN
+
+    var x = [12,"he",true,12.234];
+
+    x[0] = 12
+    x[1] = he 
+    x[2] = true 
+    x[3] = 12.234
+
+    document.write(x);//12,he,true,12.234
+
+    Array Size = Total No of Values Stored 
+
+    to find size of an Array => varName.length 
+
+    x.length = 4 -->
+
+
+    <script>
+
+      
+        const arr = [12,"hi",true,234,234,234,32];
+
+        document.write(typeof(arr));
+        document.write("<br>");
+
+        document.write(arr);
+        document.write("<br>");
+        document.write("Array length = ");
+        document.write(arr.length);//4
+
+        // document.write("<br>");
+        // document.write(arr[0]);//12
+        // document.write("<br>");
+        // document.write(arr[1]);//12
+        // document.write("<br>");
+        // document.write(arr[2]);//12
+        // document.write("<br>");
+        // document.write(arr[3]);//12
+
+        document.write("<br>");
+        document.write("<br>");
+
+
+        for(c=0;c<arr.length;c++)
+        {
+            document.write(arr[c]);
+            document.write("<br>")
+        }
+
+        for(d=20;d<=30;d++)
+        {
+            document.write("h ")
+        }
+
+      
+    
+
+    </script>
+    
+</body>
+</html>

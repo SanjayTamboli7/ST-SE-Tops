@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .testAnimation 
+        {
+            animation: scaleMe 1s;
+        }
+        div 
+        {
+            overflow: hidden;
+        }
+
+        @keyframes scaleMe 
+        {
+            from{transform: scale(1);}
+            to{transform: scale(1.5);}
+        }
+    </style>
+</head>
+<body>
+
+   <div>
+    <img src="1.jpg" alt="" height="200px" width="100%" class="x">
+
+    <img src="2.jpg" alt="" height="200px" width="100%" class="x">
+
+    <img src="3.jpg" alt="" height="200px" width="100%" class="x">
+
+    <img src="4.jpg" alt="" height="200px" width="100%" class="x">
+   </div>
+
+
+    <script>
+        index=0;
+      function slider()
+      {
+
+        
+
+        img_arr = document.getElementsByClassName('x');
+
+        console.log(img_arr);
+        console.log(img_arr.length);
+
+        // img_arr[0].style.display ="none";
+        // img_arr[1].style.display ="none";
+        // img_arr[2].style.display ="none";
+        // img_arr[3].style.display ="none";
+
+        for(i=0;i<img_arr.length;i++)
+        {
+        // console.log(i);// 0 1 2 3
+            img_arr[i].style.display ="none";
+        }
+
+        // console.log(i);//4
+        img_arr[index].style.display ="block";
+        img_arr[index].classList.add('testAnimation');
+
+      
+
+        index++;//4
+
+        if(index==img_arr.length)
+        {
+            index=0;
+        }
+
+        setTimeout("slider()",1000)
+
+      }
+        
+
+      slider()
+
+
+    </script>
+    
+</body>
+</html>

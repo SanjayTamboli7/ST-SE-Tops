@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Num1: <input type="text" id="n1" > <br><br>
+    Num2: <input type="text" id="n2" > <br><br>
+
+    Enter Operator: <input type="text" id="op" onkeyup="getOp()"><br><br>
+
+    <h2 id="res"></h2>
+
+    <button onclick=" getRes()">+</button>
+    <button onclick=" getRes1()">-</button>
+    <button onclick=" getRes2()">*</button>
+    <button onclick=" getRes3()">/</button>
+    <button onclick=" getRes4()">%</button>
+
+    <script>
+        no1= document.getElementById('n1');
+        no2= document.getElementById('n2');
+        result = document.getElementById('res');
+
+        operator = document.getElementById('op');
+
+       
+
+       function getOp()
+       {
+
+        choice = operator.value;
+        console.log(operator.value);//+
+            switch(choice)//+
+            {
+                case '+' :  result.innerHTML = parseFloat(no1.value) + parseFloat(no2.value);
+                break;
+
+                case '-' :  result.innerHTML = parseFloat(no1.value) - parseFloat(no2.value);
+                break;
+
+
+                case '*' :  result.innerHTML = parseFloat(no1.value) * parseFloat(no2.value);
+                break;
+
+
+                case '/' :  result.innerHTML = parseFloat(no1.value) / parseFloat(no2.value);
+                break;
+
+
+                case '%' :  result.innerHTML = parseFloat(no1.value) % parseFloat(no2.value);
+                break;
+
+                default :  result.innerHTML = "Invalid Operator...!";
+                
+
+            }
+       }
+
+
+    
+        // console.log(no1);
+        // console.log(no1.value);
+        // console.log(no2);
+        // console.log(no2.value);
+
+        // Number()==> 12 /12.34
+        // parseInt()==> 12 / -12
+        // parseFloat() ==> 12.34 / -12.34
+
+        // console.log(Number(no1.value) + Number(no2.value));
+    
+
+        // console.log(parseFloat(no1.value) + parseFloat(no2.value));
+
+    //    function getRes()
+    //    {
+    //     result.innerHTML = parseFloat(no1.value) + parseFloat(no2.value);
+    //    }
+
+    //    function getRes1()
+    //    {
+    //     result.innerHTML = parseFloat(no1.value) - parseFloat(no2.value);
+    //    }
+
+    //    function getRes2()
+    //    {
+    //     result.innerHTML = parseFloat(no1.value) * parseFloat(no2.value);
+    //    }
+
+    //    function getRes3()
+    //    {
+    //     result.innerHTML = parseFloat(no1.value) / parseFloat(no2.value);
+    //    }
+      
+    //    function getRes4()
+    //    {
+    //     result.innerHTML = parseFloat(no1.value) % parseFloat(no2.value);
+    //    }
+    
+    
+    </script>
+
+    
+</body>
+</html>

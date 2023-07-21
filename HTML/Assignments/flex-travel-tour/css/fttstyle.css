@@ -8,11 +8,10 @@
 /* Following parent class takes care of phone no, email ID, social media, login and signup */
 .topbar
 {
-    height: 50px;
     font-size: 16px;    
     color: #94999f;
     background-color: white;
-    padding-top: 0.35%;
+    padding-top: 1%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -20,42 +19,68 @@
 /* Following class takes care of phone no and image */
 .topbar .phone
 {
-    margin: auto;
+    margin-right: 10px;
+    margin-left: 20px;
 }
 /* Following class takes care of email address image and email address */
 .topbar .emailadd
 {
-    margin: auto;
+    margin-left: 20px ;
+    margin-right: 10px ;
 }
 /* Following class takes care of social media images */
 .topbar .socialmedia
 {
-    margin: auto;
-    margin-left: 30%;
+    margin-left: 10px;
+    color: #94999f;
+    margin-right: 10px;
 }
 /* Following class takes care of image & login  */
 .topbar .login
 {
-    margin: auto;
-    padding-left: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
     border-left: 1px solid lightgrey;
 }
 /* Following class takes care of image & signup */
 .topbar .signup
 {
-    margin: auto;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 /* Following parent class takes care of logo, navigation bar & search image */
 .logonavbarsrch
 {
     margin-top: 1%;
     height: 50px;
-    /* width: 1225px; */
     background-color: white;
-    /* border: 1px solid lightgrey; */
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+}
+.logonavbarsrch ul
+{
+    margin: 0;
+    padding: 0;
+}
+.submenu
+{
+    position: absolute;
+    top:200%;
+    left:0;
+    width: 100px;
+    color: black;
+    background: lightgray;
+    text-align: left;
+    opacity: 0;
+    list-style: none;
+    transition: 1s;
+}
+.logonavbarsrch:hover .submenu 
+{
+    opacity: 1;
+    top:100%;
 }
 /* Following class takes care of logo */
 .logonavbarsrch .logo
@@ -65,8 +90,7 @@
 /* Following class takes care of navigation bar */
 .logonavbarsrch .logonavbar
 {
-    margin: auto;
-    padding-left: 5%;
+    padding-left: 20%;
 }
 /* Following class takes care of li in navigation bar */
 .logonavbarsrch .logonavbar li
@@ -77,23 +101,23 @@
 .logonavbarsrch .logonavbar a
 {
     text-decoration: none;
+    padding-right: 10px;
 }
-.logonavbarsrch .logonavbar .line 
+.underline
 {
     height: 5px;
-    width: 0px;
-    background: #000;
+    width: 0%;
+    background: lightgray;
     position: absolute;
     top:100%;
     left:0;
     transition: 1s;
 }
-/* li:hover .line  */
-.logonavbarsrch.logonavbar li:hover .logonavbarsrch.logonavbar.line
+.logonavbarsrch .logonavbar li:hover .underline
 {
-    width:100%;
+    width: 100%;
 }
-/* Following class takes care of navigation bar */
+/* Following class takes care of search on navigation bar */
 .logonavbarsrch .srch
 {
     margin: auto;
@@ -102,11 +126,11 @@
 .sldr
 {
     height: 697.156px;
-    width: 1225px;
     padding-top: 15px;
     text-align: center;
     background-image: url(https://a6e8z9v6.stackpathcdn.com/traveltour/main4/wp-content/uploads/2019/03/bgtravel.jpg);
     background-position: center top;
+    z-index: 1;
 }
 /* Following class takes care of main title on main slider */
 .sldrmainttl
@@ -129,29 +153,34 @@
 /* Following class takes care of search bar on main slider */
 .srchonsldr
 {
-    height: 9%;
-    width: 62.5%;
     margin: auto;
     margin-top: 5%;
+    height: 9%;
+    width: 50%;
     color: black;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 /* Following class takes care of keywords search on main slider */
 .srchonsldr input
 {
-    margin: auto;
     height: 80%;
-    width: 80%;
+    width: 100%;
     margin-top: 5%;
     margin-left: 10%;
-    text-align: center;    
+    text-align: center;
+    border: none;
+    
+}
+.srchonsldr input:focus
+{
+    outline: none;
 }
 /* Following class takes care of duration & destination search on main slider */
 .srchonsldr select
 {
-    margin: auto;
     height: 80%;
     width: 100%;
     margin-top: 7%;
@@ -160,17 +189,19 @@
 }
 .srchonsldr btn
 {
-    margin: auto;
-    text-align: center;    
+    background-color: #f97150;
 }
 /* Following parent class takes care of destination, guarantee and supoort section at the end of main slider */
 .desteeport
 {
     margin-left: 5%;
+    margin-top: -2.5%;
+    height: 150px;
     width: 80%;
     background: linear-gradient(rgba(249, 114, 81, 1), rgba(255, 152, 108, 1));
     display: flex;
     flex-wrap: wrap;
+    z-index: 2;
 }
 /* Following class takes care of destination section */
 /* All h3 classes for desteeport can be merged into one. */
@@ -181,12 +212,22 @@
     flex-wrap: wrap;
     padding-right: 1.25%;
 }
-.desteeport .destination h3
+.desteeport h3
+{
+    margin-top: 1%;
+    padding-bottom: 1%;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+}
+.desteeport p
 {
     margin-top: 1%;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 2px;
+    color: white;
 }
 /* Following class takes care of guarantee section */
 .desteeport .guarantee
@@ -195,26 +236,12 @@
     display: flex;
     flex-wrap: wrap;
 }
-.desteeport .guarantee h3
-{
-    margin-top: 1%;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
 /* Following class takes care of support section */
 .desteeport .support
 {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-}
-.desteeport .support h3
-{
-    margin-top: 1%;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
 }
 /* Following class takes care of popular destination section */
 .populardestination
@@ -546,20 +573,23 @@
     width: 100%;
     background-color: white;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
+}
+.recentarticle .ttls
+{
     position: relative;
 }
 .recentarticle h3
 {
     width: 100%;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 350;
     letter-spacing: 0px;
     text-transform: none;
     color: white;
     position: absolute;
     top: 80%;
-    left: 0%;
+    left: 5%;
 }
 .recentarticle a
 {
@@ -567,7 +597,7 @@
     text-decoration: none;
     position: absolute;
     top: 90%;
-    left: 2%;
+    left: 7%;
 }
 .recentarticle .author
 {
@@ -575,7 +605,7 @@
     text-decoration: none;
     position: absolute;
     top: 90%;
-    left: 9%;
+    left: 40%;
 }
 /* Following parent class takes care of feature title section */
 .featurettl

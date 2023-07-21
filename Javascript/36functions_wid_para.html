@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Name: <input type="text" id="nm" 
+    onblur="validateForm(nm,nmErr)">
+    <span id="nmErr"></span>
+    
+    <br><br>
+
+    Mobile: <input type="text" id="mb"
+     onblur="validateForm(mb,mbErr)">
+    <span id="mbErr"></span>
+    <br><br>
+
+
+    <script>
+
+        function validateForm(e,sp)
+        {
+            console.log(e);
+            console.log(sp);
+
+            if(e.value == "")
+            {
+                sp.innerHTML ="*Required...!";
+                sp.style.color ="red";
+                e.style.border ="2px solid red";
+            }
+
+            else 
+            {
+                sp.innerHTML ="";
+                e.style.border ="2px solid green";
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

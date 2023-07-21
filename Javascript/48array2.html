@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="t" class="t">hello123</h1>
+    <h1 id="t" class="t">hello</h1>
+    <h1 id="t" class="t">hello</h1>
+    <h1 id="t" class="t">hello</h1>
+
+    <script>
+
+        // h1_tag = document.getElementById('t');
+        h1_tag =document.getElementsByClassName('t');
+
+        console.log(h1_tag);
+
+        // h1_tag[0].style.color ="red";
+        // h1_tag[1].style.color ="red";
+        // h1_tag[2].style.color ="red";
+        // h1_tag[3].style.color ="red";
+
+        for(key=0;key<h1_tag.length;key++)
+            {
+                if(key%2 ==0)
+                {
+                    h1_tag[key].style.color ="red";
+                }
+                else 
+                {
+                    h1_tag[key].style.color ="green";
+                }
+            }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <p class="x" id="x123">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus hic sunt nulla nesciunt quia facere illo. Quibusdam velit commodi hic culpa nisi, adipisci sunt. Similique enim cum cupiditate voluptas explicabo?
+    </p>
+
+    <button class="b1">Hide</button>
+
+    <button id="b1">Show</button>
+
+     <button id="b2">Hide-Show</button>
+
+     <script>
+
+    // var  a = $('.x');
+
+    // $('.x')
+    // $("#x")
+    // $('p')
+
+    $(document).ready(function(){
+
+
+
+        $('.b1').click(()=>{
+
+        $('p').fadeOut(1000);
+        })
+
+        $('#b1').dblclick(()=>{
+        $('#x123').fadeIn(2000);
+        })
+
+        $("#b2").click(function () {
+
+        $(".x").fadeToggle("fast");
+        })
+
+        // $(document).click(function(){
+        //     $('p').hide();
+        // })
+
+        $('#x123').click(function(){
+
+            $(this).hide();
+        })
+
+    })
+        
+
+      
+   
+
+     </script>
+    
+</body>
+</html>

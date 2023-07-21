@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="t" class="t" name="t">heading 2</h2>
+    <h2 id="t" class="t" name="t">heading </h2>
+    <h2 id="t" class="t" name="t">heading </h2>
+    <h2 id="t" class="t" name="t">heading </h2>
+
+    <script>
+
+        test1 = document.getElementsByClassName('t');
+        console.log(test1);
+
+        test2 = document.getElementsByTagName('h2');
+
+        console.log(test2);
+
+        test3 = document.getElementsByName('t');
+        console.log(test3)
+
+
+        t1 = document.getElementById('t');
+        console.log(t1);
+
+        t2 = document.querySelector('#t');
+        console.log(t2);
+
+        t3 = document.querySelector('.t');
+        console.log(t3);
+
+        test4 = document.querySelectorAll('#t');
+        console.log(test4);
+
+        test5 = document.querySelectorAll('.t');
+        console.log(test5);
+           
+
+
+    </script>
+    
+</body>
+</html>

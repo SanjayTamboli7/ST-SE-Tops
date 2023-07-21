@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="x"></h1>
+
+    <script>
+
+        h1_tag = document.querySelector('.x');
+
+        
+
+        // c = setInterval("count()",10);
+
+        c = setInterval(count,10);
+
+        client=0;
+       
+        function count()
+        {
+            h1_tag.innerHTML = ++client;
+            if(client==50)
+            {
+               clearInterval(c);
+            }
+            
+        }
+       
+       
+
+
+
+    </script>
+    
+</body>
+</html>

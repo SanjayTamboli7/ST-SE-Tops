@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        
+    <style>        
         .nav 
         {
-            /* height: 50px; */
             background: lightblue;
             text-align: center;
             padding: 25px 0;
-            /* line-height: 50px; */
         }
         ul 
         {
@@ -22,10 +19,8 @@
         }
         .menu
         {
-            /* border: 2px solid blue; */
             display: block;
             display: inline;
-            /* padding-right: 50px; */
             margin-right: 20px;
             position: relative;
         }
@@ -34,12 +29,10 @@
             text-decoration: none;
             color: #000;
         }
-
         .submenu a 
         {
             color: #fff;
         }
-
         .submenu 
         {
             position: absolute;
@@ -51,10 +44,8 @@
             opacity: 0;
             /* visibility: hidden; */
             list-style: none;
-
             transition: 1s;
         }
-
         .menu:hover .submenu 
         {
             /* display: block; */
@@ -68,8 +59,14 @@
     <div class="nav">
         <ul>
             <li class="menu"><a href="">Home</a></li>
-            <li  class="menu"><a href="">About</a></li>
-
+            <li  class="menu"><a href="">About</a>
+                <ul class="submenu">
+                    <li><a href="">About 1</a></li>
+                    <li><a href="">About 2</a></li>
+                    <li><a href="">About 3</a></li>
+                    <li><a href="">About 4</a></li>
+                </ul>            
+            </li>
             <li  class="menu">
                 <a href="">Services</a>
                 <ul class="submenu">
@@ -77,13 +74,10 @@
                     <li><a href="">Service 2</a></li>
                     <li><a href="">Service 3</a></li>
                     <li><a href="">Service 4</a></li>
-                </ul>
-            
+                </ul>            
             </li>
-
             <li  class="menu"><a href="">Contact</a></li>
         </ul>
-    </div>
-    
+    </div>    
 </body>
 </html>

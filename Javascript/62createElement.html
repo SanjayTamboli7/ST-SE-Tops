@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="parent">
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p id="para">Para 3</p>
+        <p>Para 4</p>
+        
+    </div>
+
+    <script>
+
+        div_tag = document.getElementById('parent');
+        p3_tag = document.getElementById('para');
+
+       h2_tag =  document.createElement('i');// <h2></h2>
+       h2_txt =  document.createTextNode('Hello This is H2 through JS...!');//Hello This is H2 through JS...!
+
+       h2_tag.append(h2_txt);//<h2>Hello This is H2 through JS...!</h2>
+
+    //    div_tag.append(h2_tag)
+
+    // div_tag.appendChild(h2_tag);
+
+    div_tag.insertBefore(h2_tag,p3_tag)
+
+
+    </script>
+    
+</body>
+</html>

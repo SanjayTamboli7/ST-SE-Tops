@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .q,.a 
+        {
+            border: 2px solid;
+            background: lightcoral;
+        }
+        .a 
+        {
+            display: none;
+        }
+    </style>
+
+    <script src="geeta.js"></script>
+</head>
+<body>
+
+    <div class="q">Question?</div>
+    <div class="a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi veritatis molestiae, ut ducimus dolore aliquid vitae eaque, consequatur officia harum quam! Magni voluptatem sunt corporis aspernatur ab assumenda inventore cum!</div>
+
+    <script>
+        $('.q').click(function(){
+            $('.a').slideToggle(1000);
+        })
+
+        
+    </script>
+    
+</body>
+</html>
