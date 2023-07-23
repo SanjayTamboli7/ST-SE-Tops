@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=\, initial-scale=1.0">
+	<title>Change Class</title>
+	<style>
+		.hide {
+			display: none;
+		}
+
+		.blueColor {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="color: green;">
+		Change Class
+	</h1>
+	
+	<h2>
+		How can the style/class of
+		an element be changed?
+	</h2>
+	
+	<h3>Hide and Show the Para</h3>
+	
+	<p>
+		This platform has been designed
+		for every geek wishing to expand their
+		knowledge, share their knowledge, and is
+		ready to grab their dream job. GFG have
+		millions of articles, live as well
+		as online courses, thousands of tutorials
+		and much more just for the geek inside you.
+	</p>
+	
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
+	<button id="color">Change Color</button>
+
+	<script>
+		const btn_hide = document.getElementById("hide");
+		const btn_show = document.getElementById("show");
+		const btn_color = document.getElementById("color");
+
+		const para = document.querySelector("p");
+		btn_hide.addEventListener("click", function () {
+			para.classList.add("hide");
+		});
+
+		btn_show.addEventListener("click", function () {
+			para.classList.remove("hide");
+		});
+
+		btn_color.addEventListener("click", function () {
+			para.classList.toggle("blueColor");
+		});
+	</script>
+</body>
+</html>

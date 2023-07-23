@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Design Image Slider using jQuery?</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <style>
+      .slider-container {
+         width: 100%;
+         height: 300px;
+         overflow: hidden;
+         position: relative;
+      }
+      .slide {
+         width: 100%;
+         height: 500px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         opacity: 0;
+         transition: opacity 0.5s ease-in-out;
+      }
+      .active {
+         opacity: 1;
+      }
+      .prev,
+      .next {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         font-size: 30px;
+         font-weight: bold;
+         color: white;
+         background-color: rgba(0, 0, 0, 0.5);
+         padding: 10px 15px;
+         border: none;
+         cursor: pointer;
+      }
+      .prev:hover,
+      .next:hover {
+         background-color: rgba(0, 0, 0, 0.8);
+      }
+      .prev {
+         left: 0;
+      }
+      .next {
+         right: 0;
+      }
+      .dots {
+         position: absolute;
+         bottom: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+         display: flex;
+      }
+      .dot {
+         width: 15px;
+         height: 15px;
+         border-radius: 50%;
+         background-color: rgba(255, 255, 255, 0.5);
+         margin: 0 10px;
+         cursor: pointer;
+      }
+      .active-dot {
+         background-color: white;
+      }
+   </style>
+</head>
+<body>
+   <h4>How to Design Image Slider using jQuery?</h4>
+   <div class="slider-container">
+      <div class="slide active">
+         <img src="https://picsum.photos/1200/500?random=1" alt="Slide 1">
+      </div>
+      <div class="slide">
+         <img src="https://picsum.photos/1200/500?random=2" alt="Slide 2">
+      </div>
+      <div class="slide">
+         <img src="https://picsum.photos/1200/500?random=3" alt="Slide 3">
+      </div>
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+      <div class="dots">
+         <div class="dot active-dot"></div>
+         <div class="dot"></div>
+         <div class="dot"></div>
+      </div>
+   </div>
+   <script>
+      $(document).ready(function () {
+         let slideCount = $('.slide').length;
+         let currentIndex = 0;
+         $('.slide').hide();
+         $('.active').show();
+         $('.prev').on('click', function () {
+            currentIndex--;
+            if (currentIndex < 0) {
+               currentIndex = slideCount - 1;
+            }
+            showSlide(currentIndex);
+         });
+         $('.next').on('click', function () {
+            currentIndex++;
+            if (currentIndex >= slideCount) {
+               currentIndex = 0;
+            }
+            showSlide(currentIndex);
+         });
+         $('.dot').on('click', function () {
+            currentIndex = $(this).index();
+            showSlide(currentIndex);
+         });
+         function showSlide(index) {
+            $('.slide').hide().removeClass('active');
+            $('.dot').removeClass('active-dot');
+            $('.slide').eq(index).show().addClass('active');
+            $('.dot').eq(index).addClass('active-dot');
+         }
+         showSlide(currentIndex);
+      });
+   </script>
+</body>
+</html>

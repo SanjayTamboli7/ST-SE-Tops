@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Change CSS</title>
+</head>
+    <body>    
+        	<h1 style="color: green;">
+		Change CSS
+	</h1>
+
+	<h2>
+		How can the style/class of
+		an element be changed?
+	</h2>
+
+	<b>Validate Pan Number</b>
+
+	<input type="text" id="pan" />
+	<p></p>
+	<button id="submit">Validate</button>
+
+	<script>
+		const btn = document.getElementById("submit");
+		btn.addEventListener("click", function () {
+			const pan = document.getElementById("pan").value;
+			const para = document.querySelector("p");
+
+			let regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/;
+			if (regex.test(pan.toUpperCase())) {
+				para.innerHTML = "Hurrey It's correct";
+
+				// Inline style
+				para.style.color = "green";
+			} else {
+				para.innerHTML = "OOps It's wrong!";
+
+				// Inline style
+				para.style.color = "red";
+			}
+		});
+	</script>
+
+    </body>
+</html>

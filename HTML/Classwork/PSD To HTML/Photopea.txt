@@ -1,0 +1,4 @@
+move tool for images
+eye droppers for colors
+text tool for text getting
+ruler for height and width

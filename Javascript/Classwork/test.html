@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fs = require('fs')
+        let fInput = "You are reading the content from Tutorials Point"
+        fs.writeFile('tp.txt', fInput, (err) => {
+        if (err) throw err;
+        else{
+            console.log("The file is updated with the given data")
+        }
+        })       
+        
+        const fs = require('fs')
+        fs.readFile('tp.txt', (err, inputD) => {
+        if (err) throw err;
+            console.log(inputD.toString());
+        })        
+    </script>
+</body>
+</html>
