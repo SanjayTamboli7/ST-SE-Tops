@@ -58,3 +58,216 @@ body
     top: 0;
     left: 100%;
 }
+.vetarinarian
+{
+    height: 500px;
+    width: 100%;
+    background-color: #fcc302;
+    display: flex;
+}
+.vetarinarian .leftext
+{
+    width: 65%;    
+}
+.vetarinarian .leftext h1
+{
+    font-size: 33px;
+    color: white;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.vetarinarian .leftext p
+{
+    font-size: 16px;
+    color: white;
+    margin-left: 10%;
+}
+.vetarinarian .leftext button
+{
+    height: 30px;
+    width: 100px;    
+}
+.vetarinarian .rightimage
+{   
+    height: 200px;
+    width: 32%;
+    margin-top: 5%;
+}
+.love4animal
+{
+    height: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+}
+.love4animal .leftext
+{
+    width: 65%;    
+}
+.love4animal .leftext h1
+{
+    font-size: 33px;
+    color: #313243;
+    margin-top: 10%;
+    margin-left: 10%;   
+}
+.love4animal .leftext p
+{
+    font-size: 16px;
+    color: #313243;
+    margin-left: 10%;
+}
+.love4animal .leftext button
+{
+    height: 30px;
+    width: 100px;    
+    margin-left: 10%;
+}
+.love4animal .rightimage
+{
+    margin-top: 5%;
+    position: relative;
+}
+.love4animal .rightimage .playicon
+{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.love4animal .rightimage .lyr
+{
+    position: absolute;
+    height: 200px;
+    width: 32%;
+    color: #ead06e;
+}
+.vvdcare
+{
+    height: 550px;
+    width: 100%;
+    background-color: #fcc302;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.vvdcare h1
+{
+    width: 100%;
+    color: #ffffff;
+    position: absolute;
+    top: 1%;
+    left: 40%;
+}
+.vvdcare p
+{
+    color: #ffffff;
+    position: absolute;
+    top: 9%;
+    left: 10%;
+}
+.vvdcare .divimages
+{
+    height: 52.5%;
+    width: 70%;
+    position:absolute;
+    top: 20%;
+    left: 15%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;    
+}
+.vvdcare .divimages .divhorizontal
+{
+    height: 87%;
+    width: 25%;  
+    margin: auto;  
+    position: relative;
+}
+.vvdcare .divimages .divhorizontal .imgs 
+{
+    height: 200px;
+    width: 175px;
+}
+.vvdcare .divimages .divhorizontal h3
+{
+    text-align: center;
+    color: #ffffff;
+}
+.vvdcare .divimages .divhorizontal h4
+{
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+}
+.vvdcare .divimages .divhorizontal button
+{
+    height: 35px;
+    width: 100px;
+    background-color: #00bec9;
+    color: #ffffff;
+    border: none;
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    border-radius: 25%;
+    /* margin-left: 10%; */
+}
+.vvdcare .divimages .divhorizontal p
+{
+    position: absolute;
+    top: 110%;
+    left: 2%;
+}
+.loveforanimal
+{
+    height: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+}
+.loveforanimal .leftimage
+{
+    width: 30%;
+    margin: auto;  
+    margin-left: 10%;  
+    position: relative;
+}
+.loveforanimal .leftimage .playicon
+{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.loveforanimal .leftimage .lyr
+{
+    position: absolute;
+    height: 200px;
+    width: 32%;
+    color: #ead06e;
+}
+.loveforanimal .rightext
+{
+    margin-top: 5%;
+    position: relative;
+}
+.loveforanimal .rightext h1
+{
+    font-size: 33px;
+    color: #313243;
+    margin-top: 10%;
+    margin-left: 10%;   
+}
+.loveforanimal .rightext p
+{
+    font-size: 16px;
+    color: #313243;
+    margin-left: 10%;
+}
+.loveforanimal .rightext button
+{
+    height: 30px;
+    width: 100px;    
+    margin-left: 80%;
+}
