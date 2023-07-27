@@ -150,6 +150,10 @@ body
     flex-wrap: nowrap;
     position: relative;
 }
+.vvdcare .tvteam
+{
+    background-color: #ffffff;
+}
 .vvdcare h1
 {
     width: 100%;
@@ -270,4 +274,75 @@ body
     height: 30px;
     width: 100px;    
     margin-left: 80%;
+}
+/* The VT Care team */
+.tvteam
+{
+    height: 550px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.tvteam h1
+{
+    width: 100%;
+    color: #313243;
+    position: absolute;
+    top: 1%;
+    left: 40%;
+}
+.tvteam p
+{
+    color: #313243;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+.tvteam .divimages
+{
+    height: 52.5%;
+    width: 70%;
+    position:absolute;
+    top: 20%;
+    left: 15%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;    
+}
+.tvteam .divimages .divhorizontal
+{
+    height: 87%;
+    width: 25%;  
+    margin: auto;  
+    position: relative;
+}
+.tvteam .divimages .divhorizontal .imgs 
+{
+    height: 200px;
+    width: 175px;
+}
+.tvteam .divimages .divhorizontal h3
+{
+    text-align: center;
+    color: #313243;
+}
+.tvteam .divimages .divhorizontal h4
+{
+    text-align: center;
+    color: #313243;
+    position: absolute;
+    top: 80%;
+    left: 12%;
+}
+.tvteam .divimages .divhorizontal p
+{
+    position: absolute;
+    top: 90%;
+    left: 15%;
+}        
+.tvteam .divimages .divhorizontal .socialmedia
+{
+    
 }
