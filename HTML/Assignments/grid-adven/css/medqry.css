@@ -1,0 +1,15 @@
+@media only screen and (max-width:500px)
+{
+    .loadimage
+    {
+        width: 50%;
+    }
+    .banner
+    {
+        width: 50%;
+    }
+    .fonemailsocmedbuknow
+    {
+        width: 50%;
+    }
+}
