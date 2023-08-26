@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="t">Heading</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit consequuntur veniam unde fuga doloremque consequatur eligendi perferendis iure modi ex esse architecto saepe quis deserunt vel eveniet laborum, corporis iusto.
+    </p>
+
+    <a href="h.html">LINK</a>
+
+    <img src="x.jpg" alt="No Image" id="img1">
+
+    <input type="text" value="InputHello" id="inp">
+
+    
+
+    <script>
+      let input_tag = document.getElementById('inp');
+
+      let img_tag = document.getElementById('img1');
+
+      
+      let asdas = document.getElementById('t');
+
+      img_tag.alt= input_tag.value;
+      console.log(img_tag.alt)
+
+      asdas.innerHTML = img_tag.alt;
+
+
+
+    </script>
+</body>
+</html>

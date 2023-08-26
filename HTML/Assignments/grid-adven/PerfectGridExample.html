@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfect Grid Example</title>
+        <style>
+            .whatweofferow
+            {
+                display: grid;
+                grid-template-rows: max-content  max-content;
+                grid-template-columns: max-content max-content max-content max-content;
+                border: 2px solid coral;
+            }
+            .whatweoffercol
+            {
+                border: 2px solid yellow;
+            }
+            .whatweofferowincol
+            {
+                display: grid;
+                grid-template-rows: max-content max-content;
+            }
+            .whatweoffercolinrow
+            {
+                display: grid;
+                grid-template-columns: max-content max-content;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="whatweofferow">
+            <div class="whatweoffercol">row 1 Image 1</div>
+            <div class="whatweoffercol whatweofferowincol">
+                <div>row1 col1 r1</div>
+                <div>row1 col2 r2</div>
+            </div>
+            <div class="whatweoffercol">row 1 Image 2</div>
+            <div class="whatweoffercol whatweofferowincol">
+                <div>row1 col4 r1</div>
+                <div>row1 col4 r2</div>
+            </div>
+        </div>
+        <div class="whatweofferow">
+            <div class="whatweoffercol">row 2 Image 1</div>
+            <div class="whatweoffercol">
+                <div class="whatweoffercolinrow">row2 col a</div>
+                <div class="whatweoffercolinrow">row2 col b</div>
+            </div>
+            <div class="whatweoffercol">row 2 Image 2</div>
+            <div class="whatweoffercol whatweofferowincol">
+                <div>row1 col4 r1</div>
+                <div>row1 col4 r2</div>
+            </div>
+        </div>
+</body>
+</html>

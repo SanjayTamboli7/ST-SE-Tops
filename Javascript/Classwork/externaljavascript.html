@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Javascript Written in External File</title>
+</head>
+<body>
+
+    <h2>Demo External JavaScript</h2>
+
+    <p id="demo">An Original Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Change Paragraph</button>
+
+    <button type="button" onclick="displayvalue()">Show Sum</button>
+
+    <button type="button" onclick="windowalert()">Window Alert</button>
+
+    <button type="button" onclick="consolelog()">Console Log</button>
+
+    <button onclick="window.print()">Print This Page</button>
+
+    <button onclick="multiply(21, 21)">Multiply 2 Values</button>
+
+    <button onclick="simplealert()">Simple Alert</button>
+
+    <p>This example links to "myScript.js".</p>
+
+    <p>(myFunction is stored in "myScript.js")</p>
+
+    <script src="js/myjavascript.js"></script>
+
+</body>
+</html>

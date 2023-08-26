@@ -1,1 +1,3 @@
 all image background color hex code #999587
+
+input[type=button]

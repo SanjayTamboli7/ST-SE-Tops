@@ -1,0 +1,308 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+.loadimage
+{
+    margin-left: 30%;
+    margin-top: 20%;
+    color: black;
+    z-index: 999991; 
+    text-transform: uppercase; 
+    transform: translateY(-50%); 
+    max-width: clamp(6.25rem, 3.3654rem + 12.8205vw, 18.75rem); 
+    transition-delay: 30s;
+}
+/* Following class for banner */
+.banner
+{
+    height: 650px;
+    /* width: 1340px; */
+    background-image: url(../images/SLider-2-bg-image.jpg);
+    background-size: contain;
+    position: relative;
+    top: 0;
+    left: 0; 
+}
+/* Following class for phone, email Id, social media and book now button */
+.fonemailsocmedbuknow
+{
+    color: #ffffff;
+    position: absolute;
+    top: 1%;
+    left: 1%; 
+    display: grid;   
+    grid-template-columns: max-content max-content;
+}
+.contact
+{
+    padding-left: 5px;
+}
+.contact a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+.socmedbuknow
+{
+    margin-left: 125px;
+    gap: 20%;
+}
+.socmedbuknow input[type=button]
+{
+    height: 20px;
+    width: 80px;
+    color: #ffffff;
+    background-color: orange;
+    border: none;
+    letter-spacing: 1px;
+}
+.horizontaline
+{
+    width: auto;
+    position: absolute;   
+    top: 5%;
+    left: 1%;
+}
+.searchlogincart
+{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    margin: auto;
+    color: #ffffff;
+    gap: 15px;
+}
+.advenlogo
+{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    margin: auto;
+    color: #ffffff;
+}
+.round
+{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    color: #000000;
+    border: 2px solid #ffffff;
+}
+.lettera
+{
+    margin-top: 30%;
+    margin-left: 35%;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+}
+.letterw
+{
+    margin-top: 30%;
+    margin-left: 35%;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 15%;
+    left: 1%;
+}
+.reviveyourself
+{
+    color: #ffffff;
+    font-size: clamp(1.875rem, 1.4423rem + 1.9231vw, 3.75rem);
+    line-height: 1;
+    font-family: cursive;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    letter-spacing: 8px;
+}
+.findyourdestination
+{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    top: 52.5%;
+    left: 6%;
+    color: #ffffff;
+}
+.findyourdestination h1
+{
+    font-size: clamp(2rem, 1.1000rem + 5.0000vw, 8.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    letter-spacing: 8px;
+}
+.yellowfreeline
+{
+    position: absolute;
+    top: 70%;
+    left: 32.5%;
+}
+.talk2nature
+{
+    position: absolute;
+    top: 69%;
+    left: 47.5%;
+    color: #ffffff;
+    font-size: clamp(1.25rem, 1.1635rem + 0.3846vw, 1.625rem);
+}
+.watchvdofrequentravellers
+{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    color: #FF9933;
+    background-color: #000000;
+    gap: 10px;
+}
+.watchvdo
+{
+    margin: auto;
+}
+.watchvdot 
+{
+    margin: auto;
+}
+.frequentravellers
+{
+    margin: auto;
+}
+.letgoround
+{
+    position: absolute;
+    top: 72.5%;
+    left: 80%;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    color: #000000;
+    border: 2px solid #FF9933;
+}
+.letgo 
+{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: #FF9933;
+    font-size: xx-large;
+    font-weight: 600;
+}
+.RejuvenateYourSoul
+{
+    /* margin-top: 2%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: auto;
+    /* width: 1340px; */
+    background-color: #000000;
+}
+.RejuvenateYourSoul .smalltitle h4
+{
+    margin-left: 3%;
+    font-size: x-large;
+    font-family: cursive;
+    font-weight: 600;
+    color: #ffffff;
+}
+.raisewings4journey
+{
+    color: #ffffff;
+}
+.raisewings4journey h4
+{
+    margin-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+}
+.RejuvenateRow
+{
+    padding-bottom: 1%;
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: max-content;
+    /* row-gap: 40%; */
+}
+.RejuvenateRow .Rejuvenatecol
+{
+    margin-left: 5%;
+    grid-template-columns: max-content max-content max-content;   
+    /* column-gap: 10%; */
+}
+.RejuvenateRow .Rejuvenatecol a
+{
+    color: #ffffff;
+    font-size: clamp(1.25rem, 1.1923rem + 0.2564vw, 1.5rem);
+    font-weight: var(--wdtFontWeight_Alt);
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+.RejuvenateRow .Rejuvenatecol .place
+{
+    padding-left: 1%;
+    font-size: clamp(0.625rem, 0.59615rem + 0.1282vw, 0.75rem);
+}
+.RejuvenateRow .Rejuvenatecol a:hover
+{
+    color: #FF9933;
+}
+.whatweoffer
+{
+    height: 675px;
+    /* width: 1340px; */
+    background-image: url(../images/bg-image-banner-home-scaled.jpg);
+    background-size: contain;
+    display: grid;
+    grid-template-rows: max-content;
+    border: 2px solid coral;
+    /* position: relative; */
+}
+/* .whatweofferow
+{
+    display: grid;
+    grid-template-rows: max-content;
+    border: 2px solid coral;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+} */
+.whatweoffer .whatweoffercol
+{
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    border: 2px solid coral;
+}.whatweoffer h2
+{
+    padding-top: 1%;
+    color: #ffffff;
+    /* Precious fonts are copied in font folder. How to enable it? */
+    font-family: cursive;
+    text-align: center;
+}
+.whatweoffer h4
+{
+    /* margin-left: 3%; */
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #ffffff;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}

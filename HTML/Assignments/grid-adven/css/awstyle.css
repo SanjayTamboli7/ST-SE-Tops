@@ -14,15 +14,14 @@
     transform: translateY(-50%); 
     max-width: clamp(6.25rem, 3.3654rem + 12.8205vw, 18.75rem); 
     transition-delay: 30s;
-    position: relative;
 }
 /* Following class for banner */
 .banner
 {
     height: 650px;
-    width: 1340px;
     background-image: url(../images/SLider-2-bg-image.jpg);
-    position: absolute;
+    background-size: contain;
+    position: relative;
     top: 0;
     left: 0; 
 }
@@ -47,7 +46,8 @@
 }
 .socmedbuknow
 {
-    margin-left: 100px;
+    margin-left: 125px;
+    gap: 20%;
 }
 .socmedbuknow input[type=button]
 {
@@ -60,10 +60,828 @@
 }
 .horizontaline
 {
-    width: 1340px;
+    width: auto;
     position: absolute;   
     top: 5%;
     left: 1%;
+}
+.searchlogincart
+{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    margin: auto;
+    color: #ffffff;
+    gap: 15px;
+}
+.advenlogo
+{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    margin: auto;
+    color: #ffffff;
+}
+.round
+{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    color: #000000;
+    border: 2px solid #ffffff;
+}
+.lettera
+{
+    margin-top: 30%;
+    margin-left: 35%;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+}
+.letterw
+{
+    margin-top: 30%;
+    margin-left: 35%;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 15%;
+    left: 1%;
+}
+.reviveyourself
+{
+    color: #ffffff;
+    font-size: clamp(1.875rem, 1.4423rem + 1.9231vw, 3.75rem);
+    line-height: 1;
+    font-family: cursive;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    letter-spacing: 8px;
+}
+.findyourdestination
+{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    top: 52.5%;
+    left: 6%;
+    color: #ffffff;
+}
+.findyourdestination h1
+{
+    font-size: clamp(2rem, 1.1000rem + 5.0000vw, 8.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    letter-spacing: 8px;
+}
+.yellowfreeline
+{
+    position: absolute;
+    top: 70%;
+    left: 32.5%;
+}
+.talk2nature
+{
+    position: absolute;
+    top: 69%;
+    left: 47.5%;
+    color: #ffffff;
+    font-size: clamp(1.25rem, 1.1635rem + 0.3846vw, 1.625rem);
+}
+.watchvdofrequentravellers
+{
+    position: absolute;
+    top: 80%;
+    left: 5%;
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: max-content max-content max-content;
+    color: #FF9933;
+    background-color: #000000;
+    gap: 10px;
+}
+.watchvdo
+{
+    margin: auto;
+}
+.watchvdot 
+{
+    margin: auto;
+}
+.frequentravellers
+{
+    margin: auto;
+}
+.letgoround
+{
+    position: absolute;
+    top: 72.5%;
+    left: 80%;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    color: #000000;
+    border: 2px solid #FF9933;
+}
+.letgo 
+{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: #FF9933;
+    font-size: xx-large;
+    font-weight: 600;
+}
+.RejuvenateYourSoul
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: auto;
+    background-color: #000000;
+}
+.RejuvenateYourSoul .smalltitle h4
+{
+    margin-left: 40%;
+    font-size: x-large;
+    font-family: cursive;
+    font-weight: 600;
+    color: #ffffff;
+}
+.raisewings4journey
+{
+    color: #ffffff;
+}
+.raisewings4journey h4
+{
+    margin-left: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+}
+.RejuvenateRow
+{
+    padding-bottom: 1%;
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: max-content;
+}
+.RejuvenateRow .Rejuvenatecol
+{
+    margin-left: 5%;
+    grid-template-columns: max-content max-content max-content;   
+}
+.RejuvenateRow .Rejuvenatecol a
+{
+    color: #ffffff;
+    font-size: clamp(1.25rem, 1.1923rem + 0.2564vw, 1.5rem);
+    font-weight: var(--wdtFontWeight_Alt);
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+.RejuvenateRow .Rejuvenatecol .place
+{
+    padding-left: 1%;
+    font-size: clamp(0.625rem, 0.59615rem + 0.1282vw, 0.75rem);
+}
+.RejuvenateRow .Rejuvenatecol a:hover
+{
+    color: #FF9933;
+}
+.whatweoffer
+{
+    height: 675px;
+    background-image: url(../images/bg-image-banner-home-scaled.jpg);
+    background-size: contain;
+}
+.whatweoffer h2
+{
+    padding-top: 1%;
+    color: #000000;
+    /* Precious fonts are copied in font folder. How to enable it? */
+    font-family: cursive;
+    text-align: center;
+}
+.whatweoffer h3
+{
+    color: #000000;
+}
+.whatweoffer h4
+{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #000000;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+.whatweofferow
+{
+    margin: auto;
+    margin-top: 5%;
+    margin-left: 25%;
+    display: grid;
+    color: #ffffff;
+    grid-template-rows: max-content  max-content;
+    grid-template-columns: max-content max-content max-content max-content;
+}
+.whatwefollowrow h4
+{
+    font-size: 20px;
+}
+.whatweoffercol
+{
+    margin-top: auto;
+    margin-left: 5px;
+    border: none;
+}
+.whatweofferowincol
+{
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+.whatweoffercolinrow
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+.whatweofferlastline
+{
+    margin-top: 10%;
+    margin-left: 27%;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    column-gap: 10px;
+    color: black;
+    align-items: center;
+}
+.whatweofferlastline input[type=button]
+{
+    height: 40px;
+    width: 150px;
+    color: #ffffff;
+    background-color: orange;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5%;    
+}
+.phonemail2lines
+{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    row-gap: 5px;
+    color: #ffffff;
+}
+.whatweofferlastline .imgsize
+{
+    height: 35px;
+}
+.dedtitles
+{
+    background-color: #000000;
+    color: #ffffff;
+}
+.dedtitles h2
+{
+    padding-top: 1%;
+    color: #ffffff;
+    /* Precious fonts are copied in font folder. How to enable it? */
+    font-family: cursive;
+    text-align: center;
+}
+.dedtitles h4
+{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #ffffff;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+.dreamexplorediscover
+{
+    background-color: #000000;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    row-gap: 1%;
+} 
+.twocolumndreamexplorediscover
+{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 0.00390625%;
+    position: relative;
+}
+.twocolumndreamexplorediscover .centertitle
+{
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+.twocolumndreamexplorediscover .centertitle img
+{
+    height: 25px;
+    width: 25px;
+}
+.twocolumndreamexplorediscover .centertitle a 
+{
+    margin: auto;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+.twocolumndreamexplorediscover img 
+{
+    height: 340px;
+    width: 680px;
+    object-fit: contain;
+}
+.twocolumndreamexplorediscover input[type=button]
+{
+    height: 30px;
+    width: 140px;
+    color: #ffffff;
+    background-color: orange;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5%;    
+    position: absolute;
+    top: 100%;
+    left: 5%;
+}
+.twocolumndreamexplorediscover input[type=button]:hover
+{
+    background-color: #000000;
+}
+.threecolumndreamexplorediscover
+{
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    column-gap: 11px;
+    margin: auto;
+    position: relative;
+}
+.threecolumndreamexplorediscover .centertitle
+{
+    color: #ffffff;
+    position: absolute;
+    top: 42.5%;
+    left: 12.5%;
+}
+.threecolumndreamexplorediscover .centertitle img
+{
+    height: 25px;
+    width: 25px;
+}
+.threecolumndreamexplorediscover .centertitle a 
+{
+    margin: auto;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: xx-large;
+}
+.threecolumndreamexplorediscover img
+{
+    margin-top: 5%;
+    border: none;
+    height: 300px;
+    width: 415px;
+    object-fit: cover;
+}
+.threecolumndreamexplorediscover input[type=button]
+{
+    height: 30px;
+    width: 140px;
+    color: #ffffff;
+    background-color: orange;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5%;    
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+.threecolumndreamexplorediscover input[type=button]:hover
+{
+    background-color: #000000;
+}
+/* Create Unforgettable Memories Section starts here */
+.creatememory
+{
+    background-color: #000000;
+    /* margin-left: 3%; If you enable this then white border will show up.*/
+    height: 675px;
+    /* width: 97%; */
+    background-image: url(../images/bg-for-video-banner-home-2-scaled.jpg);
+    background-size: cover;
+    /* border: 100% solid #000000; */
+}
+.creatememory h1
+{
+    padding-top: 2%;
+    margin-left: 50%;
+    color: #ffffff;
+    text-align: left;
+    font-size: 55px;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 700;
+}
+.creatememory p 
+{
+    padding-top: 2%;
+    color: #ffffff;
+    margin-left: 50%;
+}
+.creatememory input[type=button]
+{
+    height: 40px;
+    width: 200px;
+    margin-top: 5%;
+    margin-left: 50%;
+    color: #ffffff;
+    background-color: orange;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5%;    
+}
+.creatememory input[type=button]:hover
+{
+    background-color: #000000;
+}
+.clientservicevideo
+{
+    margin-top: 5%;
+    margin-left: 50%;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content max-content max-content;
+    column-gap: 20px;
+    color: #ffffff;
+}
+.clientservicevideorowincol
+{
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+.clientservicevideo a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+.hpptitles
+{
+    background-color: #000000;
+    color: #ffffff;
+}
+.hpptitles h2
+{
+    color: #ffffff;
+    /* Precious fonts are copied in font folder. How to enable it? */
+    font-family: cursive;
+    text-align: center;
+}
+.hpptitles h4
+{
+    color: #ffffff;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+.handpickproduct
+{
+    background: #000000;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-template-columns: max-content max-content max-content max-content;
+    row-gap: 5px;
+    column-gap: 20px;
+    color: #ffffff;
+}
+.hppimage
+{
+    margin-top: 10%;
+    margin-left: 15%;
+    height: 345px;
+    width: 300px; 
+    background: gray;   
+}
+.productdetail
+{
+    background-color: #000000;
+    margin-left: 15%;
+}    
+.productname
+{
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.productdetail .imaje
+{
+    height: 15px;
+    width: 15px;
+}
+.productname:hover
+{
+    color: orange;
+}
+.bookadventure
+{
+    padding-top: 5%;
+    padding-left: 3%;
+    background-color: #000000;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content;
+}
+.mobilecircle
+{
+    color: #ffffff;
+    /* Original size
+    height: 1024;
+    width: 722; 
+    */
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+}
+.mobilecircle img
+{
+    height: 600px; 
+    width: 400px; 
+    text-align: center;
+}
+.textdata
+{
+    background-color: #555555;
+    height: 600px;
+    width: 600px;
+}
+.bookadventure h2
+{
+    padding-top: 3%;
+    color: #ffffff;
+    /* Precious fonts are copied in font folder. How to enable it? */
+    font-family: cursive;
+    text-align: center;
+}
+.bookadventure h4
+{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    color: #ffffff;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+.bookadventure p
+{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 75%;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.textdata .imagedata
+{
+    margin-top: 5%;  
+    margin-left: 12.5%;  
+    height: 50px;
+    width: 150px;
+}
+/* Travel related blog (trb) section starts */
+.trbtitles
+{
+    background-color: #000000;
+    color: #ffffff;
+}
+.trbtitles h2
+{
+    padding-top: 3%;
+    color: #ffffff;
+    /* Precious fonts are copied in font folder. How to enable it? */
+    font-family: cursive;
+    text-align: center;
+}
+.trbtitles h4
+{
+    padding-top: 3%;
+    color: #ffffff;
+    font-size: clamp(1rem, .5500rem + 2.5000vw, 4.00rem);
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 1000;
+    text-align: center;
+}
+.trbrow 
+{
+    padding-top: 3%;
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content max-content max-content;
+    column-gap: 1%;
+}
+.trbcol
+{
+    color: #ffffff;    
+    position: relative;
+}
+.trbcol .trbimage
+{
+    height: 500px;
+    width: 325px;
+}
+.calendar 
+{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 1%;
+    left: 80%;
+}
+.trbimagetext
+{
+    color: yellow;
+    font-size: xx-large;
+    font-weight: 100;
+    text-transform: uppercase;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+}
+.trbimagetext:hover
+{
+    color: orangered;
+}
+.readmore 
+{
+    color: yellow;
+    font-size: medium;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.readmore:hover
+{
+    color: orangered;
+}
+/* Hike boat & Hill section starts here */
+.hikeboathill
+{
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content max-content;
+    column-gap: 1%;
+}
+.hikeboathillcol
+{
+    margin: auto;
+    position: relative;
+}
+.hikeboathillimage 
+{
+    height: 550px;
+    width: 440px;
+}
+.hikeboathillsmallimage
+{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 35%;
+    left: 80%;
+}
+.hikeboathilltitle
+{
+    color: coral;
+    font-size: xx-large;
+    font-weight: 100;
+    text-transform: uppercase;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+}
+.hikeboathilltext
+{
+    color: coral;
+    font-size: large;
+    font-weight: 100;
+    text-transform: uppercase;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+}
+.lastsection
+{
+    height: 675px;
+    background-image: url(../images/footer2-bg.jpg);    
+    background-size: cover;
+    position: relative;
+}
+.lastsectionrow1
+{
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    column-gap: 15px;
+    position: absolute;
+    top: 3%;
+    left: 12.5%;
+}
+.lastsectionrow2
+{
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    column-gap: 70px;
+    position: absolute;
+    top: 50%;
+    left: 12.5%;
+}
+.lastsectioncol
+{
+    border: none;
+}
+.lastsectioncol a
+{
+    color: #ffffff;
+    font-size: large;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.lastsectioncol .lscimage
+{
+    height: 50px; 
+    width: 200px; 
+    text-align: center;
+}
+.lastsectioncol .socialmedia
+{
+    font-size: large;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.lastsectioncol .socialmedia .smimage
+{
+    height: 25px;
+    width: 25px;
+}
+.bottomline1
+{
+    color: grey;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+}
+.addressphone
+{
+    color: #ffffff;
+    font-size: Large;
+    font-weight: 500;
+    position: absolute;
+    top: 75%;
+    left: 12%;
+}
+.bottomline2
+{
+    color: grey;
+    position: absolute;
+    top: 77.5%;
+    left: 12%;
 }
