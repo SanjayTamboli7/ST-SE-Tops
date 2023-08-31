@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Various Operators</title>
+</head>
+<body>
+        <h1>JavaScript Assignments</h1>
+        <h2>Simple Assignment</h2>
+        <h3>The = Operator</h3>        
+        <p id="AddNo"></p>      
+        <p id="SubNo"></p>  
+        <p id="MulNo"></p>  
+        <p id="DivideNo"></p>  
+        <p id="Remainder"></p>  
+        <p id="ExponentNo"></p>  
+        <p id="AddWord"></p>      
+        <p id="AddWord2No"></p>
+        <p id="InitBig"></p>
+        <button onclick="AddNos()">Add 2 Numbers</button>
+        <button onclick="SubtractNos()">Subtract 2 Numbers</button>
+        <button onclick="MultiplyNos()">Multiply 2 Numbers</button>
+        <button onclick="DivideNos()">Divide 2 Numbers</button>
+        <button onclick="Remainder()">Remainder Of Numbers</button>
+        <button onclick="Exponent()">Exponential Numbers</button>
+        <button onclick="AddWords()">Add 2 Words</button>
+        <button onclick="AddWord2No()">Add Word To No</button>
+        <button onclick="InitBig()">Big Init</button>
+        <script>
+            function AddNos()
+                {
+                    let y = 50
+                    let x = 10 + y;
+                    document.getElementById("AddNo").innerHTML = "Value of x is: " + x;
+                }
+            function SubtractNos()
+                {
+                    let x = 10;
+                    x -= 5;
+                    document.getElementById("SubNo").innerHTML = "Value of x is: " + x;
+                }
+            function MultiplyNos()
+                {
+                    let x = 10;
+                    x *= 5;
+                    document.getElementById("MulNo").innerHTML = "Value of x is: " + x;
+                }
+            function DivideNos()
+                {
+                    let x = 10;
+                    x /= 5;
+                    document.getElementById("DivideNo").innerHTML = "Value of x is: " + x;
+                }
+                function Remainder()
+                {
+                    let x = 10;
+                    x %= 5;
+                    document.getElementById("Remainder").innerHTML = "Value of x is: " + x;
+                }
+            function Exponent() 
+                {
+                    let x = 10;
+                    x **= 5;
+                    document.getElementById("ExponentNo").innerHTML = "Value of x is: " + x;
+                }
+            function AddWords()
+                {
+                    let text = "Hello";
+                    text += " World";
+                    document.getElementById("AddWord").innerHTML = text;
+                }
+            function AddWord2No()
+                {
+                    let text = "Hello ";
+                    text += 16 + 4;
+                    document.getElementById("AddWord2No").innerHTML = text;
+                }
+            function InitBig()                
+                {
+                    let x = BigInt("123456789012345678901234567890");
+                    document.getElementById("InitBig").innerHTML = x; 
+                }
+        </script>    
+    </body>    
+</html>

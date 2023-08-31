@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Enter Choice : <input id="inp" onkeyup="T()"/>
+    <b id="res"></b>
+<script>
+
+   function T()
+   {
+    var ch = document.getElementById('inp');
+    var b = document.getElementById('res');
+
+    var choice= ch.value;//+ - * 
+    var x=3,y=2;
+    
+    switch(choice)
+    {
+        case '+': b.innerHTML = ("Sum =" + (x+y));
+        break;
+
+        case '-': b.innerHTML = ("Sub =" + (x-y));
+        break;
+
+        case '*': b.innerHTML = ("Mul =" + (x*y));
+        break;
+
+        case '/': b.innerHTML = ("Div =" + (x/y));
+        break;
+
+        case '%':b.innerHTML = ("Mod =" + (x%y));
+        break;
+
+        default: b.innerHTML = ("Invalid case...!");
+        break;
+    }
+   }
+
+  
+
+   
+    
+</script>
+</body>
+</html>

@@ -9,5 +9,12 @@ https://www.w3schools.com/js/js_const.asp
 https://www.w3schools.com/js/js_operators.asp
 https://www.w3schools.com/js/js_arithmetic.asp
 https://www.w3schools.com/js/js_datatypes.asp
-https://www.w3schools.com/js/js_functions.asp (start with this page)
-https://www.w3schools.com/js/js_functions.asp
+https://www.w3schools.com/js/js_functions.asp 
+https://www.w3schools.com/js/js_objects.asp
+https://www.w3schools.com/js/js_events.asp
+https://www.w3schools.com/js/js_string_methods.asp
+https://www.w3schools.com/js/js_string_search.asp
+https://www.w3schools.com/js/js_string_search.asp
+https://www.w3schools.com/js/js_string_templates.asp
+https://www.w3schools.com/js/js_number_methods.asp
+https://www.w3schools.com/js/js_number_properties.asp (start with max value on this page)

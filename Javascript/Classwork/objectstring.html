@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String As An Object</title>
+</head>
+    <body>
+        <h2>Never Create Strings as Objects</h2>
+        <p>Strings and objects cannot be safely compared.</p>  
+        <p id="x"></p>
+        <p id="y"></p>
+        <p id="cond1"></p>    
+        <p id="cond2"></p>    
+        <p id="cond3"></p>    
+        <script>
+            let x = "John";        // x is a string
+            let y = new String("John");  // y is an object
+            let z = new String("John");  // y is an object
+            document.getElementById("x").innerHTML = x;
+            document.getElementById("y").innerHTML = y;
+            document.getElementById("cond1").innerHTML = "Text John == Object John ==>" + (x==y);
+            document.getElementById("cond2").innerHTML = "Text John === Object John ==>" + (x===y);
+            document.getElementById("cond3").innerHTML = "Object John === Object John ==>" + (z===y);
+        </script>    
+    </body>
+</html>

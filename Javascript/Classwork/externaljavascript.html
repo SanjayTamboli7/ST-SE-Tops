@@ -4,32 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call Javascript Written in External File</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-spacing: 5px;
+            font-size: large;
+        }
+        .clstd
+        {
+            height: auto; 
+            width: 335px;
+            align-items: center;
+            border: 1px solid black;
+        }  
+        .skroll
+        {
+            height: 25px; 
+            overflow: auto;
+        }
+    </style>
 </head>
-<body>
-
-    <h2>Demo External JavaScript</h2>
-
-    <p id="demo">An Original Paragraph.</p>
-
-    <button type="button" onclick="myFunction()">Change Paragraph</button>
-
-    <button type="button" onclick="displayvalue()">Show Sum</button>
-
-    <button type="button" onclick="windowalert()">Window Alert</button>
-
-    <button type="button" onclick="consolelog()">Console Log</button>
-
-    <button onclick="window.print()">Print This Page</button>
-
-    <button onclick="multiply(21, 21)">Multiply 2 Values</button>
-
-    <button onclick="simplealert()">Simple Alert</button>
-
-    <p>This example links to "myScript.js".</p>
-
-    <p>(myFunction is stored in "myScript.js")</p>
-
-    <script src="js/myjavascript.js"></script>
-
-</body>
+    <body>
+        <table>
+            <tr>
+                <td class="clstd"><h2>Demo External JavaScript</h2></td>
+                <td class="clstd"><a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">Complete JavaScript String Reference.</a></td>
+                <td class="clstd"><a href="https://www.w3schools.com/jsref/jsref_obj_number.asp">Complete JavaScript Number Reference.</a></td>
+            </tr>
+            <tr>
+                <td><p id="demo"       class="clstd">An Original Paragraph</p></td>
+                <td><p id="slc"        class="clstd">Apple, Banana, Kiwi</p></td>
+                <td><p id="substring1" class="clstd">Apple, Banana, Kiwi, Orange, Dragon</p></td>
+                <td><p id="streplace"  class="clstd">Please visit Microsoft Microsoft!</p></td>
+                <td><p id="Joinstr"    class="clstd">Join string</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="myFunction()">Change Paragraph</button></td>
+                <td><button type="button" class="clstd" onclick="displayvalue()">Show Sum</button></td>                
+                <td><button type="button" class="clstd" onclick="windowalert()">Window Alert</button></td>
+                <td><button type="button" class="clstd" onclick="simplealert()">Simple Alert</button></td>                
+                <td><button type="button" class="clstd" onclick="consolelog()">Console Log</button></td>
+            </tr>
+            <tr>
+                <td><p id="Strim"      class="clstd">Spaces Hello World Spaces</p></td>
+                <td><p id="Sartrim"    class="clstd">Spaces Hello World Spaces-Start trim</p></td>
+                <td><p id="Endtrim"    class="clstd">Spaces Hello World Spaces-End trim</p></td>
+                <td><p id="StartPad"   class="clstd">5</p></td>
+                <td><p id="EndPad"     class="clstd">5</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ShowDateTime()">Show Date & Time</button></td>
+                <td><button type="button" class="clstd" onclick="window.print()">Print This Page</button></td>
+                <td><button type="button" class="clstd" onclick="multiply(21, 21)">Multiply 2 Values</button></td>
+                <td><button type="button" class="clstd" onclick="slicedemo('P1')">Text Sclice P1</button></td>
+                <td><button type="button" class="clstd" onclick="slicedemo('M1')">Text Sclice M1</button></td>
+            </tr>
+            <tr>
+                <td><p id="AtChar"     class="clstd">Hello World</p></td>
+                <td><p id="CharCode"   class="clstd">Hello World</p></td>
+                <td><p id="Txt"        class="clstd">Hello World</p></td>
+                <td><p id="IndexOf"    class="clstd">Please locate where 'locate' occurs!</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="slicedemo('M2')">Text Sclice M2</button></td>
+                <td><button type="button" class="clstd" onclick="Stringsub()">Substring String</button></td>
+                <td><button type="button" class="clstd" onclick="streplace()">Replace String</button></td>
+                <td><button type="button" class="clstd" onclick="FirstLetter()">Upper case</button></td>
+                <td><button type="button" class="clstd" onclick="SecondLetter()">Lower case</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="JoinString()">Join Strings</button></td>
+                <td><button type="button" class="clstd" onclick="Striming()">Trim String</button></td>
+                <td><button type="button" class="clstd" onclick="StarTrim()">Start Trim</button></td>
+                <td><button type="button" class="clstd" ="Endtrim()">End Trim</button></td>
+                <td><button type="button" class="clstd" onclick="StartPad()">Start Padding</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="EndPad()">End Padding</button></td>
+                <td><button type="button" class="clstd" onclick="AtChar()">Char At</button></td>
+                <td><button type="button" class="clstd" onclick="CharCode()">Char Code</button></td>
+                <td><button type="button" class="clstd" onclick="Txt()">Text</button></td>
+                <td><button type="button" class="clstd" onclick="OfIndex()">Index Of</button></td>
+            </tr>
+            <tr>
+                <td><p id="LastIndexOf"     class="clstd">Please locate where 'locate' occurs!</p></td>
+                <td><p id="LastIndexOf1"    class="clstd">Please locate where 'locate' occurs!</p></td>
+                <td><p id="search1"         class="clstd">Please search where 'search' occurs!</p></td>
+                <td><p id="search2"         class="clstd">Please search where 'search' occurs!</p></td>
+                <td><p id="match1"          class="clstd">The rain in SPAIN stays mainly in the plain</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="LastOfIndex('No')">Last Index Of 1</button></td>
+                <td><button type="button" class="clstd" onclick="LastOfIndex('Yes')">Last Index Of 2</button></td>
+                <td><button type="button" class="clstd" onclick="srch('No')">search 1</button></td>
+                <td><button type="button" class="clstd" onclick="srch('Yes')">search 2</button></td>
+                <td><button type="button" class="clstd" onclick="mach('1')">Match 1</button></td>
+            </tr>
+            <tr>
+                <td><p id="match2"          class="clstd">The rain in SPAIN stays mainly in the plain</p></td>
+                <td><p id="match3"          class="clstd">The rain in SPAIN stays mainly in the plain</p></td>
+                <td><p id="matchall"        class="clstd skroll">I love cats. Cats are very easy to love with. Cats are very popular.</p></td>
+                <td><p id="include1"        class="clstd">Hello world, welcome to the universe.</p></td>
+                <td><p id="include2"        class="clstd">Hello world, welcome to the universe.</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="mach('2')">Match 2</button></td>
+                <td><button type="button" class="clstd" onclick="mach('3')">Match 3</button></td>
+                <td><button type="button" class="clstd" onclick="mach('4')">Match all</button></td>
+                <td><button type="button" class="clstd" onclick="inklude('1')">Include 1</button></td>
+                <td><button type="button" class="clstd" onclick="inklude('2')">Include 2</button></td>
+            </tr>
+            <tr>
+                <td><p id="StartWith1"        class="clstd">Hello world, welcome to the universe.</p></td>
+                <td><p id="StartWith2"        class="clstd">Hello world, welcome to the universe.</p></td>
+                <td><p id="StartWith3"        class="clstd">Hello world, welcome to the universe.</p></td>
+                <td><p id="StartWith4"        class="clstd">Hello world, welcome to the universe.</p></td>
+                <td><p id="EndWith1"          class="clstd">John Doe</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Start_with('1')">Start With 1</button></td>
+                <td><button type="button" class="clstd" onclick="Start_with('2')">Start With 2</button></td>
+                <td><button type="button" class="clstd" onclick="Start_with('3')">Start With 3</button></td>
+                <td><button type="button" class="clstd" onclick="Start_with('4')">Start With 4</button></td>
+                <td><button type="button" class="clstd" onclick="End_with('1')">End With 1</button></td>
+            </tr>
+            <tr>
+                <td><p id="EndWith2"          class="clstd">Hello world, welcome to the universe.</p></td>
+                <td><p id="BackTick"          class="clstd skroll">Template Literals use back-ticks<br>`He's often called "Johnny"`<br>
+                    `The quick
+                    brown fox
+                    jumps over
+                    the lazy dog`
+                    </p></td>
+                <td><p id="VarSubstitutions"          class="clstd">Hello world, Variable Substitutions...</p></td>
+                <td><p id="ExpSubstitutions"          class="clstd">Hello world, Expression Substitutions...</p></td> 
+                <td><p id="TemplateLiteral"           class="clstd">Hello world, Template Literals...</p></td> 
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="End_with('2')">End With 2</button></td>
+                <td><button type="button" class="clstd" onclick="Back_tick('1')">Back Tick</button></td>
+                <td><button type="button" class="clstd" onclick="VarSubstitution()">Variable Substitutions</button></td>
+                <td><button type="button" class="clstd" onclick="ExpressionSubstitution()">Expression Substitutions</button></td>
+                <td>
+                    <button type="button" class="clstd" id="tlbtn" onclick="TemplateLiteral()">Template Literals</button>
+                    <button type="button" class="clstd" id="gfbtn" onclick="Templateoff()">Go Off</button>
+                </td>
+            </tr>
+            <tr>
+                <td><p id="AutoStrToNo"          class="clstd">let x = "100";let y = "10";</p></td> 
+                <td><p id="StrAddition"          class="clstd">let x = "100";let y = "10";</p></td> 
+                <td><p id="NotANumber"           class="clstd">Checking Not A Number</p></td> 
+                <td><p id="InFinity"             class="clstd">Checking Infinity not working</p></td> 
+                <td><p id="BigInit"              class="clstd">Checking Big Init</p></td> 
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="AutoStrToNo()">Auto conversion from string to number</button></td>
+                <td><button type="button" class="clstd" onclick="StrAddition()">Numeric str addition</button></td>
+                <td><button type="button" class="clstd" onclick="NotANumber()">Check NaN</button></td>
+                <td><button type="button" class="clstd" onclick="InPhinity()">Check Infinity</button></td>
+                <td><button type="button" class="clstd" onclick="Big_Init()">Check Big Init</button></td>
+            </tr>
+            <tr>
+                <td><p id="To_String"              class="clstd">Checking To_String Function</p></td>
+                <td><p id="To_Exponential"         class="clstd">Checking To_Exponential Function</p></td>
+                <td><p id="To_Fixed"               class="clstd">Checking To_Fixed Function</p></td>
+                <td><p id="To_Precision"           class="clstd">Checking To_Precision Function</p></td>
+                <td><p id="Value_Of"               class="clstd">Checking Value_Of Function</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="To_String()">Check ToString Function</button></td>
+                <td><button type="button" class="clstd" onclick="To_Exponential()">Check ToExponential Function</button></td>
+                <td><button type="button" class="clstd" onclick="To_Fixed()">Check ToFixed Function</button></td>
+                <td><button type="button" class="clstd" onclick="To_Precision()">Check ToPrecision Function</button></td>
+                <td><button type="button" class="clstd" onclick="Value_Of()">Check Value_Of Function</button></td>
+            </tr>
+            <tr>
+                <td><p id="Number_Method"               class="clstd">Checking Number Method</p></td>
+                <td><p id="Date_Number1"                class="clstd">Convert Date To Number 1</p></td>
+                <td><p id="Date_Number2"                class="clstd">Convert Date To Number 2</p></td>
+                <td><p id="Parse_Integer"               class="clstd">Parse Integer</p></td>
+                <td><p id="Parse_Float"                 class="clstd">Parse Float</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Number_Method()">Check Number Method</button></td>
+                <td><button type="button" class="clstd" onclick="Date_Number(1)">Convert Date To Number 1</button></td>
+                <td><button type="button" class="clstd" onclick="Date_Number(2)">Convert Date To Number 2</button></td>
+                <td><button type="button" class="clstd" onclick="Parse_Integer()">Parse Integer</button></td>
+                <td><button type="button" class="clstd" onclick="Parse_Float()">Parse Float</button></td>
+            </tr>
+            <tr>
+                <td><p id="Number_IsInteger"                 class="clstd">Number IsInteger</p></td>
+                <td><p id="Number_IsSafeInteger"             class="clstd">Number Is Safe Integer</p></td>
+                <td><p id="Number_ParseFloat"                class="clstd">Number Parse Float</p></td>
+                <td><p id="Number_ParseInteger"              class="clstd">Number Parse Integer</p></td>
+                <td><p id="Number_ParseInteger"              class="clstd">Number Parse Integer</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Number_IsInteger()">Number IsInteger</button></td>
+                <td><button type="button" class="clstd" onclick="Number_IsSafeInteger()">Number Is  Safe Integer</button></td>
+                <td><button type="button" class="clstd" onclick="Number_parseFloat()">Number Parse Float</button></td>
+                <td><button type="button" class="clstd" onclick="Number_ParseInteger()">Number Parse Integer</button></td>
+                <td><button type="button" class="clstd" onclick="Number_ParseInteger()">Number Parse Integer</button></td>
+            </tr>
+            <tr>
+                <td><p id="Number_EPSILON"                 class="clstd">Number EPSILON</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Number_EPSILON()">Number EPSILON</button></td>
+            </tr>
+        </table>    
+        <script type="text/javascript" src="../js/myjavascript.js"></script>
+    </body>
 </html>
