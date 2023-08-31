@@ -1,93 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    <script>
-
-        // for(anything in varName)
-        // {
-        //     ..code
-        // }
-
-
-        // for(anything of varName)
-        // {
-        //     ..code
-        // }
-
-        var x = [1,"hi",true,31,32];
-
-        // document.write(x);
-       // document.write(typeof(x))
-        //  document.write(x[0]);
-        //  document.write(x[1]);
-        //  document.write(x[2]);
-        //  document.write(x[3]);
-        //  document.write(x[4]);
-        // document.write(x.length);//4
-
-        // for(pos=0;pos<x.length;pos++)
-        // {
-        //     // document.write(pos);
-        //     // document.write(pos);
-        //     // document.write(" => ");
-        //     // document.write(x[pos]);
-        //     // document.write("<br>")
-
-        //     document.write(pos + " => " + x[pos] +  "<br>")
-        // }
-
-            // for(xyz in x)
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // for(anything in varName)
             // {
-            //     document.write(xyz + " => " + x[xyz] + "<br>");
+            //     ..code
             // }
-
-
-            // for(xyz of x)
+            // for(anything of varName)
             // {
-            //     document.write(xyz+"<br>")
+            //     ..code
             // }
+            var x = [1,"hi",true,31,32];
 
+            // document.write(x+ "<br>");
+            // document.write(typeof(x)+ "<br>") 
+            // document.write(x[0])+ "<br>";
+            // document.write(x[1]+ "<br>");
+            // document.write(x[2]+ "<br>");
+            // document.write(x[3]+ "<br>");
+            // document.write(x[4]+ "<br>");
 
+            // document.write(x.length);//4
 
-            // var.method;
-            // x.forEach(function);
-
-
-            // x.forEach( function Test(val,key,arr)
+            // for(pos=0;pos<x.length;pos++)
             // {
-            //     document.write(val)
-            // });
-
-            // x.forEach( function (val,key,arr)
-            // {
-            //     document.write(val)
-            // });
-
-            x.forEach(  (val,key,arr)=>
-            {
-                document.write(val)
-            });
-
-            // first-Para :values
-            // second -pra :index  
-            // z:arr
-
-            //  function Test(val,key,arr)
-            // {
-            //     document.write(val)
+            //     document.write(pos);
+            //     document.write(" => ");
+            //     document.write(x[pos]);
+            //     document.write("<br>")
+            //     document.write(pos + " => " + x[pos] +  "<br>")
             // }
-            
-
-
-
-
-    </script>
-    
-</body>
+                // for(xyz in x) // Returns index and value
+                // {
+                //     document.write(xyz + " => " + x[xyz] + "<br>");
+                // }
+                // for(xyz of x) // Returns value
+                // {
+                //     document.write(xyz+"<br>")
+                // }
+                // var.method;
+                // x.forEach(function);
+                x.forEach( function Test(val,key,arr)
+                {
+                    document.write(key + "==>" + val + "<br>");
+                });
+                // x.forEach( function (val,key,arr)
+                // {
+                //     document.write(val)
+                // });
+                // x.forEach(  (val,key,arr)=>
+                // {
+                //     document.write(val)
+                // });
+                // first-Para :values
+                // second -pra :index  
+                // z:arr
+                //  function Test(val,key,arr)
+                // {
+                //     document.write(val)
+                // }
+        </script>
+    </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        const radius = [1,2,3,4];
+
+        // const CalcArea = radius.map(test);
+
+        // function test(v,i)
+        // {
+        //     // console.log(i)
+        //     // console.log(v * v * Math.PI)
+        //     return v * v * Math.PI;
+        // }
+
+        // console.log(CalcArea)
+
+        // const CalcArea = radius.map(function(v,i){
+        //     return v * v * Math.PI;
+        // })
+        // console.log(CalcArea)
+
+
+        const CalcArea = radius.map((v,i) => {
+            return v * v * Math.PI;
+        })
+        console.log(CalcArea)
+
+
+    </script>
+    
+</body>
+</html>

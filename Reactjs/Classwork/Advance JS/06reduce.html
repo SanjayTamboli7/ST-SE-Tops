@@ -8,19 +8,15 @@
 <body>
 
     <script>
-var choice = 3;
+        const arr = [1,2,3];
 
-switch(choice)
+        const course = ["c","maths","c","php","php","php"];
 
-{
-    case 1: console.log("case 1");
-    break;
-    case 2: console.log("case 2");
-    break;
+        const res = arr.reduce((cur,next)=>{
+            return cur+next;
+        })
 
-    default: console.log("case Default");
-    break;
-}
+        console.log(res)
     </script>
     
 </body>
