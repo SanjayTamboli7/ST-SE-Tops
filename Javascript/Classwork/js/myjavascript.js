@@ -424,3 +424,64 @@ function Number_EPSILON()
 {
     document.getElementById("Number_EPSILON").innerHTML = Number.EPSILON;
 }
+function Number_MaxJS()
+{
+    document.getElementById("Number_MaxJS").innerHTML = Number.MAX_VALUE;
+}
+function Number_SafeMaxJS()
+{
+    document.getElementById("Number_SafeMaxJS").innerHTML = Number.MAX_SAFE_INTEGER;
+}
+function Number_MinJS()
+{
+    document.getElementById("Number_MinJS").innerHTML = Number.MIN_VALUE;
+}
+function Number_SafeMinJS()
+{
+    document.getElementById("Number_SafeMinJS").innerHTML = Number.MIN_SAFE_INTEGER;
+}
+function Positive_Infinity()
+{
+    document.getElementById("Positive_Infinity").innerHTML = 1/0;
+}
+function Negative_Infinity()
+{
+    document.getElementById("Negative_Infinity").innerHTML = -1/0;
+}
+function NotANumber()
+{
+    document.getElementById("NotANumber1").innerHTML = Number.NaN;
+}
+function AccessFullArray()
+{
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("AccessFullArray").innerHTML = cars;
+}
+function Array2String()
+{
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("Array2String").innerHTML = fruits.toString();
+}
+function ArrayLength()
+{
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("ArrayLength").innerHTML = fruits + " Length = " + fruits.length;
+}
+function Array2List()
+{
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let fLen = fruits.length;
+    
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) 
+        {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+    text += "</ul>";    
+    document.getElementById("Array2List").innerHTML = text;    
+}
+function AddElementInArray()
+{    
+    fruits.push("Lemon");
+    document.getElementById("AddElementInArray").innerHTML = fruits;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>External JavaScript 2</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                border-spacing: 5px;
+                font-size: large;
+            }
+            .clstd
+            {
+                height: auto; 
+                width: 335px;
+                align-items: center;
+                border: 1px solid black;
+            }  
+            .skroll
+            {
+                height: 25px; 
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <table>            
+            <tr>
+                <td class="clstd"><h2>JavaScript Functions  Part 2</h2></td>
+                <td class="clstd"><a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">Complete JavaScript Array Reference.</a></td>
+            </tr>
+            <tr>
+                <td><p id="Positive_Infinity"               class="clstd">Positive Infinity</p></td>
+                <td><p id="Negative_Infinity"               class="clstd">Negative Infinity</p></td>
+                <td><p id="NotANumber1"                     class="clstd">Not A Number-NaN</p></td>
+                <td><p id="AccessFullArray"                 class="clstd">Access Full Array</p></td>
+                <td><p id="Array2String"                    class="clstd">Array 2 String</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Positive_Infinity()">Positive Infinity</button></td>
+                <td><button type="button" class="clstd" onclick="Negative_Infinity()">Negative Infinity</button></td>
+                <td><button type="button" class="clstd" onclick="NotANumber()">Not A Number-NaN</button></td>
+                <td><button type="button" class="clstd" onclick="AccessFullArray()">Access Full Array</button></td>
+                <td><button type="button" class="clstd" onclick="Array2String()">Array 2 String</button></td>
+            </tr>
+            <tr>
+                <td><p id="ArrayLength"                    class="clstd">Array Length</p></td>
+                <td><p id="Array2List" style="padding-left: 25px;" class="clstd">Array To List</p></td>
+                <td><p id="AddElementInArray"              class="clstd">Add Element In Array</p></td>
+
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ArrayLength()">Array Length</button></td>
+                <td><button type="button" class="clstd" onclick="Array2List()">Array To List</button></td>
+                <td><button type="button" class="clstd" onclick="AddElementInArray()">Add Element In Array</button></td>
+            </tr>
+        </table>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple"];
+            document.getElementById("AddElementInArray").innerHTML = fruits;            
+        </script>
+        <script type="text/javascript" src="../js/myjavascript.js"></script>        
+    </body>
+</html>

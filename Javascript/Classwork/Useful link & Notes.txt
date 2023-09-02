@@ -17,4 +17,6 @@ https://www.w3schools.com/js/js_string_search.asp
 https://www.w3schools.com/js/js_string_search.asp
 https://www.w3schools.com/js/js_string_templates.asp
 https://www.w3schools.com/js/js_number_methods.asp
-https://www.w3schools.com/js/js_number_properties.asp (start with max value on this page)
+https://www.w3schools.com/js/js_number_properties.asp
+https://www.w3schools.com/js/js_arrays.asp
+https://www.w3schools.com/js/js_array_methods.asp (start with max value on this page)
