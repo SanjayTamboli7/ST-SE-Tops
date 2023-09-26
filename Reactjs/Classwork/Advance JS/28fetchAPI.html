@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn1">Get Text</button>
+    <button id="btn2">Get JSON</button>
+    <button id="btn3">Get API Data</button>
+
+    <div class="res"></div>
+
+    <script>
+        const b1 = document.getElementById('btn1');
+        const b2 = document.getElementById('btn2');
+        const b3 = document.getElementById('btn3');
+
+        b1.addEventListener("click",GetText);
+        b2.addEventListener("click",GetJSON);
+        b3.addEventListener("click",GetAPI);
+
+
+        function GetText()
+        {
+            fetch('sample.txt')
+            .then((res)=>{return res.text()})
+            .then((data)=>{console.log(data)})
+        }
+
+        function GetJSON()
+        {
+            fetch('uses.json')
+            .then((res)=>{return res.json()})
+            .then((data)=>{console.log(data[1].username)})            
+
+        }
+
+
+        function GetAPI()
+        {
+            fetch('https://jsonplaceholder.typicode.com/photos')
+            .then((res)=>{return (res.json())})
+            .then((data)=>{
+
+                html = "<h1>API DATA</h1>"
+
+                data.forEach(function(v){
+
+                    html = html + `
+                    <li>${v.title}</li>
+                    <h2>${v.url}</h2>
+                    
+                    `
+                    // console.log(v.title)
+                })
+
+                document.querySelector('.res').innerHTML = html
+
+            })
+           
+        }
+    </script>
+    
+</body>
+</html>

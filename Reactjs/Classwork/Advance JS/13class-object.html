@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       class Bank 
+       {
+            Details(pin,bal)
+            {
+                var atmPin = pin;
+                var balance = bal;
+                var IFSC = "HDFC000N";
+                var bankName = "HDFC";
+
+                console.log(atmPin);
+                console.log(balance);
+                // console.log(IFSC);
+                // console.log(bankName);
+                
+            }
+
+         static dbms() 
+            {
+                console.log("Bank database...!");
+            }
+       }
+
+        // Details()
+
+        const himanshu = new Bank;
+        const Bhavesh = new Bank;
+        himanshu.Details(1234,2000);
+        Bhavesh.Details(4567,3000);
+       // himanshu.dbms();// error 
+        Bank.dbms();
+
+      
+
+
+    </script>
+    
+</body>
+</html>

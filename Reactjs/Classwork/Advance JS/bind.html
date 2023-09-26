@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Method</title>
+</head>
+<body>
+    <script>
+        const student = {
+            fullname: function() {
+                return this.fname + " " + this.lname
+            }
+        }
+        const student1 = {
+            fname: "Krishna",
+            lname: "Soni"
+        }
+
+        const student2 = {
+            fname: "Pal",
+            lname: "Donga"
+        }
+
+        const student3 = {
+            fname: "Himanshu",
+            lname: "Panchal"
+        }
+        const name1 = student.fullname.bind(student1);
+        const name2 = student.fullname.bind(student2);
+        const name3 = student.fullname.bind(student3);
+        console.log(name1());
+        console.log(name2());
+        console.log(name3());
+    </script>    
+</body>
+</html>

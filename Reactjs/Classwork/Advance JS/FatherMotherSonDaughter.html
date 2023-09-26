@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Father Mother Son Daughter - Inherritance Demo</title>
+    </head>
+    <body>
+        <script>
+            class ClsFather
+                {
+                    constructor()
+                        {
+                            console.log("ClsFather Constructor");
+                        }
+                    SetBalance(vFatherBalance)
+                        {
+                            var FatherBalance = vFatherBalance;
+                            console.log("Father Balance = " + FatherBalance);
+                        }
+                }        
+            class ClsMother
+                {
+                    constructor()
+                        {
+                            console.log("ClsMother Constructor");
+                        }
+                    SetBalance(vMotherBal)
+                        {
+                            var MotherBalance = vMotherBal;
+                            console.log("Mother Balance = " + MotherBalance);
+                        }
+                }
+            class ClsSon extends ClsMother
+                {
+                    constructor()
+                        {
+                            super()
+                            console.log("ClsSon Constructor");
+                        }
+                    SetBalanceforSon(vSonBal)
+                    {
+                        var SonBalance = vSonBal ;
+                        console.log("Son Balance = " + SonBalance);
+                    }
+                }
+            class ClsDaughter extends ClsMother
+            {
+                constructor()
+                    {
+                        super()
+                        console.log("ClsDaughter Constructor");
+                    }
+                SetBalanceforDaughter(vDaughterBal)
+                    {
+                        var DaughterBalance = vDaughterBal ;
+                        console.log("Daughter Balance = " + DaughterBalance);
+                    }
+            }
+            var FatherBal = 5000; 
+            var MotherBal = 0, SonBal = 0, DaughterBal = 0; 
+            let ObjFather = new ClsFather;
+            ObjFather.SetBalance(FatherBal);
+            MotherBal = FatherBal; 
+            FatherBal = 0
+            let ObjMother = new ClsMother;
+            ObjMother.SetBalance(MotherBal);
+            let ObjSon = new ClsSon;
+            ObjSon.SetBalanceforSon((MotherBal*30)/100);
+            MotherBal -= (MotherBal*30)/100;
+            let ObjDaughter = new ClsDaughter;
+            ObjDaughter.SetBalanceforDaughter(MotherBal)
+        </script>
+    </body>
+</html>

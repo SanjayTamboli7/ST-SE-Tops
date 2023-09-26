@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- ==> Constructor:
+     It's magic function which is called automatically when an object of a class is created.
+
+     =>A class may only have one constructor 
+
+     ==> cant create more then one constructor within a class
+
+     Syntax :
+
+     constructor()
+     {
+        ..code
+     } -->
+
+     <script>
+        class Test 
+        {
+            // constructor()
+            // {
+            //    console.log("Constructor...!");
+            // }
+
+            constructor(x)
+            {
+                console.log(x);
+            }
+
+            fun(y)
+            {
+                console.log("fun " + y);
+            }
+        }
+
+        const x = new Test(23);
+        const x1 = new Test("hi");
+        x.fun(12);
+     </script>
+    
+</body>
+</html>

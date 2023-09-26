@@ -19,4 +19,17 @@ https://www.w3schools.com/js/js_string_templates.asp
 https://www.w3schools.com/js/js_number_methods.asp
 https://www.w3schools.com/js/js_number_properties.asp
 https://www.w3schools.com/js/js_arrays.asp
-https://www.w3schools.com/js/js_array_methods.asp (start with max value on this page)
+https://www.w3schools.com/js/js_array_methods.asp
+https://www.w3schools.com/js/js_array_sort.asp 
+https://www.w3schools.com/js/js_array_iteration.asp
+https://www.w3schools.com/js/js_array_const.asp
+https://www.w3schools.com/js/js_dates.asp
+https://www.w3schools.com/js/js_date_methods.asp
+https://www.w3schools.com/js/js_date_methods_set.asp 
+https://www.w3schools.com/js/js_math.asp 
+https://www.w3schools.com/js/js_random.asp (start with)
+
+https://www.flipkart.com/msi-core-i7-13th-gen-13620h-16-gb-1-tb-ssd-windows-11-home-8-gb-graphics-nvidia-geforce-rtx-4060-144-hz-katana-15-b13vfk-296in-gaming-laptop/p/itm575c0dfc9902c?pid=COMGRDC8QGXJTZFH
+https://www.amazon.in/Lenovo-IdeaPad-40-6cm-Backlit-82XF003JIN/dp/B0C9HV8L6G/ref=sr_1_7?crid=1N7K7USIIFH8J&keywords=i7+laptops+13th+generation&qid=1695660187&sprefix=i7+laptop%2Caps%2C355&sr=8-7
+https://www.amazon.in/Lenovo-IdeaPad-i7-12700H-40-64cm-82SA00B2IN/dp/B0B7RWMRDS/ref=sr_1_6?crid=3D5RGUC6A9NGY&keywords=laptops+i7+13th+generation+with+graphics+card&qid=1695660428&sprefix=laptops++i7+13th+generation%2Caps%2C282&sr=8-6
+https://www.amazon.in/Acer-Predator-Processor-Windows-PHN16-71/dp/B0C3HTXBWP/ref=sr_1_14?crid=3D5RGUC6A9NGY&keywords=laptops+i7+13th+generation+with+graphics+card&qid=1695660428&sprefix=laptops++i7+13th+generation%2Caps%2C282&sr=8-14

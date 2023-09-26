@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <title>High Order Function - Reduce using arrya of string</title>
+</head>
+<body>
+    <p>Original Array : ["React", "PHP", "WD", "React", "PHP", "WD"]</p>
+    <p id="UniqueArray"></p>
+    <script>
+        let courses = ["React", "PHP", "WD", "React", "PHP", "WD"]; 
+        function deleteDuplicates(courses) 
+        {
+            let uniquecourses = courses.reduce(function (acc, curr) {
+                if (!acc.includes(curr))
+                    acc.push(curr);
+                return acc;
+            }, []);
+            return uniquecourses;
+        }
+        document.getElementById("UniqueArray").innerHTML = "Unique Array : " + deleteDuplicates(courses);
+    </script>
+</body>
+</html>

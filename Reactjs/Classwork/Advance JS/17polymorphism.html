@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Polymorphism: one name multiple form 
+
+        // ==> Same name And Same Para
+        // ==> Same name but diff para
+
+        // ==> function Test(a,b,c)
+        // {
+        //     ...code X
+        // }
+
+        // Test(1.2,3,4)
+
+        // ==> function Test(x,y,z)
+        // {
+        //     .... code Y,
+        // }
+        // Test(23,"hi",true)
+
+
+        // + 
+
+        // 1 + 2 ==> 3
+
+        // "1" + "2" ==> 12
+
+
+        class Test 
+        {
+            fun()
+            {
+                console.log("class 1....!");
+            }
+
+            // fun(e)
+            // {
+            //     console.log("FUN 123....!");
+            // }
+        }
+        
+
+        const obj = new Test;
+        obj.fun();
+
+        class Test1 
+        {
+            fun()
+            {
+                console.log("class 2....!");
+            }
+
+           
+        }
+
+        
+        const obj1 = new Test1;
+        obj1.fun()
+        
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

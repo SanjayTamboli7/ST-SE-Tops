@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Method</title>
+</head>
+<body>
+    <script>
+        const student = {
+            fullname: function() {
+                return this.fname + " " + this.lname
+            }
+        }
+        const student1 = {
+            fname: "Krishna",
+            lname: "Soni"
+        }
+
+        const student2 = {
+            fname: "Pal",
+            lname: "Donga"
+        }
+
+        const student3 = {
+            fname: "Himanshu",
+            lname: "Panchal"
+        }
+        console.log(student.fullname.apply(student1));
+        console.log(student.fullname.apply(student2));
+        console.log(student.fullname.apply(student3));
+    </script>    
+</body>
+</html>

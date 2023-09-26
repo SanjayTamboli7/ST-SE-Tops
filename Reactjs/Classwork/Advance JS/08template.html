@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="d1"></div>
+
+    <script>
+        const details = ["Akash",22,"WD"];
+
+
+        var data = `<h1>Registration</h1>
+         <table border="1" style="background:gray">
+         <tr>
+            
+            `
+
+        for(val of details)
+        {
+            data += `
+            
+           <td>
+            ${val}
+            </td>
+            `
+        }
+
+        data += `</tr></table>`
+
+        document.querySelector('.d1').innerHTML = data;
+
+      
+
+    </script>
+    
+</body>
+</html>

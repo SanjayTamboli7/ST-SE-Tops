@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent 
+        {
+            static prop()
+            {
+                console.log("Parent Class");
+            }
+            dummy()
+            {
+                console.log("dummy ")
+            }
+            static test123(x,y)
+            {  
+                
+                const sum = x+y;
+                console.log(sum)
+            }
+        }
+        class Child extends Parent
+        {
+            prop()
+            {
+                console.log("Child Class")
+            }         
+            test123(x,y)
+            {                  
+                const sum = x+y;
+                console.log(sum)
+            }
+        }
+        const getProp =  new Child;
+        getProp.prop();
+        getProp.dummy();
+        getProp.test123(12,12)
+        Parent.prop();
+        Parent.test123("hi"," hello")        
+    </script>    
+</body>
+</html>

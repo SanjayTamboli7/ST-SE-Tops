@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>    
+        <script>
+            const Student = {
+                fullname:function(){
+                    return this.fname + " " + this.lname
+                }
+            }
+            const Student1 = {
+                fname:"Krishna",
+                lname:"Soni"
+            }
+            const Student2 = {
+                fname:"Pal",
+                lname:"Donga"
+            }
+            const Student3 = {
+                fname:"Himanshu",
+                lname:"Panchal"
+            }
+            console.log(Student.fullname.call(Student1))
+            console.log(Student.fullname.call(Student2))
+            console.log(Student.fullname.call(Student3))
+        </script>
+    </body>
+</html>

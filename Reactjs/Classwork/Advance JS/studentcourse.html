@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Course Detail</title>
+        <style>
+            .clstbl 
+            {
+                border: 2px solid grey;
+            }
+            .clstblh 
+            {
+                border: 2px solid grey;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="studentcourse"></div>        
+        <script>
+            const details = [ {name:"Bhavesh",course:"wd"}, {name:"Himanshu",course:"React"}, 
+                              {name:"Dheeeraj",course:"php"}, {name:"Sanjay", course:"Java"}];
+            let htmldata=`<h1>Student - Course Detail</h1>`;
+            htmldata += `<table class="clstbl">`;
+            htmldata += `<tr class="clstbl">`;
+            htmldata += `<td class="clstblh">Student</td>`;
+            htmldata += `<td class="clstblh">Course</td>`;
+            htmldata += `</tr>`;
+            const data =  details.map((arrval)=>{
+                return `<tr class="clstbl"><td class="clstbl">` + arrval.name +`</td><td class="clstbl">`+ arrval.course + `</td></tr>`
+            })
+            console.log(data);
+            htmldata += data;
+            htmldata += `</tr>`;
+            htmldata += `</table>`;
+            console.log(htmldata);
+            document.querySelector(".studentcourse").innerHTML = htmldata;
+        </script>        
+    </body>
+</html>

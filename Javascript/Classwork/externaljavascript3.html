@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>External JavaScript 3</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                border-spacing: 5px;
+                font-size: small;
+            }
+            .clstd
+            {
+                height: auto; 
+                width: 268px;
+                align-items: center;
+                border: 1px solid black;
+            }  
+            .skroll
+            {
+                height: 25px; 
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="clstd"><h2>JavaScript Functions  Part 3</h2></td>
+                <td class="clstd"><a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">Complete JavaScript Date Reference.</a></td>
+                <td class="clstd"><a href="https://www.w3schools.com/jsref/jsref_obj_math.asp">Complete Math Object Reference</a></td>
+            </tr>
+            <tr>
+                <td><p id="Date1" class="clstd">Current Date</p></td>
+                <td><p id="Date2" class="clstd">October 13, 2014 11:13:00</p></td>
+                <td><p id="ISODate" class="clstd">2015-03</p></td>
+                <td><p id="ISODateTime" class="clstd">2015-03-25T12:00:00Z</p></td>
+                <td><p id="OnlyYear" class="clstd">2015</p></td>
+            </tr>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Date1()">Current Date</button></td>
+                <td><button type="button" class="clstd" onclick="Date2()">Old Date</button></td>
+                <td><button type="button" class="clstd" onclick="ISODate()">ISO Date</button></td>
+                <td><button type="button" class="clstd" onclick="ISODateTime()">ISO Date Time</button></td>
+                <td><button type="button" class="clstd" onclick="OnlyYear()">Only Year</button></td>
+            </tr>
+            <tr>
+                <td><p id="AddHHMM" class="clstd">2015-03-25T12:00:00-06:00</p></td>
+                <td><p id="GetFullYr" class="clstd">2021-03-25</p></td>
+                <td><p id="GetMonthNo" class="clstd">Todays' date</p></td>
+                <td><p id="GetMonthName" class="clstd">2021-03-25</p></td>
+                <td><p id="GetDayOfDate" class="clstd">Todays' date</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="AddHHMM()">Add HH MM</button></td>
+                <td><button type="button" class="clstd" onclick="GetFullYr()">Get Full Year</button></td>
+                <td><button type="button" class="clstd" onclick="GetMonthNo()">Get Month Number</button></td>
+                <td><button type="button" class="clstd" onclick="GetMonthName()">Get Month Name</button></td>
+                <td><button type="button" class="clstd" onclick="GetDayOfDate()">Get Day of Date</button></td>
+            </tr>
+            <tr>
+                <td><p id="GetHoursOfDate" class="clstd">Todays' date</p></td>
+                <td><p id="GetMinutesOfDate" class="clstd">Todays' date</p></td>
+                <td><p id="GetSecondsOfDate" class="clstd">Todays' date</p></td>
+                <td><p id="GetMiliSecondsOfDate" class="clstd">Todays' date</p></td>
+                <td><p id="GetDayOfWeek" class="clstd">Todays' date</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="GetHoursOfDate()">Get Hours of Date</button></td>
+                <td><button type="button" class="clstd" onclick="GetMinutesOfDate()">Get Minutes of Date</button></td>
+                <td><button type="button" class="clstd" onclick="GetSecondsOfDate()">Get Seconds of Date</button></td>
+                <td><button type="button" class="clstd" onclick="GetMiliSecondsOfDate()">Get Mili Seconds of Date</button></td>
+                <td><button type="button" class="clstd" onclick="GetDayOfWeek()">Get Day of Week</button></td>
+            </tr>
+            <tr>
+                <td><p id="GetDayName" class="clstd">Todays' date</p></td>
+                <td><p id="GetTimeZone" class="clstd">Todays' date</p></td>
+                <td><p id="SetFullYr" class="clstd">Todays' date</p></td>
+                <td><p id="Set_Month" class="clstd">Todays' date</p></td>
+                <td><p id="Set_Date1" class="clstd">Todays' date</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="GetDayName()">Get Day Name</button></td>
+                <td><button type="button" class="clstd" onclick="GetTimeZone()">Get Time Zone</button></td>
+                <td><button type="button" class="clstd" onclick="SetFullYr()">Set Full Year</button></td>
+                <td><button type="button" class="clstd" onclick="Set_Month()">Set Month</button></td>
+                <td><button type="button" class="clstd" onclick="Set_Date1()">Set Date 1</button></td>
+            </tr>
+            <tr>
+                <td><p id="Set_Date2" class="clstd">Todays' date</p></td>
+                <td><p id="Set_Hours" class="clstd">Todays' date</p></td>
+                <td><p id="Set_Minutes" class="clstd">Todays' date</p></td>
+                <td><p id="Set_Seconds" class="clstd">Todays' date</p></td>
+                <td><p id="CompareDates" class="clstd">Todays' date</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="Set_Date2()">Add Days In Date</button></td>
+                <td><button type="button" class="clstd" onclick="Set_Hours()">Set Hours</button></td>
+                <td><button type="button" class="clstd" onclick="Set_Minutes()">Set Minutes</button></td>
+                <td><button type="button" class="clstd" onclick="Set_Seconds()">Set Seconds</button></td>
+                <td><button type="button" class="clstd" onclick="CompareDates()">Compare Dates</button></td>
+            </tr>
+            <tr>
+                <td><p id="MathConstants" class="clstd">Math Constants</p></td>
+                <td><p id="MathRound" class="clstd">4.6</p></td>
+                <td><p id="MathCeil" class="clstd">4.4</p></td>
+                <td><p id="MathFloor" class="clstd">4.7</p></td>
+                <td><p id="MathTruncate" class="clstd">4.7</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="MathConstants()">Math Constants</button></td>
+                <td><button type="button" class="clstd" onclick="MathRound()">Math Round</button></td>
+                <td><button type="button" class="clstd" onclick="MathCeil()">Math Ceil</button></td>
+                <td><button type="button" class="clstd" onclick="MathFloor()">Math Floor</button></td>
+                <td><button type="button" class="clstd" onclick="MathTruncate()">Math Truncate</button></td>
+            </tr>
+            <tr>
+                <td><p id="MathSign" class="clstd">4</p></td>
+                <td><p id="MathPower" class="clstd">8,2 = 8<sup>2</sup></p></td>
+                <td><p id="MathAbsolute" class="clstd">-4.7</p></td>
+                <td><p id="MathSine" class="clstd">Angle in radians=(angle in degrees)*PI/180</p></td>
+                <td><p id="MathCos" class="clstd">Angle in radians=(angle in degrees)*PI/180</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="MathSign()">Math Sign</button></td>
+                <td><button type="button" class="clstd" onclick="MathPower()">Math Power</button></td>
+                <td><button type="button" class="clstd" onclick="MathAbsolute()">Math Absolute</button></td>
+                <td><button type="button" class="clstd" onclick="MathSine()">Math Sin</button></td>
+                <td><button type="button" class="clstd" onclick="MathCos()">Math Cos</button></td>
+            </tr>
+            <tr>
+                <td><p id="MathMin" class="clstd">(0, 150, 30, 20, -8, -200)</p></td>
+                <td><p id="MathMax" class="clstd">(0, 150, 30, 20, -8, -200)</p></td>
+                <td><p id="MathRandom" class="clstd">Click button many time</p></td>
+                <td><p id="MathLog" class="clstd">Math.E & Math.log() are twins</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="MathMin()">Math Min</button></td>
+                <td><button type="button" class="clstd" onclick="MathMax()">Math Max</button></td>
+                <td><button type="button" class="clstd" onclick="MathRandom()">Math Random</button></td>
+                <td><button type="button" class="clstd" onclick="MathLog()">Math Log</button></td>
+            </tr>
+        </table>
+        <script>
+            // const month_name = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        </script>
+        <script type="text/javascript" src="../js/myjavascript.js"></script>        
+    </body>
+</html>

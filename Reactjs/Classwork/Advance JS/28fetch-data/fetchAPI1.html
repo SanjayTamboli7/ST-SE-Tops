@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .clstable
+                {
+                    border: 2px solid gray;
+                }
+        </style>
+    </head>
+    <body>
+
+ <div class="d1"></div>
+        <button id="btn3">Get API Data</button>
+        <script>
+
+                    
+
+            
+            const b3 = document.getElementById('btn3');
+
+            b3.addEventListener("click",GetAPI);
+
+            function GetAPI()
+            {
+                fetch('https://jsonplaceholder.typicode.com/users')
+                .then((res)=>{return res.json() })        
+                .then((data)=>{
+
+                 const x = data.map(function(v,i,a)
+                    {
+                        return v.name +" "+ v.username
+                    })
+
+                    // console.log(x)
+                    var data = `<h1>Registration</h1>
+         <table border="1" style="background:gray">
+         <tr>
+            
+            `
+
+        for(val of x)
+        {
+            data += `
+            
+           <td>
+            ${val}
+            </td>
+            `
+        }
+
+        data += `</tr></table>`
+
+        document.querySelector('.d1').innerHTML = data;
+    
+                })
+            }
+            
+                
+            // data += '<\table>';            
+        </script>
+        
+    </body>
+</html>

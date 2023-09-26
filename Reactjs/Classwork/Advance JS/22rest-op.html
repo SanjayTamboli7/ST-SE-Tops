@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+            const arr = [1,2,3,4,5];
+
+           function GetSum(x)
+           {
+            let sum1 =0;
+            for(i=0;i<x.length;i++)
+            {
+               sum1 = sum1 + x[i];         
+            }
+
+           return sum1;
+           }
+           console.log( GetSum(arr))
+
+
+
+
+
+let sum =0;
+        function Test(...rest)
+        {
+            // const res= x+y;
+            
+            for(i=0;i<rest.length;i++)
+            {
+                sum = sum + rest[i];
+               
+            }
+            return sum;
+        }
+
+       console.log( Test(1,2,3,4,5))
+        // Test("hi","hello","how","are","you")
+        // Test(12,90.34,12,12)
+
+    </script>
+    
+</body>
+</html>

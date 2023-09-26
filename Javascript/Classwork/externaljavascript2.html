@@ -11,12 +11,12 @@
                 padding: 0;
                 box-sizing: border-box;
                 border-spacing: 5px;
-                font-size: large;
+                font-size: small;
             }
             .clstd
             {
                 height: auto; 
-                width: 335px;
+                width: 268px;
                 align-items: center;
                 border: 1px solid black;
             }  
@@ -37,8 +37,8 @@
                 <td><p id="Positive_Infinity"               class="clstd">Positive Infinity</p></td>
                 <td><p id="Negative_Infinity"               class="clstd">Negative Infinity</p></td>
                 <td><p id="NotANumber1"                     class="clstd">Not A Number-NaN</p></td>
-                <td><p id="AccessFullArray"                 class="clstd">Access Full Array</p></td>
-                <td><p id="Array2String"                    class="clstd">Array 2 String</p></td>
+                <td><p id="AccessFullArray"                 class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="Array2String"                    class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
             </tr>
             <tr>
                 <td><button type="button" class="clstd" onclick="Positive_Infinity()">Positive Infinity</button></td>
@@ -48,20 +48,173 @@
                 <td><button type="button" class="clstd" onclick="Array2String()">Array 2 String</button></td>
             </tr>
             <tr>
-                <td><p id="ArrayLength"                    class="clstd">Array Length</p></td>
-                <td><p id="Array2List" style="padding-left: 25px;" class="clstd">Array To List</p></td>
-                <td><p id="AddElementInArray"              class="clstd">Add Element In Array</p></td>
-
+                <td><p id="ArrayLength"                    class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="Array2List" style="padding-left: 25px;" class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="AddElementInArray"              class="clstd">["Banana", "Orange", "Apple"]</p></td>
+                <td><p id="DeleteArrayElement"             class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="DeleteFirstElement"             class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
             </tr>
             <tr>
                 <td><button type="button" class="clstd" onclick="ArrayLength()">Array Length</button></td>
                 <td><button type="button" class="clstd" onclick="Array2List()">Array To List</button></td>
                 <td><button type="button" class="clstd" onclick="AddElementInArray()">Add Element In Array</button></td>
+                <td><button type="button" class="clstd" onclick="DeleteArrayElement()">Delete Array last Element</button></td>
+                <td><button type="button" class="clstd" onclick="DeleteFirstElement()">Delete Array 1st Element</button></td>
+            </tr>
+            <tr>                
+                <td><p id="DeleteIndexElement"             class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="InsertFirstElement"             class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="AppendElement"                  class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ChangeFirstElement"             class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArrayType"                      class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>                
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="DeleteIndexElement()">Delete Array Index Element</button></td>
+                <td><button type="button" class="clstd" onclick="InsertFirstElement()">Insert 1st Element</button></td>
+                <td><button type="button" class="clstd" onclick="AppendElement()">Add Element At Last</button></td>
+                <td><button type="button" class="clstd" onclick="ChangeFirstElement()">Change 1st Element</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayType()">Array Type</button></td>                
+            </tr>
+            <tr>
+                <td><p id="ArrayJoin"                      class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArrayMerge"                     class="clstd">Array Merge</p></td>
+                <td><p id="ArrayFlatten"                   class="clstd">[[1,2],[3,4],[5,6]]</p></td>
+                <td><p id="ArraySplice"                   class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArraySlice"                   class="clstd">["Banana", "Orange", "Lemon", "Apple", "Mango"]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ArrayJoin()">Array Join</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayMerge()">Array Merge</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayFlatten()">Array Flatten</button></td>
+                <td><button type="button" class="clstd" onclick="ArraySplice()">Array Splice</button></td>
+                <td><button type="button" class="clstd" onclick="ArraySlice()">Array Slice</button></td>
+            </tr>
+            <tr>
+                <td><p id="ArraySort"                      class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArrayReverse"                   class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="NumericArraySort1"              class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="NumericArrayReverse1"           class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="AlphabaticalSort1"              class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ArraySort()">String Array Sort</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayReverse()">Array Reverse</button></td>
+                <td><button type="button" class="clstd" onclick="NumericSort1()">Number Array Sort 1</button></td>
+                <td><button type="button" class="clstd" onclick="NumericArrayReverse1()">Number Array Reverse 1</button></td>
+                <td><button type="button" class="clstd" onclick="AlphabaticalSort1()">Alphabatical Sort</button></td>
+            </tr>
+            <tr>
+                <td><p id="SortArrayRandomOrder"           class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="SortArrayFisherYates"           class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="SmallestInArray"                class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="SmallestInArray2"               class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="SmallestInArray3"               class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="SortArrayRandomOrder()">Sort Array In Random Order</button></td>
+                <td><button type="button" class="clstd" onclick="SortArrayFisherYates(points)">Sort Fisher Yates Again</button></td>
+                <td><button type="button" class="clstd" onclick="SmallestInArray()">Smallest In Array 1</button></td>
+                <td><button type="button" class="clstd" onclick="SmallestInArray2()">Smallest In Array 2</button></td>
+                <td><button type="button" class="clstd" onclick="SmallestInArray3()">Smallest In Array 3</button></td>
+            </tr>
+            <tr>
+                <td><p id="HighestInArray"  class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="HighestInArray2" class="clstd">[40, 100, 1, 5, 25, 10]</p></td>
+                <td><p id="HighestInArray3" class="clstd">[40, 100, 1, 5, 25, 10]</p></td>                
+                <td><p id="SortObjectArray1" class="clstd">[{type:"Volvo", year:2016}, {type:"Saab", year:2001}, {type:"BMW", year:2010}]</p></td>
+                <td><p id="SortObjectArray2" class="clstd">[{type:"Volvo", year:2016}, {type:"Saab", year:2001}, {type:"BMW", year:2010}]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="HighestInArray()">Highest In Array 1</button></td>
+                <td><button type="button" class="clstd" onclick="HighestInArray2()">Highest In Array 2</button></td>
+                <td><button type="button" class="clstd" onclick="HighestInArray3()">Highest In Array 3</button></td>
+                <td><button type="button" class="clstd" onclick="SortObjectArray1()">Sort Object Array By Year</button></td>
+                <td><button type="button" class="clstd" onclick="SortObjectArray1()">Sort Object Array By Type</button></td>
+            </tr>
+            <tr>
+                <td><p id="StableSortingAlgorithm"  class="clstd skroll">[{name:"X00",price:100 },
+                    {name:"X01",price:100 },
+                    {name:"X02",price:100 },
+                    {name:"X03",price:100 },
+                    {name:"X04",price:110 },
+                    {name:"X05",price:110 },
+                    {name:"X06",price:110 },
+                    {name:"X07",price:110 },
+                    {name:"X08",price:120 },
+                    {name:"X09",price:120 },
+                    {name:"X10",price:120 },
+                    {name:"X11",price:120 },
+                    {name:"X12",price:130 },
+                    {name:"X13",price:130 },
+                    {name:"X14",price:130 },
+                    {name:"X15",price:130 },
+                    {name:"X16",price:140 },
+                    {name:"X17",price:140 },
+                    {name:"X18",price:140 },
+                    {name:"X19",price:140 }]</p></td>
+                <td><p id="ArrayForEach"     class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayMap"         class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayFlatMap"     class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayFilter"     class="clstd">[45, 4, 9, 16, 25]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="StableSortingAlgorithm()">Stable Sorting Algorithm</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayForEach()">Array For Each</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayMap()">Array Map</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayFlatMap()">Array Flat Map</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayFilter()">Array Filter</button></td>
+            </tr>
+            <tr>
+                <td><p id="ArrayReduce"           class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayReduceRight"      class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayEvery"            class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArraySome"             class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayIndexOf"          class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ArrayReduce()">Array Reduce</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayReduceRight()">Array Reduce Right</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayEvery()">Array Every</button></td>
+                <td><button type="button" class="clstd" onclick="ArraySome()">Array Some</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayIndexOf()">Index Of Array</button></td>
+            </tr>
+            <tr>
+                <td><p id="ArrayLastIndexOf" class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArrayFind"        class="clstd">[45, 4, 9, 16, 25]</p></td>
+                <td><p id="ArrayFindIndex"   class="clstd">[4, 9, 16, 25, 29]</p></td>
+                <td><p id="ArrayFrom"        class="clstd">ABCDEFG</p></td>
+                <td><p id="ArrayKeys"        class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ArrayLastIndexOf()">Last Index Of Array</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayFind()">Array Find</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayFindIndex()">Array Find Index</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayFrom()">Array From</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayKeys()">Array Keys</button></td>
+            </tr>
+            <tr>
+                <td><p id="ArrayEntries"        class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArrayIncludes"       class="clstd">["Banana", "Orange", "Apple", "Mango"]</p></td>
+                <td><p id="ArraySpreads"        class="clstd skroll">["Jan", "Feb", "Mar"]
+                    ["Apr", "May", "Jun"]
+                    ["Jul", "Aug", "Sep"]
+                    ["Oct", "Nov", "May"]
+                    </p></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="clstd" onclick="ArrayEntries()">Array Entries</button></td>
+                <td><button type="button" class="clstd" onclick="ArrayIncludes()">Array Includes</button></td>
+                <td><button type="button" class="clstd" onclick="ArraySpreads()">Array Spreads</button></td>
             </tr>
         </table>
         <script>
-            const fruits = ["Banana", "Orange", "Apple"];
+            let fruits = ["Banana", "Orange", "Apple", "Mango"];
             document.getElementById("AddElementInArray").innerHTML = fruits;            
+            const myGirls = ["Cecilie", "Lone"];
+            const myBoys = ["Emil", "Tobias", "Linus"];
+            document.getElementById("ArrayMerge").innerHTML = "Arr1: " + myGirls + " Arr2: "+ myBoys;             
+            const points = [40, 100, 1, 5, 25, 10];   
+            const numbers = [4, 9, 16, 25, 29]; 
         </script>
         <script type="text/javascript" src="../js/myjavascript.js"></script>        
     </body>
