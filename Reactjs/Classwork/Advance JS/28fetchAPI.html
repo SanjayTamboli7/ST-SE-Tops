@@ -22,7 +22,6 @@
         b2.addEventListener("click",GetJSON);
         b3.addEventListener("click",GetAPI);
 
-
         function GetText()
         {
             fetch('sample.txt')
@@ -35,9 +34,7 @@
             fetch('uses.json')
             .then((res)=>{return res.json()})
             .then((data)=>{console.log(data[1].username)})            
-
         }
-
 
         function GetAPI()
         {

@@ -1,0 +1,37 @@
+
+body  * 
+{
+    /* border: 3px solid; */
+}
+.header 
+{
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+.list-items
+{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header,.content 
+{
+    padding: 20px;
+}
+.search-destinations
+{
+    display: flex;
+    justify-content: space-evenly;
+    background: lightblue;
+    width: 80%;
+    margin: auto;
+    margin-top: -20px;
+}
+
+@media(max-width:500px)
+{
+    .header,.list-items,.search-destinations{flex-direction: column;}
+}

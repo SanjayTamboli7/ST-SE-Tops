@@ -1,0 +1,30 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ClsHeader
+{
+    border: 2px solid yellow;
+    background-color: #003b95;
+    color: #ffffff;
+    width: 100%;    
+}
+.ClsHeader .row1
+{
+    display: grid;
+    grid-template-rows: max-content;
+    /* grid-template-columns: 15% 15% 10% 10% 10% 10% 10% 10% 10%; */
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.ClsHeader .row1 .r1Col1
+{
+    border: 1px solid yellow;
+}
+.ClsHeader .row1 .r1Col2
+{
+    display: grid;
+    grid-template-columns: repeat(6, 10%);
+    border: 1px solid yellowgreen;
+}
