@@ -1,0 +1,55 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+.Clsh1
+{
+    margin-left: 25%;
+}
+.ClsProduct 
+{
+    border: 1px solid antiquewhite;
+}
+.ClsProductTable
+{
+    border: 1px solid burlywood;
+}
+.ClsRow
+{
+    border: 1px solid cadetblue;
+}
+.ClsCellHeading
+{
+    width: 200px;
+    text-align: center;
+    font-size: large;
+    font-weight: 1000;
+    border: 1px solid darkgoldenrod;
+}
+.ClsCell
+{
+    width: 200px;
+    border: 1px solid darkgoldenrod;
+}
+.ClsCellImage
+{
+    height: 75px;
+    width: 75px;
+}
+.ClsQuantity
+{
+    width: 200px;
+    border: 1px solid darkgoldenrod;
+}
+.ClsSubTotal
+{
+    width: 200px;
+    border: 1px solid darkgoldenrod;
+}
+.ClsUnitPrice
+{
+    width: 200px;
+    border: 1px solid darkgoldenrod;
+}

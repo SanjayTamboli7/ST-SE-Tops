@@ -19,3 +19,31 @@ code {
 {
   border: 1px solid black;
 }
+ul.circle-checkmark {
+	li {
+		&::before {
+      content: ""; 
+      position: absolute; 
+      left: 0; 
+      top: 2px; 
+      border: solid 8px #afcc62;
+      border-radius: 8px;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+		}
+    &::after {
+      content: ""; 
+      position: absolute; 
+      left: .25%;
+      top: 5px;
+      width: 3px;
+      height: 6px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+	}
+}

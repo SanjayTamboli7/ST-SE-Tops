@@ -3,51 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Use Registration Form</title>
 </head>
 <body>
-
    <form  onsubmit=" return validate()">
-    Name: <input type="text" id="nm" >
-    <span id="nmErr"></span>
-    
-    <br><br>
-
-    <!-- nirav.patel@tops-int.com -->
-    Email: <input type="text" name="" id=""><br><br>
-
-    mobile: <input type="text" name="" id="mb"><br><br>
-
-    Password: <input type="text" id="pwd"><br><br>
-
-    Confirm Password: <input type="text" id="cpwd" ><br><br>
-
-    <!-- <input type="submit" onclick=" return validate()"> -->
-
-    <input type="submit">
+        Name: <input type="text" id="nm" >
+        <span id="nmErr"></span>    
+        <br><br>
+        Email: <input type="text" name="" id=""><br><br>
+        mobile: <input type="text" name="" id="mb"><br><br>
+        Password: <input type="text" id="pwd"><br><br>
+        Confirm Password: <input type="text" id="cpwd" ><br><br>
+        <!-- <input type="submit" onclick=" return validate()"> -->
+        <input type="submit">
    </form>
-
-    
-
     <script>
-
         name1 = document.getElementById('nm');
-        nmSpan = document.getElementById('nmErr');
-     
-
-
+        nmSpan = document.getElementById('nmErr');  
         mobile = document.getElementById('mb');
         pass = document.getElementById('pwd');
         cpass = document.getElementById('cpwd');
-
-        //==>  /^exp$/
-       
-
-    //    nm_exp = /^[a-zA-Z]+$/;
-
-    nm_exp = /^[a-zA-Z]{2,5}$/;
-        
-
+        // ==>  /^exp$/       
+        // nm_exp = /^[a-zA-Z]+$/;
+        nm_exp = /^[a-zA-Z]{2,5}$/;
         console.log(name1);
         console.log(name1.value);
 
@@ -60,11 +38,9 @@
                 nmSpan.style.color ="red";
                 return false;
             }
-
             else 
             {   
-                nmSpan.innerHTML ="";
-             
+                nmSpan.innerHTML ="";             
             }
 
             if(!nm_exp.test(name1.value))
@@ -91,7 +67,6 @@
                 return false;
             }
        }
-    </script>
-    
+    </script>    
 </body>
 </html>

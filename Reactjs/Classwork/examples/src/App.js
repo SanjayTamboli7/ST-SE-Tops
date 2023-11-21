@@ -20,10 +20,17 @@ import UpdateObj from './UpdateObj';
 import UpdateNestedObj from './UpdateNestedObj';
 import UsestateEx1 from './UsestateEx1';
 import UpdateNestedObj1 from './UpdateNestedObj1';
+import UseStateInputObject from './UseStateInputObject';
+import UseReference from './UseReference';
+import ListView from './ListView';
+import SetPlusMinus from './SetPlusMinus';
+
+// import FetchAPIData from './FetchAPIData'
 
 function App() {
   return (
     <div>
+      {/* <FetchAPIData/> */}
         <table className="ClsTable">
           <tbody>
             <tr>
@@ -72,6 +79,8 @@ function App() {
               <td className="ClsCell"><UpdateNestedObj/></td>  
               <td className="ClsCell"><UsestateEx1/></td>  
               <td className="ClsCell"><UpdateNestedObj1/></td>  
+              <td className="ClsCell"><UseStateInputObject/></td>  
+              <td className="ClsCell"><UseReference/></td>  
             </tr>
             <tr>
               <td className="ClsCell"><u>Update Checkbox Function 1</u></td>
@@ -79,11 +88,21 @@ function App() {
               <td className="ClsCell">Update Nested Object</td>
               <td className="ClsCell">Change Number - UseState</td>
               <td className="ClsCell">Update Nested Object 1</td>
+              <td className="ClsCell">Use State Input Object</td>
+              <td className="ClsCell">Use Reference</td>
+            </tr>
+            <tr>
+              <td className="ClsCell"><ListView/></td>
+              <td className="ClsCell"><SetPlusMinus/></td>
+            </tr>
+            <tr>
+              <td className="ClsCell">List View</td>
+              <td className="ClsCell">Set Plus Minus</td>
             </tr>
           </tbody>
-        </table>
+        </table>        
     </div>
-  );
+  )
 }
 
 export default App;

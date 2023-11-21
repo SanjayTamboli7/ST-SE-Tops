@@ -10,13 +10,13 @@ import UsestateEx2 from './UsestateEx2';
 function App() {
   return (
     <div>
-      {/* <Header/>
+      <Header/>
       <Navbar/>
-      <Content/> */}
+      <Content/>
 
-      {/* <Componentlifecycle/> */}
-      {/* <UsestateEx1/> */}
-      <UsestateEx2/>
+      {/* <Componentlifecycle/>
+      <UsestateEx1/>
+      <UsestateEx2/> */}
     </div>
   );
 }

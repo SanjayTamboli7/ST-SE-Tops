@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 function UseStateNo() {
-    const [x,setX] = useState(1);
+    const [x,setX] = useState(0);
     const handleChange = ()=>{
-          setX(2)
+          setX(0)
       }
   
     return (

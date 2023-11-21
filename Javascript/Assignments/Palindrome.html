@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Palindrome Checker</title>
+        <link rel="stylesheet" href="css/Palindrome.css">
+    </head>
+    <body>
+        <div class="root">
+            <h1 class="title">Palindrome Checker</h1> 
+            <p class="ClsPara">A palindrome is a word or phrase that reads the same backwards as forwards, e.g. level, refer.</p>             
+            <form id="RegFormID" onsubmit=" return isPalindrome()">
+                <table>
+                    <tr>
+                        <td><input class="ClsInput" type="text" name="" id="Name" placeholer="Enter the word(s) here"></td>
+                    </tr>
+                </table> 
+                <div class="foot"><input type="submit" value="Check Palindrome"></div>                
+            </form>        
+            <p id="Result"></p>
+        </div> 
+        <script type="text/javascript" src="js/Palindrome.js"></script>
+    </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+    <h1>Registration Page</h1>
+    <form class="ClsForm" id="RegFormID" onsubmit=" return validate()">
+        <table class="ClsTable">
+            <tr class="ClsRow">                
+                <td class="ClsCell"><label for="Name" class="ClsLabel">Name: </label></td>
+                <td class="ClsCell"><input class="ClsInput" type="text" name="" id="Name" autocomplete="given-name"></td>
+                <td class="ClsCell"><span id="NameErr"></span></td>
+            </tr>
+            <tr class="ClsRow">
+                <td class="ClsCell"><label for="Email" class="ClsLabel">Email: </label></td>
+                <td class="ClsCell"><input class="ClsInput" type="text" name="" id="Email" autocomplete="email"></td>
+                <td class="ClsCell"><span id="EmailErr"></span></td>
+            </tr>
+            <tr class="ClsRow">
+                <td class="ClsCell"><label for="Mobile" class="ClsLabel">Mobile: </label></td>
+                <td class="ClsCell"><input class="ClsInput" type="number" name="" id="Mobile"></td>
+                <td class="ClsCell"><span id="MobileErr"></span></td>
+            </tr>
+            <tr class="ClsRow">
+                <td class="ClsCell"><label for="Password" class="ClsLabel">Password: </label></td>
+                <td class="ClsCell"><input class="ClsInput" type="password" name="" id="Password"></td>
+                <td class="ClsCell"><span id="PasswordErr"></span></td>
+            </tr>
+            <tr class="ClsRow">
+                <td class="ClsCell"><label for="ConfirmPassword" class="ClsLabel">Confirm Password: </label></td>
+                <td class="ClsCell"><input class="ClsInput" type="password" name="" id="ConfirmPassword"></td>
+                <td class="ClsCell"><span id="ConfirmPasswordErr"></span></td>
+            </tr>
+        </table> 
+        <!-- <input type="submit" onclick=" return validate()"> -->
+        <input type="submit">
+        <input type="reset" onclick=" return FormClear()">
+    </form> 
+    <script>
+
+        let name1 = document.getElementById('Name');
+        let nmSpan = document.getElementById('NameErr');  
+        let Email1 = document.getElementById('Email')
+        let Emailspan = document.getElementById('EmailErr');
+        let mobile = document.getElementById('Mobile');
+        let Mobilespan = document.getElementById('MobileErr');
+        let pass = document.getElementById('Password');
+        let Passwordspan = document.getElementById('PasswordErr');
+        let cpass = document.getElementById('ConfirmPassword');
+        let ConfirmPasswordspan = document.getElementById('ConfirmPasswordErr');
+
+       function validate()
+       {
+            if (name1.value=='')
+                {
+                    nmSpan.innerHTML = "*Name is required...!";
+                    nmSpan.style.color = "red";
+                    return false;
+                }
+            else
+                {
+                    nmSpan.innerHTML = "";
+                    return false;
+                }
+
+            if ((name1.value.length<5) || (name1.value.length>30))
+                {
+                    nmSpan.innerHTML = "*Name length is inappropriate...!";
+                    nmSpan.style.color ="red";
+                    return false;
+                }
+            else
+                {
+                    nmSpan.innerHTML = "";
+                    let newname1 = name1.value.replace(' ', '0');    
+                    console.log(newname1);        
+                    return false;
+                }
+
+            if (newname1.match(/[a-z][A-Z][0]/))
+                {
+                    nmSpan.innerHTML = "";
+                    return false;
+                }
+            else
+                {
+                    nmSpan.innerHTML = "*Name has invalid characters...!";
+                    nmSpan.style.color ="red";
+                    return false;
+                }
+
+            if (Email1.value=='')
+                {
+                    Emailspan.innerHTML = "*Email is required...!";
+                    Emailspan.style.color ="red";
+                    return false;
+                }
+            else
+                {
+                    Emailspan.innerHTML = "";
+                    return false;
+                }
+                // Start validation checks from here
+            if (Email1.value.match(/(?:[a-z0-9+!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/gi)) 	
+            {
+                Emailspan.innerHTML = "";
+                return false;
+            }
+            else
+            {
+                Emailspan.innerHTML = "*Invalid Email ID...!";
+                return false;
+            }
+
+            if(mobile.value=='')
+            {
+                Mobilespan.innerHTML = "Mobile number is required..!";             
+                return false;
+            }
+            else
+            {
+                Mobilespan.innerHTML = "";             
+                return false;
+            }
+            if (mobile.value.match(/0-9/))
+            {
+                Mobilespan.innerHTML = "";             
+                return false;
+            }
+            else
+            {
+                Mobilespan.innerHTML = "Mobile number is invalid..!";             
+                Mobilespan.style.color ="red";
+                return false;
+            }
+
+            if (mobile.value.length==10)
+            {
+                Mobilespan.innerHTML = ""; 
+                return false;            
+            }
+            else
+            {
+                Mobilespan.innerHTML = "Mobile number should have minimum 10 digits..!";             
+                Mobilespan.style.color ="red";
+                return false;
+            }
+            
+            if (pass.value=='')
+            {
+                Passwordspan.innerHTML = "Password is required..!";
+                return false;
+            }
+            else
+            {
+                Passwordspan.innerHTML = "";
+                return false;
+            }
+            if ((pass.value.length<8) || (pass.value.length>15))
+            {
+                Passwordspan.innerHTML = "Password should have minimum 8 or maximum 15 characters..!";
+                return false;
+            }
+            else
+            {
+                Passwordspan.innerHTML = "";
+                return false;
+            }
+
+            if (cpass.value=='')
+            {
+                ConfirmPasswordspan.innerHTML = "Password is required..!";
+                return false;
+            }
+            else
+            {
+                ConfirmPasswordspan.innerHTML = "";
+                return false;
+            }
+            if ((cpass.value.length<8) || (cpass.value.length>15))
+            {
+                ConfirmPasswordspan.innerHTML = "Password should have minimum 8 or maximum 15 characters..!";
+                return false;
+            }
+            else
+            {
+                ConfirmPasswordspan.innerHTML = "";
+                return false;
+            }
+
+            if (pass.value == cpass.value)
+            {
+                ConfirmPasswordspan.innerHTML = "";
+                return false;
+            }
+            else
+            {
+                ConfirmPasswordspan.innerHTML = "Passwords do not match..!";
+                return false;
+            }
+       }
+
+       function FormClear()
+       {
+            var RegForm = document.getElementById("RegFormID");
+            RegForm.reset();
+        }
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* style.css */
+body { 
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+
+	align-items: center; 
+	min-height: 50vh; 
+} 
+
+.root { 
+	font-size: x-large; 
+	color: black; 
+	/* background-color: rgb(57, 151, 57);  */
+	background-color: white; 
+	box-shadow: 0 2px 5px grey; 
+	padding: 0% 5% 1% 5%; 
+	text-align: center; 
+	border: 10px solid #a756c9;
+	border-radius: 5px 0; 
+} 
+
+.title { 
+	border-bottom: 4px dashed; 
+	border-color: white; 
+} 
+
+.ClsPara {
+	width: 500px;
+}
+
+input { 
+	font-size: 20px; 
+	padding-left: 10px; 
+	outline: 2px grey; 
+	width: 375px;
+} 
+
+.foot { 
+	margin-bottom: 0%; 
+	display: flex; 
+	width: 100%; 
+	color: white;
+} 
+
+.foot>button { 
+	width: 100%; 
+	padding: 1%; 
+	margin: 1%; 
+	background-color: #a756c9; 
+	border-radius: 5px; 
+	border-color: yellowgreen; 
+	font-size: large; 
+	color: black;
+}

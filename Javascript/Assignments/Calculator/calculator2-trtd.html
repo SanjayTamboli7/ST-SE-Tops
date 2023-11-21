@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calulator</title>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body>
+      <div class="main">
+         <input type="text" id = 'res'>
+         <div class="btn">
+            <!-- <input type="button" value = '%' onclick = "Solve('%')"> -->
+            <!-- <input type="button" value = '←' onclick ="Back('←')"> -->
+            <tr>
+               <td><input type="button" value = '+' onclick = "Solve('+')"></td>
+               <td><input type="button" value = '-' onclick = "Solve('-')"></td>
+               <td><input type="button" value = 'x' onclick = "Solve('*')"></td>
+               <td><input type="button" value = '/' onclick = "Solve('/')"></td>
+            </tr>
+            <tr>
+               <td><input type="button" value = '7' onclick = "Solve('7')"></td>
+               <td><input type="button" value = '8' onclick = "Solve('8')"></td>
+               <td><input type="button" value = '9' onclick = "Solve('9')"></td>
+               <td><input class="ClsEqual" type="button" value = '=' onclick = "Result()"></td>
+            </tr>
+            <tr>
+               <td><input type="button" value = '4' onclick = "Solve('4')"></td>
+               <td><input type="button" value = '5' onclick = "Solve('5')"></td>
+               <td><input type="button" value = '6' onclick = "Solve('6')"></td>
+            </tr>                                  
+            <tr>
+               <td><input type="button" value = '1' onclick = "Solve('1')"></td>
+               <td><input type="button" value = '2' onclick = "Solve('2')"></td>
+               <td><input type="button" value = '3' onclick = "Solve('3')"></td>
+            </tr>                                    
+            <tr>
+               <td><input type="button" value = '0' onclick = "Solve('0')"></td>
+               <td><input type="button" value = '.' onclick = "Solve('.')"></td>
+               <td><input type="button" value = 'C' onclick = "Clear()"></td>
+            </tr>                        
+         </div>
+      </div>
+      <script src = 'calculator.js' ></script>    
+   </body>
+</html>
+
+<!-- https://www.tutorialspoint.com/real-time-calculator-using-html-css-and-javascript -->

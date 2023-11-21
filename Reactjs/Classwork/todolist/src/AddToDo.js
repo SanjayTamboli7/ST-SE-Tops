@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
 
-function AddToDo({onAddTodo}) {
+function AddToDo({onaddTodo}) {
 
-    const [title,setTitle] = useState("");
+  const [title,setTitle] = useState("");
+
 
   return (
     <div>
-        <label>
-            <input
-            type='text'
-            value={title}
-            onChange={(e)=>{setTitle(e.target.value)}}
-            />
-        </label>
-        <label>
-           <button onClick={()=>{
-            onAddTodo(title)
-           }}>Add</button>
-        </label>      
+
+    {/* {title} */}
+      <input
+      value={title}
+      onChange={(e)=>{setTitle(e.target.value)}}
+      />
+      <button onClick={()=>{
+        onaddTodo(title)
+      }}>Add</button>
+      
     </div>
   )
 }
 
 export default AddToDo
+
+

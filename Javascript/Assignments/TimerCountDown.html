@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Time Left</title>
+        <style>
+
+            .display__time-left {
+                font-weight: 100;
+                font-size: 20rem;
+                font-size: small;
+                margin: 0;
+                color: black;
+            }
+
+            .timer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .display {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="timer">
+            <div class="display">
+              <h1 class="display__time-left"></h1>
+            </div>
+        </div>        
+          <script>
+                // Create the universal variable 'countdown' that lives in the window. 
+                var countdown;
+
+                const timerDisplay = document.querySelector('.display__time-left');
+
+                window.onload(startTimer());
+
+                // This is our main function
+                function timer(seconds) {
+                    //If any timers are already going, clear them
+                    clearInterval(countdown);
+
+                    // Date.now is a new JS function, will give time in MS.
+                    const now = Date.now();
+
+                    // Find time in SECONDS by multiplying default MS by 1000
+                    const then = now + seconds * 1000;
+
+                    // Run another function, defined below, as soon as this function is invoked
+                    displayTimeLeft(seconds);
+
+                    // Set this function to the variable that lives in the browser. Set interval is a function that runs every 1000 ms 
+                    countdown = setInterval(() => {
+                        const secondsLeft = Math.round((then - Date.now()) / 1000);
+                    
+                        // Check when timer is done. 
+                        if(secondsLeft < 0){
+                            clearInterval(countdown);
+                            return;
+                        }
+                    
+                        //display it
+                        displayTimeLeft(secondsLeft);
+                                        
+                        // Run this function every 1000 ms
+                    }, 1000);
+                }
+
+                //Convert seconds to the formatted display value
+                function displayTimeLeft(seconds) {
+
+                    // Round seconds to whole numbers
+                    const minutes = Math.floor(seconds / 60);
+
+                    // Get the number of whole seconds remaining
+                    const remainderSeconds = seconds % 60;
+
+                    // Check if display needs a leading 0, if there is less than 10 seconds. so, '9' will display as '09'
+                    const display = `Time Left: ${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+
+                    timerDisplay.textContent = display;
+                }
+                
+                function startTimer(){
+
+                    // By default 1 minute is to solve one scramble.
+                    const seconds = 60;
+                    timer(seconds);
+                }
+          </script>
+    </body>
+</html>

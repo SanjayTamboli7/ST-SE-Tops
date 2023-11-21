@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate Sub Total Price Of Quantity</title>
+        <link rel="stylesheet" href="css/CalculateSubTotal.css">
+    </head>
+    <body>
+        <div class="ClsProduct">
+            <h1 class="Clsh1">Calculate subtotal price of quantity</h1>
+            <table class="ClsProductTable" id="ProductTable">
+            </table>
+        </div>
+        <!-- <script type="text/javascript" src="js/CalculateSubTotal.js"> -->
+        <script>
+
+            function ShowSubTotal(Quantity)
+                {
+                    // "Quantity"
+                    // "UnitPrice"
+                    // "SubTotal"
+
+                    let Qty = document.querySelectorAll("Quantity")
+                    console.log(Quantity)
+                    // document.getElementById("SubTotal").innerHTML = 
+
+                }           
+            function GetProductData()
+                {
+                    const ProductData = 
+                    [
+                        {ProductName:"Chopper", ProductImage:"image/Chopper.jpg", ProductUnitPrice:129},
+                        {ProductName:"DinnerSet", ProductImage:"image/DinnerSet.jpg", ProductUnitPrice:219},
+                        {ProductName:"Kadhai", ProductImage:"image/Kadhai.jpeg", ProductUnitPrice:309},
+                        {ProductName:"Pan", ProductImage:"image/Pan.jpeg", ProductUnitPrice:229},
+                        {ProductName:"Pressure-Cooker", ProductImage:"image/Pressure-Cooker.jpg", ProductUnitPrice:359}
+                    ]
+                    
+                    let LineData = '<tr class="ClsRow"><td class="ClsCellHeading">Product Info</td><td class="ClsCellHeading">Quantity</td><td class="ClsCellHeading">Unit Price</td><td class="ClsCellHeading">Price Sub Total</td><td class="ClsCellHeading">Action</td></tr>'
+                    LineData = LineData = LineData + ProductData.map((Value)=>{
+                        return '<tr class="ClsRow">' + '<td class="ClsCell">' + '<img class="ClsCellImage" src="' + Value.ProductImage + '"class="ClsQuantity" alt="Image Not Found">' + Value.ProductName + "</td>" + '<td class="ClsCell"><label>Enter: </label> <input type="number" id="Quantity" name="Quantity" placeholder="0" onchange="ShowSubTotal()"></td>' + '<td class="ClsCell" id="UnitPrice">' + Value.ProductUnitPrice + "</td>" + '<td class="ClsCell" id="SubTotal">0</td>' + '<td class="ClsCell"><button>Remove</button></td>' + '</tr>'
+                        // return Value.ProductImage + " " + Value.ProductName + " " + Value.ProductUnitPrice + "<br>"
+                    })
+                    
+                    document.getElementById("ProductTable").innerHTML = LineData;
+                
+                }
+            GetProductData()
+        </script>
+    </body>

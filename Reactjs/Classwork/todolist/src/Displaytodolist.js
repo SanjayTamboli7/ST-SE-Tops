@@ -6,13 +6,14 @@ function Displaytodolist() {
     let DivResult = `
         <h1>Todo List</h1>
         <table className="ClsTable">
-        <tr>
-            <td className="ClsCell">ID</td>
-            <td className="ClsCell">Title</td>
-            <td className="ClsCell">Edit</td>
-            <td className="ClsCell">Delete</td>
-        </tr>
-        </table>`
+            <tr>
+                <td className="ClsCell">ID</td>
+                <td className="ClsCell">Title</td>
+                <td className="ClsCell">Edit</td>
+                <td className="ClsCell">Delete</td>
+            </tr>
+        </table>
+        `
     const [task, Settask] = [{id:1, title:"Task 1"}, {id:2, title:"Task 2"}, {id:3, title:"Task 3"}]
     
     let DisplayDefaultTable = ()=> {

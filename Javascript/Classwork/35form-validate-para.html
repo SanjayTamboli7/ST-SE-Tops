@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    Name: <input type="text" id="nm" onblur="Validate(nm,nmErr)">
-        <span id="nmErr"></span>
-    <br><br>
-
-    Mobile: <input type="text"  id="mb" onblur="Validate(mb,mbErr)">
-    <span id="mbErr"></span>
-<br><br>
-    
-
-    <script>
-
-
-
-       
-       
-        function Validate(x,sp)// x = nm
-        {
-            console.log(x);//nm input
-            console.log(sp);//spanTag
-            console.log(x.value);//nm.value
-            console.log(sp.innerHTML);//span.innerhtml
-
-            if(x.value == "")
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        Name: <input type="text" id="nm" onblur="Validate(nm,nmErr)">
+            <span id="nmErr"></span>
+        <br><br>
+        Mobile: <input type="text"  id="mb" onblur="Validate(mb,mbErr)">
+        <span id="mbErr"></span>
+        <br><br>
+        <script>
+            function Validate(x,sp)// x = nm
             {
-                sp.innerHTML ="* Required...!";
-                sp.style.color="red";
-                x.style.border ="2px solid red";
-                return false;
+                console.log(x);//nm input
+                console.log(sp);//spanTag
+                console.log(x.value);//nm.value
+                console.log(sp.innerHTML);//span.innerhtml
+
+                if(x.value == "")
+                {
+                    sp.innerHTML ="* Required...!";
+                    sp.style.color="red";
+                    x.style.border ="2px solid red";
+                    return false;
+                }
+                else 
+                {
+                    sp.innerHTML ="";
+                    x.style.border ="2px solid green";
+                }
             }
-
-            else 
-            {
-                sp.innerHTML ="";
-                x.style.border ="2px solid green";
-            }
-
-        }
-
-       
-      
-        
-    </script>
-    
-</body>
+        </script>    
+    </body>
 </html>
