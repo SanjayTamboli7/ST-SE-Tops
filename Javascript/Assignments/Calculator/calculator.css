@@ -3,7 +3,7 @@
     margin: 0;
     font-family: 'poppins', sans-serif;
  }
- /* body{
+ body{
     background-color: #495250;
     display: grid;
     height: 100vh;
@@ -14,7 +14,7 @@
     height: 450px;
     background-color: white;
     position: absolute;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     border: 10px solid #99c9d7;
     border-radius: 6px; 
  }
@@ -53,26 +53,8 @@
  .btn input[type='button']:hover {
     background-color: black;
     color: white;
- } */
+ }
 
  .ClsEqual {
-   /* background-color: f87d4f; */
-   border: 0;
+   background-color: f87d4f;
  }
-.main
-{
-   padding: 10px;
-   border: 2px solid red;
-   width: 50%;
-}
-td
-{
-   /* padding: 10px; */
-   background: red;
-}
-input
-{
-   padding: 10px;
-   background: red;
-   border: 0;
-}
