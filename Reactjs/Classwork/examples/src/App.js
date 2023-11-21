@@ -24,6 +24,7 @@ import UseStateInputObject from './UseStateInputObject';
 import UseReference from './UseReference';
 import ListView from './ListView';
 import SetPlusMinus from './SetPlusMinus';
+import Search from './Search';
 
 // import FetchAPIData from './FetchAPIData'
 
@@ -94,10 +95,13 @@ function App() {
             <tr>
               <td className="ClsCell"><ListView/></td>
               <td className="ClsCell"><SetPlusMinus/></td>
+              <td className="ClsCell"><Search/></td>
+              
             </tr>
             <tr>
               <td className="ClsCell">List View</td>
               <td className="ClsCell">Set Plus Minus</td>
+              <td className="ClsCell">Add and Search</td>
             </tr>
           </tbody>
         </table>        
