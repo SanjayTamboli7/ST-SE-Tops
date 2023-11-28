@@ -89,16 +89,30 @@ function ActionOnImage(Action)
 				{
 					HeightShrinked = false;
 					idimg.classList.removeClass('leftheight');
+					idimg.classList.Classadd('left');
 				}
 			else
 				{
 					HeightShrinked = true;
 					idimg.classList.Classadd('leftheight');
+					idimg.classList.removeClass('left');
 				}
 			break;
-		// case 'MV': 
-		// 	document.getElementById("img").style.transform.scale(,5);
-		// 	break;
+		case 'MV': 
+			let idimgw = document.getElementById("img");
+			if (widthShrinked)
+				{
+					widthShrinked = false;
+					idimgw.classList.removeClass('leftwidth');
+					idimgw.classList.Classadd('left');
+				}
+			else
+				{
+					HeightShrinked = true;
+					idimgw.classList.Classadd('leftwidth');
+					idimgw.classList.removeClass('left');
+				}
+			break;
 		default:
 			alert("Please pass the correct parameter");
 	}

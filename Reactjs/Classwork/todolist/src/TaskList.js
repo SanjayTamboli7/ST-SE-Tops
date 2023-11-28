@@ -4,7 +4,7 @@ function TaskList({todos,onChangeTodo,onDeleteTodo}) {
   return (
     <div>
         <table>
-        <tr>
+            <tr>
                 <td className="ClsCell">Title</td>
                 <td className="ClsCell">Edit</td>
                 <td className="ClsCell">Delete</td>
@@ -13,13 +13,13 @@ function TaskList({todos,onChangeTodo,onDeleteTodo}) {
             {todos.map((t)=>{
                 return(
                     <tr>
-                    <td key={t.id}>
-                        <Task
-                        todo={t}
-                        onChange={onChangeTodo}
-                        onDelete={onDeleteTodo}                   
-                        />                        
-                    </td>
+                        <td key={t.id}>
+                            <Task
+                            todo={t}
+                            onChange={onChangeTodo}
+                            onDelete={onDeleteTodo}                   
+                            />                        
+                        </td>
                     </tr>
                 )
             })}

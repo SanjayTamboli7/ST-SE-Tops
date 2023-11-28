@@ -25,8 +25,22 @@ import UseReference from './UseReference';
 import ListView from './ListView';
 import SetPlusMinus from './SetPlusMinus';
 import Search from './Search';
-
-// import FetchAPIData from './FetchAPIData'
+import ClassPropEx from './ClassProps';
+import StateEx from './StateEx';
+import Home from './Home';
+import ClassCompo from './ClassCompo';
+import UseStateMove from './UseStateMove';
+import UseEffecthook from './UseEffecthook';
+import UseEffecthook1 from './UseEffecthook1';
+import UseRef from './UseRef';
+import UseContextHook from './UseContextHook';
+import UsestateEX from './UsestateEX';
+import UserefEx from './UserefEx';
+import UseContextEx from './UseContextEx';
+import ChatRoom from './ChatRoom';
+import TriggerElementOnScroll, { Box } from './TriggerElementOnScroll';
+import TestModal from './ModalDialog';
+import ShoppingList from './ShoppingList';
 
 function App() {
   return (
@@ -44,13 +58,13 @@ function App() {
               <td className="ClsCell"><ClsChangeArray/></td>
             </tr>
             <tr>
-              <td className="ClsCell">Number with useState</td>
-              <td className="ClsCell">String with useState</td>
-              <td className="ClsCell">Component Life Cycle</td>
-              <td className="ClsCell">Increment Number - Class</td>
-              <td className="ClsCell">Change String - Class</td>
-              <td className="ClsCell">Change Object - Class</td>
-              <td className="ClsCell">Change Array - Class</td>
+              <td className="ClsCell">1 Number useState</td>
+              <td className="ClsCell">2 String useState</td>
+              <td className="ClsCell">3 Component Life Cycle</td>
+              <td className="ClsCell">4 Increment Number - Class</td>
+              <td className="ClsCell">5 Change String Class</td>
+              <td className="ClsCell">6 Change Object Class</td>
+              <td className="ClsCell">7 Change Array Class</td>
             </tr>
           </tbody>
           <tbody>
@@ -64,13 +78,13 @@ function App() {
               <td className="ClsCell"><UpdateFormText/></td>
             </tr>
             <tr>
-              <td className="ClsCell">Display / Change Input</td>
-              <td className="ClsCell">Change Number Function</td>
-              <td className="ClsCell">Change String Function</td>
-              <td className="ClsCell">Change Object Function</td>
-              <td className="ClsCell">Update Number Function 1</td>
-              <td className="ClsCell">Update String Function 1</td>
-              <td className="ClsCell">Update Input Function 1</td>
+              <td className="ClsCell">8 Display Edit Input</td>
+              <td className="ClsCell">9 Edit No. Function</td>
+              <td className="ClsCell">10 Edit text Function</td>
+              <td className="ClsCell">11 Edit Object Function</td>
+              <td className="ClsCell">12 Edit No. Function</td>
+              <td className="ClsCell">13 Edit text Function</td>
+              <td className="ClsCell">14 Edit Input Function</td>
             </tr>
           </tbody>
           <tbody>
@@ -84,27 +98,78 @@ function App() {
               <td className="ClsCell"><UseReference/></td>  
             </tr>
             <tr>
-              <td className="ClsCell"><u>Update Checkbox Function 1</u></td>
-              <td className="ClsCell">Update Simple Object</td>
-              <td className="ClsCell">Update Nested Object</td>
-              <td className="ClsCell">Change Number - UseState</td>
-              <td className="ClsCell">Update Nested Object 1</td>
-              <td className="ClsCell">Use State Input Object</td>
-              <td className="ClsCell">Use Reference</td>
+              <td className="ClsCell">15 Edit Checkbox Functionnpm</td>
+              <td className="ClsCell">16 Edit Simple Object</td>
+              <td className="ClsCell">17 Edit Nested Object</td>
+              <td className="ClsCell">18 Edit No - UseState</td>
+              <td className="ClsCell">19 Edit Nested Object 1</td>
+              <td className="ClsCell">20 UseState Input Object</td>
+              <td className="ClsCell">21 Use Reference</td>
             </tr>
             <tr>
               <td className="ClsCell"><ListView/></td>
               <td className="ClsCell"><SetPlusMinus/></td>
-              <td className="ClsCell"><Search/></td>
-              
+              <td className="ClsCell"><Search/></td>              
+              <td className="ClsCell"><ClassPropEx/></td>
+              <td className="ClsCell"><StateEx/></td>
+              <td className="ClsCell"><Home/></td>
+              <td className="ClsCell"><UseStateMove/></td>
             </tr>
             <tr>
-              <td className="ClsCell">List View</td>
-              <td className="ClsCell">Set Plus Minus</td>
-              <td className="ClsCell">Add and Search</td>
+              <td className="ClsCell">22 List View</td>
+              <td className="ClsCell">23 Set Plus Minus</td>
+              <td className="ClsCell">24 Add and Search</td>
+              <td className="ClsCell">25 Class ClassProps</td>
+              <td className="ClsCell">26 This State</td>
+              <td className="ClsCell">27 Home Section</td>
+              <td className="ClsCell">28 UseState Move</td>
+            </tr>
+            <tr>
+              <td className="ClsCell"><UseEffecthook/></td>
+              <td className="ClsCell"><UseEffecthook1/></td>
+              <td className="ClsCell"><UseRef/></td>
+              <td className="ClsCell"><UserefEx/></td>              
+              <td className="ClsCell"><UseContextHook/></td>   
+              <td className="ClsCell"><UseContextEx/></td>   
+              <td className="ClsCell"><UsestateEX/></td>               
+            </tr>
+            <tr>
+              <td className="ClsCell">29 Use Effect</td>
+              <td className="ClsCell">30 Use Effect 1</td>
+              <td className="ClsCell">31 Use Reference</td>
+              <td className="ClsCell">32 Use Reference Ex</td>
+              <td className="ClsCell">33 Use Context</td>
+              <td className="ClsCell">34 Use Context Ex</td>
+              <td className="ClsCell">35 Use State</td>
+            </tr>
+            <tr>
+              <td className="ClsCell"><ChatRoom/></td>
+              <td className="ClsCell"><TestModal/></td>          
+              <td className="ClsCell"><ShoppingList/></td>
+            </tr>
+            <tr>
+              <td className="ClsCell">36 Chat Room</td>
+              <td className="ClsCell">37 Modal Dialog Box</td>
+              <td className="ClsCell">38 Shopping List</td>
+            </tr>
+            <tr>
+              {/* <td className="ClsCell"><PropEx/></td> */}
+              {/* <td className="ClsCell"><Child/></td> */}
+              {/* Above two components are problematic. So do not activate them. */}
+            </tr>
+            <tr>
+              {/* <td className="ClsCell">25 Prop Types</td> */}
+              {/* <td className="ClsCell">26 Parent Child</td> */}
+              {/* Above two components are problematic. So do not activate them. */}
             </tr>
           </tbody>
         </table>        
+        {/* <td className="ClsCell"><ClassCompo/></td> 
+        <td className="ClsCell"><TriggerElementOnScroll/></td>  */}
+        <ClassCompo/>
+        <TriggerElementOnScroll/>
+        <Box/>
+        <TriggerElementOnScroll/>
     </div>
   )
 }

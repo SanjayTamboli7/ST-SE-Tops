@@ -1,0 +1,30 @@
+
+*{
+    /* font-family: cursive;
+    box-sizing: border-box; */
+}
+.header 
+{
+    height: 100px;
+    background: lightblue;
+}
+
+.content 
+{
+    /* background: coral; */
+    /* display: flex; */
+
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 200px; */
+    /* justify-content: center; */
+    /* text-align: center;
+    align-items: center; */
+}
+
+.col 
+{
+    /* border: 2px solid; */
+    /* width: 25%;
+    height: 200px; */
+}
