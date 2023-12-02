@@ -1,28 +1,31 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Homea from './Homea'
-import Abouta from './Abouta'
-import Servicea from './Servicea'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Homea from './Homea';
+import Abouta from './Abouta';
+// import Servicea from './Servicea'
+import Services from './Services';
+import Service1 from './Service1';
+import Service2 from './Service2';
+import Service3 from './Service3';
 
 function router() {
   return (
-    // <div>
-      
-    // </div>
-    <BrowserRouter>
-        <Link to='/homea' className='me-2 text-black'>Home</Link>
-        <Link to='abouta' className='me-2 text-black'>About</Link>
-        <Link to='services' className='me-2 text-black'>Services</Link>
-        <Routes>
-            <Route path='/homea' element={<Homea/>}></Route>
-            <Route path='/abouta' element={<Abouta/>}></Route>
-            <Route path='/services' element={<Servicea/>}>
-                <Route path='service1' element={<Service1/>}></Route>
-                <Route path='service2' element={<Service1/>}></Route>
-                <Route path='service3' element={<Service1/>}></Route>
-            </Route>
-        </Routes>
-    </BrowserRouter>
+        <div>
+            <BrowserRouter>
+            <Link to='/home' className='me-2 text-black'>Home</Link>
+            <Link to='/about' className='me-2'>About</Link>
+            <Link to='/services'>Services</Link>
+            <Routes>
+                <Route path='/home' element={<Homea/>}></Route>
+                <Route path='/about' element={<Abouta/>}></Route>
+                <Route path="/services" element={<Services/>}>
+                    <Route path="/services/services1" element={<Service1/>}></Route>
+                    <Route path="/services/services2" element={<Service2/>}></Route>
+                    <Route path="/services/services3" element={<Service3/>}></Route>
+                </Route>      
+            </Routes>
+            </BrowserRouter>
+        </div>
     )
 }
 

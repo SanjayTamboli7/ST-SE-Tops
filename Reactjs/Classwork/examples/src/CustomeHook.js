@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useState, useEffect } from 'react' ;
 
 function CustomeHook() {
 
@@ -10,15 +10,13 @@ function CustomeHook() {
             })  
             // console.log(e)
             // console.log(e.clientX)
-          }
-        
-          window.addEventListener("mousemove",handleMove)     
-    
+          }        
+          window.addEventListener("mousemove",handleMove)         
     })
   
   return (
     <div>
-      
+      This is custome hook example
     </div>
   )
 }

@@ -1,54 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   
-   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+    </head>
+    <body>
         Name: <input type="text" id="inp">
         <span id="nmErr"></span>
-      <br/>
-
+        <br/>
         Mobile: <input type="text" id="mob">
         <br/>
-        <input type="submit" onclick="ValidateForm()">
-   
+        <input type="submit" onclick="ValidateForm()">   
 
-    <script>
+        <script>            
+            var nm =  document.getElementById('inp');
+            var nmEx=  /^[a-zA-Z]{2,8}$/;
+            var sp1 =  document.getElementById('nmErr')
+            var mb =  document.getElementById('mob');
 
-       
-
-      
-
-        var nm =  document.getElementById('inp');
-
-        var nmEx=  /^[a-zA-Z]{2,8}$/;
-
-
-       var sp1 =  document.getElementById('nmErr')
-
-        var mb =  document.getElementById('mob');
-
-       function ValidateForm()
-       {
-        if(nm.value=="")
-        {
-            sp1.innerHTML ="Required..!"
-        }
-        else if(!nm.value.match(nmEx))
-        {
-            sp1.innerHTML ="min 2 and max 8 letters ..!"
-        }
-        else 
-        {
-            sp1.innerHTML ="";
-        }
-       }
-
-    </script>
-    
-</body>
+            function ValidateForm()
+                {
+                if(nm.value=="")
+                    {
+                        sp1.innerHTML ="Required..!"
+                    }
+                    else if(!nm.value.match(nmEx))
+                        {
+                            sp1.innerHTML ="min 2 and max 8 letters ..!"
+                        }
+                    else 
+                        {
+                            sp1.innerHTML ="";
+                        }
+                }
+        </script>
+    </body>
 </html>

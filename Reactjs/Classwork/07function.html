@@ -1,55 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Various Function Style</title>
+    </head>
+    <body>
+        <h1 class="z">Different Function Style</h1>
+        <script>
+            let x = document.querySelector('.z');
 
-    <h1 class="z">Hello</h1>
-    <script>
+            x.addEventListener("pointerover",Test)
 
-        let x = document.querySelector('.z');
+            function Test()
+            {
+                x.style.width = "100px";
+                console.log("Regular Function called");
+            }
 
-        // x.addEventListener("pointerover",Test)
+            x.addEventListener("pointerover",function Test1()
+            {
+                x.style.color ="red";
+                console.log("inline Function Test1 called");
+            })
 
-        // function Test()
-        // {
-        //     x.style.color ="red"
-        //     console.log("skjdhf");
-        // }
+            x.addEventListener("pointerover",function ()
+            {
+                x.style.height = "100px";
+                console.log("inline function Heidht called");
+            })
 
-        x.addEventListener("pointerover",function Test()
-{
-    x.style.color ="red"
-    console.log("skjdhf");
-})
+            x.addEventListener("pointerover", ()=>
+            {
+                x.style.background = "Yellow";
+                console.log("Background color set arrow function");
+            })       
 
-
-
-
-
-// x.addEventListener("pointerover",function ()
-// {
-//     x.style.color ="red"
-//     console.log("skjdhf");
-// })
-
-
-
-// x.addEventListener("pointerover", ()=>
-// {
-//     x.style.color ="red"
-//     console.log("skjdhf");
-// })
-
-
-
-
-        
-
-    </script>
-    
-</body>
+        </script>        
+    </body>
 </html>

@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change color of 1 and 4 H1</title>
-</head>
-<body>
-    <h1>Heading 1</h1>
-    <h1>Heading 2</h1>
-    <h1>Heading 3</h1>
-    <h1>Heading 4</h1>
-    <script>
-        function changecolor14()
-            {
-                let ctr=0;
-                let arr_h1 = document.getElementsByTagName("h1")
-                for (ctr=0;ctr<4;ctr++)
-                    {
-                        if (ctr==0 || ctr==3)
-                            {
-                                arr_h1[ctr].style.color = 'Red';
-                            }
-                    }
-            }
-        changecolor14();
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change color of 1 and 4 H1</title>
+    </head>
+    <body>
+
+        <div>
+            <h1>Heading 1</h1>
+            <h1>Heading 2</h1>
+            <h1>Heading 3</h1>
+            <h1>Heading 4</h1>    
+        </div>
+        
+        <script>
+            function changecolor14()
+                {
+                    let ctr=0;
+                    let arr_h1 = document.getElementsByTagName("h1")
+                    for (ctr=0;ctr<4;ctr++)
+                        {
+                            if (ctr==0 || ctr==3)
+                                {
+                                    arr_h1[ctr].style.color = 'Red';
+                                }
+                        }
+                }
+            changecolor14();
+        </script>
+    </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Object Demo</title>
     </head>
     <body>
         <script>
@@ -12,13 +12,18 @@
                 name : "Bhavesh",
                 "age":12
             }
-            document.write(obj)
-            document.write(obj.name);
-            document.write(obj["age"]);
-            // for(xyz in obj)
-            // {
-            //     document.write(obj[xyz])
-            // }
+
+            document.write("Entire Object: "+obj+ "<br>");
+            document.write("Name: "+obj.name+ "<br>");
+            document.write("Age: "+obj["age"]+ "<br>");
+
+            document.write("Printing object element using loop" + "<br>");
+
+            for(xyz in obj)
+            {
+                document.write(obj[xyz]+ "<br>");
+            }
+
         </script>
     </body>
 </html>

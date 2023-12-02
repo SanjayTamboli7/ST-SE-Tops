@@ -41,6 +41,8 @@ import ChatRoom from './ChatRoom';
 import TriggerElementOnScroll, { Box } from './TriggerElementOnScroll';
 import TestModal from './ModalDialog';
 import ShoppingList from './ShoppingList';
+import CustomeHookP from './CustomeHookP';
+// import { Router } from 'react-router-dom';
 
 function App() {
   return (
@@ -146,11 +148,13 @@ function App() {
               <td className="ClsCell"><ChatRoom/></td>
               <td className="ClsCell"><TestModal/></td>          
               <td className="ClsCell"><ShoppingList/></td>
+              <td className="ClsCell"><CustomeHookP/></td>
             </tr>
             <tr>
               <td className="ClsCell">36 Chat Room</td>
               <td className="ClsCell">37 Modal Dialog Box</td>
               <td className="ClsCell">38 Shopping List</td>
+              <td className="ClsCell">39 Custome Hook</td>
             </tr>
             <tr>
               {/* <td className="ClsCell"><PropEx/></td> */}
@@ -170,6 +174,7 @@ function App() {
         <TriggerElementOnScroll/>
         <Box/>
         <TriggerElementOnScroll/>
+        {/* <Router/> This is not working. */}
     </div>
   )
 }

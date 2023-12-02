@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>For-In-Of-Loop</title>
     </head>
     <body>
         <script>
+
+            // Explanation as follows.
             // for(anything in varName)
             // {
             //     ..code
@@ -17,53 +19,69 @@
             // }
             var x = [1,"hi",true,31,32];
 
-            // document.write(x+ "<br>");
-            // document.write(typeof(x)+ "<br>") 
-            // document.write(x[0])+ "<br>";
-            // document.write(x[1]+ "<br>");
-            // document.write(x[2]+ "<br>");
-            // document.write(x[3]+ "<br>");
-            // document.write(x[4]+ "<br>");
+            document.write(x+ "<br>");
+            document.write(typeof(x)+ "<br>") 
+            document.write(x[0])+ "<br>";
+            document.write(x[1]+ "<br>");
+            document.write(x[2]+ "<br>");
+            document.write(x[3]+ "<br>");
+            document.write(x[4]+ "<br>");
+            document.write("<br>");
 
-            // document.write(x.length);//4
+            document.write("Array Length is " + x.length);
+            document.write("<br>")
 
-            // for(pos=0;pos<x.length;pos++)
-            // {
-            //     document.write(pos);
-            //     document.write(" => ");
-            //     document.write(x[pos]);
-            //     document.write("<br>")
-            //     document.write(pos + " => " + x[pos] +  "<br>")
-            // }
-                // for(xyz in x) // Returns index and value
-                // {
-                //     document.write(xyz + " => " + x[xyz] + "<br>");
-                // }
-                // for(xyz of x) // Returns value
-                // {
-                //     document.write(xyz+"<br>")
-                // }
+            document.write("For Loop" + "<br>") ;
+            for(pos=0;pos<x.length;pos++)
+            {
+                document.write(pos);
+                document.write(" => ");
+                document.write(x[pos]);
+                document.write("<br>")
+                document.write(pos + " => " + x[pos] +  "<br>")
+            }
+
+            document.write("For In Loop" + "<br>") ;
+            for(xyz in x) // Returns index and value
+            {
+                document.write(xyz + " => " + x[xyz] + "<br>");
+            }
+
+            document.write("For of Loop" + "<br>") ;
+            for(xyz of x) // Returns value
+            {
+                document.write(xyz+"<br>")
+            }
                 // var.method;
                 // x.forEach(function);
-                x.forEach( function Test(val,key,arr)
+
+            document.write("For Each Loop" + "<br>") ;
+            x.forEach( function Test(val,key,arr)
+            {
+                document.write(key + "==>" + val + "<br>");
+            });
+
+            document.write("For Each Loop call simple function" + "<br>") ;
+            x.forEach( function (val,key,arr)
+            {
+                document.write(val)
+            });
+
+            document.write("For Each Loop call arrow function" + "<br>") ;
+            x.forEach(  (val,key,arr)=>
+            {
+                document.write(val)
+            });
+
+            // first-Para :values
+            // second -pra :index  
+            // z:arr
+
+            function Test(val,key,arr)
                 {
-                    document.write(key + "==>" + val + "<br>");
-                });
-                // x.forEach( function (val,key,arr)
-                // {
-                //     document.write(val)
-                // });
-                // x.forEach(  (val,key,arr)=>
-                // {
-                //     document.write(val)
-                // });
-                // first-Para :values
-                // second -pra :index  
-                // z:arr
-                //  function Test(val,key,arr)
-                // {
-                //     document.write(val)
-                // }
+                    document.write(val)
+                }
+
         </script>
     </body>
 </html>
