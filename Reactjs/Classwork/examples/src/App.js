@@ -42,7 +42,7 @@ import TriggerElementOnScroll, { Box } from './TriggerElementOnScroll';
 import TestModal from './ModalDialog';
 import ShoppingList from './ShoppingList';
 import CustomeHookP from './CustomeHookP';
-// import { Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
 function App() {
   return (
@@ -174,7 +174,7 @@ function App() {
         <TriggerElementOnScroll/>
         <Box/>
         <TriggerElementOnScroll/>
-        {/* <Router/> This is not working. */}
+        <Router/> 
     </div>
   )
 }
