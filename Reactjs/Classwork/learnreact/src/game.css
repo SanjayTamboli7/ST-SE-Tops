@@ -63,12 +63,14 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
-    height: 34px;
+    /* height: 34px; */
+    height: 25px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    /* width: 34px; */
+    width: 25px;
   }
   
   .board-row:after {
@@ -86,6 +88,7 @@
   }
   
   .game-info {
-    margin-left: 20px;
+    margin-left: 15px;
+    
   }
   

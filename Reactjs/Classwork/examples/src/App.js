@@ -174,7 +174,7 @@ function App() {
         <TriggerElementOnScroll/>
         <Box/>
         <TriggerElementOnScroll/>
-        <Router/> 
+        {/* <Router/>  */}
     </div>
   )
 }
