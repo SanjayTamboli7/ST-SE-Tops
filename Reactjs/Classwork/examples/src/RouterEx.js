@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Homea from './Homea';
 import Abouta from './Abouta';
 // import Servicea from './Servicea'
@@ -8,7 +8,7 @@ import Service1 from './Service1';
 import Service2 from './Service2';
 import Service3 from './Service3';
 
-function router() {
+function RouterEx() {
   return (
         <div>
             <BrowserRouter>
@@ -29,4 +29,4 @@ function router() {
     )
 }
 
-export default router
+export default RouterEx

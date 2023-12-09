@@ -10,6 +10,7 @@ import PropUseState      from './PropUseState';
 import Scientists        from './Scientists';
 import ShoppingList      from './ShoppingList';
 import StringConcatenate from './StringConcatenate';
+import TeaSet from './TeaSet';
 import ToDoList1         from './ToDoList1';
 
 function App() {
@@ -41,12 +42,14 @@ function App() {
                 <td className="ClsCell"><PassProps2Comp/></td>
                 <td className="ClsCell"><PackingList/></td>
                 <td className="ClsCell"><List/></td>
+                <td className="ClsCell"><TeaSet/></td>
               </tr>
               <tr>
                 <td className="ClsCell">8 HTML JS JSX in curly braces</td>
                 <td className="ClsCell">9 Pass Props To Component</td>
                 <td className="ClsCell">10 Conditional Rendering</td>
                 <td className="ClsCell">11 List Using Map Func</td>
+                <td className="ClsCell">12 Pure Function</td>
               </tr>
           </tbody>
       </table>
@@ -58,3 +61,5 @@ export default App;
 
 // start with https://react.dev/learn/tutorial-tic-tac-toe 
           //  https://react.dev/learn/describing-the-ui (start with Keeping components pure)
+          // https://react.dev/learn/keeping-components-pure
+          // https://codesandbox.io/p/sandbox/suspicious-architecture-kz29wd?file=%2Findex.js%3A6%2C1

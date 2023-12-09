@@ -44,6 +44,9 @@ import ShoppingList from './ShoppingList';
 import CustomeHookP from './CustomeHookP';
 import { Router } from 'react-router-dom';
 
+import UseContextEx1 from './UseContextEx1';
+import RouterEx from './RouterEx';
+
 function App() {
   return (
     <div>
@@ -170,11 +173,14 @@ function App() {
         </table>        
         {/* <td className="ClsCell"><ClassCompo/></td> 
         <td className="ClsCell"><TriggerElementOnScroll/></td>  */}
-        <ClassCompo/>
+        {/* <ClassCompo/>
         <TriggerElementOnScroll/>
         <Box/>
-        <TriggerElementOnScroll/>
+        <TriggerElementOnScroll/> */}
         {/* <Router/>  */}
+        <RouterEx/>
+
+        {/* <UseContextEx1/> */}
     </div>
   )
 }
