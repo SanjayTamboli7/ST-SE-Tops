@@ -171,15 +171,11 @@ function App() {
             </tr>
           </tbody>
         </table>        
-        {/* <td className="ClsCell"><ClassCompo/></td> 
-        <td className="ClsCell"><TriggerElementOnScroll/></td>  */}
-        {/* <ClassCompo/>
+        <ClassCompo/>
         <TriggerElementOnScroll/>
         <Box/>
-        <TriggerElementOnScroll/> */}
-        {/* <Router/>  */}
+        <TriggerElementOnScroll/>
         <RouterEx/>
-
         {/* <UseContextEx1/> */}
     </div>
   )

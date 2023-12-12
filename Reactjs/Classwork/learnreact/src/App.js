@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Game              from './Game';
-import List from './List';
+import List              from './List';
 import MyButton          from './MyButton';
 import MyUseState        from './MyUseState';
 import PackingList       from './PackingList';
@@ -9,8 +9,9 @@ import PassProps2Comp    from './PassProps2Comp';
 import PropUseState      from './PropUseState';
 import Scientists        from './Scientists';
 import ShoppingList      from './ShoppingList';
+import ShowCurrentTime   from './ShowCurrentTime';
 import StringConcatenate from './StringConcatenate';
-import TeaSet from './TeaSet';
+import TeaSet            from './TeaSet';
 import ToDoList1         from './ToDoList1';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                 <td className="ClsCell"><PackingList/></td>
                 <td className="ClsCell"><List/></td>
                 <td className="ClsCell"><TeaSet/></td>
+                <td className="ClsCell"><ShowCurrentTime/></td>                
               </tr>
               <tr>
                 <td className="ClsCell">8 HTML JS JSX in curly braces</td>
@@ -50,6 +52,7 @@ function App() {
                 <td className="ClsCell">10 Conditional Rendering</td>
                 <td className="ClsCell">11 List Using Map Func</td>
                 <td className="ClsCell">12 Pure Function</td>
+                <td className="ClsCell">13 Current Time</td>
               </tr>
           </tbody>
       </table>
@@ -61,5 +64,5 @@ export default App;
 
 // start with https://react.dev/learn/tutorial-tic-tac-toe 
           //  https://react.dev/learn/describing-the-ui (start with Keeping components pure)
-          // https://react.dev/learn/keeping-components-pure
-          // https://codesandbox.io/p/sandbox/suspicious-architecture-kz29wd?file=%2Findex.js%3A6%2C1
+          //  https://react.dev/learn/keeping-components-pure
+          //  https://codesandbox.io/p/sandbox/suspicious-architecture-kz29wd?file=%2Findex.js%3A6%2C1
