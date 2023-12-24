@@ -42,14 +42,14 @@ import TriggerElementOnScroll, { Box } from './TriggerElementOnScroll';
 import TestModal from './ModalDialog';
 import ShoppingList from './ShoppingList';
 import CustomeHookP from './CustomeHookP';
-import { Router } from 'react-router-dom';
+// import { Router } from 'react-router-dom';
 
-import UseContextEx1 from './UseContextEx1';
+// import UseContextEx1 from './UseContextEx1';
 import RouterEx from './RouterEx';
 
 function App() {
   return (
-    <div>
+    <div>      
       {/* <FetchAPIData/> */}
         <table className="ClsTable">
           <tbody>
@@ -152,12 +152,14 @@ function App() {
               <td className="ClsCell"><TestModal/></td>          
               <td className="ClsCell"><ShoppingList/></td>
               <td className="ClsCell"><CustomeHookP/></td>
+              <td className="ClsCell"><RouterEx/></td>
             </tr>
             <tr>
               <td className="ClsCell">36 Chat Room</td>
               <td className="ClsCell">37 Modal Dialog Box</td>
               <td className="ClsCell">38 Shopping List</td>
               <td className="ClsCell">39 Custome Hook</td>
+              <td className="ClsCell">40 Router(Menu Link)</td>
             </tr>
             <tr>
               {/* <td className="ClsCell"><PropEx/></td> */}
@@ -174,8 +176,7 @@ function App() {
         <ClassCompo/>
         <TriggerElementOnScroll/>
         <Box/>
-        <TriggerElementOnScroll/>
-        <RouterEx/>
+        <TriggerElementOnScroll/>        
         {/* <UseContextEx1/> */}
     </div>
   )

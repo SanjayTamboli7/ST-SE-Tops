@@ -3,25 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import { store123 } from './Store';
-// import { configureStore } from '@reduxjs/toolkit';
-// import userSlice from "./UserReducer";
-
-
-// const store123 = configureStore({
-//   reducer:{
-//      users:userSlice
-//   }
-// })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store123}>
     <App />
-    </Provider>
-    
   </React.StrictMode>
 );
 
@@ -29,4 +15,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
