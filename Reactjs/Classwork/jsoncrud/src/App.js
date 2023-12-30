@@ -25,4 +25,6 @@ function App() {
 
 export default App;
 
-// json-server --watch __filename.json --port 8000
+// To run this app, you have to following command;
+// npm i -g json-server
+// json-server --watch employee.json --port 8000

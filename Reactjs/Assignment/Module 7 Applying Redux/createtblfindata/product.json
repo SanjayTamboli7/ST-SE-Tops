@@ -1,0 +1,58 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Bukkl",
+      "price": 297,
+      "category": "T-Shirt"
+    },
+    {
+      "id": 2,
+      "name": "Kajaru",
+      "price": 269,
+      "category": "T-Shirt"
+    },
+    {
+      "id": 3,
+      "name": "Voroxy",
+      "price": 299,
+      "category": "Casual-Shirt"
+    },
+    {
+      "id": 4,
+      "name": "VeBMoR",
+      "price": 339,
+      "category": "Casual-Shirt"
+    },
+    {
+      "id": 5,
+      "name": "LUQATTI",
+      "price": 423,
+      "category": "Formal-Shirt"
+    },
+    {
+      "id": 6,
+      "name": "PepZo",
+      "price": 339,
+      "category": "Formal-Shirt"
+    },
+    {
+      "id": 7,
+      "name": "Wearbird",
+      "price": 379,
+      "category": "Kurta"
+    },
+    {
+      "id": 8,
+      "name": "DeeMoon",
+      "price": 424,
+      "category": "Kurta"
+    },
+    {
+      "id": 9,
+      "name": "FTX",
+      "price": "299",
+      "category": "T-Shirt"
+    }
+  ]
+}

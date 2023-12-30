@@ -8,9 +8,8 @@ function EmpCreate() {
     const [email,setEmail] = useState("");
     const [phone,setPhone] = useState("");
     const [active,setActive] = useState(false);
-
     const navigate = useNavigate();
-
+    
     const handleClick =(e)=>{
 
         // We call a preventDefault on the event when submitting the form, and this will cancel the default event behavior 
