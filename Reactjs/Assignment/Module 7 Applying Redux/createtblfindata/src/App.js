@@ -22,3 +22,8 @@ function App() {
 }
 
 export default App;
+
+// npm install react-router-dom@6  bootstrap
+// npm i -g json-server
+// Json-server --watch product.json --port 8000
+// Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

@@ -40,11 +40,32 @@ function ProductList() {
      }
   }
 
+// Search code starts from here 
+const [searchItem, setSearchItem] = useState('')
+const [filteredUsers, setFilteredUsers] = useState(productData)
+
+const handleInputChange = (e) => { 
+  const searchTerm = e.target.value;
+  setSearchItem(searchTerm)
+
+  const filteredItems = productData.filter((user) =>
+  user.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  setFilteredUsers(filteredItems);
+  window.alert(filteredItems);
+}
+// https://dev.to/alais29dev/building-a-real-time-search-filter-in-react-a-step-by-step-guide-3lmm
+// Search code ends here 
+
 return (
   <div className='App container'>        
       <h4>Product List</h4>
       <div>
-          <input id='SearchText' placeholder='Search String' style={{width: "500px"}}></input>
+          <input id='SearchText' 
+            value={searchItem}
+            onChange={handleInputChange}
+            placeholder='Search String' style={{width: "500px"}}></input>
           <Link to='/product/add' className='btn btn-warning m-4'>Add New (+)</Link>
       </div>
       <table className='table'>
@@ -58,7 +79,6 @@ return (
               </tr>
           </thead>
           <tbody>
-          let findtext = 
           {productData && productData.map((items)=>(
               <tr>
                   <td>{items.id}</td>
