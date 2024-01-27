@@ -41,6 +41,13 @@
       "email": "em1@gmail.com",
       "phone": "1234567890",
       "active": true
+    },
+    {
+      "id": 7,
+      "name": "Darshan",
+      "email": "darshan999kapdi@gmail.com",
+      "phone": "9909972706",
+      "active": true
     }
   ]
 }

@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ClsHeader
+{
+    border: 2px solid green;
+    background-color: #003b95;
+    color: #ffffff;
+    width: 100%;    
+}
+.ClsHeader .row1
+{
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 9fr .5fr .5fr;
+}
+.ClsHeader .row1 .r1Col1
+{
+    align-self: right;
+    border: 2px solid yellow;
+}
+.ClsRow1Destination
+{
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 4.5fr 4.5fr;
+    border: 2px solid green;
+    column-gap: 10px;
+}
+.ClsRow1ColDestination
+{
+  padding-left: 1%;
+  height: 200px;
+  width: 500px;
+  border: 2px solid coral;
+}
+.ClsRow2Destination
+{
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 3fr 3fr 3fr;
+    border: 2px solid green;
+    column-gap: 10px;
+}
+.ClsRow2ColDestination
+{
+  padding-left: 1%;
+  height: 200px;
+  width: 300px;
+  border: 2px solid coral;
+}
+.ClsShowHotels
+{
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: max-content max-content;
+  border: 2px solid green;
+  column-gap: 10px;
+}
+.ClsColShowHotels
+{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  border: 2px solid coral;
+}
+.ClsColHotelData
+{
+  display: grid;
+  grid-template-columns: 50% 40%;
+  column-gap: 10px;
+  border: 2px solid green;
+}
+.ClsCol1HotelData
+{
+  display: grid;
+  grid-template-rows: max-content max-content max-content;
+  row-gap: 5px;
+  border: 2px solid yellow;
+}
+.ClsCol2HotelData
+{
+  display: grid;
+  grid-template-rows: max-content max-content max-content max-content;
+  border: 2px solid yellow;
+}
+.whatweofferow
+{
+    display: grid;
+    grid-template-rows: max-content  max-content;
+    grid-template-columns: max-content max-content max-content max-content;
+    border: 2px solid coral;
+}
+.whatweoffercol
+{
+    border: 2px solid yellow;
+}
+.whatweofferowincol
+{
+    display: grid;
+    grid-template-rows: max-content max-content;
+}

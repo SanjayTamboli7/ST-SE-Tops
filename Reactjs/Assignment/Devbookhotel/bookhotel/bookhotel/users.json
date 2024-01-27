@@ -1,0 +1,85 @@
+{
+    "user": [
+      {
+        "id": 1,
+        "fname": "FUser 1",
+        "lname": "LUser 1",
+        "phone": 1010101010,
+        "email": "user1@gmail.com",
+        "pass": "password1"
+      },
+      {
+        "id": 2,
+        "fname": "FUser 2",
+        "lname": "LUser 2",
+        "phone": 2020202020,
+        "email": "user2@gmail.com",
+        "pass": "password2"
+      },
+      {
+        "id": 3,
+        "fname": "FUser 3",
+        "lname": "LUser 3",
+        "phone": 3030303030,
+        "email": "user3@gmail.com",
+        "pass": "password3"
+      },
+      {
+        "id": 4,
+        "fname": "FUser 4",
+        "lname": "LUser 4",
+        "phone": 4040404040,
+        "email": "user4@gmail.com",
+        "pass": "password4"
+      },
+      {
+        "id": 5,
+        "fname": "FUser 5",
+        "lname": "LUser 5",
+        "phone": 50505505050,
+        "email": "user5@gmail.com",
+        "pass": "password5"
+      },
+      {
+        "id": 6,
+        "fname": "FUser 6",
+        "lname": "LUser 6",
+        "phone": 6060606060,
+        "email": "use6@gmail.com",
+        "pass": "password6"
+      },
+      {
+        "id": 7,
+        "fname": "FUser 7",
+        "lname": "LUser 7",
+        "phone": 7070707070,
+        "email": "user7@gmail.com",
+        "pass": "password7"
+      },
+      {
+        "id": 8,
+        "fname": "FUser 8",
+        "lname": "LUser 8",
+        "phone": 8080808080,
+        "email": "user8@gmail.com",
+        "pass": "password8"
+      },
+      {
+        "id": 9,
+        "fname": "FUser 9",
+        "lname": "LUser 9",
+        "phone": 9090909090,
+        "email": "user9@gmail.com",
+        "pass": "password9"
+      },
+      {
+        "id": 10,
+        "fname": "FUser 10",
+        "lname": "LUser 10",
+        "phone": 1010101010,
+        "email": "user10@gmail.com",
+        "pass": "password10"
+      }
+    ]
+  }
+  

@@ -1,0 +1,111 @@
+.hotelroom-main
+{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+}
+.hotelroom-parts
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.hotelroom-part2
+{
+    height: 600px;
+}
+.hotelroom-part1 .hotelroom-img
+{
+    height: 295px;
+    margin: 0px 10px 0 0;
+
+}
+.hotelroom-part1 .hotelroom-img2
+{
+    margin: 10px 10px 0 0 ;
+}
+.hotelroom-parts img 
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotelroom-imgs
+{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+.hotelroom-imgs img
+{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width:1300px)
+{
+    .hotelroom-main
+    {
+        width: 90%;
+    }
+}
+@media (max-width:1200px)
+{
+    .hotelroom-main
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width:1000px)
+{
+
+.hotelroom-imgs
+{
+ grid-template-columns: repeat(3,1fr);
+}
+.hotelroom-imgs5
+{
+     grid-column: 2/4;
+}
+}
+
+@media (max-width:700px)
+{
+    .hotelroom-parts
+    {
+     grid-template-columns: 1fr;
+    }   
+     .hotelroom-imgs
+    {
+     grid-template-columns: 1fr 1fr;
+    }
+    .hotelroom-part2
+    {
+    height: 300px;
+    }
+   .hotelroom-imgs5
+    {
+         grid-column: 1/3;
+    }
+}
+
+
+@media (max-width:500px)
+{
+     .hotelroom-imgs
+    {
+     grid-template-columns: 1fr;
+    }   
+    .hotelroom-imgs5
+    {
+         grid-column: 1/-1;
+    }
+    
+}
