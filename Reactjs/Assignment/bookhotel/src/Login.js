@@ -8,53 +8,48 @@ function Login() {
   const [pass, setPass] = useState("");
   const [userName, setuserName] = useState("");
   const navigate = useNavigate();
-  const {setlogin} = useContext(loginuser)
- 
-  
-   
-
-
+  const { setlogin } = useContext(loginuser)
 
   function handleSubmit(e) {
 
     e.preventDefault();
     fetch('http://localhost:8000/users')
       .then((res) => { return res.json() })
-      .then((data)=>{
+      .then((data) => {
 
-        data.map((v)=>{
+        data.map((v) => {
 
-          if(email != '' && pass != '')
-          {
-          if(v.email == email)
-          {
-           if(v.pass== pass)
-           {
-            setlogin(v.fname)
-            alert("login sccess")
-            navigate('/')
-           }
-           else if(v.pass != pass)
-           {
-            alert("Wrong password")
-           }
+          if (email !== '' && pass !== '') {
+            if (v.email === email) {
+              if (v.pass === pass) {
+                setlogin(v.fname)
+                alert("login sccess")
+                navigate('/')
+              }
+              else if (v.pass !== pass) {
+                alert("Wrong password")
+                navigate('/')
+              }
+              else if (v.email !== email) {
+                alert("Wrong Email")
+                navigate('/')
+              }
+            }
           }
-
-          else if(v.email != email)
-          {
-            alert("Wrong Email")
+          else {
+            if (email.length === 0) {
+              alert("Enter email ID")
+              navigate('/login')
+            }
+            if (pass.length === 0) {
+              alert("Enter email ID")
+              navigate('/login')
+            }
           }
-
-         
-          }
-
-         
-
+        })
       })
-      })
 
-
-    console.log(email)
+    // console.log(email)
   }
   return (
     <div className="container">
@@ -79,7 +74,6 @@ function Login() {
           </small>
         </div>
 
-
         <div className="form-group">
           <label >Password</label>
           <input
@@ -92,7 +86,6 @@ function Login() {
           />
         </div>
 
-
         <div className="form-group form-check">
           <input
             type="checkbox"
@@ -103,7 +96,6 @@ function Login() {
             Check me out
           </label>
         </div>
-
 
         <button type="submit" className="btn btn-primary">
           Submit

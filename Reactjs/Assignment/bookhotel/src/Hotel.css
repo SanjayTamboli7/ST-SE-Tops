@@ -14,8 +14,17 @@
     grid-template-rows: 300px;
     grid-auto-rows: 300px;
     gap: 10px;
-}
 
+    position: relative;
+}
+.hotels-sec-1-title
+{
+    position: absolute;
+    top: 5%;    
+    left: 2%;
+    color: white;
+    font-weight: 700;
+}
 .hotels-sec-2
 {
     display: grid;
@@ -25,14 +34,24 @@
     grid-auto-rows: 300px;
     margin-top: 10px;
     gap: 10px;
+
+    position: relative;
 }
+.hotels-sec-2-title
+{
+    position: absolute;
+    top: 5%;    
+    left: 2%;
+    color: white;
+    font-weight: 700;
+}
+
 .hotels-sec-1 img,.hotels-sec-2 img
 {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-
 }
 .hotel-details-part1 span
 {

@@ -10,65 +10,51 @@ function Register() {
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
   const h3Ref = useRef();
- const [userdatas,setuserdata] = useState('')
+  const [userdatas, setuserdata] = useState('')
 
-  
-  useEffect(()=>{
+  useEffect(() => {
     fetch(" http://localhost:8000/users")
-          .then((res)=>{return res.json()})
-          .then((data)=>{setuserdata(data)})
-  },[])
+      .then((res) => { return res.json() })
+      .then((data) => { setuserdata(data) })
+  }, [])
 
-  
- const handleSubmit =(e)=>{
-  e.preventDefault()
+  const handleSubmit = (e) => {
 
-  const userdata = {lanme,fname,phone,email,pass}
+    e.preventDefault()
+    const userdata = { lanme, fname, phone, email, pass }
+    const datax = userdatas.find((v) => v.email === email)
 
+    if (datax) {
+      alert("User exists")
+    }
 
- const datax = userdatas.find((v)=> v.email == email)
-
- 
-      if(datax)
-      {
-        alert("email usage")
-      }
-
-      else
-      {
-        if(fname != '' && email != '' && pass != '' && phone != '' && lanme != '')
-       {
-          fetch(" http://localhost:8000/users",
+    else {
+      if (fname !== '' && email !== '' && pass !== '' && phone !== '' && lanme !== '') {
+        fetch(" http://localhost:8000/users",
           {
             method: "post",
-            headers : {"content-type" : "application/json"},
-            body:JSON.stringify(userdata)
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(userdata)
           }
-          )
-          .then((res)=>{
-            if(res)
-            {
-              alert("data posted")
+        )
+          .then((res) => {
+            if (res) {
+              alert("User added successfully")
               navigate('/login')
-            setFname('')
-            setLanme('')
-            setEmail("")
-            setPass("")
-            setPhone('')
-          }})
-          .then((data)=>{console.log(data)})
-       }
-       else
-       {
-        alert("y")
-       }
+              setFname('')
+              setLanme('')
+              setEmail('')
+              setPass('')
+              setPhone('')
+            }
+          })
+          .then((data) => { console.log(data) })
       }
-
-
-       
-
- }
-   
+      else {
+        alert("New user added successfully.")
+      }
+    }
+  }
 
   return (
     <div>
@@ -120,7 +106,7 @@ function Register() {
           <div className="form-group">
             <label>Email address</label>
             <input
-              type="text"
+              type="Email"
               value={email}
               onChange={(e) => { setEmail(e.target.value) }}
               className="form-control"
@@ -134,7 +120,7 @@ function Register() {
           <div className="form-group">
             <label>Password</label>
             <input
-              type="text"
+              type="password"
               value={pass}
               onChange={(e) => { setPass(e.target.value) }}
               className="form-control"
@@ -144,7 +130,7 @@ function Register() {
             {pass.length === 0 && <span className="text-danger">* Enter Password</span>}
           </div>
 
-          <input type="submit" className="btn btn-primary" name="create" value={"signup"}/>
+          <input type="submit" className="btn btn-primary" name="create" value={"signup"} />
         </form>
       </div>
     </div>
