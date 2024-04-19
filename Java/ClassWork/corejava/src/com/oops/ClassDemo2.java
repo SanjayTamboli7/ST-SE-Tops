@@ -13,9 +13,9 @@ class Student
 	public void display()
 	{
 		assignDataValue();
-		System.out.println("Sno = "+sno);
-		System.out.println("Sname = "+sname);
-		System.out.println("City = "+city);
+		System.out.println("Sno = " + sno);
+		System.out.println("Sname = " + sname);
+		System.out.println("City = " + city);
 	}
 }
 public class ClassDemo2 {

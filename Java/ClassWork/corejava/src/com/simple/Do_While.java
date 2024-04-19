@@ -1,5 +1,7 @@
 package com.simple;
 
+import java.util.ArrayList;
+
 public class Do_While {
 	public static void main(String[] args)
 	{
@@ -10,5 +12,6 @@ public class Do_While {
 			i++;
 		}
 		while(i<=5);
+//		ArrayList<E>
 	}
 }
