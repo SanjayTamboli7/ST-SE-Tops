@@ -39,7 +39,17 @@ public class ModlCoreJavaCode29 {
 		BankB objBankB = new BankB();
 		BankC objBankC = new BankC();
 
-//		objBankA = new BankA();
+		System.out.println("Bank A Balance : " + objBankA.balance);
+		System.out.println("Bank B Balance : " + objBankB.balance);
+		System.out.println("Bank C Balance : " + objBankC.balance);
+		
+		objBankA.Deposit(100);;
+		objBankB.Deposit(150);;
+		objBankC.Deposit(200);;
+
+		System.out.println("Bank A Balance : " + objBankA.balance);
+		System.out.println("Bank B Balance : " + objBankB.balance);
+		System.out.println("Bank C Balance : " + objBankC.balance);
 
 	}
 }
