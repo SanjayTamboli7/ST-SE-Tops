@@ -17,7 +17,7 @@
     <param-name>pass</param-name>
     <param-value>tops123</param-value>
   </context-param>
-  <servlet>
+   <servlet>
     <servlet-name>rahul</servlet-name>
     <servlet-class>com.servlet.ServletConfigDemo</servlet-class>
     <init-param>
@@ -59,14 +59,31 @@
     <servlet-name>ThirdServlet</servlet-name>
     <url-pattern>/ThirdServlet</url-pattern>
   </servlet-mapping>
+ 
+  <listener>
+    <listener-class>com.listener.ListenerDemo</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.listener.ServletListenerDemo</listener-class>
+  </listener>
   <servlet>
     <description></description>
-    <display-name>ServletContextDemo</display-name>
-    <servlet-name>ServletContextDemo</servlet-name>
-    <servlet-class>com.servlet.ServletContextDemo</servlet-class>
+    <display-name>ServletListenerDemo</display-name>
+    <servlet-name>ServletListenerDemo</servlet-name>
+    <servlet-class>com.listener.ServletListenerDemo</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ServletContextDemo</servlet-name>
-    <url-pattern>/ServletContextDemo</url-pattern>
+    <servlet-name>ServletListenerDemo</servlet-name>
+    <url-pattern>/ServletListenerDemo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
 </web-app>

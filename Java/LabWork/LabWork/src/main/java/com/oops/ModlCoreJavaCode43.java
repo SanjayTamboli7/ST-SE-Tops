@@ -25,13 +25,13 @@ public class ModlCoreJavaCode43 {
 
 		t1.start();
 		try {
-			Thread.sleep(200); // miliseconds
+			Thread.sleep(200); // Milliseconds
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		t2.start();
 		try {
-			Thread.sleep(200); // miliseconds
+			Thread.sleep(200); // Milliseconds
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
