@@ -8,20 +8,20 @@ public class ModlCoreJavaCode47 {
 	public static void main(String[] args) {
 		
 	    // create ArrayList
-	    ArrayList<String> languages = new ArrayList<>();
+	    ArrayList<String> colours = new ArrayList<>();
 
 	    // Add elements to ArrayList
 	    
-	    languages.add("Green");
-	    languages.add("Blue");
-	    languages.add("Red");
-	    languages.add("Brown");
-	    languages.add("Purple");
-	    languages.add("Black");
-	    languages.add("Yellow");
-	    languages.add("Grey");
-	    languages.add("White");
+	    colours.add("Green");
+	    colours.add("Blue");
+	    colours.add("Red");
+	    colours.add("Brown");
+	    colours.add("Purple");
+	    colours.add("Black");
+	    colours.add("Yellow");
+	    colours.add("Grey");
+	    colours.add("White");
 	    
-	    System.out.println("ArrayList: " + languages);
+	    System.out.println("ArrayList: " + colours);
 	}
 }

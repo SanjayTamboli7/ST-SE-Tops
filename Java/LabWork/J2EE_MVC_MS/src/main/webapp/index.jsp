@@ -7,6 +7,6 @@
 </head>
 <body>
 If New User, <a href="registration.jsp">Sign up</a><br>
-If Existing User, <a href="login">Sign in</a><br>
+If Existing User, <a href="login.jsp">Sign in</a><br>
 </body>
 </html>

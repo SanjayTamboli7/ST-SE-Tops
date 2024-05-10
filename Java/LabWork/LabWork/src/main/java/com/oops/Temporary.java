@@ -1,20 +1,20 @@
 package com.oops;
 
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.Scanner;
 
 public class Temporary {
 	public static void main(String[] args) {
-        String[] strings = {"apple", "banana", "cherry", "date"};
-        
-        System.out.println("Before sorting:");
-        System.out.println(Arrays.toString(strings));
 
-        Arrays.sort(strings, Collections.reverseOrder());
-        Arrays.sort(strings, Collections.reverseOrder());
-        
+		Scanner scanner = new Scanner(System.in);
 
-        System.out.println("After sorting in descending order:");
-        System.out.println(Arrays.toString(strings));
+		System.out.print("Enter your age: ");
+		int age = scanner.nextInt();
+		System.out.println("You are " + age + " years old.");
+
+		System.out.print("Enter your name: ");
+		String name = scanner.nextLine();
+		System.out.println("Hello, " + name + "!");
+
+		scanner.close();
 	}
 }

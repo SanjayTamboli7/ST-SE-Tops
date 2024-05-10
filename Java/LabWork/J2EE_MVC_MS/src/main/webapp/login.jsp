@@ -11,7 +11,7 @@
  --%>
 	${msg }
 	<h1>Login Form</h1>
-	<form method="post" action="RegistrationController">
+	<form method="post" action="LoginController1">
 		<table>
 			<tr>
 				<td>UserName :</td>
