@@ -1,13 +1,13 @@
 package com.oops;
 
-/* Write a Java program to sort a given array list.  Page 48*/
+/* Write a Java program to shuffle elements in an array list. Darshan@999 */
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ModlCoreJavaCode54 {
+public class ModlCoreJavaCode56 {
 	public static void main(String[] args) {
-		
+
 		// create ArrayList
 		ArrayList<String> colours = new ArrayList<String>();
 
@@ -23,7 +23,8 @@ public class ModlCoreJavaCode54 {
 		colours.add("White");
 
 		System.out.println("Original ArrayList: " + colours);
-		Collections.sort(colours);
-		System.out.println("Sorted ArrayList: " + colours);		
+		Collections.shuffle(colours);
+		System.out.println("Original ArrayList: " + colours);
+		
 	}
 }

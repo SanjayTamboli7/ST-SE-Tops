@@ -1,12 +1,12 @@
 package com.oops;
 
+/* Write a Java program to iterate through all elements in a hash list. */
+
 import java.util.*;
-import java.util.Iterator;
-import java.util.Set;
 
-public class Temporary {
+public class ModlCoreJavaCode58 {
 	public static void main(String[] args) {
-
+		
 		// Creating Hashtable object where key is of Integer
 		// type
 		// and value is of String type
@@ -36,7 +36,7 @@ public class Temporary {
 			int key = itr.next();
 
 			// Print and display the Rank and Name
-			System.out.println("Rank : " + key + "\t\t Name : " + ht.get(key));
-		}
+			System.out.println("Rank : " + key + "\t Course : " + ht.get(key));
+		}		
 	}
 }

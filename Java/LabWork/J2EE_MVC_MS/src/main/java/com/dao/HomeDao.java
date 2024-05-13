@@ -17,7 +17,7 @@ public class HomeDao {
 		
 		try {
 			cn=new DBUtil().getConnectionData();
-			String qry = "select * from user where userid = ?";
+			String qry = "select * from user where userid=?";
 			PreparedStatement st=cn.prepareStatement(qry);
 			st.setInt(1, userid);
 			ResultSet rs = st.executeQuery();
@@ -36,4 +36,39 @@ public class HomeDao {
 		}
 		return model;
 	}
+	
+	public int updateUser(UserModel hmodel) {
+		int x=0;
+		try {
+			cn=new DBUtil().getConnectionData();
+			String qry = "update user set firstname=?, lastname=?, username=?, password=? where userid = ?";
+			PreparedStatement st=cn.prepareStatement(qry);
+			st.setString(1, hmodel.getFirstname());
+			st.setString(2, hmodel.getLastname());
+			st.setString(3, hmodel.getUsername());
+			st.setString(4, hmodel.getPassword());
+			st.setInt(5, hmodel.getUserid());
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		return x;
+	}
+
+	public int deleteUser(int userid) {
+		int x=0;
+		try {
+			cn=new DBUtil().getConnectionData();
+			String qry = "delete from user where userid = ?";
+			PreparedStatement st=cn.prepareStatement(qry);
+			st.setInt(1, userid);
+			x=st.executeUpdate();
+			cn.close();
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		return x;
+	}
+
 }

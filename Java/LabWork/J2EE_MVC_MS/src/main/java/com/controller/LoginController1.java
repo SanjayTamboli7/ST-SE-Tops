@@ -31,7 +31,7 @@ public class LoginController1 extends HttpServlet {
 		if (model != null) {
 			HttpSession session=request.getSession(true);
 			session.setAttribute("model", model);
-			response.sendRedirect("HomeController?action=showuser&userid="+model.getUserid());
+			response.sendRedirect("HomeController.do?action=showuser&userid="+model.getUserid());
 		}
 	}
 
