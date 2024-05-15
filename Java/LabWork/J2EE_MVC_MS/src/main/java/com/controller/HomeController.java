@@ -45,8 +45,9 @@ public class HomeController extends HttpServlet {
 		}
 }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		
 		UserModel hmodel = new UserModel();
 		hmodel.setUserid(Integer.parseInt(request.getParameter("userid")));
 		hmodel.setFirstname(request.getParameter("firstname"));

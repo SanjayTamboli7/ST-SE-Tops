@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,18 +21,17 @@
 			<td>${model.lastname }</td>
 			<td>${model.username }</td>
 			<td>${model.password }</td>
-			<td><a
-				href="HomeController.do?action=edituser@userid=${model.userid }">Edit
+			<td><a href="HomeController.do?action=edituser&userid=${model.userid }">Edit
 					User</a></td>
 			<td><a
-				href="HomeController.do?action=deleteuser@userid=${model.userid }">Delete
+				href="HomeController.do?action=deleteuser&userid=${model.userid }">Delete
 					User</a></td>
 		</tr>
 	</table>
 	<br>
 	<br>
 
-	<%-- <c:if test="${hmodel.userid > 0}"> --%>
+	
 		<form method="post" action="HomeController.do">
 			<table>
 				<tr>
@@ -62,6 +61,6 @@
 			</table>
 		</form>
 	
-	<!-- 	</c:if> -->
+	
 </body>
 </html>
