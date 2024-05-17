@@ -1,11 +1,10 @@
 package com.oops;
 
-/* Write a Java program to shuffle elements in an array list. */
+/* Write a Java program to increase the size of an array list. */
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class ModlCoreJavaCode56 {
+public class ModlCoreJavaCode70 {
 	public static void main(String[] args) {
 
 		// create ArrayList
@@ -23,8 +22,9 @@ public class ModlCoreJavaCode56 {
 		colours.add("White");
 
 		System.out.println("Original ArrayList: " + colours);
-		Collections.shuffle(colours);
-		System.out.println("Original ArrayList: " + colours);
-		
+		System.out.println("Original array size = " + colours.size());
+		colours.ensureCapacity(colours.size()*2);
+		System.out.println("Revised array size = " + colours.size());
+
 	}
 }

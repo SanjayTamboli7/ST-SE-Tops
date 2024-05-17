@@ -1,11 +1,10 @@
 package com.oops;
 
-/* Write a Java program to shuffle elements in an array list. */
-
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class ModlCoreJavaCode56 {
+/* Write a Java program to extract a portion of an array list. */
+
+public class ModlCoreJavaCode63 {
 	public static void main(String[] args) {
 
 		// create ArrayList
@@ -23,8 +22,6 @@ public class ModlCoreJavaCode56 {
 		colours.add("White");
 
 		System.out.println("Original ArrayList: " + colours);
-		Collections.shuffle(colours);
-		System.out.println("Original ArrayList: " + colours);
-		
+		System.out.println("First 3 elemements of ArrayList: " + colours.subList(0, 3));
 	}
 }

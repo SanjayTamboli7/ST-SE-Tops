@@ -1,11 +1,11 @@
 package com.oops;
 
-/* Write a Java program to shuffle elements in an array list. */
-
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ModlCoreJavaCode56 {
+/* Write a Java program to reverse elements in an array list. */
+
+public class ModlCoreJavaCode62 {
 	public static void main(String[] args) {
 
 		// create ArrayList
@@ -23,8 +23,7 @@ public class ModlCoreJavaCode56 {
 		colours.add("White");
 
 		System.out.println("Original ArrayList: " + colours);
-		Collections.shuffle(colours);
-		System.out.println("Original ArrayList: " + colours);
-		
+		Collections.reverse(colours);
+		System.out.println("Reversed ArrayList: " + colours);
 	}
 }

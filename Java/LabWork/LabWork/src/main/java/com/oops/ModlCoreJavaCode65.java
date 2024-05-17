@@ -1,11 +1,11 @@
 package com.oops;
 
-/* Write a Java program to shuffle elements in an array list. */
+/* Write a Java program of swap two elements in an array list. */
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ModlCoreJavaCode56 {
+public class ModlCoreJavaCode65 {
 	public static void main(String[] args) {
 
 		// create ArrayList
@@ -23,8 +23,7 @@ public class ModlCoreJavaCode56 {
 		colours.add("White");
 
 		System.out.println("Original ArrayList: " + colours);
-		Collections.shuffle(colours);
-		System.out.println("Original ArrayList: " + colours);
-		
+		Collections.swap(colours, 1, 5);
+		System.out.println("Swapped ArrayList: " + colours);
 	}
 }
