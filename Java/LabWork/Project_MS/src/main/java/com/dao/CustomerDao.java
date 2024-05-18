@@ -14,7 +14,7 @@ public class CustomerDao {
 	{
 		int x=0;
 		try {
-			cn=new DBUtil().getConnectionData();
+			cn=new DBUtil().getConnectionData();			
 			PreparedStatement st=cn.prepareStatement("insert into customer (firstname,lastname,mobno,address,city,email,password,status) values (?,?,?,?,?,?,?,?)");
 			st.setString(1, rmodel.getFirstname());
 			st.setString(2, rmodel.getLastname());
@@ -33,7 +33,7 @@ public class CustomerDao {
 		return x;
 	}
 	
-	public CustomerModel customerLogin(CustomerModel, lmodel)
+	public CustomerModel customerLogin(CustomerModel lmodel)
 	{
 		CustomerModel model=null;
 		try {
@@ -42,7 +42,7 @@ public class CustomerDao {
 			PreparedStatement st=cn.prepareStatement(qry);
 			st.setString(1,lmodel.getEmail());
 			st.setString(2,lmodel.getPassword());
-			ResultSert rs=st.executeQuery();
+			ResultSet rs=st.executeQuery();
 			
 			if (rs.next())
 			{

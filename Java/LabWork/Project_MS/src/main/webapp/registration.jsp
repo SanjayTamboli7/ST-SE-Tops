@@ -49,35 +49,35 @@
                                 <div class="col-md-12 col-lg-6">
                                     <div class="form-item w-100">
                                         <label class="form-label my-3">First Name<sup>*</sup></label>
-                                        <input type="text" required="required" class="form-control">
+                                        <input type="text" required="required" class="form-control" name="firstname">
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-6">
                                     <div class="form-item w-100">
                                         <label class="form-label my-3">Last Name<sup>*</sup></label>
-                                        <input type="text" required="required" class="form-control">
+                                        <input type="text" required="required" class="form-control" name="lastname">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">Mobile No<sup>*</sup></label>
-                                <input type="text" required="required" class="form-control">
+                                <input type="text" required="required" class="form-control" name="mobno">
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">Address <sup>*</sup></label>
-                                <textarea name="text" class="form-control" spellcheck="false" cols="30" rows="05" placeholder="Enter address"></textarea>
+                                <textarea name="address" class="form-control" spellcheck="false" cols="30" rows="05" placeholder="Enter address"></textarea>
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">City<sup>*</sup></label>
-                                <input type="text" required="required" class="form-control">
+                                <input type="text" required="required" class="form-control" name="city">
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">Email Address<sup>*</sup></label>
-                                <input type="email" required="required" class="form-control">
+                                <input type="email" required="required" class="form-control" name="email">
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">Password<sup>*</sup></label>
-                                <input type="password" required="required" class="form-control">
+                                <input type="password" required="required" class="form-control" name="password">
                             </div>
                             <div class="row g-4 text-center align-items-center justify-content-center pt-4">
                                 <input type="submit" name="action" value="register" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>

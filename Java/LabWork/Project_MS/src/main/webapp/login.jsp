@@ -53,9 +53,8 @@
                                 <label class="form-label my-3">Password<sup>*</sup></label>
                                 <input type="password" class="form-control">
                             </div>
-                            <div class="form-check my-3">
-                                <input type="checkbox" class="form-check-input" id="Account-1" name="Accounts" value="Accounts">
-                                <label class="form-check-label" for="Account-1">Create an account?</label>
+                            <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                            	<input type="submit" name="action" value="Login" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>
                             </div>
                             <div>
                             	<a href="registration.jsp">Create A New Account</a>

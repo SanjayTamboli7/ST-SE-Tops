@@ -10,6 +10,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class CustomerController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,13 +38,13 @@ public class CustomerController extends HttpServlet {
 			
 			int x = new CustomerDao().customerRegistration(rmodel);
 			if (x>0) {
-				response.sendRedirect(login.jsp);
+				response.sendRedirect("login.jsp");
 			} else {
-				response.sendRedirect(registration.jsp);
+				response.sendRedirect("registration.jsp");
 			}
 		}
 		else if (action.equalsIgnoreCase("login")) {
-			CustomerModel rmodel=new CustomerModel();
+			CustomerModel lmodel=new CustomerModel();
 			lmodel.setEmail(request.getParameter("email"));
 			lmodel.setPassword(request.getParameter("password"));
 			
