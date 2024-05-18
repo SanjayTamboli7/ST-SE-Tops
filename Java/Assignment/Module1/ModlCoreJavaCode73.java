@@ -1,8 +1,10 @@
 package com.oops;
 
+/* Write a Java program to compare two sets and retain elements which are same on both sets. */
+
 import java.util.ArrayList;
 
-public class Temporary {
+public class ModlCoreJavaCode73 {
 	public static void main(String[] args) {
 
 		ArrayList<Integer> list1 = new ArrayList<Integer>();
