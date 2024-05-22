@@ -42,12 +42,12 @@
                      </li>
                      <li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>
                      <li>
-                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Elements</span></a>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Services</span></a>
                         <ul class="collapse list-unstyled" id="element">
-                           <li><a href="general_elements.html">> <span>General Elements</span></a></li>
-                           <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
-                           <li><a href="icons.html">> <span>Icons</span></a></li>
-                           <li><a href="invoice.html">> <span>Invoice</span></a></li>
+                           <li><a href="addmainservices.jsp">> <span>Add Main Services</span></a></li>
+                           <li><a href="addsubservices.jsp">> <span>Add Sub Services</span></a></li>
+                           <li><a href="viewmainservices.jsp">> <span>View Main Services</span></a></li>
+                           <li><a href="viewsubservices.jsp">> <span>View Sub Services</span></a></li>
                         </ul>
                      </li>
                      <li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>
