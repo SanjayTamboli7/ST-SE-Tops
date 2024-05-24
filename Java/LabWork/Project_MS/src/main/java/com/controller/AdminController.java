@@ -13,6 +13,7 @@ import java.io.IOException;
 
 import com.dao.AdminDao;
 import com.model.ServicesModel;
+import com.model.SubServicesModel;
 
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 512, // 512 MB)
 maxFileSize = 1024 * 1024 * 512, // 512 MB
@@ -74,6 +75,27 @@ public class AdminController extends HttpServlet {
 				response.sendRedirect("admin/addmainservices.jsp");
 
 			}
+			
+		}
+		else if (action.endsWith("addsubservices")) 
+		{
+			SubServicesModel ssm=new SubServicesModel();
+			ssm.setServiceid(Integer.parseInt(request.getParameter("serviceid")));
+			ssm.setSubname(request.getParameter("subname"));
+			ssm.setFeatures(request.getParameter("features"));
+			ssm.setPrice(request.getParameter("price"));
+			
+			int x=new AdminDao().addSubServices(ssm) ;
+			if (x>0)
+				if (x>0) {
+					response.sendRedirect("admin/dashboard.jsp");
+				} 
+				else {
+					response.sendRedirect("admin/addsubservices.jsp");
+
+				}
+				
+					
 			
 		}
 	}
