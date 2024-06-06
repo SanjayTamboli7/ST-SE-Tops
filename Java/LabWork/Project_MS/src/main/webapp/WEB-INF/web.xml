@@ -29,4 +29,14 @@
     <servlet-name>AdminController</servlet-name>
     <url-pattern>/AdminController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ForgotController</display-name>
+    <servlet-name>ForgotController</servlet-name>
+    <servlet-class>com.controller.ForgotController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgotController</servlet-name>
+    <url-pattern>/ForgotController</url-pattern>
+  </servlet-mapping>
 </web-app>

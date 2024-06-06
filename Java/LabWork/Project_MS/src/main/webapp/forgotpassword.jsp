@@ -42,16 +42,13 @@
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <h1 class="mb-4">Billing details</h1>
-                <form action="#">
+                ${invalidemail }
+                <form method="post" action="ForgotController#">
                     <div class="row g-5">
                         <div class="col-md-12 col-lg-6 col-xl-7">
                             <div class="form-item">
                                 <label class="form-label my-3">Email Address<sup>*</sup></label>
                                 <input type="email" class="form-control">
-                            </div>
-                            <div class="form-item">
-                                <label class="form-label my-3">Password<sup>*</sup></label>
-                                <input type="password" class="form-control">
                             </div>
                             <div class="row g-4 text-center align-items-center justify-content-center pt-4">
                             	<input type="submit" name="action" value="Login" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>
