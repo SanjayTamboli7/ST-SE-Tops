@@ -14,7 +14,6 @@
 	-->
 	<h1>03 Student Info from JSP to Servlet</h1>
 	<form method="post" action="ValidateJsp06">
-	<!-- <form> -->
 		<table>
 			<tr>
 				<td>FirstName :</td>
@@ -42,23 +41,8 @@
 			</tr>
 			<tr>
 				<td><input type="submit" value="Register"></td>
-				<!-- <td><input type="submit" value="Register" onclick="validateInput()"></td> -->
 			</tr>
 		</table>
 	</form>
-	<!-- <script type="text/javascript" src="../js/myjavascript.js"></script> -->
-	<script>
-		function CheckOnlyCharacters(CharStr) {
-			return /\d/.test(CharStr);
-		}
-
-		function validateInput() {
-			alert("I am an alert box!");
-			/* 			if (CheckOnlyCharacters(document.getelementsbyname("firstname"))) {*/
-			if (CheckOnlyCharacters(document.getelementsbyname("firstname").value)) {
-				alert("First name should have onlcy a-z or A-Z");
-			}
-		}
-	</script>
 </body>
 </html>

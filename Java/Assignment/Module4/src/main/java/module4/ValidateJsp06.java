@@ -35,7 +35,8 @@ public class ValidateJsp06 extends HttpServlet {
 		
 		pw.println("First name is " + firstname);
 		if (firstname.length() <= 5) {
-			pw.println("Firstname contains Number...");
+			/* pw.println("Firstname contains Number..."); */
+			request.setAttribute("msg", "FirstName contains Numbers...");
 		}
 		pw.println("Last name is " + lastname);
 		if (lastname.length() <= 7 ) {
@@ -54,6 +55,7 @@ public class ValidateJsp06 extends HttpServlet {
 		if (password.length() <= 7 ) {
 			pw.println("Password must be atleast 8 character long...");
 		}
+		request.getRequestDispatcher("Validatejsp06.jsp").forward(request, response);
 	}
 
 }
