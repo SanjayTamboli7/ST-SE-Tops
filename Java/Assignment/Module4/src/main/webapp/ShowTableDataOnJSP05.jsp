@@ -1,49 +1,54 @@
+<%@page import="com.dao.EmpDao"%>
+<%@page import="com.model.Emp"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd"><html>
+<!DOCTYPE html>
+<html>
 <head>
-<!-- <meta charset="UTF-8"> -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>05 Show SQL table data on JSP</title>
 </head>
 <body>
-
-	<sql:setDataSource var="myDS" driver="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/module4" user="root" password="" />
-
-	<sql:query var="listUsers" dataSource="${myDS}">
-        SELECT * FROM EMP;
-    </sql:query>
-
+	<jsp:include page="HeaderEmp.html"></jsp:include>
 	<div align="center">
-		<table border="1" cellpadding="5">
-			<caption>List of employees</caption>
-			<tr>
-				<th>No</th>
-				<th>Name</th>
-				<th>Job</th>
-				<th>Manager</th>
-				<th>Joined On</th>
-				<th>Salary</th>
-				<th>Commission</th>
-				<th>Department</th>
-			</tr>
-			<c:forEach var="user" items="${listUsers.rows}">
-				<tr>
-					<td><c:out value="${user.empno}" /></td>
-					<td><c:out value="${user.ename}" /></td>
-					<td><c:out value="${user.job}" /></td>
-					<td><c:out value="${user.mgr}" /></td>
-					<td><c:out value="${user.hiredate}" /></td>
-					<td><c:out value="${user.sal}" /></td>
-					<td><c:out value="${user.commission}" /></td>
-					<td><c:out value="${user.department}" /></td>
-				</tr>
-			</c:forEach>
-		</table>
+		<div class="px-4 py-5 my-5">
+			<div class="col-lg-6 mx-auto">
+				<h4 class="display-5 fw-bold text-body-emphasis">All Employees</h4>
+				<%
+				List<Emp> list = EmpDao.getAllRecords();
+				request.setAttribute("list", list);
+				%>
+				<table class="table table-bordered border-dark table-striped">
+					<tr>
+						<th>No</th>
+						<th>Name</th>
+						<th>Job</th>
+						<th>Manager</th>
+						<th>Joined On</th>
+						<th>Salary</th>
+						<th>Commission</th>
+						<th>Department</th>
+					</tr>
+					<%
+					for (Emp u : list) {
+					%>
+					<tr>
+						<td><%=u.getEmpno()%></td>
+						<td><%=u.getEname()%></td>
+						<td><%=u.getJob()%></td>
+						<td><%=u.getMgr()%></td>
+						<td><%=u.getHiredate()%></td>
+						<td><%=u.getSal()%></td>
+						<td><%=u.getComm()%></td>
+						<td><%=u.getDeptno()%></td>
+					</tr>
+					<%
+					}
+					%>
+				</table>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

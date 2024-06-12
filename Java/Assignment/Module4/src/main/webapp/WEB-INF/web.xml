@@ -53,4 +53,24 @@
     <servlet-name>ValidateJsp06</servlet-name>
     <url-pattern>/ValidateJsp06</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegistrationController</display-name>
+    <servlet-name>RegistrationController</servlet-name>
+    <servlet-class>com.controller.RegistrationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationController</servlet-name>
+    <url-pattern>/RegistrationController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MsgUserLoginController</display-name>
+    <servlet-name>MsgUserLoginController</servlet-name>
+    <servlet-class>com.controller.MsgUserLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MsgUserLoginController</servlet-name>
+    <url-pattern>/MsgUserLoginController</url-pattern>
+  </servlet-mapping>
 </web-app>

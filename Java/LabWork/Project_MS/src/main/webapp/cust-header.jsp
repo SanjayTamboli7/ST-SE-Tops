@@ -1,12 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+
         <!-- Navbar start -->
         <div class="container-fluid fixed-top">
             <div class="container topbar bg-primary d-none d-lg-block">
@@ -33,9 +34,10 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Shop</a>
                             <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+                           
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><%=session.getAttribute("firstname %") %>&nbsp;<%=session.getAttribute("lastname %") %></a>
+                             <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><%=session.getAttribute("firstname") %>&nbsp;<%=session.getAttribute("lastname") %> </a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
                                     <a href="logout.jsp" class="dropdown-item">Logout</a>
                                 </div>
@@ -56,6 +58,5 @@
             </div>
         </div>
         <!-- Navbar End -->
-
 </body>
 </html>

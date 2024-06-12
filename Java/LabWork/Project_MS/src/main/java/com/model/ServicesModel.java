@@ -1,8 +1,9 @@
 package com.model;
 
-public class ServicesModel {
+public class ServicesModel 
+{
 	private int serviceid;
-	private String servicename, image;
+	private String servicename,image;
 	public int getServiceid() {
 		return serviceid;
 	}

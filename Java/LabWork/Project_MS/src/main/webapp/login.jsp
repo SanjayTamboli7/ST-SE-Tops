@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-        <title>Fruitables - Vegetable Website Template</title>
+<meta charset="ISO-8859-1">
+   <title>Fruitables - Vegetable Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -28,48 +28,50 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+    </head>
 
-</head>
-<body>
+    <body>
+
         <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" role="status"></div>
         </div>
         <!-- Spinner End -->
-
-		<%@ include file="header.jsp" %>
-        <!-- Checkout Page Start -->
+		
+	<%@ include file="header.jsp" %>	
+	<%@ include file="banner.jsp" %>
+	<!-- Checkout Page Start -->
         <div class="container-fluid py-5">
             <div class="container py-5">
-                <h1 class="mb-4">Billing details</h1>
-                <form action="#">
+                <h1 class="mb-4">Login details</h1>
+                <form method="post" action="CustomerController">
                     <div class="row g-5">
                         <div class="col-md-12 col-lg-6 col-xl-7">
-                            <div class="form-item">
-                                <label class="form-label my-3">Email Address<sup>*</sup></label>
-                                <input type="email" class="form-control">
+                            <div class="row">
+                             
+                             <div class="form-item">
+                                <label class="form-label my-3">Email <sup>*</sup></label>
+                                <input type="email" required="required" class="form-control" name="email">
                             </div>
                             <div class="form-item">
-                                <label class="form-label my-3">Password<sup>*</sup></label>
-                                <input type="password" class="form-control">
-                            </div>
-                            <div class="row g-4 text-center align-items-center justify-content-center pt-4">
-                            	<input type="submit" name="action" value="Login" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>
+                                <label class="form-label my-3">Passwrod <sup>*</sup></label>
+                                <input type="password" required="required" class="form-control" name="password">
                             </div>
                             
-                            <div>
-                            	<a href="registration.jsp">Create A New Account</a>
-                            	<a href="forgotpassword.jsp">Forgot Password?</a>
+                             <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                              <input type="submit" name="action" value="login" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>
                             </div>
                         </div>
-                    </div>
+                     </div>                           
+							<a href="registration.jsp">Create an New Account</a><a href="forgotpassword.jsp">Forgot Password?</a>
+                       </div>
                 </form>
             </div>
         </div>
         <!-- Checkout Page End -->
-		
- 		<%@ include file="footer.jsp" %>
-        <!-- Back to Top -->
+	<%@ include file="footer.jsp" %>
+	
+   <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
         
@@ -83,6 +85,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    </body>
 
-</body>
 </html>

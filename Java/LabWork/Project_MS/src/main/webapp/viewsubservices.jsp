@@ -91,8 +91,10 @@
                                     <div class="row g-4">
                                     	<%
                                     		Connection cn=new DBUtil().getConnectionData();
-                                    		String qry="select * from services";
+                                    		String qry="select * from subservices where serviceid=?";
+                                    		
                                     		PreparedStatement st=cn.prepareStatement(qry);
+                                    		st.setInt(1, Integer.parseInt(request.getParameter("serviceid")));
                                     		ResultSet rs=st.executeQuery();
                                     		while(rs.next())
                                     		{
@@ -100,15 +102,15 @@
                                         <div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="rounded position-relative fruite-item">
                                                 <div class="fruite-img">
-                                                    <img src="images/<%=rs.getString(3) %>" class="img-fluid w-100 rounded-top" alt="">
+                                                    <img src="images/<%=request.getParameter("image") %>" class="img-fluid w-100 rounded-top" alt="">
                                                 </div>
                                                 <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                                 <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4><%=rs.getString(2) %></h4>
-                                                    
+                                                    <h4><%=rs.getString(3) %></h4>
+                                                    <p><%=rs.getString(4) %></p>
                                                     <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        
-                                                        <a href="viewsubservices.jsp?serviceid=<%=rs.getInt(1) %>&image=<%=rs.getString(3) %>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> More</a>
+                                                        <p class="text-dark fs-5 fw-bold mb-0"><%=rs.getString(5) %> Rs.</p>
+                                                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Book</a>
                                                     </div>
                                                 </div>
                                             </div>

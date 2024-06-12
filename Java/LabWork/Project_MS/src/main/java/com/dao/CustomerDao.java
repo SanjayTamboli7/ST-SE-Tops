@@ -4,18 +4,20 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import com.model.CustomerModel;
 import com.util.DBUtil;
 
-public class CustomerDao {
-	
+public class CustomerDao 
+{
 	Connection cn=null;
 	public int customerRegistration(CustomerModel rmodel)
 	{
 		int x=0;
-		try {
-			cn=new DBUtil().getConnectionData();			
-			PreparedStatement st=cn.prepareStatement("insert into customer (firstname,lastname,mobno,address,city,email,password,status) values (?,?,?,?,?,?,?,?)");
+		try 
+		{
+			cn=new DBUtil().getConnectionData();		
+			PreparedStatement st=cn.prepareStatement("insert into customer(firstname,lastname,mobno,address,city,email,password,status) values(?,?,?,?,?,?,?,?)");
 			st.setString(1, rmodel.getFirstname());
 			st.setString(2, rmodel.getLastname());
 			st.setString(3, rmodel.getMobno());
@@ -28,27 +30,27 @@ public class CustomerDao {
 			x=st.executeUpdate();
 			cn.close();
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return x;
 	}
-	
 	public CustomerModel customerLogin(CustomerModel lmodel)
 	{
 		CustomerModel model=null;
-		try {
+		try 
+		{
 			cn=new DBUtil().getConnectionData();
-			String qry="select * from customer where email=? and password=? and status='Active'" ;
+			String qry="select * from customer where email=? and password=? and status='Active'";
 			PreparedStatement st=cn.prepareStatement(qry);
-			st.setString(1,lmodel.getEmail());
-			st.setString(2,lmodel.getPassword());
+			st.setString(1, lmodel.getEmail());
+			st.setString(2, lmodel.getPassword());
 			ResultSet rs=st.executeQuery();
-			
-			if (rs.next())
+			if(rs.next())
 			{
 				model=new CustomerModel();
 				model.setCustomerid(rs.getInt(1));
-				model.setFirstname(rs.getString(2));
+				model.setFirstname(rs.getString("firstname"));
 				model.setLastname(rs.getString(3));
 				model.setMobno(rs.getString(4));
 				model.setAddress(rs.getString(5));
@@ -57,9 +59,10 @@ public class CustomerDao {
 				model.setPassword(rs.getString(8));
 			}
 			cn.close();
-		} catch (SQLException e){
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}		
 		return model;
 	}
 }

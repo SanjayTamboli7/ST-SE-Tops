@@ -1,3 +1,4 @@
+<%@page import="com.model.CustomerModel"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,7 +12,7 @@
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" >
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
 
         <!-- Icon Font Stylesheet -->
@@ -40,13 +41,50 @@
 		
 	<%@ include file="header.jsp" %>	
 	<%@ include file="banner.jsp" %>
-	<%@ include file="container.jsp" %>
+	<!-- Checkout Page Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <h1 class="mb-4">OTP Page details</h1>
+                <%
+String email=null;
+if(session.getAttribute("otp")==null) 
+{
+response.sendRedirect("forgotpassword.jsp");
+}
+else	
+{
+	CustomerModel f=(CustomerModel)session.getAttribute("UserData");
+	email=f.getEmail();
+}
+%>
+                ${notmatch }
+                <form method="post" action="ForgotController">
+                    <div class="row g-5">
+                        <div class="col-md-12 col-lg-6 col-xl-7">
+                            <div class="row">
+                              <label class="form-label my-3">send otp on this email : <%=email %> <sup>*</sup></label>
+                             <div class="form-item">
+                                <label class="form-label my-3">Enter OTP <sup>*</sup></label>
+                                <input type="text" required="required" class="form-control" name="EnterOTP">
+                            </div>
+                            
+                             <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                              <input type="submit" name="action" value="Verify" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary"/>
+                            </div>
+                        </div>
+                     </div>                           
+							
+                       </div>
+                </form>
+            </div>
+        </div>
+        <!-- Checkout Page End -->
 	<%@ include file="footer.jsp" %>
 	
    <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-         
+        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

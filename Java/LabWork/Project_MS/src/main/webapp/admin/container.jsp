@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-               <!-- dashboard inner -->
-               <div class="midde_cont">
+ <!-- dashboard inner -->
+              
                   <div class="container-fluid">
                      <div class="row column_title">
                         <div class="col-md-12">
@@ -352,16 +352,8 @@
                         </div>
                      </div>
                   </div>
-                  <!-- footer -->
-                  <div class="container-fluid">
-                     <div class="footer">
-                        <p>Copyright © 2018 Designed by html.design. All rights reserved.<br><br>
-                           Distributed By: <a href="https://themewagon.com/">ThemeWagon</a>
-                        </p>
-                     </div>
-                  </div>
-               </div>
+                  
+               
                <!-- end dashboard inner -->
-
 </body>
 </html>

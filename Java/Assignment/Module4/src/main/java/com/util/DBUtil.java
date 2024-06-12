@@ -3,21 +3,18 @@ package com.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBUtil 
-{
+
+public class DBUtil {
 	Connection cn=null;
 	public Connection getConnectionData()
 	{
-		try 
-		{
+		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ms", "root", "");
-			System.out.println("Connection Established...");
+			cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/module4", "root","");
+			System.out.println("Connection established...");			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return cn;
 	}
 }

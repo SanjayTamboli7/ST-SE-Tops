@@ -1,8 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+   <head>
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,35 +28,34 @@
       <link rel="stylesheet" href="css/perfect-scrollbar.css" />
       <!-- custom css -->
       <link rel="stylesheet" href="css/custom.css" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="js/semantic.min.css" />
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-
-</head>
+   </head>
    <body class="inner_page login">
       <div class="full_container">
          <div class="container">
             <div class="center verticle_center full_height">
                <div class="login_section">
-                  <div class="logo_login">
-                     <div class="center">
-                        <img width="210" src="images/logo/logo.png" alt="#" />
-                     </div>
-                  </div>
+                 
                   <div class="login_form">
                      <form method="post" action="../AdminController">
                         <fieldset>
                            <div class="field">
-                              <label class="label_field">Username</label>
-                              <input type="text" name="username" placeholder="Username" />
+                              <label class="label_field">Username </label>
+                              <input type="text" name="username" placeholder="username" />
                            </div>
                            <div class="field">
                               <label class="label_field">Password</label>
                               <input type="password" name="password" placeholder="Password" />
                            </div>
+                         
                            <div class="field margin_0">
-                              <button class="main_bt" name="action" value="login">Sing In</button>
+                              <label class="label_field hidden">hidden label</label>
+                              <button class="main_bt" name="action" value="login">LogIn</button>
                            </div>
                         </fieldset>
                      </form>

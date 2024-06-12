@@ -1,9 +1,10 @@
 package com.model;
 
-public class CustomerModel {
-
+public class CustomerModel 
+{
 	private int customerid;
-	private String firstname,lastname,mobno,address,city,email,password,status;
+	private String firstname,lastname,mobno,address, city, email,password,status;
+	
 	public int getCustomerid() {
 		return customerid;
 	}
@@ -58,6 +59,4 @@ public class CustomerModel {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-	
 }
