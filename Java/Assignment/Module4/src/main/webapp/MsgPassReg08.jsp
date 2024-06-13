@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<%-- <%= request.getAttribute() %>
- --%>
 	${msg }
 	<h1>Registration Form</h1>
 	<form method="post" action="RegistrationController">

@@ -73,4 +73,24 @@
     <servlet-name>MsgUserLoginController</servlet-name>
     <url-pattern>/MsgUserLoginController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MsgPassController</display-name>
+    <servlet-name>MsgPassController</servlet-name>
+    <servlet-class>com.controller.MsgPassController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MsgPassController</servlet-name>
+    <url-pattern>/MsgPassController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MsgSendController</display-name>
+    <servlet-name>MsgSendController</servlet-name>
+    <servlet-class>com.controller.MsgSendController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MsgSendController</servlet-name>
+    <url-pattern>/MsgSendController</url-pattern>
+  </servlet-mapping>
 </web-app>

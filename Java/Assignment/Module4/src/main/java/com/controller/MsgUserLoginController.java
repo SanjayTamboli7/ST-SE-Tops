@@ -20,8 +20,8 @@ public class MsgUserLoginController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		// TODO Auto-generated method stub0
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,16 +35,15 @@ public class MsgUserLoginController extends HttpServlet {
 		if (model == null) {
 			HttpSession session=request.getSession(false);
 			session.setAttribute("model", null);
-			response.sendRedirect("HomeController.do?action=MsgPassLogi08");			
+			response.sendRedirect("MsgPassController.do?action=MsgPassLogi08");			
 		}
 		else {
 			HttpSession session=request.getSession(true);
 			session.setAttribute("model", model);
 			// response.sendRedirect("HomeController.do?action=showuser&userid="+model.getUserid());
-			response.sendRedirect("HomeController.do?action=MsgPassList08&username="+model.getEmail());
+			response.sendRedirect("MsgPassController.do?action=MsgPassList08&useremail="+model.getEmail());
 		}
-		
-		
+				
 	}
 
 }
