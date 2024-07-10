@@ -1,4 +1,4 @@
-package com.oops;
+package module1;
 
 import java.util.Scanner;
 
