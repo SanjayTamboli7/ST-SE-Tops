@@ -108,7 +108,7 @@
                   </li>
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gradient Overlay Header</a>
                     <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_gradient_overlay.jsp">Fulscreen</a></li>
+                      <li><a href="index_mp_fullscreen_gradient_overlay.jsp">Full screen</a></li>
                       <li><a href="index_mp_classic_gradient_overlay.jsp">Classic</a></li>
                     </ul>
                   </li>

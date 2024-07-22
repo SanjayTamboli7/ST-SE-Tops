@@ -2,9 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FeedbackForm.html</title>
 </head>
 <body>
-
+	<div class="container mt-5">
+		<!--  <form action="AddFeedback.jsp" method="post"> -->
+		<form method="post" action="FeedbackController">
+			<div class="mb-3">
+				<label for="customeremailid" class="form-label">Customer
+					Email ID:</label> <input type="email" class="form-control"
+					id="customeremailid" name="customeremailid">
+			</div>
+			<div class="mb-3">
+				<label for="description" class="form-label">Description :</label> <input
+					type="text" class="form-control" id="description"
+					name="description">
+			</div>
+			<div class="mb-3">
+				<label for="suggestion" class="form-label">Suggestion:</label> <input
+					type="text" class="form-control" id="suggestion" name="suggestion">
+			</div>
+			<button type="submit" class="btn btn-primary">Add Feedback</button>
+		</form>
+	</div>
 </body>
 </html>

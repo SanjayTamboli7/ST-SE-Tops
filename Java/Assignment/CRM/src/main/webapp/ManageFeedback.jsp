@@ -1,6 +1,5 @@
 <%@page import="com.dao.FeedbackDao"%>
 <%@page import="com.model.FeedbackModel"%>
-<%-- <%@page import="java.util.*"%>--%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

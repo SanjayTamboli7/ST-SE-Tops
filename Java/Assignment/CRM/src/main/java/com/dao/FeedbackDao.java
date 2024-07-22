@@ -13,13 +13,13 @@ import com.util.DBUtil;
 
 public class FeedbackDao {
 
-	public static int saveFeedback(FeedbackModel f) {
+	public int saveFeedback(FeedbackModel f) {
 		int status = 0;
 		try {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement(
-					"insert into tblcustomerfeedback CustomerEmailID,Description,Suggestion,fkRegID,CreatedDateTime,CreatedByIP values (?,?,?,?,?,?)");
+					"insert into tblcustomerfeedback (CustomerEmailID,Description,Suggestion,fkRegID,CreatedDateTime,CreatedByIP) values (?,?,?,?,?,?)");
 			ps.setString(1, f.getCustomeremailid());
 			ps.setString(2, f.getDescription());
 			ps.setString(3, f.getSuggestion());
