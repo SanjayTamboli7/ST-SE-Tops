@@ -52,7 +52,7 @@
 					<td><%=u.getCreateddatetime()%></td>
 					<td><%=u.getCreatedbyip()%></td>
 					<td><a class="btn btn-success"
-						href="editform.jsp?id=<%=u.getPkfeedbackid()%>">Edit</a></td>
+						href="EditFeedback.jsp?id=<%=u.getPkfeedbackid()%>">Edit</a></td>
 					<td><a class="btn btn-danger"
 						href="deleteuser.jsp?id=<%=u.getPkfeedbackid()%>">Delete</a></td>
 				</tr>

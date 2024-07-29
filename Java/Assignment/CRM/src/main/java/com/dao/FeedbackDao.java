@@ -109,7 +109,6 @@ public class FeedbackDao {
 			if (rs.next()) {
 				f = new FeedbackModel();
 				f.setPkfeedbackid(rs.getInt("pkfeedbackid"));
-				;
 				f.setCustomeremailid(rs.getString("customeremailid"));
 				f.setDescription(rs.getString("description"));
 				f.setSuggestion(rs.getString("Suggestion"));
