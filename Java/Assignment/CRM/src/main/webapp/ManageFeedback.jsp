@@ -54,7 +54,7 @@
 					<td><a class="btn btn-success"
 						href="EditFeedback.jsp?id=<%=u.getPkfeedbackid()%>">Edit</a></td>
 					<td><a class="btn btn-danger"
-						href="deleteuser.jsp?id=<%=u.getPkfeedbackid()%>">Delete</a></td>
+						href="DeleteFeedback.jsp?id=<%=u.getPkfeedbackid()%>">Delete</a></td>
 				</tr>
 				<%
 				}
