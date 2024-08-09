@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ProjectForm.html</title>
+</head>
+<body>
+	<div class="container mt-5">
+		<!--  <form action="AddProject.jsp" method="post"> -->
+		<form method="post" action="ProjectController">
+			<div class="mb-3">
+				<label for="ProjectName" class="form-label">Project Name :</label> <input
+					type="text" class="form-control" id="ProjectName"
+					name="ProjectName">
+			</div>
+			<div class="mb-3">
+				<label for="ProjectDescription" class="form-label">Project Description:</label> <input
+					type="text" class="form-control" id="ProjectDescription" name="ProjectDescription">
+			</div>
+			<div class="mb-3">
+				<label for="fkCustomerID" class="form-label">Customer ID:</label>
+				<input type="number" class="form-control" id="fkCustomerID"
+					name="fkCustomerID">
+			</div>
+			<!-- Starts from here -->
+			<div class="mb-3">
+				<label for="customeremailid" class="form-label">Customer
+					Email ID:</label> <input type="email" class="form-control"
+					id="customeremailid" name="customeremailid">
+			</div>
+			<div class="mb-3">
+				<label for="response" class="form-label">Response:</label> <input
+					type="text" class="form-control" id="response" name="response">
+			</div>
+			<div class="mb-3">
+				<label for="fkregid" class="form-label"> From:</label> <input
+					type="number" class="form-control" id="fkregid" name="fkregid">
+				<input id="createddatetime" type="hidden" value="2024-07-18"
+					name="createddatetime" />
+			</div>
+			<div class="mb-3">
+				<label for="responsedate" class="form-label">Response On:</label> <input
+					type="date" class="form-control" id="responsedate"
+					name="responsedate"> <input id="createdbyip" type="hidden"
+					value="100.100.100.100" name="createdbyip" />
+			</div>
+			<button type="submit" class="btn btn-primary">Add </button>
+		</form>
+	</div>
+</body>
+</html>

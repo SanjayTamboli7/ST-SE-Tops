@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="latin1" collation="latin1_swedish_ci">crm</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="tblcustomer" view="colnames">
+<left>29</left>
+<top>24</top>
+<width>228</width>
+<height>342</height>
+<sql_create_table>CREATE TABLE `tblcustomer` (
+  `pkCustomerID` int(5) NOT NULL DEFAULT '0',
+  `CustomerName` varchar(30) DEFAULT NULL,
+  `CustomerEmailID` varchar(30) DEFAULT NULL,
+  `CustomerContactNo` varchar(10) DEFAULT NULL,
+  `CustomerAddress` varchar(100) DEFAULT NULL,
+  `CustomerCity` varchar(20) DEFAULT NULL,
+  `CustomerState` varchar(20) DEFAULT NULL,
+  `CustomerCountry` varchar(20) DEFAULT NULL,
+  `fkRegID` int(5) DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkCustomerID`),
+  KEY `fkRegID` (`fkRegID`),
+  CONSTRAINT `tblcustomer_ibfk_1` FOREIGN KEY (`fkRegID`) REFERENCES `tblregistration` (`pkRegID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="tblregistration" view="colnames">
+<left>333</left>
+<top>28</top>
+<width>208</width>
+<height>254</height>
+<sql_create_table>CREATE TABLE `tblregistration` (
+  `pkRegID` int(5) NOT NULL DEFAULT '0',
+  `UserName` varchar(30) DEFAULT NULL,
+  `EmailId` varchar(30) DEFAULT NULL,
+  `RegistrationType` char(1) DEFAULT NULL,
+  `ActiveFlag` char(1) DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkRegID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="tbllogin" view="colnames">
+<left>606</left>
+<top>31</top>
+<width>208</width>
+<height>210</height>
+<sql_create_table>CREATE TABLE `tbllogin` (
+  `pkLoginID` int(5) NOT NULL DEFAULT '0',
+  `EmailId` varchar(30) DEFAULT NULL,
+  `fkRegID` int(5) DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkLoginID`),
+  KEY `fkRegID` (`fkRegID`),
+  CONSTRAINT `tbllogin_ibfk_1` FOREIGN KEY (`fkRegID`) REFERENCES `tblregistration` (`pkRegID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="tblforgotpassword" view="colnames">
+<left>873</left>
+<top>31</top>
+<width>208</width>
+<height>188</height>
+<sql_create_table>CREATE TABLE `tblforgotpassword` (
+  `pkFPID` int(5) NOT NULL DEFAULT '0',
+  `EmailId` varchar(30) DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkFPID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="tblcustomerfeedback" view="colnames">
+<left>37</left>
+<top>391</top>
+<width>208</width>
+<height>254</height>
+<sql_create_table>CREATE TABLE `tblcustomerfeedback` (
+  `pkFeedbackID` int(5) NOT NULL DEFAULT '0',
+  `CustomerEmailID` varchar(30) DEFAULT NULL,
+  `Description` varchar(100) DEFAULT NULL,
+  `Suggestion` varchar(100) DEFAULT NULL,
+  `fkRegID` int(5) DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkFeedbackID`),
+  KEY `fkRegID` (`fkRegID`),
+  CONSTRAINT `tblcustomerfeedback_ibfk_1` FOREIGN KEY (`fkRegID`) REFERENCES `tblregistration` (`pkRegID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="tblproject" view="colnames">
+<left>323</left>
+<top>319</top>
+<width>214</width>
+<height>408</height>
+<sql_create_table>CREATE TABLE `tblproject` (
+  `pkProjectID` int(5) NOT NULL DEFAULT '0',
+  `ProjectName` varchar(30) DEFAULT NULL,
+  `ProjectDescription` varchar(30) DEFAULT NULL,
+  `fkCustomerID` int(5) DEFAULT NULL,
+  `ProjectDuration` int(4) DEFAULT NULL,
+  `ProjectStartDate` date DEFAULT NULL,
+  `ProjectEndDate` date DEFAULT NULL,
+  `ProjectCost` int(7) DEFAULT NULL,
+  `ProjectRemarks` varchar(100) DEFAULT NULL,
+  `ProjectStatus` varchar(20) DEFAULT NULL,
+  `fkRegID` int(5) DEFAULT NULL,
+  `CustomerReview` varchar(100) DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkProjectID`),
+  KEY `fkCustomerID` (`fkCustomerID`),
+  KEY `fkRegID` (`fkRegID`),
+  CONSTRAINT `tblproject_ibfk_1` FOREIGN KEY (`fkCustomerID`) REFERENCES `tblcustomer` (`pkCustomerID`),
+  CONSTRAINT `tblproject_ibfk_2` FOREIGN KEY (`fkRegID`) REFERENCES `tblregistration` (`pkRegID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="tblcustomerquery" view="colnames">
+<left>611</left>
+<top>271</top>
+<width>208</width>
+<height>320</height>
+<sql_create_table>CREATE TABLE `tblcustomerquery` (
+  `pkQueryID` int(5) NOT NULL DEFAULT '0',
+  `CustomerEmailID` varchar(30) DEFAULT NULL,
+  `Description` varchar(100) DEFAULT NULL,
+  `Suggestion` varchar(100) DEFAULT NULL,
+  `Response` varchar(100) DEFAULT NULL,
+  `fkResponseID` int(5) DEFAULT NULL,
+  `fkRegID` int(5) DEFAULT NULL,
+  `ResponseDate` date DEFAULT NULL,
+  `CreatedDateTime` date DEFAULT NULL,
+  `CreatedByIP` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`pkQueryID`),
+  KEY `fkResponseID` (`fkResponseID`),
+  KEY `fkRegID` (`fkRegID`),
+  CONSTRAINT `tblcustomerquery_ibfk_1` FOREIGN KEY (`fkResponseID`) REFERENCES `tblregistration` (`pkRegID`),
+  CONSTRAINT `tblcustomerquery_ibfk_2` FOREIGN KEY (`fkRegID`) REFERENCES `tblregistration` (`pkRegID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

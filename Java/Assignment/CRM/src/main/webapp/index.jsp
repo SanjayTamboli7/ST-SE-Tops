@@ -77,7 +77,7 @@
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Customers</a>
                 <ul class="dropdown-menu">
                   <li class="dropdown"><a href="ManageFeedback.jsp">Manage Feedback</a></li>
-                  <li class="dropdown"><a href="listQuery.jsp">Manage Query</a></li>
+                  <li class="dropdown"><a href="ManageQuery.jsp">Manage Query</a></li>
                   <li class="dropdown"><a href="listProject.jsp">View Project</a></li>
                   <li class="dropdown"><a href="Profile.jsp">Manage Profile</a></li>
                   <li class="dropdown"><a href="ResetPassword.jsp">Reset Password</a></li>
@@ -85,9 +85,8 @@
               </li>
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">BDE</a>
                 <ul class="dropdown-menu">
-                  <li class="dropdown"><a href="InviteCustomer.jsp">Invite Customer</a>
-
-                  </li>
+                  <li class="dropdown"><a href="InviteCustomer.jsp">Invite Customer</a></li>
+                  <li class="dropdown"><a href="ManageProject.jsp">Manage Project</a></li>
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu">
                       <li><a href="service1.jsp">Service 1</a></li>
