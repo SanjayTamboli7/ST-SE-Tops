@@ -1,13 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="com.model.ProjectModel"%>
+<%@page import="com.dao.ProjectDao"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ProjectForm.html</title>
+<title>Edit Project</title>
 </head>
 <body>
+	<%
+	String Projectid = request.getParameter("id");
+	System.out.println("Project id = " + Projectid);
+	ProjectModel p = ProjectDao.getProjectByID(Integer.parseInt(Projectid));
+	%>
+	<jsp:include page="HeaderProject.html"></jsp:include>
 	<div class="container mt-5">
-		<!--  <form action="AddProject.jsp" method="post"> -->
-		<form method="post" action="ProjectController">
+		<form action="EditProject1.jsp" method="post">
+		<!-- <form method="post" action="ProjectController"> -->
 			<div class="mb-3">
 				<label for="ProjectName" class="form-label">Project Name :</label> <input
 					type="text" class="form-control" id="ProjectName"
@@ -73,8 +83,24 @@
 					id="CreatedByIP" type="hidden" value="100.100.100.100"
 					name="CreatedByIP" />
 			</div>
-			<button type="submit" class="btn btn-primary">Add Project</button>
+			<button type="submit" class="btn btn-primary">Edit Project</button>
 		</form>
 	</div>
+
+	<%-- 	
+	<div class="col-lg-6 mx-auto">
+		<h4 class="display-5 fw-bold text-body-emphasis">Edit User</h4>
+		<form action="edituser.jsp" method="post">
+			<input type="hidden" name="id" value="<%=u.getId()%>" />
+			<div class="mb-3">
+				<label for="name" class="form-label">Name:</label> <input
+					type="text" class="form-control" id="name" name="name"
+					value="<%=u.getClass()%>">
+			</div>
+			<button type="submit" class="btn btn-primary">Edit User</button>
+		</form>
+	</div>
+ --%>
+
 </body>
 </html>

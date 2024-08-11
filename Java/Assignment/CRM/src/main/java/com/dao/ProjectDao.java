@@ -19,7 +19,9 @@ public class ProjectDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement(
-					"insert into TblProject (ProjectName,ProjectDescription,fkCustomerID,ProjectDuration,ProjectStartDate,ProjectEndDate,ProjectCost,ProjectRemarks,ProjectStatus,fkRegID,CustomerReview,CreatedDateTime,CreatedByIP) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+					"insert into TblProject (ProjectName,ProjectDescription,fkCustomerID,ProjectDuration,ProjectStartDate,ProjectEndDate,ProjectCost,ProjectRemarks,ProjectStatus,fkRegID,CustomerReview,CreatedDateTime,CreatedByIP) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			//                               ProjectName,ProjectDescription,fkCustomerID,ProjectDuration,ProjectStartDate,ProjectEndDate,ProjectCost,ProjectRemarks,ProjectStatus,fkRegID,CustomerReview,CreatedDateTime,CreatedByIP
+
 			ps.setString(1, p.getProjectName());
 			ps.setString(2, p.getProjectDescription());
 			ps.setInt(3, p.getFkCustomerID());
@@ -84,7 +86,7 @@ public class ProjectDao {
 		return status;
 	}
 //	Start from here
-	public static List<ProjectModel> getAllQueries() {
+	public static List<ProjectModel> getAllProjects() {
 		List<ProjectModel> listProject = new ArrayList<ProjectModel>();
 		try {
 			Connection cn = null;

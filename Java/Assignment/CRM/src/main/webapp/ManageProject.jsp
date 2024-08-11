@@ -28,27 +28,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>View Queries</title>
+<title>View Projects</title>
 </head>
 <body>
 	<jsp:include page="HeaderProject.html"></jsp:include>
 	<div class="px-4 py-5 my-5">
 		<div class="col-lg-6 mx-auto">
-			<h4 class="display-5 fw-bold text-body-emphasis">All Queries</h4>
+			<h4 class="display-5 fw-bold text-body-emphasis">All Projects</h4>
 			<%
-			List<ProjectModel> list = ProjectDao.getAllQueries();
+			List<ProjectModel> list = ProjectDao.getAllProjects();
 			request.setAttribute("list", list);
 			%>
 			<table class="table table-bordered border-dark table-striped">
 				<tr>
 					<th>Id</th>
-					<th>Customer Email</th>
+					<th>Name</th>
 					<th>Description</th>
-					<th>Suggestion</th>
-					<th>Response</th>
-					<th>Response From</th>
-					<th>Project From</th>
-					<th>Response On</th>
+					<th>Customer</th>
+					<th>Days</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Cost</th>
+					<th>Remarks</th>
+					<th>BDE</th>
+					<th>Review</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -57,13 +60,16 @@
 				%>
 				<tr>
 					<td><%=p.getPkProjectID()%></td>
-					<td><%=p.getCustomerEmailID()%></td>
-					<td><%=p.getDescription()%></td>
-					<td><%=p.getSuggestion()%></td>
-					<td><%=p.getResponse()%></td>
-					<td><%=p.getFkResponseID()%></td>
+					<td><%=p.getProjectName()%></td>
+					<td><%=p.getProjectDescription()%></td>
+					<td><%=p.getFkCustomerID()%></td>
+					<td><%=p.getProjectDuration()%></td>
+					<td><%=p.getProjectStartDate()%></td>
+					<td><%=p.getProjectEndDate()%></td>
+					<td><%=p.getProjectCost()%></td>
+					<td><%=p.getProjectRemarks()%></td>
 					<td><%=p.getFkRegID()%></td>
-					<td><%=p.getResponseDate()%></td>
+					<td><%=p.getCustomerReview()%></td>
 					<td><a class="btn btn-success"
 						href="EditProject.jsp?id=<%=p.getPkProjectID()%>">Edit</a></td>
 					<td><a class="btn btn-danger"
