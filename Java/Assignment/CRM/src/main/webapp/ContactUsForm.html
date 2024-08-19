@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ContactUsForm.html</title>
+	</head>
+	<body>
+		<div class="container mt-5">
+			<!--  <form action="AddContactUs.jsp" method="post"> -->			
+			<form method="post" action="ContactUsController">			
+				<div class="mb-3">
+					<label for=YourName class="form-label">Your Name :</label>
+					<input type="text" class="form-control" id="YourName"
+						name="YourName">
+				</div>
+				<div class="mb-3">
+					<label for="YourEmailID" class="form-label">Your
+						Email :</label> <input type="email" class="form-control"
+						id="YourEmailID" name="YourEmailID">
+				</div>
+				<div class="mb-3">
+					<label for="YourMessage" class="form-label">Your Message :</label> <input
+						type="text" class="form-control" id="YourMessage"
+						name="YourMessage">
+				</div>
+				<button type="submit" class="btn btn-primary">Add Contact Us</button>
+			</form>
+		</div>
+	</body>
+</html>

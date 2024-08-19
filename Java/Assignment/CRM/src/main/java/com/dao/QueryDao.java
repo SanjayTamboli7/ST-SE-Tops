@@ -121,7 +121,8 @@ public class QueryDao {
 				q.setSuggestion(rs.getString("suggestion"));
 				q.setResponse(rs.getString("response"));
 				q.setFkResponseID(rs.getInt("fkresponseid"));				
-				q.setFkRegID(rs.getInt("fkregid"));				
+				q.setFkRegID(rs.getInt("fkregid"));		
+				q.setResponseDate(rs.getString("responsedate"));
 				q.setCreatedDateTime(rs.getString("createddatetime"));
 				q.setCreatedByIP(rs.getString("createdbyip"));				
 			}

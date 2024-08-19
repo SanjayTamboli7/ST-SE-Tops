@@ -91,3 +91,13 @@ PRIMARY KEY (pkQueryID),
 FOREIGN KEY (fkResponseID) REFERENCES TblRegistration(pkRegID),
 FOREIGN KEY (fkRegID) REFERENCES TblRegistration(pkRegID)
 );
+
+CREATE TABLE TblContactUs (
+pkContactUsID	INTEGER(5) AUTO_INCREMENT,
+YourName	VARCHAR(30),
+YourEmailID	VARCHAR(30),
+YourMessage	VARCHAR(100),
+CreatedDateTime	DATE,
+CreatedByIP	VARCHAR(15),
+PRIMARY KEY     (pkContactUsID)
+);

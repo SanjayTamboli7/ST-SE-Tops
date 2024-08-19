@@ -21,48 +21,48 @@
 			<div class="mb-3">
 				<label for="ProjectName" class="form-label">Project Name :</label> <input
 					type="text" class="form-control" id="ProjectName"
-					name="ProjectName">
+					name="ProjectName" value="<%=p.getProjectName()%>">
 			</div>
 			<div class="mb-3">
 				<label for="ProjectDescription" class="form-label">Project
 					Description :</label> <input type="text" class="form-control"
-					id="ProjectDescription" name="ProjectDescription">
+					id="ProjectDescription" name="ProjectDescription" value="<%=p.getProjectDescription()%>">
 			</div>
 			<div class="mb-3">
 				<label for="fkCustomerID" class="form-label">Customer ID:</label> <input
 					type="number" class="form-control" id="fkCustomerID"
-					name="fkCustomerID">
+					name="fkCustomerID" value="<%=p.getFkCustomerID()%>">
 			</div>
 			<div class="mb-3">
 				<label for="ProjectDuration" class="form-label">Project
 					Duration (days) :</label> <input type="number" class="form-control"
-					id="ProjectDuration" name="ProjectDuration">
+					id="ProjectDuration" name="ProjectDuration" value="<%=p.getProjectDuration()%>">
 			</div>
 			<div class="mb-3">
 				<label for="ProjectStartDate" class="form-label">Project
 					Start Date :</label> <input type="date" class="form-control"
-					id="ProjectStartDate" name="ProjectStartDate">
+					id="ProjectStartDate" name="ProjectStartDate" value="<%=p.getProjectStartDate()%>">
 			</div>
 			<div class="mb-3">
 				<label for="ProjectEndDate" class="form-label">Project End
 					Date :</label> <input type="date" class="form-control" id="ProjectEndDate"
-					name="ProjectEndDate">
+					name="ProjectEndDate" value="<%=p.getProjectEndDate()%>">
 			</div>
 			<div class="mb-3">
 				<label for="ProjectCost" class="form-label">Project Cost (USD) :</label> <input
 					type="number" class="form-control" id="ProjectCost"
-					name="ProjectCost">
+					name="ProjectCost" value="<%=p.getProjectCost()%>">
 			</div>
 			<div class="mb-3">
 				<label for="ProjectRemarks" class="form-label">Project
 					Remarks :</label> <input type="text" class="form-control"
-					id="ProjectRemarks" name="ProjectRemarks">
+					id="ProjectRemarks" name="ProjectRemarks" value="<%=p.getProjectRemarks()%>">
 			</div>
 			<!-- <div class="form-group"> -->
 			<div class="mb-3">
 				<label for="ProjectStatus" class="form-label">Project Status :</label>
 				<select class="form-control" id="ProjectStatus"
-					name="ProjectStatus">
+					name="ProjectStatus" value="<%=p.getProjectStatus()%>">
 					<option value="Pending">Pending</option>
 					<option value="In Progress">In Progress</option>
 					<option value="Suspended">Suspended</option>
@@ -71,7 +71,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="fkregid" class="form-label">Created By :</label> <input
-					type="number" class="form-control" id="fkregid" name="fkregid">
+					type="number" class="form-control" id="fkregid" name="fkregid" value="<%=p.getFkRegID()%>">
 				<input id="createddatetime" type="hidden" value="2024-07-12"
 					name="createddatetime" /> <input id="createddatetime"
 					type="hidden" value="2024-07-18" name="createddatetime" />
@@ -79,7 +79,7 @@
 			<div class="mb-3">
 				<label for="CustomerReview" class="form-label">Customer
 					Review :</label> <input type="text" class="form-control"
-					id="CustomerReview" name="CustomerReview"> <input
+					id="CustomerReview" name="CustomerReview" value="<%=p.getCustomerReview()%>"> <input
 					id="CreatedByIP" type="hidden" value="100.100.100.100"
 					name="CreatedByIP" />
 			</div>

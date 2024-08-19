@@ -1,11 +1,8 @@
-<%@page import="com.dao.QueryDao,com.model.QueryModel"%>
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- --%>
- <jsp:useBean id="u" class="com.model.QueryModel"></jsp:useBean>
-<jsp:setProperty property="*" name="u"/>
+<%@page import="com.dao.QueryDao"%>
+<jsp:useBean id="q" class="com.model.QueryModel"></jsp:useBean>
+<jsp:setProperty property="*" name="q"/>
 
 <%
-int i=QueryDao.updateQuery(u);
+int i=QueryDao.updateQuery(q);
 response.sendRedirect("ManageQuery.jsp");
 %>

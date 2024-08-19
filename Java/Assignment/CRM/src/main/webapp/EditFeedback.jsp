@@ -23,16 +23,16 @@
 			<div class="mb-3">
 				<label for="customeremailid" class="form-label">Customer
 					Email ID:</label> <input type="email" class="form-control"
-					id="customeremailid" name="customeremailid">
+					id="customeremailid" name="customeremailid" value="<%=u.getCustomeremailid()%>">
 			</div>
 			<div class="mb-3">
 				<label for="description" class="form-label">Description :</label> <input
 					type="text" class="form-control" id="description"
-					name="description">
+					name="description" value="<%=u.getDescription()%>">
 			</div>
 			<div class="mb-3">
 				<label for="suggestion" class="form-label">Suggestion:</label> <input
-					type="text" class="form-control" id="suggestion" name="suggestion">
+					type="text" class="form-control" id="suggestion" name="suggestion" value="<%=u.getSuggestion()%>">
 			</div>
 			<button type="submit" class="btn btn-primary">Edit Feedback</button>
 		</form>
