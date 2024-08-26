@@ -18,6 +18,7 @@
 	<div class="container mt-5">
 		<form action="EditProject1.jsp" method="post">
 		<!-- <form method="post" action="ProjectController"> -->
+			<input type="text" name="pkProjectID" value="<%=p.getPkProjectID()%>">			
 			<div class="mb-3">
 				<label for="ProjectName" class="form-label">Project Name :</label> <input
 					type="text" class="form-control" id="ProjectName"
@@ -70,18 +71,15 @@
 				</select>
 			</div>
 			<div class="mb-3">
-				<label for="fkregid" class="form-label">Created By :</label> <input
-					type="number" class="form-control" id="fkregid" name="fkregid" value="<%=p.getFkRegID()%>">
-				<input id="createddatetime" type="hidden" value="2024-07-12"
-					name="createddatetime" /> <input id="createddatetime"
-					type="hidden" value="2024-07-18" name="createddatetime" />
+				<label for="fkRegID" class="form-label">Created By :</label> <input
+					type="number" class="form-control" id="fkRegID" name="fkRegID" value="<%=p.getFkRegID()%>">
+				<input id="CreatedDateTime" type="hidden" value="2024-07-18" name="CreatedDateTime" />
 			</div>
 			<div class="mb-3">
 				<label for="CustomerReview" class="form-label">Customer
 					Review :</label> <input type="text" class="form-control"
 					id="CustomerReview" name="CustomerReview" value="<%=p.getCustomerReview()%>"> <input
-					id="CreatedByIP" type="hidden" value="100.100.100.100"
-					name="CreatedByIP" />
+					id="CreatedByIP" type="hidden" value="100.100.100.100" name="CreatedByIP" />
 			</div>
 			<button type="submit" class="btn btn-primary">Edit Project</button>
 		</form>

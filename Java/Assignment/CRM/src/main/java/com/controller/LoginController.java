@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,6 +40,9 @@ public class LoginController extends HttpServlet {
 			response.sendRedirect("HomeController.do?action=index&username="+model.getUsername()); 
 		}
 		// write a code to insert a record into tblLogin
+		else {
+			
+		}
 	}
 
 }

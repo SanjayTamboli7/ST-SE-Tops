@@ -51,7 +51,7 @@ public class ProjectController extends HttpServlet {
 		} else {
 			request.setAttribute("msg", "Record not inserted.");
 		}
-		// request.getRequestDispatcher("ManageProject.jsp").forward(request, response);
+		request.getRequestDispatcher("ManageProject.jsp").forward(request, response);
 	}
 
 }

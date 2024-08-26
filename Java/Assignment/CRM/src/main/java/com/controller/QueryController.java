@@ -30,17 +30,17 @@ public class QueryController extends HttpServlet {
 		// doGet(request, response);
 		QueryModel fmodel = new QueryModel();
 		
-		fmodel.setCustomerEmailID(request.getParameter("customeremailid"));
-		fmodel.setDescription(request.getParameter("description"));
-		fmodel.setSuggestion(request.getParameter("suggestion"));
-		fmodel.setResponse(request.getParameter("response"));
-		fmodel.setFkResponseID(Integer.parseInt(request.getParameter("fkresponseid")));
-		// fmodel.setFkregid(Integer.parseInt("fkregid"));
+		fmodel.setCustomerEmailID(request.getParameter("CustomerEmailID"));
+		fmodel.setDescription(request.getParameter("Description"));
+		fmodel.setSuggestion(request.getParameter("Suggestion"));
+		fmodel.setResponse(request.getParameter("Response"));
+		fmodel.setFkResponseID(Integer.parseInt(request.getParameter("fkResponseID")));
+		// fmodel.setFkregid(Integer.parseInt("fkRegID"));
 		fmodel.setFkRegID(7);	
 		fmodel.setResponseDate(request.getParameter("ResponseDate"));
-		fmodel.setCreatedDateTime(request.getParameter("createddatetime"));
+		fmodel.setCreatedDateTime(request.getParameter("CreatedDateTime"));
 		// fmodel.setCreateddatetime("21-07-2024 00:00");
-		fmodel.setCreatedByIP(request.getParameter("createdbyip"));
+		fmodel.setCreatedByIP(request.getParameter("CreatedByIP"));
 		// fmodel.setCreatedbyip("102.102.102.102");
 		
 		int x = new QueryDao().saveQuery(fmodel);
@@ -49,7 +49,7 @@ public class QueryController extends HttpServlet {
 		} else {
 			request.setAttribute("msg", "Record not inserted.");
 		}
-		// request.getRequestDispatcher("ManageQuery.jsp").forward(request, response);
+		request.getRequestDispatcher("ManageQuery.jsp").forward(request, response);
 	}
 
 }

@@ -43,7 +43,7 @@ public class ContactUsController extends HttpServlet {
 		} else {
 			request.setAttribute("msg", "Record not inserted.");
 		}
-		// request.getRequestDispatcher("ManageContactUs.jsp").forward(request, response);
+		request.getRequestDispatcher("ManageContactUs.jsp").forward(request, response);
 		
 	}
 

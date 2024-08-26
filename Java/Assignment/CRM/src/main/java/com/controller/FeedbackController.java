@@ -48,7 +48,7 @@ public class FeedbackController extends HttpServlet {
 		} else {
 			request.setAttribute("msg", "Record not inserted.");
 		}
-		// request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.getRequestDispatcher("ManageFeedback.jsp").forward(request, response);
 
 	}
 }

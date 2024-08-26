@@ -1,8 +1,11 @@
 <%@page import="com.dao.RegistrationDao"%>
+<%@page import="com.model.RegistrationModel"%>
 <jsp:useBean id="p" class="com.model.RegistrationModel"></jsp:useBean>
 <jsp:setProperty property="*" name="p"/>
-
 <%
-RegistrationDao.deleteRegistration(p);
+String RegID = request.getParameter("id");
+System.out.println("In Delete Reg id = " + RegID);
+RegistrationModel rm = RegistrationDao.getRegistrationByID(Integer.parseInt(RegID));
+int i=RegistrationDao.deleteRegistration(rm);
 response.sendRedirect("ManageRegistration.jsp");
 %>

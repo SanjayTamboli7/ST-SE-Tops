@@ -4,6 +4,7 @@ public class ContactUsModel {
 
 	private int pkContactUsID;
 	private String YourName, YourEmailID, YourMessage, CreatedDateTime, CreatedByIP;
+
 	public int getPkContactUsID() {
 		return pkContactUsID;
 	}

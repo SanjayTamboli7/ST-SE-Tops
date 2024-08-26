@@ -111,7 +111,7 @@
 				  <div class="form-group">
 				  	<label for="password" class="form-label">Password :</label>
                     <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
-                    <input id="createddatetime" type="hidden" value="18-07-2024 15:15" name="createddatetime"/>
+                    <input id="createddatetime" type="hidden" value="2024-08-26" name="createddatetime"/>
                   </div>
                   <div class="form-group">
                   	<label for="re-password" class="form-label">Confirm Password :</label>

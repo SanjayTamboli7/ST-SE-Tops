@@ -18,30 +18,33 @@
 	<div class="container mt-5">
 		<form action="EditCustomer1.jsp" method="post">
 		<!-- <form method="post" action="CustomerController"> -->
+			<input type="text" name="pkCustomerID" value="<%=p.getPkCustomerID()%>">
 				<div class="mb-3">
 					<label for="CustomerName" class="form-label">Customer Name :</label>
 					<input type="text" class="form-control" id="CustomerName"
-						name="CustomerName" value="<%=p.getCustomerName()%>">
+						name="CustomerName">
 				</div>
 				<div class="mb-3">
 					<label for="CustomerEmailID" class="form-label">Customer
 						Email :</label> <input type="email" class="form-control"
-						id="CustomerEmailID" name="CustomerEmailID" value="<%=p.getCustomerEmailID()%>">
+						id="CustomerEmailID" name="CustomerEmailID">
 				</div>
 				<div class="mb-3">
-					<label for="CustomerContactNo" class="form-label">Customer Contact Number:</label> <input
+					<label for="CustomerContactNo" class="form-label">Customer Number:</label> <input
 						type="text" class="form-control" id="CustomerContactNo"
-						name="CustomerContactNo" value="<%=p.getCustomerContactNo()%>">
+						name="CustomerContactNo">
 				</div>
 				<div class="mb-3">
 					<label for="CustomerAddress" class="form-label">Customer
 						Address :</label> <input type="text" class="form-control"
-						id="CustomerAddress" name="CustomerAddress" value="<%=p.getCustomerAddress()%>">
-				</div>				
+						id="CustomerAddress" name="CustomerAddress">
+				</div>
+<!-- 	Date,
+	Varchar(15), -->				
 				<div class="mb-3">
 					<label for="CustomerCity" class="form-label">Customer
 						City :</label> <select class="form-control" id="CustomerCity"
-						name="CustomerCity" value="<%=p.getCustomerCity()%>">
+						name="CustomerCity">
 						<option value="Ahmedabad">Ahmedabad</option>
 						<option value="Baroda">Baroda</option>
 						<option value="Rajkot">Rajkot</option>
@@ -58,22 +61,27 @@
 				</div>								
 				<div class="mb-3">
 					<label for="CustomerState" class="form-label">Customer
-						State :</label> <select class="form-control" id="CustomerState" name="CustomerState" value="<%=p.getCustomerCity()%>">
+						State :</label> <select class="form-control" id="CustomerState" name="CustomerState">
 						<option value="Gujarat">Gujarat</option>
 						<option value="Maharashtra">Maharashtra</option>
 						<option value="Rajsthan">Rajsthan</option>
 					</select>
 				</div>
 				<div class="mb-3">
+					<label for="CustomerCountry" class="form-label">Customer 
+						Country :</label> <input type="text" class="form-control" id="CustomerCountry"
+						name="CustomerCountry">
+				</div>
+				<div class="mb-3">
 					<label for="CustomerCountry" class="form-label">Customer
 						Country :</label> <select class="form-control" id="CustomerCountry"
-						name="CustomerCountry" value="<%=p.getCustomerCountry()%>">
+						name="CustomerCountry">
 						<option value="India">India</option>
 					</select>
 				</div>
 				<div class="mb-3">
 					<label for="fkRegID" class="form-label">Created By :</label> <input type="text" class="form-control"
-						id="fkRegID" name="fkRegID" value="<%=p.getFkRegID()%>">
+						id="fkRegID" name="fkRegID">
 						<input id="CreatedDateTime" type="hidden" value="2024-08-12"
 						name="CreatedDateTime" /> 
 						<input id="CreatedByIP" type="hidden" value="100.100.100.100"

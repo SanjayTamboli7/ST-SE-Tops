@@ -18,6 +18,7 @@
 	<div class="container mt-5">
 		<form action="EditRegistration1.jsp" method="post">
 		<!-- <form method="post" action="RegistrationController"> -->
+				 <input type="text" name="pkregid" value="<%=p.getPkregid()%>">	
                   <div class="form-group">
                   	<label for="emailid" class="form-label">Email ID :</label>
                     <input class="form-control" id="emailid" type="text" name="emailid" placeholder="Email Id" value="<%=p.getEmailid()%>"/>
@@ -39,8 +40,8 @@
                     <br>
 				  </div>								
 				  <div class="form-group">
-				  	<label for="password" class="form-label">Password :</label>
-                    <input class="form-control" id="password" type="password" name="password" placeholder="Password" value="<%=p.getPwd()%>"/>
+				  	<label for="pwd" class="form-label">Password :</label>
+                    <input class="form-control" id="pwd" type="password" name="pwd" placeholder="Password" value="<%=p.getPwd()%>"/>
                     <input id="createddatetime" type="hidden" value="2024-08-17 15:15" name="createddatetime"/>
                     <br>
                   </div>
@@ -49,8 +50,7 @@
                     <input class="form-control" id="re-password" type="password" name="re-password" placeholder="Re-enter Password" value="<%=p.getPwd()%>"/>
                     <input id="createdbyip" type="hidden" value="100.100.100.100" name="createdbyip"/>
                     <br>
-                  </div>
-				
+                  </div>				
 			<button type="submit" class="btn btn-primary">Edit Registration</button>
 		</form>
 	</div>

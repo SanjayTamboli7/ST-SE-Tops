@@ -69,7 +69,7 @@ public class CustomerDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement("delete from TblCustomer where pkCustomerID=?");
-			ps.setInt(1, c.getPkCustomerID());
+			ps.setInt(1, c.getPkCustomerID()); // Customer ID becomes zero here and hence delete fails.
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -118,7 +118,7 @@ public class CustomerDao {
 			ps.setInt(1, Customerid);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				c = new CustomerModel();				
+				c = new CustomerModel();							
 				c.setPkCustomerID(rs.getInt("pkCustomerID"));
 				c.setCustomerName(rs.getString("CustomerName"));
 				c.setCustomerEmailID(rs.getString("CustomerEmailID"));

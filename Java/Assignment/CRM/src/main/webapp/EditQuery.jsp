@@ -19,43 +19,43 @@
 		<form action="EditQuery1.jsp" method="post">
 		<!-- <form method="post" action="QueryController"> -->
 			<div class="mb-3">
-				<label for="customeremailid" class="form-label">Query ID:</label>
-				<input id="pkqueryid" type=number name="pkqueryid" value="<%=u.getPkQueryID()%>"/>
+				<label for="pkQueryID" class="form-label">Query ID:</label>
+				<input id="pkQueryID" type=number name="pkQueryID" value="<%=u.getPkQueryID()%>"/>
 			</div>
 			<div class="mb-3">
-				<label for="customeremailid" class="form-label">Customer
+				<label for="CustomerEmailID" class="form-label">Customer
 					Email ID:</label> <input type="email" class="form-control"
-					id="customeremailid" name="customeremailid" value="<%=u.getCustomerEmailID()%>">					
+					id="CustomerEmailID" name="CustomerEmailID" value="<%=u.getCustomerEmailID()%>">
 			</div>
 			<div class="mb-3">
-				<label for="description" class="form-label">Description :</label> <input
-					type="text" class="form-control" id="description"
-					name="description" value="<%=u.getDescription()%>">
+				<label for="Description" class="form-label">Description :</label> <input
+					type="text" class="form-control" id="Description"
+					name="Description" value="<%=u.getDescription()%>">
 			</div>
 			<div class="mb-3">
-				<label for="suggestion" class="form-label">Suggestion:</label> <input
-					type="text" class="form-control" id="suggestion" name="suggestion" value="<%=u.getSuggestion()%>">
+				<label for="Suggestion" class="form-label">Suggestion:</label> <input
+					type="text" class="form-control" id="Suggestion" name="Suggestion" value="<%=u.getSuggestion()%>">
 			</div>
 			<div class="mb-3">
-				<label for="response" class="form-label">Response:</label> <input
-					type="text" class="form-control" id="response" name="response" value="<%=u.getResponse()%>">
+				<label for="Response" class="form-label">Response:</label> <input
+					type="text" class="form-control" id="Response" name="Response" value="<%=u.getResponse()%>">
 			</div>
 			<div class="mb-3">
-				<label for="fkresponseid" class="form-label">Response From:</label>
-				<input type="number" class="form-control" id="fkresponseid"
-					name="fkresponseid" value="<%=u.getFkRegID()%>">
+				<label for="fkResponseID" class="form-label">Response From:</label>
+				<input type="number" class="form-control" id="fkResponseID"
+					name="fkResponseID" value="<%=u.getFkResponseID()%>">
 			</div>
 			<div class="mb-3">
-				<label for="fkregid" class="form-label">Query From:</label> <input
-					type="number" class="form-control" id="fkregid" name="fkregid" value="<%=u.getFkRegID()%>">
-				<input id="createddatetime" type="hidden" value="2024-07-18"
-					name="createddatetime" />
+				<label for="fkRegID" class="form-label">Query From:</label> <input
+					type="number" class="form-control" id="fkRegID" name="fkRegID" value="<%=u.getFkRegID()%>">
+				<input id="CreatedDateTime" type="hidden" value="2024-07-18"
+					name="CreatedDateTime" />
 			</div>
 			<div class="mb-3">
-				<label for="responsedate" class="form-label">Response On:</label> <input
-					type="date" class="form-control" id="responsedate"
-					name="responsedate" value="<%=u.getResponseDate()%>"> <input id="createdbyip" type="hidden"
-					value="100.100.100.100" name="createdbyip" />
+				<label for="ResponseDate" class="form-label">Response On:</label> <input
+					type="date" class="form-control" id="ResponseDate"
+					name="ResponseDate" value="<%=u.getResponseDate()%>"> <input id="CreatedByIP" type="hidden"
+					value="100.100.100.100" name="CreatedByIP" />
 			</div>
 			<button type="submit" class="btn btn-primary">Edit Query</button>
 		</form>

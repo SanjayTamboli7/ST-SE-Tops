@@ -3,10 +3,11 @@ package com.model;
 public class CustomerModel {
 
 	private int pkCustomerID, fkRegID;
-	private String CustomerName, CustomerEmailID, CustomerContactNo, CustomerAddress, CustomerCity, CustomerState,
-			CustomerCountry, CreatedDateTime, CreatedByIP;
+	private String CustomerName, CustomerEmailID, CustomerContactNo, CustomerAddress, CustomerCity, CustomerState;
+	private String CustomerCountry, CreatedDateTime, CreatedByIP;
 
 	public int getPkCustomerID() {
+		System.out.println(" pkCustomerID : " + pkCustomerID);
 		return pkCustomerID;
 	}
 
@@ -15,6 +16,7 @@ public class CustomerModel {
 	}
 
 	public int getFkRegID() {
+		System.out.println(" fkRegID : " + fkRegID);
 		return fkRegID;
 	}
 
@@ -23,6 +25,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerName() {
+		System.out.println(" CustomerName: " + CustomerName);
 		return CustomerName;
 	}
 
@@ -31,6 +34,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerEmailID() {
+		System.out.println(" CustomerEmailID : " + CustomerEmailID);
 		return CustomerEmailID;
 	}
 
@@ -39,6 +43,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerContactNo() {
+		System.out.println(" CustomerContactNo : " + CustomerContactNo);
 		return CustomerContactNo;
 	}
 
@@ -47,6 +52,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerAddress() {
+		System.out.println(" CustomerAddress : " + CustomerAddress );
 		return CustomerAddress;
 	}
 
@@ -55,6 +61,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerCity() {
+		System.out.println(" CustomerCity : " + CustomerCity );
 		return CustomerCity;
 	}
 
@@ -63,6 +70,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerState() {
+		System.out.println(" CustomerState : " + CustomerState);
 		return CustomerState;
 	}
 
@@ -71,6 +79,7 @@ public class CustomerModel {
 	}
 
 	public String getCustomerCountry() {
+		System.out.println(" CustomerCountry : " +CustomerCountry);
 		return CustomerCountry;
 	}
 
@@ -79,6 +88,7 @@ public class CustomerModel {
 	}
 
 	public String getCreatedDateTime() {
+		System.out.println(" CreatedDateTime : " + CreatedDateTime);
 		return CreatedDateTime;
 	}
 
@@ -87,6 +97,7 @@ public class CustomerModel {
 	}
 
 	public String getCreatedByIP() {
+		System.out.println(" CreatedByIP : " + CreatedByIP);
 		return CreatedByIP;
 	}
 

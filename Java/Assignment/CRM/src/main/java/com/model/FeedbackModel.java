@@ -6,6 +6,7 @@ public class FeedbackModel {
 	private int fkregid,pkfeedbackid;
 
 	public int getPkfeedbackid() {
+		System.out.println(" pkfeedbackid : " + pkfeedbackid);
 		return pkfeedbackid;
 	}
 
@@ -14,10 +15,12 @@ public class FeedbackModel {
 	}
 
 	public String getCustomeremailid() {
+		System.out.println(" customeremailid : " + customeremailid);
 		return customeremailid;
 	}
 
 	public int getFkregid() {
+		System.out.println(" fkregid : " + fkregid);
 		return fkregid;
 	}
 
@@ -30,6 +33,7 @@ public class FeedbackModel {
 	}
 
 	public String getDescription() {
+		System.out.println(" description : " + description);
 		return description;
 	}
 
@@ -38,6 +42,7 @@ public class FeedbackModel {
 	}
 
 	public String getSuggestion() {
+		System.out.println(" suggestion : " + suggestion);
 		return suggestion;
 	}
 
@@ -46,6 +51,7 @@ public class FeedbackModel {
 	}
 
 	public String getCreateddatetime() {
+		System.out.println(" createddatetime : " + createddatetime);
 		return createddatetime;
 	}
 
@@ -54,6 +60,7 @@ public class FeedbackModel {
 	}
 
 	public String getCreatedbyip() {
+		System.out.println(" createdbyip : " + createdbyip);
 		return createdbyip;
 	}
 

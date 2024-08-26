@@ -18,20 +18,21 @@
 	<div class="container mt-5">
 		<form action="ManageContactUs.jsp" method="post">
 		<!-- <form method="post" action="ContactUsController"> -->
+				<input type="text" name="pkContactUsID" value="<%=p.getPkContactUsID()%>">	
 				<div class="mb-3">
-					<label for=YourName class="form-label">Your Name :</label>
+					<label for="YourName" class="form-label">Your Name :</label>
 					<input type="text" class="form-control" id="YourName"
-						name="YourName">
+						name="YourName" value="<%=p.getYourName()%>">
 				</div>
 				<div class="mb-3">
 					<label for="YourEmailID" class="form-label">Your
 						Email :</label> <input type="email" class="form-control"
-						id="YourEmailID" name="YourEmailID">
+						id="YourEmailID" name="YourEmailID" value="<%=p.getYourEmailID()%>">
 				</div>
 				<div class="mb-3">
 					<label for="YourMessage" class="form-label">Your Message :</label> <input
 						type="text" class="form-control" id="YourMessage"
-						name="YourMessage">
+						name="YourMessage" value="<%=p.getYourMessage()%>">
 				</div>
 			<button type="submit" class="btn btn-primary">View All</button>
 		</form>

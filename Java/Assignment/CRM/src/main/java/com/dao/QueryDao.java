@@ -87,15 +87,16 @@ public class QueryDao {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				QueryModel q = new QueryModel();
-				q.setPkQueryID(rs.getInt("pkqueryid"));
-				q.setCustomerEmailID(rs.getString("customeremailid"));
-				q.setDescription(rs.getString("description"));								
-				q.setSuggestion(rs.getString("suggestion"));
-				q.setResponse(rs.getString("response"));
-				q.setFkResponseID(rs.getInt("fkresponseid"));				
-				q.setFkRegID(rs.getInt("fkregid"));				
-				q.setCreatedDateTime(rs.getString("createddatetime"));
-				q.setCreatedByIP(rs.getString("createdbyip"));
+				q.setPkQueryID(rs.getInt("pkQueryID"));
+				q.setCustomerEmailID(rs.getString("CustomerEmailID"));
+				q.setDescription(rs.getString("Description"));								
+				q.setSuggestion(rs.getString("Suggestion"));
+				q.setResponse(rs.getString("Response"));
+				q.setResponseDate(rs.getString("ResponseDate"));
+				q.setFkResponseID(rs.getInt("fkResponseID"));				
+				q.setFkRegID(rs.getInt("fkRegID"));				
+				q.setCreatedDateTime(rs.getString("CreatedDateTime"));
+				q.setCreatedByIP(rs.getString("CreatedByIP"));
 				listQuery.add(q);
 			}
 		} catch (Exception e) {
@@ -114,17 +115,17 @@ public class QueryDao {
 			ps.setInt(1, querykid);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				q = new QueryModel();				
-				q.setPkQueryID(rs.getInt("pkqueryid"));
-				q.setCustomerEmailID(rs.getString("customeremailid"));
-				q.setDescription(rs.getString("description"));								
-				q.setSuggestion(rs.getString("suggestion"));
-				q.setResponse(rs.getString("response"));
-				q.setFkResponseID(rs.getInt("fkresponseid"));				
-				q.setFkRegID(rs.getInt("fkregid"));		
-				q.setResponseDate(rs.getString("responsedate"));
-				q.setCreatedDateTime(rs.getString("createddatetime"));
-				q.setCreatedByIP(rs.getString("createdbyip"));				
+				q = new QueryModel();								
+				q.setPkQueryID(rs.getInt("pkQueryID"));
+				q.setCustomerEmailID(rs.getString("CustomerEmailID"));
+				q.setDescription(rs.getString("Description"));								
+				q.setSuggestion(rs.getString("Suggestion"));
+				q.setResponse(rs.getString("Response"));
+				q.setResponseDate(rs.getString("ResponseDate"));
+				q.setFkResponseID(rs.getInt("fkResponseID"));				
+				q.setFkRegID(rs.getInt("fkRegID"));				
+				q.setCreatedDateTime(rs.getString("CreatedDateTime"));
+				q.setCreatedByIP(rs.getString("CreatedByIP"));
 			}
 		} catch (Exception e) {
 			System.out.println(e);

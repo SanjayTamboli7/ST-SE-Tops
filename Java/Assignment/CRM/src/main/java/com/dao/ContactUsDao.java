@@ -103,8 +103,8 @@ public class ContactUsDao {
 			ps.setInt(1, ContactUsid);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				cu = new ContactUsModel();				
-				cu.setPkContactUsID(rs.getInt("pkContactUsID"));
+				cu = new ContactUsModel();
+				cu.setPkContactUsID(ContactUsid);
 				cu.setYourName(rs.getString("YourName"));
 				cu.setYourEmailID(rs.getString("YourEmailID"));
 				cu.setYourMessage(rs.getString("YourMessage"));

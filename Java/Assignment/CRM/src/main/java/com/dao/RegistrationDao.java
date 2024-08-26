@@ -48,8 +48,8 @@ public class RegistrationDao {
 			st.setString(5, rmodel.getActiveflag());
 			st.setString(6, rmodel.getCreateddatetime());
 			st.setString(7, rmodel.getCreatedbyip());		
-			st.setInt(8, 1);
-			// st.setString(8, rmodel.getpkRegID()); set pkRegId here to update the specific row.
+			// st.setInt(8, 1);
+			st.setInt(8, rmodel.getPkregid()); // set pkRegId here to update the specific row.
 			status = st.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -64,8 +64,8 @@ public class RegistrationDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement("delete from TblRegistration where pkRegID=?");
-			ps.setInt(1, 2);
-			// st.setString(1, rmodel.getpkRegID()); set pkRegId here to update the specific row.
+			// ps.setInt(1, 2);
+			ps.setInt(1, rmodel.getPkregid()); // set pkRegId here to update the specific row.
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {

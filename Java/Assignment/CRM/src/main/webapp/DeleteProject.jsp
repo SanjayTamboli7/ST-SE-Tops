@@ -1,8 +1,12 @@
-<%@page import="com.dao.CustomerDao"%>
-<jsp:useBean id="p" class="com.model.CustomerModel"></jsp:useBean>
+<%@page import="com.dao.ProjectDao"%>
+<%@page import="com.model.ProjectModel"%>
+<jsp:useBean id="p" class="com.model.ProjectModel"></jsp:useBean>
 <jsp:setProperty property="*" name="p"/>
 
 <%
-CustomerDao.deleteCustomer(p);
-response.sendRedirect("ManageCustomer.jsp");
+String ProjectID = request.getParameter("id");
+System.out.println("In Project id = " + ProjectID);
+ProjectModel pm = ProjectDao.getProjectByID(Integer.parseInt(ProjectID));
+int i=ProjectDao.deleteProject(pm);
+response.sendRedirect("ManageProject.jsp");
 %>

@@ -23,7 +23,8 @@ public class FeedbackDao {
 			ps.setString(1, f.getCustomeremailid());
 			ps.setString(2, f.getDescription());
 			ps.setString(3, f.getSuggestion());
-			ps.setInt(4, f.getFkregid());
+			/* ps.setInt(4, f.getFkregid()); */
+			ps.setInt(4, 7);
 			ps.setString(5, f.getCreateddatetime());
 			ps.setString(6, f.getCreatedbyip());
 			status = ps.executeUpdate();
@@ -44,7 +45,8 @@ public class FeedbackDao {
 			ps.setString(1, f.getCustomeremailid());
 			ps.setString(2, f.getDescription());
 			ps.setString(3, f.getSuggestion());
-			ps.setInt(4, f.getFkregid());
+			/* ps.setInt(4, f.getFkregid()); */
+			ps.setInt(4, 7);
 			ps.setString(5, f.getCreateddatetime());
 			ps.setString(6, f.getCreatedbyip());
 			ps.setInt(7, f.getPkfeedbackid());

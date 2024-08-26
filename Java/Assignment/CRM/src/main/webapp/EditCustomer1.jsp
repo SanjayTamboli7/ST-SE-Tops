@@ -1,5 +1,6 @@
-<%@page import="com.dao.CustomerDao,com.model.CustomerModel"%>
- <jsp:useBean id="c" class="com.model.CustomerModel"></jsp:useBean>
+<%@page import="com.dao.CustomerDao"%>
+<%@page import="com.model.CustomerModel"%>
+<jsp:useBean id="c" class="com.model.CustomerModel"></jsp:useBean>
 <jsp:setProperty property="*" name="c"/>
 
 <%

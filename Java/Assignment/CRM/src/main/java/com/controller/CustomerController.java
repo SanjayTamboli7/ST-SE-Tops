@@ -48,7 +48,7 @@ public class CustomerController extends HttpServlet {
 		} else {
 			request.setAttribute("msg", "Record not inserted.");
 		}
-		// request.getRequestDispatcher("ManageCustomer.jsp").forward(request, response);
+		request.getRequestDispatcher("ManageCustomer.jsp").forward(request, response);
 	}
 
 }
