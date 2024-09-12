@@ -30,17 +30,17 @@ public class CustomerController extends HttpServlet {
 		// doGet(request, response);
 		
 		CustomerModel cmodel=new CustomerModel();		
-		cmodel.setCustomerName(request.getParameter("CustomerName"));
-		cmodel.setCustomerEmailID(request.getParameter("CustomerEmailID"));
-		cmodel.setCustomerContactNo(request.getParameter("CustomerContactNo"));	
-		cmodel.setCustomerAddress(request.getParameter("CustomerAddress"));
-		cmodel.setCustomerCity(request.getParameter("CustomerCity"));
-		cmodel.setCustomerState(request.getParameter("CustomerState"));
-		cmodel.setCustomerCountry(request.getParameter("CustomerCountry"));
-		// cmodel.setFkRegID(Integer.parseInt("fkRegID"));
-		cmodel.setFkRegID(9);	
-		cmodel.setCreatedDateTime(request.getParameter("CreatedDateTime"));
-		cmodel.setCreatedByIP(request.getParameter("CreatedByIP"));
+		cmodel.setCustomername(request.getParameter("customername"));
+		cmodel.setCustomeremailid(request.getParameter("customeremailid"));
+		cmodel.setCustomercontactno(request.getParameter("customercontactno"));	
+		cmodel.setCustomeraddress(request.getParameter("customeraddress"));
+		cmodel.setCustomercity(request.getParameter("customercity"));
+		cmodel.setCustomerstate(request.getParameter("customerstate"));
+		cmodel.setCustomercountry(request.getParameter("customercountry"));
+		// cmodel.setFkregid(Integer.parseInt("fkRegID"));
+		cmodel.setFkregid(9);	
+		cmodel.setCreateddatetime(request.getParameter("createddatetime"));
+		cmodel.setCreatedbyip(request.getParameter("createdbyip"));
 						
 		int x = new CustomerDao().saveCustomer(cmodel);
 		if (x > 0) {

@@ -54,21 +54,5 @@
 			<button type="submit" class="btn btn-primary">Edit Registration</button>
 		</form>
 	</div>
-
-	<%-- 	
-	<div class="col-lg-6 mx-auto">
-		<h4 class="display-5 fw-bold text-body-emphasis">Edit User</h4>
-		<form action="edituser.jsp" method="post">
-			<input type="hidden" name="id" value="<%=u.getId()%>" />
-			<div class="mb-3">
-				<label for="name" class="form-label">Name:</label> <input
-					type="text" class="form-control" id="name" name="name"
-					value="<%=u.getClass()%>">
-			</div>
-			<button type="submit" class="btn btn-primary">Edit User</button>
-		</form>
-	</div>
- --%>
-
 </body>
 </html>

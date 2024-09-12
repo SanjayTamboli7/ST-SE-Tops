@@ -1,9 +1,14 @@
 <%@page import="com.dao.CustomerDao"%>
-<%@page import="com.model.CustomerModel"%>
-<jsp:useBean id="c" class="com.model.CustomerModel"></jsp:useBean>
-<jsp:setProperty property="*" name="c"/>
+<jsp:useBean id="v" class="com.model.CustomerModel"></jsp:useBean>
+<jsp:setProperty property="*" name="v"/>
 
 <%
-int i=CustomerDao.updateCustomer(c);
+
+  String s= request.getParameter("customername");
+
+   System.out.print(s);
+int i=CustomerDao.updateCustomer(v);
+
+System.out.print(i);
 response.sendRedirect("ManageCustomer.jsp");
 %>

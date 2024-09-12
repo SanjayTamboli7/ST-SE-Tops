@@ -59,21 +59,21 @@
 				for (ProjectModel p : list) {
 				%>
 				<tr>
-					<td><%=p.getPkProjectID()%></td>
-					<td><%=p.getProjectName()%></td>
-					<td><%=p.getProjectDescription()%></td>
-					<td><%=p.getFkCustomerID()%></td>
-					<td><%=p.getProjectDuration()%></td>
-					<td><%=p.getProjectStartDate()%></td>
-					<td><%=p.getProjectEndDate()%></td>
-					<td><%=p.getProjectCost()%></td>
-					<td><%=p.getProjectRemarks()%></td>
-					<td><%=p.getFkRegID()%></td>
-					<td><%=p.getCustomerReview()%></td>
+					<td><%=p.getPkprojectid()%></td>
+					<td><%=p.getProjectname()%></td>
+					<td><%=p.getProjectdescription()%></td>
+					<td><%=p.getFkcustomerid()%></td>
+					<td><%=p.getProjectduration()%></td>
+					<td><%=p.getProjectstartdate()%></td>
+					<td><%=p.getProjectenddate()%></td>
+					<td><%=p.getProjectcost()%></td>
+					<td><%=p.getProjectremarks()%></td>
+					<td><%=p.getFkregid()%></td>
+					<td><%=p.getCustomerreview()%></td>
 					<td><a class="btn btn-success"
-						href="EditProject.jsp?id=<%=p.getPkProjectID()%>">Edit</a></td>
+						href="EditProject.jsp?id=<%=p.getPkprojectid()%>">Edit</a></td>
 					<td><a class="btn btn-danger"
-						href="DeleteProject.jsp?id=<%=p.getPkProjectID()%>">Delete</a></td>
+						href="DeleteProject.jsp?id=<%=p.getPkprojectid()%>">Delete</a></td>
 				</tr>
 				<%
 				}

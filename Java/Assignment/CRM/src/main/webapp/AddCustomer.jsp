@@ -14,7 +14,8 @@
 			<h4 class="display-5 fw-bold text-body-emphasis">Add New
 				Customer</h4>
 
-			<jsp:include page="CustomerForm.html"></jsp:include>
+			<%-- <jsp:include page="CustomerForm.html"></jsp:include> --%>
+			<%@ include file="CustomerForm.jsp" %>
 		</div>
 	</div>
 </body>

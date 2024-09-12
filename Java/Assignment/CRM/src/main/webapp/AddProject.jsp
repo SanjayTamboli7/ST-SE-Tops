@@ -14,7 +14,9 @@
 			<h4 class="display-5 fw-bold text-body-emphasis">Add New
 				Project</h4>
 
-			<jsp:include page="ProjectForm.html"></jsp:include>
+			<%-- <jsp:include page="ProjectForm.html"></jsp:include> --%>
+			<%@ include file="ProjectForm.jsp" %>
+			
 		</div>
 	</div>
 </body>

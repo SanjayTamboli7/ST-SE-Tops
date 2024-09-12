@@ -14,6 +14,7 @@ import com.model.RegistrationModel;
 
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
        
     public LoginController() {
@@ -31,18 +32,20 @@ public class LoginController extends HttpServlet {
 		// doGet(request, response);
 		RegistrationModel lmodel=new RegistrationModel();
 		lmodel.setUsername(request.getParameter("username"));
-		lmodel.setPwd(request.getParameter("password"));
+		lmodel.setPwd(request.getParameter("pwd"));
 		
 		RegistrationModel model=new LoginDao().userLogin(lmodel);
 		if (model != null) {
 			HttpSession session=request.getSession(true);
 			session.setAttribute("model", model);
-			response.sendRedirect("HomeController.do?action=index&username="+model.getUsername()); 
+			// response.sendRedirect("HomeController.do?action=index&username="+model.getUsername()); 
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
-		// write a code to insert a record into tblLogin
-		else {
-			
-		}
+		/*
+		 * write a code to insert a record into tblLogin else {
+		 * 
+		 * }
+		 */
 	}
 
 }

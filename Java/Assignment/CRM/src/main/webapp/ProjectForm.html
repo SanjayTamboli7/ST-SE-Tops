@@ -9,50 +9,49 @@
 		<!--  <form action="AddProject.jsp" method="post"> -->
 		<form method="post" action="ProjectController">
 			<div class="mb-3">
-				<label for="ProjectName" class="form-label">Project Name :</label> <input
-					type="text" class="form-control" id="ProjectName"
-					name="ProjectName">
+				<label for="projectname" class="form-label">Project Name :</label> <input
+					type="text" class="form-control" id="projectname"
+					name="projectname">
 			</div>
 			<div class="mb-3">
-				<label for="ProjectDescription" class="form-label">Project
+				<label for="projectdescription" class="form-label">Project
 					Description :</label> <input type="text" class="form-control"
-					id="ProjectDescription" name="ProjectDescription">
+					id="projectdescription" name="projectdescription">
 			</div>
 			<div class="mb-3">
-				<label for="fkCustomerID" class="form-label">Customer ID:</label> <input
-					type="number" class="form-control" id="fkCustomerID"
-					name="fkCustomerID">
+				<label for="fkcustomerid" class="form-label">Customer ID:</label> <input
+					type="number" class="form-control" id="fkcustomerid"
+					name="fkcustomerid">
 			</div>
 			<div class="mb-3">
-				<label for="ProjectDuration" class="form-label">Project
+				<label for="projectduration" class="form-label">Project
 					Duration (days) :</label> <input type="number" class="form-control"
-					id="ProjectDuration" name="ProjectDuration">
+					id="projectduration" name="projectduration">
 			</div>
 			<div class="mb-3">
-				<label for="ProjectStartDate" class="form-label">Project
+				<label for="projectstartdate" class="form-label">Project
 					Start Date :</label> <input type="date" class="form-control"
-					id="ProjectStartDate" name="ProjectStartDate">
+					id="projectstartdate" name="projectstartdate">
 			</div>
 			<div class="mb-3">
-				<label for="ProjectEndDate" class="form-label">Project End
-					Date :</label> <input type="date" class="form-control" id="ProjectEndDate"
-					name="ProjectEndDate">
+				<label for="projectenddate" class="form-label">Project End
+					Date :</label> <input type="date" class="form-control" id="projectenddate"
+					name="projectenddate">
 			</div>
 			<div class="mb-3">
-				<label for="ProjectCost" class="form-label">Project Cost (USD) :</label> <input
-					type="number" class="form-control" id="ProjectCost"
-					name="ProjectCost">
+				<label for="projectcost" class="form-label">Project Cost (USD) :</label> <input
+					type="number" class="form-control" id="projectcost"
+					name="projectcost">
 			</div>
 			<div class="mb-3">
-				<label for="ProjectRemarks" class="form-label">Project
+				<label for="projectremarks" class="form-label">Project
 					Remarks :</label> <input type="text" class="form-control"
-					id="ProjectRemarks" name="ProjectRemarks">
+					id="projectremarks" name="projectremarks">
 			</div>
-			<!-- <div class="form-group"> -->
 			<div class="mb-3">
-				<label for="ProjectStatus" class="form-label">Project Status :</label>
-				<select class="form-control" id="ProjectStatus"
-					name="ProjectStatus">
+				<label for="projectstatus" class="form-label">Project Status :</label>
+				<select class="form-control" id="projectstatus"
+					name="projectstatus">
 					<option value="Pending">Pending</option>
 					<option value="In Progress">In Progress</option>
 					<option value="Suspended">Suspended</option>
@@ -66,11 +65,11 @@
 					name="createddatetime" /> 
 			</div>
 			<div class="mb-3">
-				<label for="CustomerReview" class="form-label">Customer
+				<label for="customerreview" class="form-label">Customer
 					Review :</label> <input type="text" class="form-control"
-					id="CustomerReview" name="CustomerReview"> <input
-					id="CreatedByIP" type="hidden" value="100.100.100.100"
-					name="CreatedByIP" />
+					id="customerreview" name="customerreview"> <input
+					id="createdbyip" type="hidden" value="100.100.100.100"
+					name="createdbyip" />
 			</div>
 			<button type="submit" class="btn btn-primary">Add Project</button>
 		</form>

@@ -2,67 +2,68 @@ package com.model;
 
 public class QueryModel {
 
-	private int pkQueryID, fkResponseID, fkRegID;
-	private String CustomerEmailID, Description, Suggestion, Response, ResponseDate, CreatedDateTime, CreatedByIP;
-	public int getPkQueryID() {
-		return pkQueryID;
+	private int pkqueryid, fkresponseid, fkregid;
+	private String customeremailid, description, suggestion, response, responsedate, createddatetime, createdbyip;
+	public int getPkqueryid() {
+		return pkqueryid;
 	}
-	public void setPkQueryID(int pkQueryID) {
-		this.pkQueryID = pkQueryID;
+	public void setPkqueryid(int pkqueryid) {
+		this.pkqueryid = pkqueryid;
 	}
-	public int getFkResponseID() {
-		return fkResponseID;
+	public int getFkresponseid() {
+		return fkresponseid;
 	}
-	public void setFkResponseID(int fkResponseID) {
-		this.fkResponseID = fkResponseID;
+	public void setFkresponseid(int fkresponseid) {
+		this.fkresponseid = fkresponseid;
 	}
-	public int getFkRegID() {
-		return fkRegID;
+	public int getFkregid() {
+		return fkregid;
 	}
-	public void setFkRegID(int fkRegID) {
-		this.fkRegID = fkRegID;
+	public void setFkregid(int fkregid) {
+		this.fkregid = fkregid;
 	}
-	public String getCustomerEmailID() {
-		return CustomerEmailID;
+	public String getCustomeremailid() {
+		return customeremailid;
 	}
-	public void setCustomerEmailID(String customerEmailID) {
-		CustomerEmailID = customerEmailID;
+	public void setCustomeremailid(String customeremailid) {
+		this.customeremailid = customeremailid;
 	}
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 	public String getSuggestion() {
-		return Suggestion;
+		return suggestion;
 	}
 	public void setSuggestion(String suggestion) {
-		Suggestion = suggestion;
+		this.suggestion = suggestion;
 	}
 	public String getResponse() {
-		return Response;
+		return response;
 	}
 	public void setResponse(String response) {
-		Response = response;
+		this.response = response;
 	}
-	public String getResponseDate() {
-		return ResponseDate;
+	public String getResponsedate() {
+		return responsedate;
 	}
-	public void setResponseDate(String responseDate) {
-		ResponseDate = responseDate;
+	public void setResponsedate(String responsedate) {
+		this.responsedate = responsedate;
 	}
-	public String getCreatedDateTime() {
-		return CreatedDateTime;
+	public String getCreateddatetime() {
+		return createddatetime;
 	}
-	public void setCreatedDateTime(String createdDateTime) {
-		CreatedDateTime = createdDateTime;
+	public void setCreateddatetime(String createddatetime) {
+		this.createddatetime = createddatetime;
 	}
-	public String getCreatedByIP() {
-		return CreatedByIP;
+	public String getCreatedbyip() {
+		return createdbyip;
 	}
-	public void setCreatedByIP(String createdByIP) {
-		CreatedByIP = createdByIP;
+	public void setCreatedbyip(String createdbyip) {
+		this.createdbyip = createdbyip;
 	}
 
+	
 }

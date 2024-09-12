@@ -30,20 +30,20 @@ public class ProjectController extends HttpServlet {
 		// doGet(request, response);
 		
 		ProjectModel pmodel=new ProjectModel();
-		pmodel.setProjectName(request.getParameter("ProjectName"));
-		pmodel.setProjectDescription(request.getParameter("ProjectDescription"));
-		pmodel.setFkCustomerID(Integer.parseInt(request.getParameter("fkCustomerID")));
-		pmodel.setProjectDuration(Integer.parseInt(request.getParameter("ProjectDuration")));
-		pmodel.setProjectStartDate(request.getParameter("ProjectStartDate"));
-		pmodel.setProjectEndDate(request.getParameter("ProjectEndDate"));
-		pmodel.setProjectCost(Integer.parseInt(request.getParameter("ProjectCost")));
-		pmodel.setProjectRemarks(request.getParameter("ProjectRemarks"));
-		pmodel.setProjectStatus(request.getParameter("ProjectStatus"));
+		pmodel.setProjectname(request.getParameter("projectname"));
+		pmodel.setProjectdescription(request.getParameter("projectdescription"));
+		pmodel.setFkcustomerid(Integer.parseInt(request.getParameter("fkcustomerid")));
+		pmodel.setProjectduration(Integer.parseInt(request.getParameter("projectduration")));
+		pmodel.setProjectstartdate(request.getParameter("projectstartdate"));
+		pmodel.setProjectenddate(request.getParameter("projectenddate"));
+		pmodel.setProjectcost(Integer.parseInt(request.getParameter("projectcost")));
+		pmodel.setProjectremarks(request.getParameter("projectremarks"));
+		pmodel.setProjectstatus(request.getParameter("projectstatus"));
 		// pmodel.setFkRegID(Integer.parseInt("fkRegID"));
-		pmodel.setFkRegID(9);	
-		pmodel.setCustomerReview(request.getParameter("CustomerReview"));
-		pmodel.setCreatedDateTime(request.getParameter("CreatedDateTime"));
-		pmodel.setCreatedByIP(request.getParameter("CreatedByIP"));
+		pmodel.setFkregid(9);	
+		pmodel.setCustomerreview(request.getParameter("customerreview"));
+		pmodel.setCreateddatetime(request.getParameter("createddatetime"));
+		pmodel.setCreatedbyip(request.getParameter("createdbyip"));
 				
 		int x = new ProjectDao().saveProject(pmodel);
 		if (x > 0) {

@@ -14,7 +14,8 @@
 			<h4 class="display-5 fw-bold text-body-emphasis">Add New
 				Query</h4>
 
-			<jsp:include page="QueryForm.html"></jsp:include>
+			<%-- <jsp:include page="QueryForm.html"></jsp:include> --%>
+			<%@ include file="QueryForm.jsp" %>
 		</div>
 	</div>
 </body>

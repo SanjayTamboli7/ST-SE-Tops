@@ -20,21 +20,20 @@ public class ProjectDao {
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement(
 					"insert into TblProject (ProjectName,ProjectDescription,fkCustomerID,ProjectDuration,ProjectStartDate,ProjectEndDate,ProjectCost,ProjectRemarks,ProjectStatus,fkRegID,CustomerReview,CreatedDateTime,CreatedByIP) values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
-			//                               ProjectName,ProjectDescription,fkCustomerID,ProjectDuration,ProjectStartDate,ProjectEndDate,ProjectCost,ProjectRemarks,ProjectStatus,fkRegID,CustomerReview,CreatedDateTime,CreatedByIP
 
-			ps.setString(1, p.getProjectName());
-			ps.setString(2, p.getProjectDescription());
-			ps.setInt(3, p.getFkCustomerID());
-			ps.setInt(4, p.getProjectDuration());
-			ps.setString(5, p.getProjectStartDate());
-			ps.setString(6, p.getProjectEndDate());
-			ps.setInt(7, p.getProjectCost());
-			ps.setString(8, p.getProjectRemarks());
-			ps.setString(9, p.getProjectStatus());
-			ps.setInt(10, p.getFkRegID());
-			ps.setString(11, p.getCustomerReview());						
-			ps.setString(12, p.getCreatedDateTime());
-			ps.setString(13, p.getCreatedByIP());
+			ps.setString(1, p.getProjectname());
+			ps.setString(2, p.getProjectdescription());
+			ps.setInt(3, p.getFkcustomerid());
+			ps.setInt(4, p.getProjectduration());
+			ps.setString(5, p.getProjectstartdate());
+			ps.setString(6, p.getProjectenddate());
+			ps.setInt(7, p.getProjectcost());
+			ps.setString(8, p.getProjectremarks());
+			ps.setString(9, p.getProjectstatus());
+			ps.setInt(10, p.getFkregid());
+			ps.setString(11, p.getCustomerreview());						
+			ps.setString(12, p.getCreateddatetime());
+			ps.setString(13, p.getCreatedbyip());
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -49,20 +48,22 @@ public class ProjectDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement("update TblProject set ProjectName=?,ProjectDescription=?,fkCustomerID=?,ProjectDuration=?,ProjectStartDate=?,ProjectEndDate=?,ProjectCost=?,ProjectRemarks=?,ProjectStatus=?,fkRegID=?,CustomerReview=?,CreatedDateTime=?,CreatedByIP=? where pkProjectID=?");			
-			ps.setString(1, p.getProjectName());
-			ps.setString(2, p.getProjectDescription());
-			ps.setInt(3, p.getFkCustomerID());
-			ps.setInt(4, p.getProjectDuration());
-			ps.setString(5, p.getProjectStartDate());
-			ps.setString(6, p.getProjectEndDate());
-			ps.setInt(7, p.getProjectCost());
-			ps.setString(8, p.getProjectRemarks());
-			ps.setString(9, p.getProjectStatus());
-			ps.setInt(10, p.getFkRegID());
-			ps.setString(11, p.getCustomerReview());						
-			ps.setString(12, p.getCreatedDateTime());
-			ps.setString(13, p.getCreatedByIP());
-			ps.setInt(14, p.getPkProjectID());
+
+			ps.setString(1, p.getProjectname());
+			ps.setString(2, p.getProjectdescription());
+			ps.setInt(3, p.getFkcustomerid());
+			ps.setInt(4, p.getProjectduration());
+			ps.setString(5, p.getProjectstartdate());
+			ps.setString(6, p.getProjectenddate());
+			ps.setInt(7, p.getProjectcost());
+			ps.setString(8, p.getProjectremarks());
+			ps.setString(9, p.getProjectstatus());
+			ps.setInt(10, p.getFkregid());
+			ps.setString(11, p.getCustomerreview());						
+			ps.setString(12, p.getCreateddatetime());
+			ps.setString(13, p.getCreatedbyip());
+			ps.setInt(14, p.getPkprojectid());
+
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -77,7 +78,7 @@ public class ProjectDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement("delete from TblProject where pkProjectID=?");
-			ps.setInt(1, p.getPkProjectID());
+			ps.setInt(1, p.getPkprojectid());
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -85,7 +86,7 @@ public class ProjectDao {
 		}
 		return status;
 	}
-//	Start from here
+
 	public static List<ProjectModel> getAllProjects() {
 		List<ProjectModel> listProject = new ArrayList<ProjectModel>();
 		try {
@@ -97,20 +98,20 @@ public class ProjectDao {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				ProjectModel p = new ProjectModel();
-				p.setPkProjectID(rs.getInt("pkProjectID"));
-				p.setProjectName(rs.getString("ProjectName"));
-				p.setProjectDescription(rs.getString("ProjectDescription"));
-				p.setFkCustomerID(rs.getInt("fkCustomerID"));
-				p.setProjectDuration(rs.getInt("ProjectDuration"));
-				p.setProjectStartDate(rs.getString("ProjectStartDate"));
-				p.setProjectEndDate(rs.getString("ProjectEndDate"));
-				p.setProjectCost(rs.getInt("ProjectCost"));
-				p.setProjectRemarks(rs.getString("ProjectRemarks"));
-				p.setProjectStatus(rs.getString("ProjectStatus"));
-				p.setFkRegID(rs.getInt("fkRegID"));
-				p.setCustomerReview(rs.getString("CustomerReview"));
-				p.setCreatedDateTime(rs.getString("CreatedDateTime"));
-				p.setCreatedByIP(rs.getString("CreatedByIP"));				
+				p.setPkprojectid(rs.getInt("pkprojectid"));
+				p.setProjectname(rs.getString("projectname"));
+				p.setProjectdescription(rs.getString("projectdescription"));
+				p.setFkcustomerid(rs.getInt("fkcustomerid"));
+				p.setProjectduration(rs.getInt("projectduration"));
+				p.setProjectstartdate(rs.getString("projectstartdate"));
+				p.setProjectenddate(rs.getString("projectenddate"));
+				p.setProjectcost(rs.getInt("projectcost"));
+				p.setProjectremarks(rs.getString("projectremarks"));
+				p.setProjectstatus(rs.getString("projectstatus"));
+				p.setFkregid(rs.getInt("fkregid"));
+				p.setCustomerreview(rs.getString("customerreview"));
+				p.setCreateddatetime(rs.getString("createddatetime"));
+				p.setCreatedbyip(rs.getString("createdbyip"));				
 				listProject.add(p);
 			}
 		} catch (Exception e) {
@@ -129,21 +130,22 @@ public class ProjectDao {
 			ps.setInt(1, Projectkid);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				p = new ProjectModel();				
-				p.setPkProjectID(rs.getInt("pkProjectID"));
-				p.setProjectName(rs.getString("ProjectName"));
-				p.setProjectDescription(rs.getString("ProjectDescription"));
-				p.setFkCustomerID(rs.getInt("fkCustomerID"));
-				p.setProjectDuration(rs.getInt("ProjectDuration"));
-				p.setProjectStartDate(rs.getString("ProjectStartDate"));
-				p.setProjectEndDate(rs.getString("ProjectEndDate"));
-				p.setProjectCost(rs.getInt("ProjectCost"));
-				p.setProjectRemarks(rs.getString("ProjectRemarks"));
-				p.setProjectStatus(rs.getString("ProjectStatus"));
-				p.setFkRegID(rs.getInt("fkRegID"));
-				p.setCustomerReview(rs.getString("CustomerReview"));
-				p.setCreatedDateTime(rs.getString("CreatedDateTime"));
-				p.setCreatedByIP(rs.getString("CreatedByIP"));				
+				p = new ProjectModel();
+
+				p.setPkprojectid(rs.getInt("pkprojectid"));
+				p.setProjectname(rs.getString("projectname"));
+				p.setProjectdescription(rs.getString("projectdescription"));
+				p.setFkcustomerid(rs.getInt("fkcustomerid"));
+				p.setProjectduration(rs.getInt("projectduration"));
+				p.setProjectstartdate(rs.getString("projectstartdate"));
+				p.setProjectenddate(rs.getString("projectenddate"));
+				p.setProjectcost(rs.getInt("projectcost"));
+				p.setProjectremarks(rs.getString("projectremarks"));
+				p.setProjectstatus(rs.getString("projectstatus"));
+				p.setFkregid(rs.getInt("fkregid"));
+				p.setCustomerreview(rs.getString("customerreview"));
+				p.setCreateddatetime(rs.getString("createddatetime"));
+				p.setCreatedbyip(rs.getString("createdbyip"));								
 			}
 		} catch (Exception e) {
 			System.out.println(e);

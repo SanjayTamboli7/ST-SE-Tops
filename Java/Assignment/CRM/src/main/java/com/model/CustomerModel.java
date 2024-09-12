@@ -1,108 +1,97 @@
 package com.model;
 
 public class CustomerModel {
-
-	private int pkCustomerID, fkRegID;
-	private String CustomerName, CustomerEmailID, CustomerContactNo, CustomerAddress, CustomerCity, CustomerState;
-	private String CustomerCountry, CreatedDateTime, CreatedByIP;
-
-	public int getPkCustomerID() {
-		System.out.println(" pkCustomerID : " + pkCustomerID);
-		return pkCustomerID;
+	
+	private int    pkcustomerid, fkregid;
+	private String customername, customeremailid, customercontactno, customeraddress, customercity, customerstate;
+	private String customercountry, createddatetime, createdbyip;
+		
+	public int getPkcustomerid() {
+		return pkcustomerid;
 	}
 
-	public void setPkCustomerID(int pkCustomerID) {
-		this.pkCustomerID = pkCustomerID;
+	public void setPkcustomerid(int pkcustomerid) {
+		this.pkcustomerid = pkcustomerid;
 	}
 
-	public int getFkRegID() {
-		System.out.println(" fkRegID : " + fkRegID);
-		return fkRegID;
+	public int getFkregid() {
+		return fkregid;
 	}
 
-	public void setFkRegID(int fkRegID) {
-		this.fkRegID = fkRegID;
+	public void setFkregid(int fkregid) {
+		this.fkregid = fkregid;
 	}
 
-	public String getCustomerName() {
-		System.out.println(" CustomerName: " + CustomerName);
-		return CustomerName;
+	public String getCustomername() {
+		return customername;
+	}
+	
+	public void setCustomername(String customername) {
+		this.customername = customername;
+	}
+	
+	public String getCustomeremailid() {
+		return customeremailid;
+	}
+	
+	public void setCustomeremailid(String customeremailid) {
+		this.customeremailid = customeremailid;
+	}
+		
+	public String getCustomercontactno() {
+		return customercontactno;
 	}
 
-	public void setCustomerName(String customerName) {
-		CustomerName = customerName;
+	public void setCustomercontactno(String customercontactno) {
+		this.customercontactno = customercontactno;
 	}
 
-	public String getCustomerEmailID() {
-		System.out.println(" CustomerEmailID : " + CustomerEmailID);
-		return CustomerEmailID;
+	public String getCustomeraddress() {
+		return customeraddress;
 	}
-
-	public void setCustomerEmailID(String customerEmailID) {
-		CustomerEmailID = customerEmailID;
+	
+	public void setCustomeraddress(String customeraddress) {
+		this.customeraddress = customeraddress;
 	}
-
-	public String getCustomerContactNo() {
-		System.out.println(" CustomerContactNo : " + CustomerContactNo);
-		return CustomerContactNo;
+	
+	public String getCustomercity() {
+		return customercity;
 	}
-
-	public void setCustomerContactNo(String customerContactNo) {
-		CustomerContactNo = customerContactNo;
+	
+	public void setCustomercity(String customercity) {
+		this.customercity = customercity;
 	}
-
-	public String getCustomerAddress() {
-		System.out.println(" CustomerAddress : " + CustomerAddress );
-		return CustomerAddress;
+	
+	public String getCustomerstate() {
+		return customerstate;
 	}
-
-	public void setCustomerAddress(String customerAddress) {
-		CustomerAddress = customerAddress;
+	
+	public void setCustomerstate(String customerstate) {
+		this.customerstate = customerstate;
 	}
-
-	public String getCustomerCity() {
-		System.out.println(" CustomerCity : " + CustomerCity );
-		return CustomerCity;
+	
+	public String getCustomercountry() {
+		return customercountry;
 	}
-
-	public void setCustomerCity(String customerCity) {
-		CustomerCity = customerCity;
+	
+	public void setCustomercountry(String customercountry) {
+		this.customercountry = customercountry;
 	}
-
-	public String getCustomerState() {
-		System.out.println(" CustomerState : " + CustomerState);
-		return CustomerState;
+	
+	public String getCreateddatetime() {
+		return createddatetime;
 	}
-
-	public void setCustomerState(String customerState) {
-		CustomerState = customerState;
+	
+	public void setCreateddatetime(String createddatetime) {
+		this.createddatetime = createddatetime;
 	}
-
-	public String getCustomerCountry() {
-		System.out.println(" CustomerCountry : " +CustomerCountry);
-		return CustomerCountry;
+	
+	public String getCreatedbyip() {
+		return createdbyip;
 	}
-
-	public void setCustomerCountry(String customerCountry) {
-		CustomerCountry = customerCountry;
+	
+	public void setCreatedbyip(String createdbyip) {
+		this.createdbyip = createdbyip;
 	}
-
-	public String getCreatedDateTime() {
-		System.out.println(" CreatedDateTime : " + CreatedDateTime);
-		return CreatedDateTime;
-	}
-
-	public void setCreatedDateTime(String createdDateTime) {
-		CreatedDateTime = createdDateTime;
-	}
-
-	public String getCreatedByIP() {
-		System.out.println(" CreatedByIP : " + CreatedByIP);
-		return CreatedByIP;
-	}
-
-	public void setCreatedByIP(String createdByIP) {
-		CreatedByIP = createdByIP;
-	}
-
+	
 }

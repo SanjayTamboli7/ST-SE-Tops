@@ -2,106 +2,92 @@ package com.model;
 
 public class ProjectModel {
 
-	private int pkProjectID, fkCustomerID, ProjectDuration, ProjectCost, fkRegID;
-	private String ProjectName, ProjectDescription, ProjectStartDate, ProjectEndDate, ProjectRemarks, ProjectStatus; 
-	private String CustomerReview, CreatedDateTime, CreatedByIP;
-	public int getPkProjectID() {
-		System.out.println("pkProjectID : " + pkProjectID);
-		return pkProjectID;
+	private int pkprojectid, fkcustomerid, projectduration, projectcost, fkregid;
+	private String projectname, projectdescription, projectstartdate, projectenddate, projectremarks, projectstatus; 
+	private String customerreview, createddatetime, createdbyip;
+	public int getPkprojectid() {
+		return pkprojectid;
 	}
-	public void setPkProjectID(int pkProjectID) {
-		this.pkProjectID = pkProjectID;
+	public void setPkprojectid(int pkprojectid) {
+		this.pkprojectid = pkprojectid;
 	}
-	public int getFkCustomerID() {
-		System.out.println("fkCustomerID : " + fkCustomerID);
-		return fkCustomerID;
+	public int getFkcustomerid() {
+		return fkcustomerid;
 	}
-	public void setFkCustomerID(int fkCustomerID) {
-		this.fkCustomerID = fkCustomerID;
+	public void setFkcustomerid(int fkcustomerid) {
+		this.fkcustomerid = fkcustomerid;
 	}
-	public int getProjectDuration() {
-		System.out.println("ProjectDuration : " + ProjectDuration);
-		return ProjectDuration;
+	public int getProjectduration() {
+		return projectduration;
 	}
-	public void setProjectDuration(int projectDuration) {
-		ProjectDuration = projectDuration;
+	public void setProjectduration(int projectduration) {
+		this.projectduration = projectduration;
 	}
-	public int getProjectCost() {
-		System.out.println("ProjectCost : " + ProjectCost);
-		return ProjectCost;
+	public int getProjectcost() {
+		return projectcost;
 	}
-	public void setProjectCost(int projectCost) {
-		ProjectCost = projectCost;
+	public void setProjectcost(int projectcost) {
+		this.projectcost = projectcost;
 	}
-	public int getFkRegID() {
-		System.out.println("fkRegID : " + fkRegID);
-		return fkRegID;
+	public int getFkregid() {
+		return fkregid;
 	}
-	public void setFkRegID(int fkRegID) {
-		this.fkRegID = fkRegID;
+	public void setFkregid(int fkregid) {
+		this.fkregid = fkregid;
 	}
-	public String getProjectName() {
-		System.out.println("ProjectName : " + ProjectName);
-		return ProjectName;
+	public String getProjectname() {
+		return projectname;
 	}
-	public void setProjectName(String projectName) {
-		ProjectName = projectName;
+	public void setProjectname(String projectname) {
+		this.projectname = projectname;
 	}
-	public String getProjectDescription() {
-		System.out.println("ProjectDescription : " + ProjectDescription);
-		return ProjectDescription;
+	public String getProjectdescription() {
+		return projectdescription;
 	}
-	public void setProjectDescription(String projectDescription) {
-		ProjectDescription = projectDescription;
+	public void setProjectdescription(String projectdescription) {
+		this.projectdescription = projectdescription;
 	}
-	public String getProjectStartDate() {
-		System.out.println("ProjectStartDate : " + ProjectStartDate);
-		return ProjectStartDate;
+	public String getProjectstartdate() {
+		return projectstartdate;
 	}
-	public void setProjectStartDate(String projectStartDate) {
-		ProjectStartDate = projectStartDate;
+	public void setProjectstartdate(String projectstartdate) {
+		this.projectstartdate = projectstartdate;
 	}
-	public String getProjectEndDate() {
-		System.out.println("ProjectEndDate : " + ProjectEndDate);
-		return ProjectEndDate;
+	public String getProjectenddate() {
+		return projectenddate;
 	}
-	public void setProjectEndDate(String projectEndDate) {
-		ProjectEndDate = projectEndDate;
+	public void setProjectenddate(String projectenddate) {
+		this.projectenddate = projectenddate;
 	}
-	public String getProjectRemarks() {
-		System.out.println("ProjectRemarks : " + ProjectRemarks);
-		return ProjectRemarks;
+	public String getProjectremarks() {
+		return projectremarks;
 	}
-	public void setProjectRemarks(String projectRemarks) {
-		ProjectRemarks = projectRemarks;
+	public void setProjectremarks(String projectremarks) {
+		this.projectremarks = projectremarks;
 	}
-	public String getProjectStatus() {
-		System.out.println("ProjectStatus : " + ProjectStatus);
-		return ProjectStatus;
+	public String getProjectstatus() {
+		return projectstatus;
 	}
-	public void setProjectStatus(String projectStatus) {
-		ProjectStatus = projectStatus;
+	public void setProjectstatus(String projectstatus) {
+		this.projectstatus = projectstatus;
 	}
-	public String getCustomerReview() {
-		System.out.println("CustomerReview : " + CustomerReview);
-		return CustomerReview;
+	public String getCustomerreview() {
+		return customerreview;
 	}
-	public void setCustomerReview(String customerReview) {
-		CustomerReview = customerReview;
+	public void setCustomerreview(String customerreview) {
+		this.customerreview = customerreview;
 	}
-	public String getCreatedDateTime() {
-		System.out.println("CreatedDateTime : " + CreatedDateTime);
-		return CreatedDateTime;
+	public String getCreateddatetime() {
+		return createddatetime;
 	}
-	public void setCreatedDateTime(String createdDateTime) {
-		CreatedDateTime = createdDateTime;
+	public void setCreateddatetime(String createddatetime) {
+		this.createddatetime = createddatetime;
 	}
-	public String getCreatedByIP() {
-		System.out.println("CreatedByIP : " + CreatedByIP);
-		return CreatedByIP;
+	public String getCreatedbyip() {
+		return createdbyip;
 	}
-	public void setCreatedByIP(String createdByIP) {
-		CreatedByIP = createdByIP;
-	}		
+	public void setCreatedbyip(String createdbyip) {
+		this.createdbyip = createdbyip;
+	}
 	
 }

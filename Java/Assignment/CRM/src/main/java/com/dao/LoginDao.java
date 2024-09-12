@@ -1,9 +1,9 @@
 package com.dao;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.model.RegistrationModel;
 import com.util.DBUtil;
@@ -25,7 +25,7 @@ public class LoginDao {
 				model=new RegistrationModel();
 				model.setUsername(rs.getString("username"));
 				model.setEmailid(rs.getString("emailid"));
-				model.setPwd(rs.getString("password"));
+				model.setPwd(rs.getString("pwd"));
 				model.setRegistrationtype(rs.getString("activeflag"));
 				model.setActiveflag(rs.getString("activeflag"));
 				model.setCreateddatetime(rs.getString("createddatetime"));

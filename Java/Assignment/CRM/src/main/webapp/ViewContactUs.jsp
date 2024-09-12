@@ -22,17 +22,17 @@
 				<div class="mb-3">
 					<label for="YourName" class="form-label">Your Name :</label>
 					<input type="text" class="form-control" id="YourName"
-						name="YourName" value="<%=p.getYourName()%>">
+						name="YourName" value="<%=p.getYourName()%>" disabled>
 				</div>
 				<div class="mb-3">
 					<label for="YourEmailID" class="form-label">Your
 						Email :</label> <input type="email" class="form-control"
-						id="YourEmailID" name="YourEmailID" value="<%=p.getYourEmailID()%>">
+						id="YourEmailID" name="YourEmailID" value="<%=p.getYourEmailID()%>" disabled>
 				</div>
 				<div class="mb-3">
 					<label for="YourMessage" class="form-label">Your Message :</label> <input
 						type="text" class="form-control" id="YourMessage"
-						name="YourMessage" value="<%=p.getYourMessage()%>">
+						name="YourMessage" value="<%=p.getYourMessage()%>" disabled>
 				</div>
 			<button type="submit" class="btn btn-primary">View All</button>
 		</form>

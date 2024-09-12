@@ -51,18 +51,18 @@
 					for (QueryModel q : list) {
 					%>
 					<tr>
-						<td><%=q.getPkQueryID()%></td>
-						<td><%=q.getCustomerEmailID()%></td>
+						<td><%=q.getPkqueryid()%></td>
+						<td><%=q.getCustomeremailid()%></td>
 						<td><%=q.getDescription()%></td>
 						<td><%=q.getSuggestion()%></td>
 						<td><%=q.getResponse()%></td>
-						<td><%=q.getFkResponseID()%></td>
-						<td><%=q.getFkRegID()%></td>
-						<td><%=q.getResponseDate()%></td>
+						<td><%=q.getFkresponseid()%></td>
+						<td><%=q.getFkregid()%></td>
+						<td><%=q.getResponsedate()%></td>
 						<td><a class="btn btn-success"
-							href="EditQuery.jsp?id=<%=q.getPkQueryID()%>">Edit</a></td>
+							href="EditQuery.jsp?id=<%=q.getPkqueryid()%>">Edit</a></td>
 						<td><a class="btn btn-danger"
-							href="DeleteQuery.jsp?id=<%=q.getPkQueryID()%>">Delete</a></td>
+							href="DeleteQuery.jsp?id=<%=q.getPkqueryid()%>">Delete</a></td>
 					</tr>
 					<%
 					}

@@ -2,6 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@page import="com.model.CustomerModel"%>
 <%@page import="com.dao.CustomerDao"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="com.util.DBUtil"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,95 +20,91 @@
 	%>
 	<jsp:include page="HeaderCustomer.html"></jsp:include>
 	<div class="container mt-5">
-		<form action="EditCustomer1.jsp" method="post">
-		<!-- <form method="post" action="CustomerController"> -->
-			<input type="text" name="pkCustomerID" value="<%=p.getPkCustomerID()%>">
-				<div class="mb-3">
-					<label for="CustomerName" class="form-label">Customer Name :</label>
-					<input type="text" class="form-control" id="CustomerName"
-						name="CustomerName">
-				</div>
-				<div class="mb-3">
-					<label for="CustomerEmailID" class="form-label">Customer
-						Email :</label> <input type="email" class="form-control"
-						id="CustomerEmailID" name="CustomerEmailID">
-				</div>
-				<div class="mb-3">
-					<label for="CustomerContactNo" class="form-label">Customer Number:</label> <input
-						type="text" class="form-control" id="CustomerContactNo"
-						name="CustomerContactNo">
-				</div>
-				<div class="mb-3">
-					<label for="CustomerAddress" class="form-label">Customer
-						Address :</label> <input type="text" class="form-control"
-						id="CustomerAddress" name="CustomerAddress">
-				</div>
-<!-- 	Date,
-	Varchar(15), -->				
-				<div class="mb-3">
-					<label for="CustomerCity" class="form-label">Customer
-						City :</label> <select class="form-control" id="CustomerCity"
-						name="CustomerCity">
-						<option value="Ahmedabad">Ahmedabad</option>
-						<option value="Baroda">Baroda</option>
-						<option value="Rajkot">Rajkot</option>
-						<option value="Surat">Surat</option>
-						<option value="Mumbai">Mumbai</option>
-						<option value="Pune">Pune</option>
-						<option value="Nagpur">Nagpur</option>
-						<option value="Aurangabad">Aurangabad</option>
-						<option value="Udaipur">Udaipur</option>
-						<option value="Jaipur">Jaipur</option>
-						<option value="Bikaner">Bikaner</option>
-						<option value="Gangapur">Gangapur</option>
-					</select>
-				</div>								
-				<div class="mb-3">
-					<label for="CustomerState" class="form-label">Customer
-						State :</label> <select class="form-control" id="CustomerState" name="CustomerState">
-						<option value="Gujarat">Gujarat</option>
-						<option value="Maharashtra">Maharashtra</option>
-						<option value="Rajsthan">Rajsthan</option>
-					</select>
-				</div>
-				<div class="mb-3">
-					<label for="CustomerCountry" class="form-label">Customer 
-						Country :</label> <input type="text" class="form-control" id="CustomerCountry"
-						name="CustomerCountry">
-				</div>
-				<div class="mb-3">
-					<label for="CustomerCountry" class="form-label">Customer
-						Country :</label> <select class="form-control" id="CustomerCountry"
-						name="CustomerCountry">
-						<option value="India">India</option>
-					</select>
-				</div>
-				<div class="mb-3">
-					<label for="fkRegID" class="form-label">Created By :</label> <input type="text" class="form-control"
-						id="fkRegID" name="fkRegID">
-						<input id="CreatedDateTime" type="hidden" value="2024-08-12"
-						name="CreatedDateTime" /> 
-						<input id="CreatedByIP" type="hidden" value="100.100.100.100"
-						name="CreatedByIP" />						
-				</div>
-			<button type="submit" class="btn btn-primary">Edit Customer</button>
-		</form>
-	</div>
-
-	<%-- 	
-	<div class="col-lg-6 mx-auto">
-		<h4 class="display-5 fw-bold text-body-emphasis">Edit User</h4>
-		<form action="edituser.jsp" method="post">
-			<input type="hidden" name="id" value="<%=u.getId()%>" />
+		<form action="EditCustomer1.jsp">
+			<!-- <form method="post" action="CustomerController"> -->
+			<input type="text" name="pkcustomerid"
+				value="<%=p.getPkcustomerid()%>">
 			<div class="mb-3">
-				<label for="name" class="form-label">Name:</label> <input
-					type="text" class="form-control" id="name" name="name"
-					value="<%=u.getClass()%>">
+				<label for="customername" class="form-label">Customer Name :</label>
+				<input type="text" class="form-control" name="customername"
+					value="<%=p.getCustomername()%>">
 			</div>
-			<button type="submit" class="btn btn-primary">Edit User</button>
+			<div class="mb-3">
+				<label for="customeremailid" class="form-label">Customer
+					Email :</label> <input type="email" class="form-control"
+					name="customeremailid" value="<%=p.getCustomeremailid()%>">
+			</div>
+			<div class="mb-3">
+				<label for="customercontactno" class="form-label">Customer
+					Number:</label> <input type="text" class="form-control"
+					name="customercontactno" value="<%=p.getCustomercontactno()%>">
+			</div>
+			<div class="mb-3">
+				<label for="customeraddress" class="form-label">Customer
+					Address :</label> <input type="text" class="form-control"
+					name="customeraddress" value="<%=p.getCustomeraddress()%>">
+			</div>
+			<div class="mb-3">
+				<label for="customercity" class="form-label">Customer City :</label>
+				<select class="form-control" name="customercity"
+					value="<%=p.getCustomercity()%>">
+					<option value="Ahmedabad">Ahmedabad</option>
+					<option value="Baroda">Baroda</option>
+					<option value="Rajkot">Rajkot</option>
+					<option value="Surat">Surat</option>
+					<option value="Mumbai">Mumbai</option>
+					<option value="Pune">Pune</option>
+					<option value="Nagpur">Nagpur</option>
+					<option value="Aurangabad">Aurangabad</option>
+					<option value="Udaipur">Udaipur</option>
+					<option value="Jaipur">Jaipur</option>
+					<option value="Bikaner">Bikaner</option>
+					<option value="Gangapur">Gangapur</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<label for="customerstate" class="form-label">Customer State
+					:</label> <select class="form-control" name="customerstate"
+					value="<%=p.getCustomerstate()%>">
+					<option value="Gujarat">Gujarat</option>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Rajsthan">Rajsthan</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<label for="customercountry" class="form-label">Customer
+					Country :</label> <input type="text" class="form-control"
+					name="customercountry" value="<%=p.getCustomercountry()%>">
+					<input name="createddatetime" type="hidden" value="2024-08-12" /> 
+					<input name="createdbyip" type="hidden" value="100.100.100.100" />
+			</div>
+			<%-- <div class="mb-3">
+				<label for="fkregid" class="form-label">Created By :</label> <input
+					type="text" class="form-control" id="fkregid" name="fkregid"
+					value="<%=p.getFkregid()%>"> 
+			</div> --%>
+ 				<div class="mb-3">
+					<label for="fkregid" class="form-label">Created By :</label> 
+					<select name="fkregid" value="<%=p.getFkregid()%>">
+					<%
+						Connection cn=new DBUtil().getConnectionData();
+						PreparedStatement st=cn.prepareStatement("select pkRegID, UserName from tblregistration where RegistrationType='B' and ActiveFlag='A'");
+						ResultSet rs=st.executeQuery();
+						while(rs.next())
+						{
+					%>
+							<option value="<%=rs.getInt(1)%>"><%=rs.getString(2) %></option>
+					<% 
+						}
+						cn.close();
+					%>
+					</select>
+				</div>
+			<button type="submit" class="btn btn-primary">Edit Customer
+			</button>
 		</form>
 	</div>
- --%>
 
 </body>
 </html>
+

@@ -78,7 +78,7 @@
                   </div>
                   <div class="form-group">
                   	<label for="password" class="form-label">Password :</label>
-                    <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
+                    <input class="form-control" id="pwd" type="password" name="pwd" placeholder="Password"/>
                   </div>
                   <div class="form-group">
                     <button class="btn btn-round btn-b">Login</button>

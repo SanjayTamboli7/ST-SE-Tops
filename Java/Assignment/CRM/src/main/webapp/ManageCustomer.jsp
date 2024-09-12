@@ -54,19 +54,19 @@
 				for (CustomerModel c : list) {
 				%>
 				<tr>
-					<td><%=c.getPkCustomerID()%></td>
-					<td><%=c.getCustomerName()%></td>
-					<td><%=c.getCustomerEmailID()%></td>
-					<td><%=c.getCustomerContactNo()%></td>
-					<td><%=c.getCustomerAddress()%></td>
-					<td><%=c.getCustomerCity()%></td>
-					<td><%=c.getCustomerState()%></td>
-					<td><%=c.getCustomerCountry() %></td>
-					<td><%=c.getFkRegID()%></td>
+					<td><%=c.getPkcustomerid()%></td>
+					<td><%=c.getCustomername()%></td>
+					<td><%=c.getCustomeremailid()%></td>
+					<td><%=c.getCustomercontactno()%></td>
+					<td><%=c.getCustomeraddress()%></td>
+					<td><%=c.getCustomercity()%></td>
+					<td><%=c.getCustomerstate()%></td>
+					<td><%=c.getCustomercountry() %></td>
+					<td><%=c.getFkregid()%></td>
 					<td><a class="btn btn-success"
-						href="EditCustomer.jsp?id=<%=c.getPkCustomerID()%>">Edit</a></td>
+						href="EditCustomer.jsp?id=<%=c.getPkcustomerid()%>">Edit</a></td>
 					<td><a class="btn btn-danger"
-						href="DeleteCustomer.jsp?id=<%=c.getPkCustomerID()%>">Delete</a></td>
+						href="DeleteCustomer.jsp?id=<%=c.getPkcustomerid()%>">Delete</a></td>
 				</tr>
 				<%
 				}

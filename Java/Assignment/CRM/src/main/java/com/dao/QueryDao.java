@@ -20,15 +20,15 @@ public class QueryDao {
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement(
 					"insert into TblCustomerQuery (CustomerEmailID,Description,Suggestion,Response,fkResponseID,fkRegID,ResponseDate,CreatedDateTime,CreatedByIP) values (?,?,?,?,?,?,?,?,?)");
-			ps.setString(1, q.getCustomerEmailID());
+			ps.setString(1, q.getCustomeremailid());
 			ps.setString(2, q.getDescription());
 			ps.setString(3, q.getSuggestion());
 			ps.setString(4, q.getResponse());
-			ps.setInt(5,    q.getFkResponseID());
-			ps.setInt(6,    q.getFkRegID());
-			ps.setString(7, q.getResponseDate());
-			ps.setString(8, q.getCreatedDateTime());
-			ps.setString(9, q.getCreatedByIP());
+			ps.setInt(5,    q.getFkresponseid());
+			ps.setInt(6,    q.getFkregid());
+			ps.setString(7, q.getResponsedate());
+			ps.setString(8, q.getCreateddatetime());
+			ps.setString(9, q.getCreatedbyip());
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -43,16 +43,16 @@ public class QueryDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement("update TblCustomerQuery set CustomerEmailID=?,Description=?,Suggestion=?,Response=?,fkResponseID=?,fkRegID=?,ResponseDate=?,CreatedDateTime=?,CreatedByIP=? where pkQueryID=?");			
-			ps.setString(1, q.getCustomerEmailID());
+			ps.setString(1, q.getCustomeremailid());
 			ps.setString(2, q.getDescription());
 			ps.setString(3, q.getSuggestion());
 			ps.setString(4, q.getResponse());
-			ps.setInt(5,    q.getFkResponseID());
-			ps.setInt(6,    q.getFkRegID());
-			ps.setString(7, q.getResponseDate());
-			ps.setString(8, q.getCreatedDateTime());
-			ps.setString(9, q.getCreatedByIP());
-			ps.setInt(10, q.getPkQueryID());
+			ps.setInt(5,    q.getFkresponseid());
+			ps.setInt(6,    q.getFkregid());
+			ps.setString(7, q.getResponsedate());
+			ps.setString(8, q.getCreateddatetime());
+			ps.setString(9, q.getCreatedbyip());
+			ps.setInt(10, q.getPkqueryid());
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -67,7 +67,7 @@ public class QueryDao {
 			Connection cn = null;
 			cn = new DBUtil().getConnectionData();
 			PreparedStatement ps = cn.prepareStatement("delete from TblCustomerQuery where pkQueryID=?");
-			ps.setInt(1, q.getPkQueryID());
+			ps.setInt(1, q.getPkqueryid());
 			status = ps.executeUpdate();
 			cn.close();
 		} catch (SQLException e) {
@@ -87,16 +87,16 @@ public class QueryDao {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				QueryModel q = new QueryModel();
-				q.setPkQueryID(rs.getInt("pkQueryID"));
-				q.setCustomerEmailID(rs.getString("CustomerEmailID"));
-				q.setDescription(rs.getString("Description"));								
-				q.setSuggestion(rs.getString("Suggestion"));
-				q.setResponse(rs.getString("Response"));
-				q.setResponseDate(rs.getString("ResponseDate"));
-				q.setFkResponseID(rs.getInt("fkResponseID"));				
-				q.setFkRegID(rs.getInt("fkRegID"));				
-				q.setCreatedDateTime(rs.getString("CreatedDateTime"));
-				q.setCreatedByIP(rs.getString("CreatedByIP"));
+				q.setPkqueryid(rs.getInt("pkqueryid"));
+				q.setCustomeremailid(rs.getString("customeremailid"));
+				q.setDescription(rs.getString("description"));								
+				q.setSuggestion(rs.getString("suggestion"));
+				q.setResponse(rs.getString("response"));
+				q.setResponsedate(rs.getString("responsedate"));
+				q.setFkresponseid(rs.getInt("fkresponseid"));				
+				q.setFkregid(rs.getInt("fkRegID"));				
+				q.setCreateddatetime(rs.getString("CreatedDateTime"));
+				q.setCreatedbyip(rs.getString("CreatedByIP"));
 				listQuery.add(q);
 			}
 		} catch (Exception e) {
@@ -116,16 +116,16 @@ public class QueryDao {
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
 				q = new QueryModel();								
-				q.setPkQueryID(rs.getInt("pkQueryID"));
-				q.setCustomerEmailID(rs.getString("CustomerEmailID"));
-				q.setDescription(rs.getString("Description"));								
-				q.setSuggestion(rs.getString("Suggestion"));
-				q.setResponse(rs.getString("Response"));
-				q.setResponseDate(rs.getString("ResponseDate"));
-				q.setFkResponseID(rs.getInt("fkResponseID"));				
-				q.setFkRegID(rs.getInt("fkRegID"));				
-				q.setCreatedDateTime(rs.getString("CreatedDateTime"));
-				q.setCreatedByIP(rs.getString("CreatedByIP"));
+				q.setPkqueryid(rs.getInt("pkqueryid"));
+				q.setCustomeremailid(rs.getString("customeremailid"));
+				q.setDescription(rs.getString("description"));								
+				q.setSuggestion(rs.getString("suggestion"));
+				q.setResponse(rs.getString("response"));
+				q.setResponsedate(rs.getString("responsedate"));
+				q.setFkresponseid(rs.getInt("fkresponseid"));				
+				q.setFkregid(rs.getInt("fkRegID"));				
+				q.setCreateddatetime(rs.getString("CreatedDateTime"));
+				q.setCreatedbyip(rs.getString("CreatedByIP"));
 			}
 		} catch (Exception e) {
 			System.out.println(e);
