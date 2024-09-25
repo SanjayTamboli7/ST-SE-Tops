@@ -1,0 +1,8 @@
+<%@page import="com.dao.QueryDao"%>
+<jsp:useBean id="u" class="com.model.QueryModel"></jsp:useBean>
+<jsp:setProperty property="*" name="u"/>
+
+<%
+int i=QueryDao.deleteQuery(u);
+response.sendRedirect("ManageQuery.jsp");
+%>

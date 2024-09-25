@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+D:\ST-SE-Tops\Java\Classwork\Hibernate\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

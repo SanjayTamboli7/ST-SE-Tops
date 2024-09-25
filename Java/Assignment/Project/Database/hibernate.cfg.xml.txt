@@ -1,0 +1,78 @@
+hibernate.cfg.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hb_crud</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>        
+		<mapping class="com.hb.Person"/>
+    </session-factory>
+</hibernate-configuration>
+
+hibernate.hbm.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="crud.model"
+	schema="hb_crud">
+	<class entity-name="Person" name="crud.model.Person">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="first_name" type="string">
+			<column name="first_name" length="40" />
+		</property>
+		<property name="last_name" type="string">
+			<column name="last_name" length="40" />
+		</property>
+		<property name="age" type="string">
+			<column name="age" length="20" />
+		</property>
+		<property name="profession" type="string">
+			<column name="profession" length="15" />
+		</property>
+	</class>
+</hibernate-mapping>
+
+hibernate.reveng.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="hibernate_pro"/>
+  <table-filter match-name="person"/>
+</hibernate-reverse-engineering>
+
+https://www.geeksforgeeks.org/hibernate-interview-questions/
+https://www.geeksforgeeks.org/spring-interview-questions/
+https://www.geeksforgeeks.org/spring/
+https://www.geeksforgeeks.org/aspect-oriented-programming-and-aop-in-spring-framework/
+https://www.geeksforgeeks.org/difference-between-rest-api-and-soap-api/
+https://www.geeksforgeeks.org/crud-operations-using-hibernate/
+https://www.sevenmentor.com/interview-questions-on-spring-hibernate#
+https://www.educative.io/blog/40-spring-interview-questions
+https://www.reddit.com/r/java/comments/19ba5jj/what_is_the_advantage_of_spring_compared_with/
+https://www.spiceworks.com/tech/devops/articles/what-is-aop/
+https://www.codejava.net/coding/jsp-servlet-jdbc-mysql-create-read-update-delete-crud-example
+https://www.codejava.net/frameworks/hibernate/java-hibernate-jpa-annotations-tutorial-for-beginners
+https://www.codejava.net/frameworks/spring-boot/spring-boot-crud-example-with-spring-mvc-spring-data-jpa-thymeleaf-hibernate-mysql
+
+https://www.simplilearn.com/tutorials/spring-tutorial/spring-aop-aspect-oriented-programming#:~:text=Aspect%2DOriented%20Programming%20(AOP),into%20separate%20parts%20called%20concerns.
+
+BookStore
+CRM
+eclipse-workspace
+Hibernate
+Project
+Spring
+Spring suit
+

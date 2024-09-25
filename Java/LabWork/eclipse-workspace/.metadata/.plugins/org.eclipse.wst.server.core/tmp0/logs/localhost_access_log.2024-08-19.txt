@@ -1,0 +1,12 @@
+127.0.0.1 - - [19/Aug/2024:19:16:08 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:16:09 +0530] "GET /Module4/CRUDJsp07.jsp HTTP/1.1" 200 1936
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:16:11 +0530] "GET /Module4/viewusers.jsp HTTP/1.1" 200 2068
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:16:14 +0530] "GET /Module4/editform.jsp?id=3 HTTP/1.1" 200 3576
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:16:36 +0530] "POST /Module4/edituser.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:16:36 +0530] "GET /Module4/viewusers.jsp HTTP/1.1" 200 2065
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:16:46 +0530] "GET /Module4/adduserform.jsp HTTP/1.1" 200 3416
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:17:20 +0530] "POST /Module4/adduser.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:17:21 +0530] "GET /Module4/adduser-success.jsp HTTP/1.1" 200 3506
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:17:23 +0530] "GET /Module4/viewusers.jsp HTTP/1.1" 200 2340
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:17:27 +0530] "GET /Module4/deleteuser.jsp?id=4 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:19:17:27 +0530] "GET /Module4/viewusers.jsp HTTP/1.1" 200 2065

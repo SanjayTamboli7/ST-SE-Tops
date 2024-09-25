@@ -1,0 +1,11 @@
+127.0.0.1 - - [19/Jul/2024:15:29:42 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:15:29:44 +0530] "GET /CRM/ManageFeedback.jsp HTTP/1.1" 200 3052
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:15:29:44 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:15:29:51 +0530] "GET /CRM/AddFeedback.jsp HTTP/1.1" 200 1720
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:19:26 +0530] "GET /CRM/ManageFeedback.jsp HTTP/1.1" 200 3052
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:19:30 +0530] "GET /CRM/AddFeedback.jsp HTTP/1.1" 200 1720
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:38:53 +0530] "GET /CRM/ManageFeedback.jsp HTTP/1.1" 200 3052
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:39:27 +0530] "GET /CRM/ManageFeedback.jsp HTTP/1.1" 200 3052
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:39:34 +0530] "GET /CRM/AddFeedback.jsp HTTP/1.1" 200 3580
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:53:07 +0530] "GET /CRM/AddFeedback.jsp HTTP/1.1" 200 2462
+0:0:0:0:0:0:0:1 - - [19/Jul/2024:16:53:34 +0530] "POST /CRM/AddFeedback.jsp HTTP/1.1" 200 2462

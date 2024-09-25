@@ -1,0 +1,5 @@
+package model.net.codejava;
+
+public class Product {
+
+}

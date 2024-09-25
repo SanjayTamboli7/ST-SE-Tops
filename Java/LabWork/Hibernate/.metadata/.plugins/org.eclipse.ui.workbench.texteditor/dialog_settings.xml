@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value=","/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="&lt;dependencies&gt;"/>
+			<item value="`,"/>
+			<item value="Customer"/>
+			<item value="value"/>
+			<item value="()()"/>
+			<item value="CustomerName"/>
+			<item value="feedback"/>
+			<item value="crud"/>
+			<item value="link&gt;"/>
+			<item value="link"/>
+			<item value="user"/>
+			<item value="queryid"/>
+			<item value="ContactUs"/>
+			<item value="Contact"/>
+			<item value="password"/>
+		</list>
+		<list key="replacehistory">
+			<item value=","/>
+			<item value="ContactUs"/>
+			<item value="()"/>
+			<item value="Customername"/>
+			<item value="com"/>
+			<item value="Registration"/>
+			<item value="RegID"/>
+			<item value="rm."/>
+			<item value="rmodel."/>
+			<item value="pkRegID"/>
+			<item value="RegistrationModel"/>
+			<item value="RegistrationDao"/>
+			<item value="User"/>
+			<item value="cumodel"/>
+			<item value="cu."/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1420"/>
+		<item key="DIALOG_Y_ORIGIN" value="496"/>
+		<item key="DIALOG_WIDTH" value="511"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

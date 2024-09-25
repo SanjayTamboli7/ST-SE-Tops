@@ -1,0 +1,9 @@
+127.0.0.1 - - [30/Aug/2024:16:00:28 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:00:29 +0530] "GET /CRM/ManageProject.jsp HTTP/1.1" 200 4883
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:00:29 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:41:07 +0530] "GET /CRM/ManageProject.jsp HTTP/1.1" 500 3300
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:43:13 +0530] "GET /CRM/ManageProject.jsp HTTP/1.1" 200 4883
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:43:33 +0530] "GET /CRM/AddProject.jsp HTTP/1.1" 200 4490
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:48:52 +0530] "GET /CRM/AddProject.jsp HTTP/1.1" 200 4490
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:51:12 +0530] "POST /CRM/ProjectController HTTP/1.1" 200 4883
+0:0:0:0:0:0:0:1 - - [30/Aug/2024:16:51:16 +0530] "POST /CRM/ProjectController HTTP/1.1" 200 4883
