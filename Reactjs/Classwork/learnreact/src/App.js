@@ -1,68 +1,22 @@
-// import logo from './logo.svg';
-import './App.css';
-import Game              from './Game';
-import List              from './List';
-import MyButton          from './MyButton';
-import MyUseState        from './MyUseState';
-import PackingList       from './PackingList';
-import PassProps2Comp    from './PassProps2Comp';
-import PropUseState      from './PropUseState';
-import Scientists        from './Scientists';
-import ShoppingList      from './ShoppingList';
-import ShowCurrentTime   from './ShowCurrentTime';
-import StringConcatenate from './StringConcatenate';
-import TeaSet            from './TeaSet';
-import ToDoList1         from './ToDoList1';
+import "./styles.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Home";
+import Page1 from "./Page1";
+import Page2 from "./Page2";
+import NotFound from "./NotFound";
 
-function App() {
-
+export default function App() {
   return (
-    <div>
-        <table className="ClsTable">
-          <tbody>
-              <tr>                
-                <td className="ClsCell"><MyButton/></td>
-                <td className="ClsCell"><StringConcatenate/></td>
-                <td className="ClsCell"><ShoppingList/></td>
-                <td className="ClsCell"><MyUseState/></td>
-                <td className="ClsCell"><PropUseState/></td>
-                <td className="ClsCell"><Game/></td>
-                <td className="ClsCell"><Scientists/></td>
-              </tr>
-              <tr>
-                <td className="ClsCell">1 HTML-Javascript-JSX</td>
-                <td className="ClsCell">2 String Concatenate</td>
-                <td className="ClsCell">3 Map Fun</td>
-                <td className="ClsCell">4 UseState Fun</td>
-                <td className="ClsCell">5 UseState Props+Liftup</td>
-                <td className="ClsCell">6 Game-Tic-Toc-Toe</td>
-                <td className="ClsCell">7 Simple Components</td>
-              </tr>
-              <tr>
-                <td className="ClsCell"><ToDoList1/></td>
-                <td className="ClsCell"><PassProps2Comp/></td>
-                <td className="ClsCell"><PackingList/></td>
-                <td className="ClsCell"><List/></td>
-                <td className="ClsCell"><TeaSet/></td>
-                <td className="ClsCell"><ShowCurrentTime/></td>                
-              </tr>
-              <tr>
-                <td className="ClsCell">8 HTML JS JSX in curly braces</td>
-                <td className="ClsCell">9 Pass Props To Component</td>
-                <td className="ClsCell">10 Conditional Rendering</td>
-                <td className="ClsCell">11 List Using Map Func</td>
-                <td className="ClsCell">12 Pure Function</td>
-                <td className="ClsCell">13 Current Time</td>
-              </tr>
-          </tbody>
-      </table>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="page1" element={<Page1 />} />
+          <Route path="page2" element={<Page2 />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
-
-// start with https://react.dev/learn/tutorial-tic-tac-toe 
-          //  https://react.dev/learn/describing-the-ui (start with Keeping components pure)
-          //  https://react.dev/learn/keeping-components-pure
-          //  https://codesandbox.io/p/sandbox/suspicious-architecture-kz29wd?file=%2Findex.js%3A6%2C1

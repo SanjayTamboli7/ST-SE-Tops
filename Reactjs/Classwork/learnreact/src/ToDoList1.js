@@ -6,17 +6,20 @@ function ToDoList1() {
         name: 'Gregorio Y. Zara',
         theme: {
           backgroundColor: 'black',
-          color: 'pink'
+          color: 'yellow'
         }
       };
-      
+    const avtar = "https://i.imgur.com/7vQD0fPs.jpg";
+    const description = "Gregorio Y. Zara";
   return (
     <div style={person.theme}>
       <h1>{person.name}'s Todos</h1>
       <img
         className="avatar"
-        src="https://i.imgur.com/7vQD0fPs.jpg"
-        alt="Gregorio Y. Zara"
+        // src="https://i.imgur.com/7vQD0fPs.jpg"
+        // alt="Gregorio Y. Zara"
+        src={avtar}
+        alt={description}
       />
       <ul>
         <li>Improve the videophone</li>
