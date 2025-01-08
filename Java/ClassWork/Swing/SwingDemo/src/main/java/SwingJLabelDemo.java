@@ -5,7 +5,6 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -44,8 +43,8 @@ public class SwingJLabelDemo extends JFrame {
 
 		// a label with only icon (icon file is in classpath or jar file)		
 		String iconPath = "Images/Color.png";
-		Icon icon = new ImageIcon(getClass().getResource(iconPath));
-		JLabel label3 = new JLabel(icon);
+//		Icon icon = new ImageIcon(getClass().getResource(iconPath));
+		JLabel label3 = new JLabel(new ImageIcon("images/Color.jpg"));
 		label3.setText("a label with icon in classpath");
 		constraints.gridy = 2;
 		add(label3, constraints);

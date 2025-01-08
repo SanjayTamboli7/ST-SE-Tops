@@ -24,6 +24,10 @@ body {
     background-image: linear-gradient(135deg, #ffe985 10%, #fa742b 100%);
   }
   
+  .page3 {
+    background-image: linear-gradient(135deg, #ffe985 10%, #fa742b 100%);
+  }
+
   .home {
     background-image: linear-gradient(135deg, #5efce8 10%, #736efe 100%);
   }
@@ -55,3 +59,12 @@ body {
     max-height: 25%;
     /* object-fit: cover;    */
    }
+.fancy {
+  border: solid;
+  background-color: yellowgreen;
+}
+
+.hover {
+  border: solid;
+  background-color: #ffe985;
+}
