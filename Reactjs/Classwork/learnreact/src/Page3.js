@@ -25,5 +25,5 @@ const Page3 = () => {
 
 export default Page3;
 
-// https://react.dev/learn/extracting-state-logic-into-a-reducer
-// Comparing useState and useReducer
+// https://react.dev/learn/passing-data-deeply-with-context
+// Context: an alternative to passing props
