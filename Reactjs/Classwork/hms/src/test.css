@@ -1,0 +1,191 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+header .logo {
+    flex: 1;
+}
+
+header .logo h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header .logo p {
+    font-size: 14px;
+}
+
+header .main-menu {
+    flex: 2;
+    text-align: right;
+}
+
+header .main-menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .main-menu li {
+    position: relative;
+    margin-left: 20px;
+}
+
+header .main-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+}
+
+header .main-menu a:hover {
+    background-color: #444;
+    border-radius: 4px;
+}
+
+/* Submenu styles */
+header .main-menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .main-menu .submenu li {
+    width: 200px;
+}
+
+header .main-menu li:hover .submenu {
+    display: block;
+}
+
+header .main-menu .submenu .submenu {
+    left: 100%;
+    top: 0;
+}
+
+header .main-menu .submenu li:hover .submenu {
+    display: block;
+}
+
+/* Content area styles */
+main {
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer .social-media a:hover {
+    color: #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .main-menu {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    header .main-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .main-menu li {
+        margin: 10px 0;
+    }
+
+    header .main-menu a {
+        padding: 8px;
+    }
+
+    footer .social-media a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 24px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    footer .social-media a {
+        font-size: 14px;
+    }
+}

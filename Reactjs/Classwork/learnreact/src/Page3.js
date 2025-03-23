@@ -52,5 +52,5 @@ const Page3 = () => {
 
 export default Page3;
 
-// https://react.dev/learn/escape-hatches
-// Start with Separating events from Effects 
+// https://react.dev/learn/referencing-values-with-refs
+// Start from top line

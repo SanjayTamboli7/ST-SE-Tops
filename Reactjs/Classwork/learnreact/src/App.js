@@ -7,6 +7,7 @@ import Page2 from "./Page2";
 import Page3 from "./Page3";
 import Page4 from "./Page4";
 import NotFound from "./NotFound";
+// import ECommHomePage from "./ECommHomePage";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="page2" element={<Page2 />} />
           <Route path="page3" element={<Page3 />} />
           <Route path="page4" element={<Page4 />} />
+          {/* <Route path="ecommhomepage" element={<ECommHomePage />} /> */}
           {/* When you add any option here change Header.js also. */}
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -1,0 +1,29 @@
+.menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 5px 0;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .menu-item {
+    text-decoration: none;
+    font-size: 16px;
+    color: blue;
+  }
+  
+  .submenu {
+    margin-left: 20px;
+    padding-left: 10px;
+    /* border-left: 2px solid gray; */
+  }
+  

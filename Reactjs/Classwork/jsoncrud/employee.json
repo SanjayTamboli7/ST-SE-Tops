@@ -1,52 +1,45 @@
 {
   "employee": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Juliet Oma",
       "email": "julie@yahoo.com",
       "phone": "08100000000",
       "isactive": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "James Williams",
       "email": "jameswilly@gmail.com",
       "phone": "08111111111",
       "isactive": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Ahmed Ali",
       "email": "ahmedali012@gmail.com",
       "phone": "09022222222",
       "isactive": true
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Grace Funsho",
       "email": "gracefunsho@gmail.com",
       "phone": "09033333333",
       "isactive": false
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Mahesh shah",
       "email": "mshah@gmail.com",
       "phone": "1029384756",
       "active": true
     },
     {
-      "id": 6,
-      "name": "Name 1",
-      "email": "em1@gmail.com",
-      "phone": "1234567890",
-      "active": true
-    },
-    {
-      "id": 7,
-      "name": "Darshan",
-      "email": "darshan999kapdi@gmail.com",
-      "phone": "9909972706",
+      "id": "7",
+      "name": "Darshan1",
+      "email": "darshan9989kapdi@gmail.com",
+      "phone": "9909978706",
       "active": true
     }
   ]

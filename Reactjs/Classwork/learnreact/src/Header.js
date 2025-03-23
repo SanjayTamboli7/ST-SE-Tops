@@ -19,6 +19,9 @@ const Header = () => {
         <li>
           <Link to="page4">PAGE4</Link>
         </li>
+        {/* <li>
+          <link to="ecommhomepage">Shop</link>
+        </li> */}
       </ul>
     </nav>
   );

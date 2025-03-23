@@ -1,0 +1,537 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.company-tagline {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.system-punchline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0056b3;
+}
+
+.auth-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Navigation Styles */
+.main-navigation {
+  background-color: #0056b3;
+  padding: 0 1rem;
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item-content {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-menu > .menu-item > .menu-item-content {
+  font-weight: 500;
+}
+
+.menu-item-content:hover {
+  background-color: #003d7a;
+}
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.submenu {
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  list-style: none;
+}
+
+.submenu .menu-item-content {
+  color: #333;
+  padding: 0.8rem 1rem;
+}
+
+.submenu .menu-item-content:hover {
+  background-color: #f0f0f0;
+}
+
+.submenu .submenu {
+  left: 100%;
+  top: 0;
+}
+
+.menu-item.active > .menu-item-content {
+  background-color: #003d7a;
+}
+
+.submenu .menu-item.active > .menu-item-content {
+  background-color: #f0f0f0;
+}
+
+/* Content Area Styles */
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dynamic-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sample-form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #003d7a;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+.social-link svg {
+  margin-right: 0.3rem;
+}
+
+.social-link:hover {
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .logo-container {
+    margin-bottom: 0.5rem;
+  }
+  
+  .system-punchline {
+    margin: 0.5rem 0;
+  }
+  
+  .main-menu {
+    flex-direction: column;
+  }
+  
+  .submenu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background-color: #f0f0f0;
+  }
+  
+  .submenu .submenu {
+    left: 0;
+    margin-left: 1rem;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HorizontalMenu.css */
+.horizontal-menu-container {
+  background: linear-gradient(to bottom, #3a7bd5, #2b5876);
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Top level menu */
+.menu-level-0 {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-level-0 > .menu-item {
+  position: relative;
+}
+
+.menu-link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 15px 20px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.menu-link.top-level {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item.open > .menu-link .menu-arrow {
+  transform: rotate(180deg);
+}
+
+/* Submenu containers */
+.submenu-container {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1001;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.level-1 {
+  top: 100%;
+  left: 0;
+}
+
+.level-2,
+.level-3,
+.level-4 {
+  top: 0;
+  left: 100%;
+}
+
+/* Submenu lists */
+.menu-level-1,
+.menu-level-2,
+.menu-level-3,
+.menu-level-4 {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+/* Submenu items */
+.menu-level-1 .menu-link,
+.menu-level-2 .menu-link,
+.menu-level-3 .menu-link,
+.menu-level-4 .menu-link {
+  color: #333;
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+
+.menu-level-1 .menu-item:hover > .menu-link,
+.menu-level-2 .menu-item:hover > .menu-link,
+.menu-level-3 .menu-item:hover > .menu-link,
+.menu-level-4 .menu-item:hover > .menu-link {
+  background-color: #f5f5f5;
+  color: #3a7bd5;
+}
+
+/* Arrow for submenus */
+.menu-level-1 .menu-arrow,
+.menu-level-2 .menu-arrow,
+.menu-level-3 .menu-arrow,
+.menu-level-4 .menu-arrow {
+  transform: rotate(0deg);
+}
+
+.menu-level-1 .menu-item.open > .menu-link .menu-arrow,
+.menu-level-2 .menu-item.open > .menu-link .menu-arrow,
+.menu-level-3 .menu-item.open > .menu-link .menu-arrow,
+.menu-level-4 .menu-item.open > .menu-link .menu-arrow {
+  transform: rotate(90deg);
+}
+
+/* Loading and error states */
+.menu-loading,
+.menu-error {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.menu-error {
+  color: #d9534f;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-level-0 {
+    flex-wrap: wrap;
+  }
+  
+  .submenu-container.level-1 {
+    width: 100%;
+    position: static;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submenu-container.level-2,
+  .submenu-container.level-3,
+  .submenu-container.level-4 {
+    left: 0;
+    top: 100%;
+    width: 100%;
+  }
+}
+/* Update just these CSS rules in your HorizontalMenu.css file */
+
+.menu-arrow {
+  margin-left: 8px;
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.menu-item.open > .menu-link .menu-arrow {
+  transform: rotate(180deg);
+}
+
+/* For horizontal submenus, don't rotate but change the character in the JSX instead */
+.menu-level-1 .menu-item.open > .menu-link .menu-arrow,
+.menu-level-2 .menu-item.open > .menu-link .menu-arrow,
+.menu-level-3 .menu-item.open > .menu-link .menu-arrow,
+.menu-level-4 .menu-item.open > .menu-link .menu-arrow {
+  transform: rotate(90deg);
+}

@@ -1,2 +1,27 @@
 https://www.w3schools.com/git/git_remote_getstarted.asp?remote=github
 https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
+
+Oracle, MicroSoft SQL, MySQL, Java, Servlet, Spring Boot, React.JS
+1234567890123456789012345678901234567890123456789012345678901234567890
+
+Following link to create react js + spring boot + MySQL app
+https://dev.to/kajal_mapare24/get-started-with-fullstack-development-react-springboot-mysql-postman-5997
+https://delta-dev-software.fr/book-management-system-a-full-stack-crud-application-with-spring-boot-and-react
+
+SRS - Hospital Management System
+https://www.google.com/search?q=software+requirement+specification+for+hospital+management+system&sca_esv=74f7731948ddd43d&biw=1432&bih=684&tbs=qdr%3Ay&sxsrf=AHTn8zqeqD-NjVUsejmu09WlVJyKnE5f7w%3A1739533012492&ei=1CqvZ8TkHamN2roP_Yzg0A0&oq=Software+requirement+specifications+for+&gs_lp=Egxnd3Mtd2l6LXNlcnAiKFNvZnR3YXJlIHJlcXVpcmVtZW50IHNwZWNpZmljYXRpb25zIGZvciAqAggHMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNMgcQABiABBgNSP3oAlAAWLPlAXAEeAGQAQCYAYMDoAGRTqoBCTAuMTAuMzEuM7gBAcgBAPgBAZgCMKAChlCoAhTCAgQQIxgnwgILEAAYgAQYkQIYigXCAgoQABiABBhDGIoFwgIOEC4YgAQYsQMY0QMYxwHCAhEQLhiABBixAxjRAxiDARjHAcICCxAAGIAEGLEDGIMBwgINEAAYgAQYsQMYQxiKBcICChAuGIAEGEMYigXCAgcQIxgnGOoCwgIUEAAYgAQYkQIYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AEBwgIKECMYgAQYJxiKBcICEBAAGIAEGLEDGEMYgwEYigXCAg4QABiABBiRAhixAxiKBcICChAAGIAEGBQYhwLCAgUQABiABMICBxAAGIAEGArCAgYQABgWGB6YAxHxBXkC4oMCbsT6ugYGCAEQARgBkgcINC43LjM0LjOgB8jnAg&sclient=gws-wiz-serp
+https://www.geeksforgeeks.org/hospital-management-system-project-in-software-development/
+https://www.slideshare.net/slideshow/hospital-management-system-srs-for-software/266492971
+
+There are many hospital solutions in ranking from 1 to 20+. Following is one of them.
+
+https://www.shmsolutions.in/product
+
+Design components:
+
+https://demo.bootstrapdash.com/plus-free/template/demo_1/pages/ui-features/buttons.html
+
+https://www.koruux.com/50-examples-of-healthcare-UI/
+https://www.behance.net/gallery/218438333/Hospital-Management-System-UI-UX-Design?tracking_source=search_projects|hospital+management+app+figma&l=3
+https://www.geeksforgeeks.org/hospital-management-system-project-in-software-development/
+https://dev.to/kajal_mapare24/get-started-with-fullstack-development-react-springboot-mysql-postman-5997

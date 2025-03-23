@@ -1,0 +1,88 @@
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 1432px;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  color: white;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+  /* border: 2px solid coral; */
+}
+
+.App-header-part1 {
+  margin-left: 0;  
+  /* border: 1px solid yellow; */
+}
+
+.App-header-part2 {
+  /* margin: auto; */
+  font-size: large;
+  /* border: 1px solid yellow; */
+}
+
+.App-header-part3 {
+  margin-left: 35%;
+  /* border: 1px solid yellow; */
+}
+
+.App-link {
+  color: #ffffff;
+}
+
+.App-content {
+  height: 450px;
+  background-color: #282c34;
+  color: white;
+}
+
+.App-foooter {
+  height: 50px;
+  /* background-color: red; */
+  color: white;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+}
+
+.App-footer-part1 {
+  margin-left: 0;  
+  /* border: 1px solid yellow; */
+}
+
+.App-footer-part2 {
+  margin-left: 65%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.classh2
+{
+  color: white;
+}
+
+.classli
+{
+  color: white;
+}

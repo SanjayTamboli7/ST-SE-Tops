@@ -1,0 +1,163 @@
+/* Style for the horizontal menu */
+.menu {
+    list-style: none;
+    display: flex;
+    background-color: #222;
+    padding: 10px;
+  }
+  
+  .menu li {
+    position: relative;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu li:hover {
+    background-color: #444;
+  }
+  
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Style for menu items */
+.navbar .menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Add space between menu items */
+.navbar .menu-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* Change background on hover */
+.navbar .menu-item:hover {
+    background-color: #555;
+}
+
+/* Ensure submenu appears below */
+.navbar .submenu {
+    display: none;
+    position: absolute;
+    background: #444;
+    padding: 0;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+}
+
+/* Show submenu on hover */
+.navbar .menu-item:hover .submenu {
+    display: block;
+}
+
+/* Style submenu items */
+.submenu li {
+    padding: 10px;
+    display: block;
+    color: white;
+}
+
+.submenu li:hover {
+    background-color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%;  /* Positions it directly below the parent */
+    left: 0;
+    display: none;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu li:hover > .submenu {
+    display: block;
+  }
+
+  .submenu .submenu {
+    top: 0;
+    left: 100%;  /* Positions it to the right */
+  }
+
+  .submenu {
+    display: none; /* Ensures submenus are hidden initially */
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item:hover > .submenu {
+    display: block; /* Show submenu on hover */
+  }
+
+  .menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu-item {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .menu-item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    color: black;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item:hover > .submenu {
+    display: block;
+  }
+  
+  .submenu-item {
+    padding: 10px;
+  }
+  
+  .submenu-item a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .submenu-item:hover {
+    background: #ddd;
+  }
+  
