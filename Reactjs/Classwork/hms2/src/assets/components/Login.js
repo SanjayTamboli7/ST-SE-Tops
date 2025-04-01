@@ -16,8 +16,10 @@ const Login = () => {
         const response = await axios.post("http://localhost:8080/api/admin/login", { email, password });
         if (response.data) {                    
           console.log("Login 18: "+email);
+          // alert("Login 18: ");
+
           localStorage.setItem("auth", "true"); // Store auth state
-          navigate("/home/:email"); // Redirect to home page
+          navigate("/home/"+email); // Redirect to home page
         } else {
             alert("Invalid credentials!");
         }

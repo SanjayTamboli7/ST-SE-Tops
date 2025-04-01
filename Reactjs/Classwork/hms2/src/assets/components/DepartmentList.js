@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, Button, Form, Alert, Modal } from "react-bootstrap";
+import { useUserContext } from '../../UserContext';
+import { useContext } from 'react';
 
 const DepartmentList = () => {
   const [departments, setDepartments] = useState([]);
@@ -15,11 +17,18 @@ const DepartmentList = () => {
   const [formData, setFormData] = useState({ deptname: "", deptheadname: "", activestatus: "Active" });
   const [editMode, setEditMode] = useState(false);
   const [editId, setEditId] = useState(null);
+  const { email, auserid, auserstatus } = useUserContext();
 
   useEffect(() => {
     fetchDepartments();
   }, [search, page, sortBy, sortOrder, filterStatus]);
 
+  useEffect(() => {
+    console.log('🔍 DepartmentList.js - Email:', email);
+    console.log('🔍 DepartmentList.js - User ID:', auserid);
+    console.log('🔍 DepartmentList.js - User Status:', auserstatus);
+  }, [email, auserid, auserstatus]);  // Effect will run when context values change
+    
   const fetchDepartments = async () => {
     try {
       const response = await axios.get("http://localhost:8080/api/departments", {
@@ -78,6 +87,12 @@ const DepartmentList = () => {
   return (
     <div className="container mt-4">
       <h2>Department List</h2>
+      <div>
+            <h1>Departments</h1>
+            <p>User ID: {auserid !== null ? auserid : "Not Set"}</p>
+            <p>User Status: {auserstatus || "Not Set"}</p>            
+            {/* Render department list here */}
+        </div>      
       {alert.show && <Alert variant={alert.variant}>{alert.message}</Alert>}
       <div className="d-flex mb-3">
         <Form.Control

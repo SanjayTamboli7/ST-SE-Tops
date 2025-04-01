@@ -15,7 +15,7 @@ import Master3 from './assets/components/Master3';
 import ErrorBoundary from './assets/components/ErrorBoundary';
 
 import { UserProvider } from './UserContext';  // Import UserProvider
-import UserDetails from './UserDetails';  // Import UserDetails component
+// import UserDetails from './UserDetails';  // Import UserDetails component
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -57,9 +57,9 @@ function App() {
             </div>
           } />
         </Routes>
-        <div>
+        {/* <div>
           <UserDetails />
-        </div>
+        </div> */}
       </ErrorBoundary>
     </UserProvider>
   );
