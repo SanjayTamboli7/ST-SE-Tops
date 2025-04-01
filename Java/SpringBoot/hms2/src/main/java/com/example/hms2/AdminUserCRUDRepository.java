@@ -10,14 +10,17 @@ import org.springframework.data.repository.query.Param;
 
 public interface AdminUserCRUDRepository extends JpaRepository<AdminUserCRUD, Integer> {
     Optional<AdminUserCRUD> findByAuseremailid(String email);
-    
-    // Search by username, email, or contact number
+
+    // ✅ Enable Pagination for fetching users
+    Page<AdminUserCRUD> findAll(Pageable pageable);
+
+    // ✅ Enable Pagination for Search
     @Query("SELECT u FROM AdminUserCRUD u WHERE " +
             "LOWER(u.ausername) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
             "OR LOWER(u.auseremailid) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
-            "OR LOWER(u.ausercontactno) LIKE LOWER(CONCAT('%', :keyword, '%'))" +
+            "OR LOWER(u.ausercontactno) LIKE LOWER(CONCAT('%', :keyword, '%')) " +
             "OR u.auserstatus = :keyword")
-     Page<AdminUserCRUD> searchUsers(@Param("keyword") String keyword, Pageable pageable);
-        
+    Page<AdminUserCRUD> searchUsers(@Param("keyword") String keyword, Pageable pageable);
+
 }
 

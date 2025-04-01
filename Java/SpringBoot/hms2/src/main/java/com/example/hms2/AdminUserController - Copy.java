@@ -5,30 +5,17 @@ package com.example.hms2;
 //import com.example.hms2.service.AdminUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.hms2.AdminUserController.adminUserRepository;
-
 import java.util.Map;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/admin")
 @CrossOrigin(origins = "http://localhost:3000")
 public class AdminUserController {
 
-    public interface adminUserRepository {
-
-		static Optional<AdminUser> findByAuserEmailId(String email) {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-	}
-
-	@Autowired
+    @Autowired
     private AdminUserService service;
 
     /**
@@ -62,6 +49,4 @@ public class AdminUserController {
         boolean success = service.resetPassword(email, newPassword);
         return success ? "Password reset successful" : "User not found";
     }
-
 }
-

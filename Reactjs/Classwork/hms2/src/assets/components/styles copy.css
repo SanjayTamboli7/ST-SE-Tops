@@ -1,0 +1,587 @@
+/* ===== Global Styles ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Header Styling ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 20px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .logout-btn {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.header .logout-btn:hover {
+  background-color: #cc0000;
+}
+
+/* ===== Menu Styling ===== */
+.menu {
+  background-color: #0056b3;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu ul li:hover {
+  background-color: #003d80;
+}
+
+/* Dropdown Submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li {
+  padding: 10px;
+  color: black;
+  white-space: nowrap;
+}
+
+.submenu li:hover {
+  background-color: #ddd;
+}
+
+/* Show submenu on hover */
+.menu ul li:hover .submenu {
+  display: block;
+}
+
+/* ===== Content Area ===== */
+.content-area {
+  padding: 20px;
+  background-color: white;
+  min-height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+/* ===== Footer Styling ===== */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer .footer-links,
+.footer .social-media {
+  flex: 1;
+  text-align: left;
+}
+
+.footer .footer-links a,
+.footer .social-media a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer .social-media a {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.footer .social-media img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.footer p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* ===== Menu Styling ===== */
+.menu {
+  background-color: #0056b3;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu ul li:hover {
+  background-color: #003d80;
+}
+
+/* Submenu Styles (Hidden by Default) */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.submenu li {
+  padding: 10px;
+  color: black;
+  white-space: nowrap;
+}
+
+.submenu li:hover {
+  background-color: #ddd;
+}
+
+/* Show Submenu when Parent is Hovered */
+.menu ul li:hover > .submenu {
+  display: block;
+}
+
+/* ====== Main Menu ====== */
+.menu {
+  background-color: #1f4a9c;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu ul li:hover {
+  background-color: #153477;
+}
+
+/* ====== Submenu (Hidden by Default) ====== */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.submenu li {
+  padding: 10px 15px;
+  color: black;
+  font-weight: normal;
+  display: block;
+}
+
+.submenu li a {
+  color: #1f4a9c;
+  font-weight: bold;
+}
+
+.submenu li:hover {
+  background-color: #f1f1f1;
+}
+
+/* ====== Show Submenu on Hover ====== */
+.menu ul li:hover > .submenu {
+  display: block;
+}
+
+/* ====== Multi-Level Submenu (Right Aligned) ====== */
+.submenu .submenu {
+  left: 100%;
+  top: 0;
+}
+
+/* ====== Main Menu ====== */
+.menu {
+  background-color: #1f4a9c;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu ul li:hover {
+  background-color: #153477;
+}
+
+/* ====== Submenu Styling ====== */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 0;
+  z-index: 100
+}
+
+/* ====== Main Menu ====== */
+.menu {
+  background-color: #1f4a9c;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu ul li:hover {
+  background-color: #153477;
+}
+
+/* ====== Submenu Styling ====== */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.submenu li {
+  padding: 10px 15px;
+  color: black;
+  font-weight: normal;
+}
+
+.submenu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* ====== Show Submenu on Hover ====== */
+.menu ul li:hover > .submenu {
+  display: block;
+}
+
+/* ====== Nested Submenu Positioning ====== */
+.submenu .submenu {
+  left: 100%;
+  top: 0;
+}
+
+/* ====== Nested Submenu Hover Fix ====== */
+.submenu li:hover > .submenu {
+  display: block;
+}
+
+/* ====== Main Menu ====== */
+.menu {
+  background-color: #1f4a9c;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu ul li:hover {
+  background-color: #153477;
+}
+
+/* ====== Submenu Styling ====== */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.submenu li {
+  padding: 10px 15px;
+  color: black;
+  font-weight: normal;
+}
+
+.submenu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* ====== Show Submenu on Hover ====== */
+.menu ul li:hover > .submenu {
+  display: block;
+}
+
+/* ====== Nested Submenu Positioning ====== */
+.submenu .submenu {
+  left: 100%;
+  top: 0;
+  margin-left: -5px; /* Slight shift to prevent gaps */
+}
+
+/* ====== Prevent Hover Flickering ====== */
+.menu ul li:hover .submenu,
+.submenu li:hover .submenu {
+  display: block;
+}
+
+/* Main Menu */
+.navbar {
+  background-color: #2C4A99;
+  padding: 10px;
+  display: flex;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hide submenus initially */
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.submenu li {
+  display: block;
+  padding: 10px;
+  white-space: nowrap;
+  color: #2C4A99;
+}
+
+.submenu li:hover {
+  background-color: #F4F4F4;
+}
+
+/* Show submenu on hover */
+.navbar li:hover > .submenu {
+  display: block;
+}
+
+/* Nested Submenus */
+.submenu .submenu {
+  left: 100%;
+  top: 0;
+}
+
+.menu-container {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-level-0 {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  min-width: 180px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.submenu .menu-item {
+  padding: 8px 12px;
+}
+
+.submenu .menu-item:hover {
+  background: #1e3a8a;
+  color: white;
+}
+
+.menu-item:hover > .submenu {
+  display: block;
+}

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
 @RestController
@@ -30,35 +31,33 @@ public class AdminUserCRUDController {
         this.adminUserCRUDRepository = adminUserCRUDRepository;
     }
 
-    // GET: Fetch all users
+    // ✅ UPDATED: Get users with pagination
     @GetMapping
-    public List<AdminUserCRUD> getAllUsers() {
-        return adminUserCRUDRepository.findAll();
+    public Page<AdminUserCRUD> getAllUsers(
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "5") int size
+    ) {
+        Pageable pageable = PageRequest.of(page, size);
+        return adminUserCRUDRepository.findAll(pageable);
     }
 
-    // GET: Fetch user by ID
+    // ✅ GET: Fetch user by ID
     @GetMapping("/{id}")
     public ResponseEntity<AdminUserCRUD> getUserById(@PathVariable int id) {
         Optional<AdminUserCRUD> user = adminUserCRUDRepository.findById(id);
         return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // POST: Add a new user
+    // ✅ POST: Add a new user
     @PostMapping
     public AdminUserCRUD createUser(@RequestBody AdminUserCRUD adminUserCURD) {
         return adminUserCRUDRepository.save(adminUserCURD);
     }
 
-    // PUT: Update user by ID
+    // ✅ PUT: Update user
     @PutMapping("/{id}")
     public ResponseEntity<AdminUserCRUD> updateUser(@PathVariable int id, @RequestBody AdminUserCRUD updatedUser) {
-
-//    	if (!updatedUser.getAuserstatus().equalsIgnoreCase("Active") &&
-//    		    !updatedUser.getAuserstatus().equalsIgnoreCase("Inactive")) {
-//    		    return ResponseEntity.badRequest().body(null);
-//    		}
-    	
-    	return adminUserCRUDRepository.findById(id).map(user -> {
+        return adminUserCRUDRepository.findById(id).map(user -> {
             user.setAusername(updatedUser.getAusername());
             user.setAuseremailid(updatedUser.getAuseremailid());
             user.setAusercontactno(updatedUser.getAusercontactno());
@@ -68,20 +67,24 @@ public class AdminUserCRUDController {
         }).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // DELETE: Remove user by ID
+    // ✅ DELETE: Remove user
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable int id) {
         if (adminUserCRUDRepository.existsById(id)) {
-        	adminUserCRUDRepository.deleteById(id);
+            adminUserCRUDRepository.deleteById(id);
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
     }
-    
+
+    // ✅ UPDATED: Search with Pagination
     @GetMapping("/search")
-    public Page<AdminUserCRUD> searchUsers(@RequestParam String keyword, Pageable pageable) {
+    public Page<AdminUserCRUD> searchUsers(
+        @RequestParam String keyword,
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "5") int size
+    ) {
+        Pageable pageable = PageRequest.of(page, size);
         return adminUserCRUDRepository.searchUsers(keyword, pageable);
-    }    
-
+    }
 }
-

@@ -7,6 +7,5 @@ import java.util.Optional;
 
 public interface AdminUserRepository extends JpaRepository<AdminUser, Integer> {
     Optional<AdminUser> findByAuserEmailId(String email);
-
-
 }
+

@@ -1,22 +1,18 @@
-import React from 'react';
-import logo from '../../assets/logo.png'; // Add a logo to your assets folder
+import React from "react";
+import "./styles.css";
+import logo from "../logo.png";
 
-function Header() {
-  
-  return (    
+const Header = ({ onLogout }) => {
+  return (
     <header className="header">
-      <div className="logo-container">
-        <img src={logo} alt="Company Logo" className="logo" />
-        <div className="company-tagline">Innovative Solutions for Tomorrow</div>
+      <div className="logo">
+        <img src={logo} alt="Logo" />
+        <span className="title">System Punchline</span>
       </div>
-      <div className="system-punchline">
-        Empowering Your Business with Technology
-      </div>      
-      <div className="auth-container">
-        <button className="btn btn-danger">Logout</button>      
-      </div>
+      <div className="title">Dummy System Punchline</div>
+      <button className="logout-btn" onClick={onLogout}>Logout</button>
     </header>
   );
-}
+};
 
 export default Header;

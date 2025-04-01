@@ -1,30 +1,43 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./Login";
-import Home from "./Home";
-import ManageAdminUsers from "./ManageAdminUsers";
+import React from 'react';
 
-const componentMap = {
-  ManageAdminUsers: ManageAdminUsers, // Maps string to component
-};
+// Import all your potential components
+import Dashboard from './Dashboard';
+import Patients from './Patients';
+import Appointments from './Appointments';
+import Billing from './Billing';
+import Reports from './Reports';
+import ManageAdminUsers from './ManageAdminUsers';
+import DepartmentList from './DepartmentList';
+import "./styles.css";
 
-const ContentArea = ({ isAuthenticated, setIsAuthenticated }) => {
-  return (
-    <div>
-      <Routes>
-        <Route
-          path="/"
-          element={isAuthenticated ? <Navigate to="/home" /> : <Login setIsAuthenticated={setIsAuthenticated} />}
-        />
-        <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/" />} />
+const ContentArea = ({ componentToRender }) => {
+  // Component mapping for dynamic rendering
+  const componentMap = {
+    'Dashboard': Dashboard,
+    'Patients': Patients,
+    'Appointments': Appointments,
+    'Billing': Billing,
+    'Reports': Reports,
+    'ManageAdminUsers': ManageAdminUsers,
+    'DepartmentList': DepartmentList,
+    // Add more components as needed
+  };
 
-        {/* Dynamic Routing Based on Menu JSON */}
-        {Object.entries(componentMap).map(([key, Component]) => (
-          <Route key={key} path={`/${key.toLowerCase()}`} element={isAuthenticated ? <Component /> : <Navigate to="/" />} />
-        ))}
-
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+  // Default component to render if the requested one doesn't exist
+  const DefaultComponent = () => (
+    <div className="default-content">
+      <h2>Component Not Found</h2>
+      <p>The requested component "{componentToRender}" is not available.</p>
     </div>
+  );
+
+  // Dynamically render the component
+  const ComponentToRender = componentMap[componentToRender] || DefaultComponent;
+
+  return (
+    <main className="content-area">
+      <ComponentToRender />
+    </main>
   );
 };
 
