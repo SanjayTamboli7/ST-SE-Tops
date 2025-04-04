@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,11 +38,21 @@ public class DepartmentController {
         return departmentService.getDepartmentById(id);
     }
 
-    @PostMapping
-    public Department addDepartment(@RequestBody Department department) {
-        return departmentService.saveDepartment(department);
-    }
+//    @PostMapping
+//    public Department addDepartment(@RequestBody Department department) {
+//        return departmentService.saveDepartment(department);
+//    }
 
+    @PostMapping
+    public ResponseEntity<?> addDepartment(@RequestBody Department department) {
+        try {
+            Department savedDepartment = departmentService.saveDepartment(department);
+            return ResponseEntity.ok(savedDepartment);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+    
     @PutMapping("/{id}")
     public Department updateDepartment(@PathVariable int id, @RequestBody Department department) {
         return departmentService.updateDepartment(id, department);

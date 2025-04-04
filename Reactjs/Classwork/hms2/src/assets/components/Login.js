@@ -7,6 +7,10 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // const [auserid, setauserid] = useState(null);
+  // const [auserstatus, setauserstatus] = useState("");
+  
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -15,11 +19,19 @@ const Login = () => {
         console.log("Attempting login...");  // Debugging log
         const response = await axios.post("http://localhost:8080/api/admin/login", { email, password });
         if (response.data) {                    
-          console.log("Login 18: "+email);
-          // alert("Login 18: ");
-
           localStorage.setItem("auth", "true"); // Store auth state
-          navigate("/home/"+email); // Redirect to home page
+          // New code begins here to fetch auserid and auserstatus
+          const response = await axios.get(`http://localhost:8080/api/adminuserdetails/fetchUserDetails?email=`+email);
+          const { auserid, auserstatus } = response.data;      
+          console.log("Login 11 : " + email);
+          console.log("Login 12 : " + auserid);
+          console.log("Login 13 : " + auserstatus);
+          // Store user data in sessionStorage
+          sessionStorage.setItem('useremailid', email);
+          sessionStorage.setItem('userid', auserid);
+          sessionStorage.setItem('userstatus', auserstatus);          
+          // New code ends here to fetch auserid and auserstatus
+          navigate("/home"); // Redirect to home page
         } else {
             alert("Invalid credentials!");
         }

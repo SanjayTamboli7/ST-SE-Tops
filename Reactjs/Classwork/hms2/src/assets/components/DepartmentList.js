@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { Table, Button, Form, Alert, Modal } from "react-bootstrap";
-import { useUserContext } from '../../UserContext';
-import { useContext } from 'react';
 
 const DepartmentList = () => {
+
   const [departments, setDepartments] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
   const [sortBy, setSortBy] = useState("deptname");
   const [sortOrder, setSortOrder] = useState("asc");
   const [filterStatus, setFilterStatus] = useState("");
@@ -17,28 +16,57 @@ const DepartmentList = () => {
   const [formData, setFormData] = useState({ deptname: "", deptheadname: "", activestatus: "Active" });
   const [editMode, setEditMode] = useState(false);
   const [editId, setEditId] = useState(null);
-  const { email, auserid, auserstatus } = useUserContext();
+
+  const useremailid = sessionStorage.getItem('useremailid');
+  const userid = sessionStorage.getItem('userid');
+  const userstatus = sessionStorage.getItem('userstatus');
+
+  console.log(useremailid);
+  console.log(userid);
+  console.log(userstatus);
+  console.log("Values from DeprtmentList.js");
 
   useEffect(() => {
     fetchDepartments();
   }, [search, page, sortBy, sortOrder, filterStatus]);
 
-  useEffect(() => {
-    console.log('🔍 DepartmentList.js - Email:', email);
-    console.log('🔍 DepartmentList.js - User ID:', auserid);
-    console.log('🔍 DepartmentList.js - User Status:', auserstatus);
-  }, [email, auserid, auserstatus]);  // Effect will run when context values change
-    
-  const fetchDepartments = async () => {
+  const fetchDepartments = useCallback(async () => {
     try {
+      console.log(`Fetching page ${page}, size 5, filter: ${filterStatus}`);
       const response = await axios.get("http://localhost:8080/api/departments", {
-        params: { page, size: 5, search, sortBy, sortOrder, filterStatus },
+        params: {
+          page,
+          size: 5,
+          search,
+          sortBy,
+          sortOrder,
+          filterStatus
+        },
       });
+      console.log("Response:", response.data);
       setDepartments(response.data.content);
       setTotalPages(response.data.totalPages);
     } catch (error) {
+      console.error("Pagination error:", error);
       setAlert({ show: true, message: "Error fetching data", variant: "danger" });
     }
+  }, [page, search, sortBy, sortOrder, filterStatus]);
+
+  useEffect(() => {
+    fetchDepartments();
+  }, [fetchDepartments]);
+
+  // Update these button handlers to be more explicit
+  const handlePrevPage = () => {
+    const newPage = Math.max(0, page - 1);
+    console.log(`Moving to previous page: ${newPage}`);
+    setPage(newPage);
+  };
+
+  const handleNextPage = () => {
+    const newPage = page + 1;
+    console.log(`Moving to next page: ${newPage}`);
+    setPage(newPage);
   };
 
   const handleDelete = async (id) => {
@@ -68,31 +96,51 @@ const DepartmentList = () => {
 
   const handleCloseModal = () => setShowModal(false);
 
+  const handleSort = (field) => {
+    // If clicking the same field, toggle direction
+    if (sortBy === field) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      // If clicking a new field, default to ascending
+      setSortBy(field);
+      setSortOrder("asc");
+    }
+  };
+
   const handleSubmit = async () => {
+    // Add userid to the data being sent
+    const dataToSubmit = { ...formData, lastaddeditby: userid };
+
     try {
       if (editMode) {
-        await axios.put(`http://localhost:8080/api/departments/${editId}`, formData);
+        await axios.put(`http://localhost:8080/api/departments/${editId}`, dataToSubmit);
         setAlert({ show: true, message: "Department updated successfully", variant: "success" });
       } else {
-        await axios.post("http://localhost:8080/api/departments", formData);
+        await axios.post("http://localhost:8080/api/departments", dataToSubmit);
         setAlert({ show: true, message: "Department added successfully", variant: "success" });
       }
       setShowModal(false);
       fetchDepartments();
     } catch (error) {
-      setAlert({ show: true, message: "Error saving department", variant: "danger" });
+      // Error handling as discussed previously
+      console.error("Error details:", error);
+      const errorMessage = error.response?.data?.message ||
+        error.response?.data?.error ||
+        error.response?.data ||
+        error.message ||
+        "Error saving department";
+
+      setAlert({
+        show: true,
+        message: `Error saving department: ${errorMessage}`,
+        variant: "danger"
+      });
     }
   };
 
   return (
     <div className="container mt-4">
       <h2>Department List</h2>
-      <div>
-            <h1>Departments</h1>
-            <p>User ID: {auserid !== null ? auserid : "Not Set"}</p>
-            <p>User Status: {auserstatus || "Not Set"}</p>            
-            {/* Render department list here */}
-        </div>      
       {alert.show && <Alert variant={alert.variant}>{alert.message}</Alert>}
       <div className="d-flex mb-3">
         <Form.Control
@@ -111,12 +159,19 @@ const DepartmentList = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th onClick={() => setSortBy("deptname")}>Department Name</th>
-            <th onClick={() => setSortBy("deptheadname")}>Head Name</th>
-            <th onClick={() => setSortBy("activestatus")}>Status</th>
+            <th onClick={() => handleSort("deptname")} style={{ cursor: 'pointer' }}>
+              Department Name {sortBy === "deptname" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+            </th>
+            <th onClick={() => handleSort("deptheadname")} style={{ cursor: 'pointer' }}>
+              Head Name {sortBy === "deptheadname" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+            </th>
+            <th onClick={() => handleSort("activestatus")} style={{ cursor: 'pointer' }}>
+              Status {sortBy === "activestatus" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+            </th>
             <th>Actions</th>
           </tr>
         </thead>
+
         <tbody>
           {departments.map((dept) => (
             <tr key={dept.deptid}>
@@ -133,16 +188,27 @@ const DepartmentList = () => {
           ))}
         </tbody>
       </Table>
-      <div className="d-flex justify-content-between">
-        <Button disabled={page === 0} onClick={() => setPage(page - 1)}>
+
+      <div className="d-flex justify-content-between align-items-center mt-3">
+        <Button 
+          disabled={page === 0} 
+          onClick={handlePrevPage}
+          variant={page === 0 ? "secondary" : "primary"}
+        >
           Previous
         </Button>
-        <span>Page {page + 1} of {totalPages}</span>
-        <Button disabled={page + 1 >= totalPages} onClick={() => setPage(page + 1)}>
+        <span>
+          Page {page + 1} of {totalPages || 1} 
+          (Debug: page={page}, totalPages={totalPages})
+        </span>
+        <Button 
+          disabled={page + 1 >= totalPages} 
+          onClick={handleNextPage}
+          variant={page + 1 >= totalPages ? "secondary" : "primary"}
+        >
           Next
         </Button>
       </div>
-
       {/* Add/Edit Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
@@ -166,6 +232,15 @@ const DepartmentList = () => {
               </Form.Select>
             </Form.Group>
           </Form>
+          {/* style={{ display: 'none' }} */}
+          <Form.Group className="mb-3">
+            <Form.Label>User ID</Form.Label>
+            <Form.Control
+              type="number"
+              value={formData.lastaddeditby || userid}
+              onChange={(e) => setFormData({ ...formData, lastaddeditby: userid })}
+            />
+          </Form.Group>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>Cancel</Button>

@@ -1,9 +1,15 @@
 package com.example.hms2;
 
-import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
-//import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "mstdepartment")
@@ -16,11 +22,18 @@ public class Department {
     private String deptheadname;
     private String activestatus;
     private int lastaddeditby;
-//    private Date lasteditdatetime;
-    
-    @Column(nullable = false)
-    private LocalDateTime lasteditdatetime = LocalDateTime.now();
 
+//    @ManyToOne
+//    @JoinColumn(name = "lastaddeditby", referencedColumnName = "auserid")
+//    private AdminUser lastAddEditBy;
+    
+//    private Date lasteditdatetime;
+        
+    @Column(nullable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+    // private LocalDateTime lasteditdatetime = LocalDateTime.now();    
+    private LocalDateTime lasteditdatetime = LocalDateTime.now();
+    
     // Getters and Setters
     public int getDeptid() {
         return deptid;

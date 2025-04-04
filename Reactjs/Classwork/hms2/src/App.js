@@ -1,10 +1,8 @@
 import React from 'react';
 import Login from "./assets/components/Login";
 import Home from "./assets/components/Home"; // This will include Header, Menu, ContentArea, and Footer
-// import { Routes, Route, Navigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './assets/components/Dashboard';
-// import AdminUserList from './assets/components/AdminUserList';
 import ManageAdminUsers from './assets/components/ManageAdminUsers';
 import DepartmentList from './assets/components/DepartmentList'; 
 import Roles from './assets/components/Roles';
@@ -13,9 +11,6 @@ import EveningShift from './assets/components/EveningShift';
 import NightShift from './assets/components/NightShift';
 import Master3 from './assets/components/Master3';
 import ErrorBoundary from './assets/components/ErrorBoundary';
-
-import { UserProvider } from './UserContext';  // Import UserProvider
-// import UserDetails from './UserDetails';  // Import UserDetails component
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -35,11 +30,10 @@ const withErrorBoundary = (Component, name) => (
 
 function App() {
   return (
-    <UserProvider>
       <ErrorBoundary>      
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home/:email" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin-users" element={<ManageAdminUsers />} />
           <Route path="/admin-departments" element={<DepartmentList />} />
@@ -57,11 +51,7 @@ function App() {
             </div>
           } />
         </Routes>
-        {/* <div>
-          <UserDetails />
-        </div> */}
       </ErrorBoundary>
-    </UserProvider>
   );
 }
 
