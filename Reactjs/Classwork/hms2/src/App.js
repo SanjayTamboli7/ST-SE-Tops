@@ -4,13 +4,15 @@ import Home from "./assets/components/Home"; // This will include Header, Menu, 
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './assets/components/Dashboard';
 import ManageAdminUsers from './assets/components/ManageAdminUsers';
-import DepartmentList from './assets/components/DepartmentList'; 
+// import DepartmentList from './assets/components/DepartmentList'; 
 import Roles from './assets/components/Roles';
 import MorningShift from './assets/components/MorningShift';
 import EveningShift from './assets/components/EveningShift';
 import NightShift from './assets/components/NightShift';
 import Master3 from './assets/components/Master3';
 import ErrorBoundary from './assets/components/ErrorBoundary';
+import DepartmentManagement from './assets/components/DepartmentManagement';
+import DesignationPage from './assets/components/DesignationPage';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -36,7 +38,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin-users" element={<ManageAdminUsers />} />
-          <Route path="/admin-departments" element={<DepartmentList />} />
+          <Route path="/admin-departments" element={<DepartmentManagement />} />
+          <Route path="/admin-designations" element={<DesignationPage />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/master3" element={<Master3 />} />
           <Route path="/morning-shift" element={<MorningShift />} />
@@ -56,3 +59,5 @@ function App() {
 }
 
 export default App;
+
+// npm install xlsx file-saver jspdf jspdf-autotable

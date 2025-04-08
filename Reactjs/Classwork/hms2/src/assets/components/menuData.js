@@ -8,6 +8,7 @@ export const menuItems = [
       submenus: [
         { label: "Admin Users", path: "/admin-users" },
         { label: "Departments", path: "/admin-departments" },
+        { label: "Designations", path: "/admin-designations" },
         { label: "Roles", path: "/roles" },
         { label: "Master 3", path: "/master3" },
       ],

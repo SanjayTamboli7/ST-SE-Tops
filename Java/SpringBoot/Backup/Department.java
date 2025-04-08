@@ -1,7 +1,15 @@
 package com.example.hms2;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "mstdepartment")
@@ -9,22 +17,23 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int deptid;
-    
-    @Column(nullable = false, length = 50)
-    private String deptname;
-    
-    @Column(nullable = false, length = 50)
-    private String deptheadname;
-    
-    @Column(nullable = false, length = 8)
-    private String activestatus;
-    
-    @Column(nullable = false)
-    private int lastaddeditby;
-    
-    @Column(nullable = false)
-    private LocalDateTime lasteditdatetime;
 
+    private String deptname;
+    private String deptheadname;
+    private String activestatus;
+    private int lastaddeditby;
+
+//    @ManyToOne
+//    @JoinColumn(name = "lastaddeditby", referencedColumnName = "auserid")
+//    private AdminUser lastAddEditBy;
+    
+//    private Date lasteditdatetime;
+        
+    @Column(nullable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+    // private LocalDateTime lasteditdatetime = LocalDateTime.now();    
+    private LocalDateTime lasteditdatetime = LocalDateTime.now();
+    
     // Getters and Setters
     public int getDeptid() {
         return deptid;
@@ -66,11 +75,15 @@ public class Department {
         this.lastaddeditby = lastaddeditby;
     }
 
-    public LocalDateTime getLasteditdatetime() {
-        return lasteditdatetime;
-    }
+//    public Date getLasteditdatetime() {
+//        return lasteditdatetime;
+//    }
+//
+//    public void setLasteditdatetime(Date lasteditdatetime) {
+//        this.lasteditdatetime = lasteditdatetime;
+//    }
 
-    public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
-        this.lasteditdatetime = lasteditdatetime;
-    }
+    public LocalDateTime getLasteditdatetime() { return lasteditdatetime; }
+    public void setLasteditdatetime(LocalDateTime lasteditdatetime) { this.lasteditdatetime = lasteditdatetime; }
+    
 }

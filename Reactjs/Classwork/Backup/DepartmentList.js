@@ -26,49 +26,98 @@ const DepartmentList = () => {
   console.log(userstatus);
   console.log("Values from DeprtmentList.js");
 
+  const [reload, setReload] = useState(false);
+
   useEffect(() => {
+    fetchDepartments();
+    setReload((prev) => !prev);  // 🔥 Force re-render
+  }, [page]);
+  
+  useEffect(() => {
+    setPage(0);  // Reset to first page when search changes
     fetchDepartments();
   }, [search, page, sortBy, sortOrder, filterStatus]);
 
-  const fetchDepartments = useCallback(async () => {
+  // const fetchDepartments = useCallback(async () => {
+  //   try {
+  //     console.log(`Fetching page ${page}, size 5, filter: ${filterStatus}`);
+  //     const response = await axios.get("http://localhost:8080/api/departments", {
+  //       params: {
+  //         page,
+  //         size: 5,
+  //         search,
+  //         sortBy,
+  //         sortOrder,
+  //         filterStatus
+  //       },
+  //     });
+  //     console.log("Response:", response.data);
+  //     setDepartments(response.data.content);
+  //     setTotalPages(response.data.totalPages);
+  //   } catch (error) {
+  //     console.error("Pagination error:", error);
+  //     setAlert({ show: true, message: "Error fetching data", variant: "danger" });
+  //   }
+  // }, [page, search, sortBy, sortOrder, filterStatus]);
+
+  const fetchDepartments = async () => {
+    console.log("📡 Fetching Data for Page:", page);  // Debugging
+  
     try {
-      console.log(`Fetching page ${page}, size 5, filter: ${filterStatus}`);
       const response = await axios.get("http://localhost:8080/api/departments", {
-        params: {
-          page,
+        params: { 
+          page,  // Make sure this is correctly passed
           size: 5,
-          search,
-          sortBy,
-          sortOrder,
-          filterStatus
-        },
+          search 
+        }
       });
-      console.log("Response:", response.data);
+  
+      console.log("✅ API Response:", response.data);
       setDepartments(response.data.content);
       setTotalPages(response.data.totalPages);
     } catch (error) {
-      console.error("Pagination error:", error);
-      setAlert({ show: true, message: "Error fetching data", variant: "danger" });
+      console.error("🚨 Error fetching departments:", error);
     }
-  }, [page, search, sortBy, sortOrder, filterStatus]);
-
+  };
+  
   useEffect(() => {
     fetchDepartments();
   }, [fetchDepartments]);
 
+  useEffect(() => {
+    console.log("🌀 Page Changed, Fetching New Data for Page:", page);
+  
+    if (page >= 0) {  // Prevents running on first load
+      fetchDepartments();
+    }
+  }, [page]);  
+  
   // Update these button handlers to be more explicit
-  const handlePrevPage = () => {
-    const newPage = Math.max(0, page - 1);
-    console.log(`Moving to previous page: ${newPage}`);
-    setPage(newPage);
-  };
+  // const handlePrevPage = () => {
+  //   const newPage = Math.max(0, page - 1);
+  //   console.log(`Moving to previous page: ${newPage}`);
+  //   setPage(newPage);
+  // };
+
+  // const handleNextPage = () => {
+  //   const newPage = page + 1;
+  //   console.log(`Moving to next page: ${newPage}`);
+  //   setPage(newPage);
+  // };
 
   const handleNextPage = () => {
-    const newPage = page + 1;
-    console.log(`Moving to next page: ${newPage}`);
-    setPage(newPage);
+    if (page + 1 < totalPages) {
+      console.log("➡️ Next Page Clicked. Changing to:", page + 1); // Debugging
+      setPage(page + 1);
+    }
+  }; 
+  
+  const handlePrevPage = () => {
+    if (page > 0) {
+      setPage((prevPage) => prevPage - 1);
+    }
   };
-
+      
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this department?")) {
       try {

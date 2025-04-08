@@ -1,11 +1,18 @@
 package com.example.hms2;
 
-import java.util.Optional;
+import java.util.Optional; // Handling optional results
 
+// package com.example.departmentapi.controller;
+
+//import com.example.departmentapi.entity.Department;
+//import com.example.departmentapi.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+//import org.springframework.data.domain.PageRequest; // Page request creation
+//import org.springframework.data.domain.Pageable; // Pageable parameter support
+//import org.springframework.data.domain.Sort; // Sorting support
 import org.springframework.http.ResponseEntity;
+// Required for @RestController, @RequestMapping, @GetMapping, etc.
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,47 +26,47 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/departments")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 public class DepartmentController {
-
+    
     @Autowired
     private DepartmentService departmentService;
-
+    
     @GetMapping
-    public Page<Department> getAllDepartments(
+    public ResponseEntity<Page<Department>> getAllDepartments(
+            @RequestParam(required = false) String search,
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "5") int size,
-            @RequestParam(defaultValue = "") String search) {
-        return departmentService.getDepartments(search, PageRequest.of(page, size));
+            @RequestParam(defaultValue = "10") int size) {
+        return ResponseEntity.ok(departmentService.getAllDepartments(search, page, size));
     }
-
+    
     @GetMapping("/{id}")
-    public Optional<Department> getDepartmentById(@PathVariable int id) {
-        return departmentService.getDepartmentById(id);
+    public ResponseEntity<Department> getDepartmentById(@PathVariable int id) {
+        Optional<Department> department = departmentService.getDepartmentById(id);
+        return department.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-//    @PostMapping
-//    public Department addDepartment(@RequestBody Department department) {
-//        return departmentService.saveDepartment(department);
-//    }
-
+    
     @PostMapping
-    public ResponseEntity<?> addDepartment(@RequestBody Department department) {
-        try {
-            Department savedDepartment = departmentService.saveDepartment(department);
-            return ResponseEntity.ok(savedDepartment);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+    public ResponseEntity<Department> createDepartment(@RequestBody Department department) {
+        return ResponseEntity.ok(departmentService.saveOrUpdateDepartment(department));
     }
     
     @PutMapping("/{id}")
-    public Department updateDepartment(@PathVariable int id, @RequestBody Department department) {
-        return departmentService.updateDepartment(id, department);
+    public ResponseEntity<Department> updateDepartment(@PathVariable int id, @RequestBody Department department) {
+        if (!departmentService.getDepartmentById(id).isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        department.setDeptid(id);
+        return ResponseEntity.ok(departmentService.saveOrUpdateDepartment(department));
     }
-
+    
     @DeleteMapping("/{id}")
-    public void deleteDepartment(@PathVariable int id) {
+    public ResponseEntity<Void> deleteDepartment(@PathVariable int id) {
+        if (!departmentService.getDepartmentById(id).isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
         departmentService.deleteDepartment(id);
+        return ResponseEntity.noContent().build();
     }
 }
+
