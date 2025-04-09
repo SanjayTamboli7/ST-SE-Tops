@@ -13,6 +13,7 @@ import Master3 from './assets/components/Master3';
 import ErrorBoundary from './assets/components/ErrorBoundary';
 import DepartmentManagement from './assets/components/DepartmentManagement';
 import DesignationPage from './assets/components/DesignationPage';
+import ManageOtherUsers from './assets/components/ManageOtherUsers';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -38,6 +39,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin-users" element={<ManageAdminUsers />} />
+          <Route path="/other-users" element={<ManageOtherUsers />} />
           <Route path="/admin-departments" element={<DepartmentManagement />} />
           <Route path="/admin-designations" element={<DesignationPage />} />
           <Route path="/roles" element={<Roles />} />
@@ -61,3 +63,4 @@ function App() {
 export default App;
 
 // npm install xlsx file-saver jspdf jspdf-autotable
+// npm install reactstrap bootstrap

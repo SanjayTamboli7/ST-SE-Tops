@@ -2,15 +2,9 @@ package com.example.hms2;
 
 import java.time.LocalDateTime;
 
-//import com.example.departmentapi.entity.Department;
-//import com.example.departmentapi.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-//import org.springframework.data.domain.PageRequest; // Page request creation
-//import org.springframework.data.domain.Pageable; // Pageable parameter support
-//import org.springframework.data.domain.Sort; // Sorting support
 import org.springframework.http.ResponseEntity;
-//Required for @RestController, @RequestMapping, @GetMapping, etc.
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
