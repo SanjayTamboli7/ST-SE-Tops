@@ -6,6 +6,7 @@ import { getDepartments } from './OtherAPI';
 import { getDesignations } from './OtherAPI';
 
 const OtherUserForm = ({ userId, mode, onClose }) => {
+  // const sessionUser = sessionStorage.getItem('userid');
   const [user, setUser] = useState({
     ousername: '',
     ouserdeptid: '',
@@ -13,6 +14,7 @@ const OtherUserForm = ({ userId, mode, onClose }) => {
     ousercontactno: '',
     ouseremailid: '',
     ouserstatus: 1,
+    lastaddeditby: sessionStorage.getItem('userid'),
   });
   const [departments, setDepartments] = useState([]);
   const [designations, setDesignations] = useState([]);

@@ -21,7 +21,8 @@ public class OtherUser {
     private String ousercontactno;
     private int ouserdeptid;
     private int ouserdesignationid;
-    private String ouserpassword;
+    private int lastaddeditby;    
+	private String ouserpassword;
     private String ouserstatus;
     private LocalDateTime lasteditdatetime;
 	public int getOuserid() {
@@ -60,6 +61,12 @@ public class OtherUser {
 	public void setOuserdesignationid(int ouserdesignationid) {
 		this.ouserdesignationid = ouserdesignationid;
 	}
+    public int getLastaddeditby() {
+		return lastaddeditby;
+	}
+	public void setLastaddeditby(int lastaddeditby) {
+		this.lastaddeditby = lastaddeditby;
+	}	
 	public String getOuserpassword() {
 		return ouserpassword;
 	}

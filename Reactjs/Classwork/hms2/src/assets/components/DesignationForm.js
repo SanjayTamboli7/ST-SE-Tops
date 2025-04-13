@@ -4,7 +4,7 @@ import { Button, Form, Toast, ToastContainer } from 'react-bootstrap';
 import { loadDesignations } from '../utils/designationUtils';
 
 const DesignationForm = ({ selected, onSaveComplete }) => {
-  const [form, setForm] = useState({ designationname: '', lastaddeditby: 1 });
+  const [form, setForm] = useState({ designationname: '', lastaddeditby: sessionStorage.getItem('userid') });
   const [toastMsg, setToastMsg] = useState('');
   const [designations, setDesignations] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
@@ -33,7 +33,7 @@ useEffect(() => {
       : addDesignation(form);
     save.then(() => {
       setToastMsg('Designation saved successfully.');
-      setForm({ designationname: '', lastaddeditby: 1 });
+      setForm({ designationname: '', lastaddeditby: sessionStorage.getItem('userid') });
       onSaveComplete();
     });
   };

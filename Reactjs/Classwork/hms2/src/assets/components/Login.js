@@ -6,11 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Login = () => {
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  // const [auserid, setauserid] = useState(null);
-  // const [auserstatus, setauserstatus] = useState("");
-  
+  const [password, setPassword] = useState("");  
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -23,9 +19,6 @@ const Login = () => {
           // New code begins here to fetch auserid and auserstatus
           const response = await axios.get(`http://localhost:8080/api/adminuserdetails/fetchUserDetails?email=`+email);
           const { auserid, auserstatus } = response.data;      
-          console.log("Login 11 : " + email);
-          console.log("Login 12 : " + auserid);
-          console.log("Login 13 : " + auserstatus);
           // Store user data in sessionStorage
           sessionStorage.setItem('useremailid', email);
           sessionStorage.setItem('userid', auserid);

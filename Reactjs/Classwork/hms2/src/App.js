@@ -4,7 +4,6 @@ import Home from "./assets/components/Home"; // This will include Header, Menu, 
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './assets/components/Dashboard';
 import ManageAdminUsers from './assets/components/ManageAdminUsers';
-// import DepartmentList from './assets/components/DepartmentList'; 
 import Roles from './assets/components/Roles';
 import MorningShift from './assets/components/MorningShift';
 import EveningShift from './assets/components/EveningShift';
@@ -14,6 +13,8 @@ import ErrorBoundary from './assets/components/ErrorBoundary';
 import DepartmentManagement from './assets/components/DepartmentManagement';
 import DesignationPage from './assets/components/DesignationPage';
 import ManageOtherUsers from './assets/components/ManageOtherUsers';
+import ManageHolidays from './assets/components/ManageHolidays';
+import ManageLeave from './assets/components/ManageLeave';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -42,8 +43,10 @@ function App() {
           <Route path="/other-users" element={<ManageOtherUsers />} />
           <Route path="/admin-departments" element={<DepartmentManagement />} />
           <Route path="/admin-designations" element={<DesignationPage />} />
+          <Route path="/admin-holidays" element={<ManageHolidays />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/master3" element={<Master3 />} />
+          <Route path="/leave" element={<ManageLeave />} />
           <Route path="/morning-shift" element={<MorningShift />} />
           <Route path="/evening-shift" element={<EveningShift />} />
           <Route path="/night-shift" element={<NightShift />} />

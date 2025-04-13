@@ -10,8 +10,15 @@ export const menuItems = [
         { label: "Other Users", path: "/other-users" },
         { label: "Departments", path: "/admin-departments" },
         { label: "Designations", path: "/admin-designations" },
+        { label: "Holidays", path: "/admin-holidays" },
         { label: "Roles", path: "/roles" },
         { label: "Master 3", path: "/master3" },
+      ],
+    },
+    {
+      label: "Transaction",
+      submenus: [
+        { label: "Leave", path: "/leave" },
       ],
     },
     {
