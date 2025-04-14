@@ -15,6 +15,8 @@ import DesignationPage from './assets/components/DesignationPage';
 import ManageOtherUsers from './assets/components/ManageOtherUsers';
 import ManageHolidays from './assets/components/ManageHolidays';
 import ManageLeave from './assets/components/ManageLeave';
+import OULogin from './assets/components/OULogin';
+import OUForgotPassword from './assets/components/OUForgotPassword';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -36,7 +38,9 @@ function App() {
   return (
       <ErrorBoundary>      
         <Routes>
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<OULogin />} />
+          <Route path="/forgot-password" element={<OUForgotPassword />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin-users" element={<ManageAdminUsers />} />
