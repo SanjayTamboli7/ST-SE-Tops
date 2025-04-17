@@ -6,25 +6,33 @@ const OUForgotPasswordModal = ({ show, handleClose }) => {
 
   const handleSubmit = async () => {
     if (!email) {
-      alert("Please enter email");
+      alert("Please enter your email.");
       return;
     }
-
-    // Call your backend logic to handle forgot password
-    const response = await fetch("http://localhost:8080/api/ouuser/forgot-password", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
-
-    if (response.ok) {
-      alert("Reset instructions sent to your email.");
-      handleClose();
-    } else {
-      alert("Failed to send instructions. Please try again.");
+  
+    try {
+      const response = await fetch("http://localhost:8080/api/ouuser/forgot-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
+  
+      const resultText = await response.text();
+  
+      if (response.ok) {
+        alert(resultText);       // ✅ shows success message
+        handleClose();           // ✅ closes modal
+        return;                  // ✅ make sure we exit here
+      }
+  
+      // If not ok, show error message from backend
+      alert("Failed to send instructions: " + resultText);
+    } catch (error) {
+      console.error("Network or server error:", error);
+      alert("Error connecting to server.");
     }
   };
-
+    
   const handleReset = () => {
     setEmail("");
   };

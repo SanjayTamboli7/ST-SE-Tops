@@ -1,9 +1,8 @@
 package com.example.hms2;
 
-//package com.example.hms2;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
 import java.util.Optional;
 
@@ -14,26 +13,25 @@ public class OUUserServiceImpl implements OUUserService {
     private OUUserRepository ouUserRepository;
 
     @Override
-    public Optional<OUUserStatusResponse> getUserStatusByEmail(String email) {
-        Optional<OUUser> userOpt = ouUserRepository.findByOuseremailid(email);
-        return userOpt.map(user -> new OUUserStatusResponse(
-            user.getOuserid(),
-            user.getOuserdeptid(),
-            user.getOuserdesignationid(),
-            user.getOuserstatus()
-        ));
+    public Optional<OUUser> login(String email, String password) {
+        return ouUserRepository.findByOuseremailidAndOuserpassword(email, password);
     }
 
     @Override
-    public void changePassword(String email, String newPassword) {
-        Optional<OUUser> optionalUser = ouUserRepository.findByOuseremailid(email);
-        if (optionalUser.isPresent()) {
-            OUUser user = optionalUser.get();
+    public boolean changePassword(String email, String newPassword) {
+        Optional<OUUser> userOpt = ouUserRepository.findByOuseremailid(email);
+        if (userOpt.isPresent()) {
+            OUUser user = userOpt.get();
             user.setOuserpassword(newPassword);
             user.setLasteditdatetime(LocalDateTime.now());
             ouUserRepository.save(user);
-        } else {
-            throw new RuntimeException("User not found with email: " + email);
+            return true;
         }
+        return false;
+    }
+
+    @Override
+    public Optional<OUUser> findByEmail(String email) {
+        return ouUserRepository.findByOuseremailid(email);
     }
 }

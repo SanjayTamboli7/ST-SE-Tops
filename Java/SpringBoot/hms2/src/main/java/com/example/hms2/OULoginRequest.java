@@ -1,14 +1,16 @@
 package com.example.hms2;
 
-// package com.example.hms2;
+//package com.example.demo.dto;
 
-public class OUEmailPasswordRequest {
+//package com.example.demo.dto;
+
+public class OULoginRequest {
     private String email;
     private String password;
 
-    public OUEmailPasswordRequest() {}
+    public OULoginRequest() {}
 
-    public OUEmailPasswordRequest(String email, String password) {
+    public OULoginRequest(String email, String password) {
         this.email = email;
         this.password = password;
     }

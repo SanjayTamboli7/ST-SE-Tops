@@ -1,12 +1,14 @@
 package com.example.hms2;
 
-//package com.yourpackage.repository;
+//package com.example.demo.repository;
 //
-//import com.yourpackage.entity.OUUser;
+//import com.example.demo.entity.OUUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
 public interface OUUserRepository extends JpaRepository<OUUser, Integer> {
-    Optional<OUUser> findByOuseremailid(String ouseremailid);
+    Optional<OUUser> findByOuseremailidAndOuserpassword(String email, String password);
+    Optional<OUUser> findByOuseremailid(String email);
+    
 }
