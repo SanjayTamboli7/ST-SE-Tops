@@ -37,7 +37,7 @@ CREATE TABLE `mstdesignation` (
 
 LOCK TABLES `mstdesignation` WRITE;
 /*!40000 ALTER TABLE `mstdesignation` DISABLE KEYS */;
-INSERT INTO `mstdesignation` VALUES (2,'Doctor',1,'2025-04-05 17:13:18'),(3,'Anaesthetist',1,'2025-04-05 17:14:44'),(5,'Assistant Surgeon',1,'2025-04-05 00:00:00'),(6,'Blood Bank Technician',1,'2025-04-05 00:00:00'),(7,'Civil Surgeon',1,'2025-04-05 00:00:00'),(8,'Clerk',1,'2025-04-05 00:00:00'),(9,'Cook',1,'2025-04-05 00:00:00'),(10,'Dark Room Attendent',1,'2025-04-05 00:00:00'),(11,'Deputy Medical Suprintendent',1,'2025-04-05 00:00:00'),(13,'Dhobi',1,'2025-04-05 00:00:00'),(14,'Dietician',1,'2025-04-05 00:00:00'),(15,'Dispenser',1,'2025-04-05 00:00:00'),(16,'Dresser',1,'2025-04-05 00:00:00'),(17,'Driver',1,'2025-04-05 00:00:00'),(18,'General Physician',1,'2025-04-05 00:00:00'),(19,'Head Nurse',1,'2025-04-05 00:00:00'),(20,'Hospital Attendant',1,'2025-04-05 00:00:00'),(21,'House Physician',1,'2025-04-05 00:00:00'),(22,'Junior Superintendent',1,'2025-04-05 00:00:00'),(23,'Lab Attendent',1,'2025-04-05 00:00:00'),(24,'Laboratory Technician',1,'2025-04-05 00:00:00'),(25,'Medical Officer',1,'2025-04-05 00:00:00'),(26,'Medical Superintendent',1,'2025-04-05 00:00:00'),(27,'Nursing Assistant',1,'2025-04-05 00:00:00'),(28,'Nursing Staff',1,'2025-04-05 00:00:00'),(34,'Test Designation',17,'2025-04-09 13:03:06');
+INSERT INTO `mstdesignation` VALUES (2,'Doctor',1,'2025-04-05 17:13:18'),(3,'Anaesthetist',1,'2025-04-05 17:14:44'),(5,'Assistant Surgeon',1,'2025-04-05 00:00:00'),(6,'Blood Bank Technician',1,'2025-04-05 00:00:00'),(7,'Civil Surgeon',1,'2025-04-05 00:00:00'),(8,'Clerk',1,'2025-04-05 00:00:00'),(9,'Cook',1,'2025-04-05 00:00:00'),(10,'Dark Room Attendent',1,'2025-04-05 00:00:00'),(11,'Deputy Medical Suprintendent',1,'2025-04-05 00:00:00'),(13,'Dhobi',1,'2025-04-05 00:00:00'),(14,'Dietician',1,'2025-04-05 00:00:00'),(15,'Dispenser',1,'2025-04-05 00:00:00'),(16,'Dresser',1,'2025-04-05 00:00:00'),(17,'Driver',1,'2025-04-05 00:00:00'),(18,'General Physician',1,'2025-04-05 00:00:00'),(19,'Head Nurse',1,'2025-04-05 00:00:00'),(20,'Hospital Attendant',1,'2025-04-05 00:00:00'),(21,'House Physician',1,'2025-04-05 00:00:00'),(22,'Junior Superintendent',1,'2025-04-05 00:00:00'),(23,'Lab Attendent',1,'2025-04-05 00:00:00'),(24,'Laboratory Technician',1,'2025-04-05 00:00:00'),(25,'Medical Officer',1,'2025-04-05 00:00:00'),(26,'Medical Superintendent',1,'2025-04-05 00:00:00'),(27,'Nursing Assistant',1,'2025-04-05 00:00:00'),(28,'Nursing Staff',1,'2025-04-05 00:00:00'),(34,'Logistic',1,'2025-04-16 16:29:00');
 /*!40000 ALTER TABLE `mstdesignation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:09
+-- Dump completed on 2025-04-19 13:52:44

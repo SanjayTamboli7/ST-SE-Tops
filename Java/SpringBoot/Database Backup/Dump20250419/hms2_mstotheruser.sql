@@ -47,7 +47,7 @@ CREATE TABLE `mstotheruser` (
 
 LOCK TABLES `mstotheruser` WRITE;
 /*!40000 ALTER TABLE `mstotheruser` DISABLE KEYS */;
-INSERT INTO `mstotheruser` VALUES (15,'Sanjay1-Gmail','sanjay1@gmail.com','8141234784',1,3,'password','1',1,'2025-04-09 12:44:42'),(16,'Sanjay2-Gmail','sanjay2@gmail.com','9825434784',6,8,'password','1',1,'2025-04-12 17:32:55');
+INSERT INTO `mstotheruser` VALUES (15,'Sanjay1-Gmail','sanjay1@gmail.com','8141234784',1,3,'password','Active',1,'2025-04-09 12:44:42'),(16,'Sanjay2-Gmail','sanjay2@gmail.com','9825434784',6,8,'password','Active',1,'2025-04-15 06:21:26');
 /*!40000 ALTER TABLE `mstotheruser` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -91,4 +91,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:08
+-- Dump completed on 2025-04-19 13:52:44

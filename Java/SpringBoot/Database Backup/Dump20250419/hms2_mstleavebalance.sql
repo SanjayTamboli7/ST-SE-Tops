@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: restapi
+-- Host: localhost    Database: hms2
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,32 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `mstadmin_user`
+-- Table structure for table `mstleavebalance`
 --
 
-DROP TABLE IF EXISTS `mstadmin_user`;
+DROP TABLE IF EXISTS `mstleavebalance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `mstadmin_user` (
-  `auser_id` int NOT NULL AUTO_INCREMENT,
-  `auser_name` varchar(50) NOT NULL,
-  `auser_email_id` varchar(50) NOT NULL,
-  `auser_contact_no` varchar(10) NOT NULL,
-  `auser_password` varchar(30) NOT NULL,
-  `auser_status` tinyint(1) NOT NULL,
-  `last_edit_date_time` datetime NOT NULL,
-  PRIMARY KEY (`auser_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `mstleavebalance` (
+  `ouserid` int NOT NULL,
+  `casualleave` decimal(6,2) NOT NULL,
+  `sickleave` decimal(6,2) NOT NULL,
+  `privilegeleave` decimal(6,2) NOT NULL,
+  `maternityleave` decimal(6,2) NOT NULL,
+  `paternityleave` decimal(6,2) NOT NULL,
+  `lastaddeditby` int NOT NULL,
+  `lasteditdatetime` datetime NOT NULL,
+  PRIMARY KEY (`ouserid`),
+  CONSTRAINT `mstleavebalance_ibfk_1` FOREIGN KEY (`ouserid`) REFERENCES `mstotheruser` (`ouserid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mstadmin_user`
+-- Dumping data for table `mstleavebalance`
 --
 
-LOCK TABLES `mstadmin_user` WRITE;
-/*!40000 ALTER TABLE `mstadmin_user` DISABLE KEYS */;
-INSERT INTO `mstadmin_user` VALUES (1,'Sanjay-gmail','Sanjay.tamboli@gmail.com','814213478','password',1,'2025-03-06 15:30:17'),(2,'Sanjay-hotmail','Sanjay_tamboli@hotmail.com','9825434784','password',0,'2025-03-06 15:45:56'),(3,'Sanjay-yahoo','Sanjay_tamboli@yahoo.com','8141234784','password',1,'2025-03-06 15:49:25'),(4,'user1gmail','user1@gmail.com','1234567890','password',1,'2025-03-06 17:21:42');
-/*!40000 ALTER TABLE `mstadmin_user` ENABLE KEYS */;
+LOCK TABLES `mstleavebalance` WRITE;
+/*!40000 ALTER TABLE `mstleavebalance` DISABLE KEYS */;
+INSERT INTO `mstleavebalance` VALUES (15,30.50,33.50,31.50,42.50,28.50,30,'2025-04-11 00:00:00'),(16,0.00,0.00,0.00,0.00,0.00,1,'2025-04-12 17:32:55');
+/*!40000 ALTER TABLE `mstleavebalance` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:10
+-- Dump completed on 2025-04-19 13:52:44

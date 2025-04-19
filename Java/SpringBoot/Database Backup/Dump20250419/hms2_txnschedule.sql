@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: restapi
+-- Host: localhost    Database: hms2
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,28 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `product`
+-- Table structure for table `txnschedule`
 --
 
-DROP TABLE IF EXISTS `product`;
+DROP TABLE IF EXISTS `txnschedule`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `product` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `price` float NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `txnschedule` (
+  `schuserid` int NOT NULL,
+  `schdesignationid` int NOT NULL,
+  `scheduledate` date NOT NULL,
+  `fromtime` time NOT NULL,
+  `totime` time NOT NULL,
+  `lastaddeditby` int NOT NULL,
+  `lasteditdatetime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `product`
+-- Dumping data for table `txnschedule`
 --
 
-LOCK TABLES `product` WRITE;
-/*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (10,'Product 10',1000),(12,'Product 20',2000),(15,'Product 15',1500),(16,'Product 16',1600),(17,'Product 17',1700);
-/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+LOCK TABLES `txnschedule` WRITE;
+/*!40000 ALTER TABLE `txnschedule` DISABLE KEYS */;
+INSERT INTO `txnschedule` VALUES (16,8,'2025-04-20','07:00:00','15:00:00',1,'2025-04-19 13:22:38'),(16,8,'2025-04-21','07:00:00','15:00:00',1,'2025-04-19 13:22:38'),(16,8,'2025-04-22','07:00:00','15:00:00',1,'2025-04-19 13:22:38'),(16,8,'2025-04-23','07:00:00','15:00:00',1,'2025-04-19 13:22:38'),(16,8,'2025-04-24','07:00:00','15:00:00',1,'2025-04-19 13:22:38'),(16,8,'2025-04-25','07:00:00','15:00:00',1,'2025-04-19 13:22:38'),(16,8,'2025-04-26','15:00:00','23:00:00',1,'2025-04-19 13:48:22'),(19,34,'2025-04-20','15:00:00','23:00:00',1,'2025-04-19 13:48:22');
+/*!40000 ALTER TABLE `txnschedule` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:10
+-- Dump completed on 2025-04-19 13:52:44

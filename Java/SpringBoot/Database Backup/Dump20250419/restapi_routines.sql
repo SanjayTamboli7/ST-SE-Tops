@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: hms2
+-- Host: localhost    Database: restapi
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,11 +16,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping events for database 'hms2'
+-- Dumping events for database 'restapi'
 --
 
 --
--- Dumping routines for database 'hms2'
+-- Dumping routines for database 'restapi'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32,4 +32,4 @@
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:10
+-- Dump completed on 2025-04-19 13:52:43

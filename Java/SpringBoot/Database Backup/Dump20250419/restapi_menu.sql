@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: hms2
+-- Host: localhost    Database: restapi
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,31 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `mstleave`
+-- Table structure for table `menu`
 --
 
-DROP TABLE IF EXISTS `mstleave`;
+DROP TABLE IF EXISTS `menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `mstleave` (
-  `casualeave` int NOT NULL,
-  `sickleave` int NOT NULL,
-  `privilegeleave` int NOT NULL,
-  `maternityleave` int NOT NULL,
-  `paternityleave` int NOT NULL,
-  `lastaddeditby` int NOT NULL,
-  `lasteditdatetime` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `menu` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `menu_name` varchar(255) NOT NULL,
+  `parent_id` int DEFAULT NULL,
+  `menu_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `parent_id` (`parent_id`),
+  CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `menu` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mstleave`
+-- Dumping data for table `menu`
 --
 
-LOCK TABLES `mstleave` WRITE;
-/*!40000 ALTER TABLE `mstleave` DISABLE KEYS */;
-INSERT INTO `mstleave` VALUES (10,10,30,180,15,1,'2025-04-11 00:00:00');
-/*!40000 ALTER TABLE `mstleave` ENABLE KEYS */;
+LOCK TABLES `menu` WRITE;
+/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT INTO `menu` VALUES (1,'Home',NULL,'/home'),(2,'About',NULL,'/about'),(3,'Services',NULL,'/services'),(4,'Web Design',3,'/services/web'),(5,'SEO',3,'/services/seo'),(6,'Contact',NULL,'/contact');
+/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:09
+-- Dump completed on 2025-04-19 13:52:42

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: restapi
+-- Host: localhost    Database: hms2
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -24,9 +24,9 @@ DROP TABLE IF EXISTS `menu_items`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `menu_items` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `label` varchar(100) NOT NULL,
+  `label` varchar(255) NOT NULL,
   `url` varchar(255) DEFAULT NULL,
-  `icon` varchar(50) DEFAULT NULL,
+  `icon` varchar(255) DEFAULT NULL,
   `parent_id` bigint DEFAULT NULL,
   `position` int DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '1',
@@ -35,7 +35,7 @@ CREATE TABLE `menu_items` (
   PRIMARY KEY (`id`),
   KEY `parent_id` (`parent_id`),
   CONSTRAINT `menu_items_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `menu_items` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `menu_items` (
 
 LOCK TABLES `menu_items` WRITE;
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
-INSERT INTO `menu_items` VALUES (1,'Dashboard','/dashboard','dashboard',NULL,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(2,'Products','#','shopping-cart',NULL,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(3,'Customers','#','users',NULL,3,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(4,'Reports','#','bar-chart',NULL,4,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(5,'Settings','#','settings',NULL,5,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(6,'All Products','/products',NULL,2,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(7,'Categories','/products/categories',NULL,2,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(8,'Inventory','/products/inventory',NULL,2,3,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(9,'All Customers','/customers',NULL,3,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(10,'Customer Groups','/customers/groups',NULL,3,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(11,'Sales Report','/reports/sales',NULL,4,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(12,'Product Performance','/reports/products',NULL,4,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(13,'Advanced Reports','#',NULL,4,3,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(14,'User Management','/settings/users',NULL,5,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(15,'System Settings','/settings/system',NULL,5,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(16,'Customer Analysis','/reports/advanced/customers',NULL,13,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(17,'Inventory Analysis','/reports/advanced/inventory',NULL,13,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(18,'Regional Breakdown','/reports/advanced/inventory/regional',NULL,17,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53');
+INSERT INTO `menu_items` VALUES (1,'Dashboard','/dashboard','dashboard',NULL,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(2,'Products','#','shopping-cart',NULL,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(3,'Customers','#','users',NULL,3,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(4,'Reports','#','bar-chart',NULL,4,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(5,'Settings','#','settings',NULL,5,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(6,'All Products','/products',NULL,2,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(7,'Categories','/products/categories',NULL,2,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(8,'Inventory','/products/inventory',NULL,2,3,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(9,'All Customers','/customers',NULL,3,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(10,'Customer Groups','/customers/groups',NULL,3,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(11,'Sales Report','/reports/sales',NULL,4,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(12,'Product Performance','/reports/products',NULL,4,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(13,'Advanced Reports','#',NULL,4,3,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(14,'User Management','/settings/users',NULL,5,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(15,'System Settings','/settings/system',NULL,5,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(16,'Customer Analysis','/reports/advanced/customers',NULL,13,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(17,'Inventory Analysis','/reports/advanced/inventory',NULL,13,2,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(18,'Regional Breakdown','/reports/advanced/inventory/regional',NULL,17,1,1,'2025-03-08 08:15:53','2025-03-08 08:15:53'),(19,'Login','/Login','Login',NULL,6,1,'2025-03-13 18:30:00','2025-03-14 07:23:05');
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:10
+-- Dump completed on 2025-04-19 13:52:44

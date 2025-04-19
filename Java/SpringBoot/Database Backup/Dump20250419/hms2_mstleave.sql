@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: restapi
+-- Host: localhost    Database: hms2
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,27 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `student`
+-- Table structure for table `mstleave`
 --
 
-DROP TABLE IF EXISTS `student`;
+DROP TABLE IF EXISTS `mstleave`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `student` (
-  `RollNo` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(30) NOT NULL,
-  `Branch` varchar(20) NOT NULL,
-  PRIMARY KEY (`RollNo`)
+CREATE TABLE `mstleave` (
+  `casualeave` int NOT NULL,
+  `sickleave` int NOT NULL,
+  `privilegeleave` int NOT NULL,
+  `maternityleave` int NOT NULL,
+  `paternityleave` int NOT NULL,
+  `lastaddeditby` int NOT NULL,
+  `lasteditdatetime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `mstleave`
 --
 
-LOCK TABLES `student` WRITE;
-/*!40000 ALTER TABLE `student` DISABLE KEYS */;
-/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+LOCK TABLES `mstleave` WRITE;
+/*!40000 ALTER TABLE `mstleave` DISABLE KEYS */;
+INSERT INTO `mstleave` VALUES (10,10,30,180,15,1,'2025-04-11 00:00:00');
+/*!40000 ALTER TABLE `mstleave` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 18:12:10
+-- Dump completed on 2025-04-19 13:52:43
