@@ -26,6 +26,9 @@ public class Designation {
     @Column(nullable = false)
     private LocalDateTime lasteditdatetime;
 
+    @Column(nullable = false, length = 7)
+    private String dutytype;
+    
 	public int getDesignationid() {
 		return designationid;
 	}
@@ -57,5 +60,13 @@ public class Designation {
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
 	}
-    
+
+	public String getDutytype() {
+		return dutytype;
+	}
+
+	public void setDutytype(String dutytype) {
+		this.dutytype = dutytype;
+	}
+	
 }

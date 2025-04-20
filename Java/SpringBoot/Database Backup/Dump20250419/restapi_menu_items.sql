@@ -41,6 +41,7 @@ CREATE TABLE `menu_items` (
 --
 -- Dumping data for table `menu_items`
 --
+-- ORDER BY:  `id`
 
 LOCK TABLES `menu_items` WRITE;
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
@@ -57,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-19 13:52:42
+-- Dump completed on 2025-04-20 15:30:30

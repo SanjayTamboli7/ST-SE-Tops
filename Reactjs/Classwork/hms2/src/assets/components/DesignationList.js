@@ -142,6 +142,7 @@ const DesignationList = ({ onEdit }) => {
                   <tr key={designation.designationid}>
                     <td>{designation.designationid}</td>
                     <td>{designation.designationname}</td>
+                    <td>{designation.dutytype}</td>
                     <td>
                       <Button variant="primary" size="sm" onClick={() => onEdit(designation)} className="me-2">
                         Edit

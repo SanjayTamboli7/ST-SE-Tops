@@ -36,6 +36,7 @@ CREATE TABLE `mstdepartment` (
 --
 -- Dumping data for table `mstdepartment`
 --
+-- ORDER BY:  `deptid`
 
 LOCK TABLES `mstdepartment` WRITE;
 /*!40000 ALTER TABLE `mstdepartment` DISABLE KEYS */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-19 13:52:44
+-- Dump completed on 2025-04-20 15:30:26

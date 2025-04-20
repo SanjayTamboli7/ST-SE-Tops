@@ -24,24 +24,6 @@ public class DesignationController {
     @Autowired
     private DesignationService service;
 
-//    @GetMapping
-//    public Page<Designation> getAll(
-//            @RequestParam(defaultValue = "") String search,
-//            @RequestParam(defaultValue = "0") int page,
-//            @RequestParam(defaultValue = "5") int size) {
-//        return service.getAll(search, page, size);
-//    }
-//
-//    @GetMapping
-//    public Page<Designation> getAll(
-//            @RequestParam(defaultValue = "") String search,
-//            @RequestParam(defaultValue = "0") int page,
-//            @RequestParam(defaultValue = "5") int size,
-//            @RequestParam(defaultValue = "designationname") String sortField,
-//            @RequestParam(defaultValue = "asc") String sortDir) {
-//        return service.getAll(search, page, size, sortField, sortDir);
-//    }
-
     @GetMapping
     public Page<Designation> getAll(
             @RequestParam(defaultValue = "") String search,
@@ -66,6 +48,7 @@ public class DesignationController {
     public ResponseEntity<Designation> update(@PathVariable int id, @RequestBody Designation updated) {
         return service.getById(id).map(existing -> {
             existing.setDesignationname(updated.getDesignationname());
+            existing.setDutytype(updated.getDutytype()); // ✅ this line is needed
             existing.setLastaddeditby(updated.getLastaddeditby());
             existing.setLasteditdatetime(LocalDateTime.now());
             return ResponseEntity.ok(service.save(existing));

@@ -41,6 +41,7 @@ CREATE TABLE `txnleave` (
 --
 -- Dumping data for table `txnleave`
 --
+-- ORDER BY:  `leaveappid`
 
 LOCK TABLES `txnleave` WRITE;
 /*!40000 ALTER TABLE `txnleave` DISABLE KEYS */;
@@ -155,4 +156,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-19 13:52:43
+-- Dump completed on 2025-04-20 15:30:27

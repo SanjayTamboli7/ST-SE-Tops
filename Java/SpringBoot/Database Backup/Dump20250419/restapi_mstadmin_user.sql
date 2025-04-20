@@ -37,6 +37,7 @@ CREATE TABLE `mstadmin_user` (
 --
 -- Dumping data for table `mstadmin_user`
 --
+-- ORDER BY:  `auser_id`
 
 LOCK TABLES `mstadmin_user` WRITE;
 /*!40000 ALTER TABLE `mstadmin_user` DISABLE KEYS */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-19 13:52:42
+-- Dump completed on 2025-04-20 15:30:31
