@@ -19,6 +19,7 @@ export const menuItems = [
       label: "Transaction",
       submenus: [
         { label: "Leave", path: "/leave" },
+        { label: "Schedule", path: "/schedule" },
       ],
     },
     {

@@ -107,3 +107,13 @@ body, html {
   margin-top: 15px;
   font-size: 12px;
 }
+
+/* .pagination-container {
+  overflow-x: auto;
+  white-space: nowrap;
+} */
+
+select.form-select option {
+  color: #000 !important;
+}
+

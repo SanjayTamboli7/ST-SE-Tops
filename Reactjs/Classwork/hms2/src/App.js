@@ -1,5 +1,6 @@
 import React from 'react';
-import Login from "./assets/components/Login";
+// import Login from "./assets/components/Login";
+import { ToastContainer } from 'react-toastify';
 import Home from "./assets/components/Home"; // This will include Header, Menu, ContentArea, and Footer
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './assets/components/Dashboard';
@@ -17,6 +18,7 @@ import ManageHolidays from './assets/components/ManageHolidays';
 import ManageLeave from './assets/components/ManageLeave';
 import OULogin from './assets/components/OULogin';
 import OUForgotPassword from './assets/components/OUForgotPassword';
+import ScheduleList from './assets/components/ScheduleList';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -51,6 +53,7 @@ function App() {
           <Route path="/roles" element={<Roles />} />
           <Route path="/master3" element={<Master3 />} />
           <Route path="/leave" element={<ManageLeave />} />
+          <Route path="/schedule" element={<ScheduleList />} />
           <Route path="/morning-shift" element={<MorningShift />} />
           <Route path="/evening-shift" element={<EveningShift />} />
           <Route path="/night-shift" element={<NightShift />} />
@@ -63,7 +66,8 @@ function App() {
             </div>
           } />
         </Routes>
-      </ErrorBoundary>
+        <ToastContainer />
+        </ErrorBoundary>
   );
 }
 
@@ -71,3 +75,4 @@ export default App;
 
 // npm install xlsx file-saver jspdf jspdf-autotable
 // npm install reactstrap bootstrap
+// npm install react-datepicker

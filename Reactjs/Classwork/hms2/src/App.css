@@ -535,3 +535,13 @@ body {
 .menu-level-4 .menu-item.open > .menu-link .menu-arrow {
   transform: rotate(90deg);
 }
+
+select.form-select option {
+  color: #000 !important;
+}
+
+select.form-select,
+select.form-select option {
+    color: #000 !important;
+    background-color: #fff !important;
+}
