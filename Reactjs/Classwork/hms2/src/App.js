@@ -19,6 +19,10 @@ import ManageLeave from './assets/components/ManageLeave';
 import OULogin from './assets/components/OULogin';
 import OUForgotPassword from './assets/components/OUForgotPassword';
 import ScheduleList from './assets/components/ScheduleList';
+import CategoryCrud from './assets/inventory/CategoryCrud';
+import UOMCrud from './assets/inventory/UOMCrud';
+import ItemList from './assets/inventory/ItemList';
+import SupplierCrud from './assets/inventory/SupplierCrud';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -50,6 +54,10 @@ function App() {
           <Route path="/admin-departments" element={<DepartmentManagement />} />
           <Route path="/admin-designations" element={<DesignationPage />} />
           <Route path="/admin-holidays" element={<ManageHolidays />} />
+          <Route path="/item-category" element={<CategoryCrud />} />
+          <Route path="/item-unit" element={<UOMCrud />} />
+          <Route path="/item" element={<ItemList />} />
+          <Route path="/supplier" element={<SupplierCrud />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/master3" element={<Master3 />} />
           <Route path="/leave" element={<ManageLeave />} />

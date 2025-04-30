@@ -71,5 +71,10 @@ public class ScheduleController {
      Map<String, Object> result = scheduleService.searchSchedulesByNameOrDesignation(keyword, page, size);
      return ResponseEntity.ok(result);
  }
- 
+
+ @PostMapping("/create")
+ public String createSchedule(@RequestParam int lastaddeditby) {
+     scheduleService.callScheduleShift(lastaddeditby);
+     return "Schedule created successfully!";
+ } 
 }

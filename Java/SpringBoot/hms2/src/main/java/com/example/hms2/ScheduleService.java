@@ -10,7 +10,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -136,5 +139,14 @@ public class ScheduleService {
             "totalPages", (int) Math.ceil((double) total / size)
         );
     }
-    
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    @Transactional
+    public void callScheduleShift(int lastaddeditby) {
+        entityManager.createNativeQuery("CALL ScheduleShift(:lastaddedit_by)")
+                     .setParameter("lastaddedit_by", lastaddeditby)
+                     .executeUpdate();
+    }    
 }

@@ -173,3 +173,32 @@
     transform: rotate(180deg);
   }
 }
+
+/* Addition on 25-Apr-2025 */
+/* Submenu item styling */
+.dropdown-menu li {
+  background-color: #444;
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu li:focus {
+  background-color: #555;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li button:hover {
+  background-color: #555;
+  color: #fff;
+}

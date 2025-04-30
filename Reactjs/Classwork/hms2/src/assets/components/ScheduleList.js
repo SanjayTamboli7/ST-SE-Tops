@@ -4,6 +4,7 @@ import axios from "axios";
 import { Modal, Button, Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Spinner, Alert } from "react-bootstrap";
 
 function ScheduleList() {
     const [scheduleList, setScheduleList] = useState([]);
@@ -18,12 +19,36 @@ function ScheduleList() {
         fromtime: "",
         totime: "",
         attendance: "Yes",
-        lastaddeditby: 1,
+        lastaddeditby: sessionStorage.getItem('userid'),
     });
+
     const [isEditMode, setIsEditMode] = useState(false);
     const [editId, setEditId] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [pagination, setPagination] = useState({ page: 0, size: 5, totalPages: 0 });
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+
+    const handleCreateSchedule = async () => {
+        const userId = sessionStorage.getItem("userid");
+        if (!userId) {
+            setMessage("User ID not found in session!");
+            return;
+        }
+
+        setLoading(true);
+        try {
+            const res = await axios.post("http://localhost:8080/api/schedules/create", null, {
+                params: { lastaddeditby: userId }
+              });                         
+            setMessage(res.data);
+        } catch (err) {
+            console.error("Schedule creation error:", err);
+            setMessage("Failed to create schedule.");
+        } finally {
+            setLoading(false);
+        }
+    };
 
     const fetchDesignations = async (designationId) => {
         try {
@@ -187,7 +212,11 @@ function ScheduleList() {
         <div className="container mt-4">
             <div className="d-flex justify-content-between align-items-center mb-3">
                 <h4>Schedule List</h4>
+                {message && <Alert variant="info">{message}</Alert>}
                 <Button onClick={openAddModal}>Add Schedule</Button>
+                <Button variant="success" onClick={handleCreateSchedule} disabled={loading}>
+                    {loading ? <Spinner animation="border" size="sm" /> : "Create Schedule"}
+                </Button>
             </div>
 
             <Form.Control
