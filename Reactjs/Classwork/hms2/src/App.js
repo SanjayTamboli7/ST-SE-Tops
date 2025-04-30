@@ -23,6 +23,7 @@ import CategoryCrud from './assets/inventory/CategoryCrud';
 import UOMCrud from './assets/inventory/UOMCrud';
 import ItemList from './assets/inventory/ItemList';
 import SupplierCrud from './assets/inventory/SupplierCrud';
+import SupplierItemCrud from './assets/inventory/SupplierItemCrud';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -58,6 +59,7 @@ function App() {
           <Route path="/item-unit" element={<UOMCrud />} />
           <Route path="/item" element={<ItemList />} />
           <Route path="/supplier" element={<SupplierCrud />} />
+          <Route path="/supplier-item" element={<SupplierItemCrud />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/master3" element={<Master3 />} />
           <Route path="/leave" element={<ManageLeave />} />

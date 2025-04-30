@@ -15,6 +15,7 @@ export const menuItems = [
         { label: "Item Unit", path: "/item-unit" },
         { label: "Item", path: "/item" },
         { label: "Supplier", path: "/supplier" },
+        { label: "Supplier-Item", path: "/supplier-item" },
         { label: "Roles", path: "/roles" },
         { label: "Master 3", path: "/master3" },
       ],
