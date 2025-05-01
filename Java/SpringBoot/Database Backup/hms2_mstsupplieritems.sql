@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: restapi
+-- Host: localhost    Database: hms2
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,31 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `menu`
+-- Table structure for table `mstsupplieritems`
 --
 
-DROP TABLE IF EXISTS `menu`;
+DROP TABLE IF EXISTS `mstsupplieritems`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `menu` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `menu_name` varchar(255) NOT NULL,
-  `parent_id` int DEFAULT NULL,
-  `menu_url` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `parent_id` (`parent_id`),
-  CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `menu` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `mstsupplieritems` (
+  `supplierid` int NOT NULL,
+  `itemid` int NOT NULL,
+  `leadtimedays` int NOT NULL,
+  `lastaddeditby` int NOT NULL,
+  `lasteditdatetime` datetime NOT NULL,
+  PRIMARY KEY (`supplierid`,`itemid`),
+  KEY `itemid` (`itemid`),
+  CONSTRAINT `mstsupplieritems_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`),
+  CONSTRAINT `mstsupplieritems_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `menu`
+-- Dumping data for table `mstsupplieritems`
 --
 
-LOCK TABLES `menu` WRITE;
-/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-INSERT INTO `menu` VALUES (1,'Home',NULL,'/home'),(2,'About',NULL,'/about'),(3,'Services',NULL,'/services'),(4,'Web Design',3,'/services/web'),(5,'SEO',3,'/services/seo'),(6,'Contact',NULL,'/contact');
-/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
+LOCK TABLES `mstsupplieritems` WRITE;
+/*!40000 ALTER TABLE `mstsupplieritems` DISABLE KEYS */;
+INSERT INTO `mstsupplieritems` VALUES (2,1,10,15,'2025-04-30 18:45:02'),(2,2,10,102,'2025-04-30 18:03:37'),(2,3,10,15,'2025-04-30 18:45:16'),(2,4,10,15,'2025-04-30 18:45:43');
+/*!40000 ALTER TABLE `mstsupplieritems` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-01 19:51:09
+-- Dump completed on 2025-05-01 19:51:07

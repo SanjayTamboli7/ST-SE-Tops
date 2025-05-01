@@ -28,6 +28,12 @@ export const menuItems = [
       ],
     },
     {
+      label: "Inventory",
+      submenus: [
+        { label: "Purchase Request", path: "/purchase-request" },
+      ],
+    },
+    {
       label: "Hospital Services",
       submenus: [
         {

@@ -24,6 +24,7 @@ import UOMCrud from './assets/inventory/UOMCrud';
 import ItemList from './assets/inventory/ItemList';
 import SupplierCrud from './assets/inventory/SupplierCrud';
 import SupplierItemCrud from './assets/inventory/SupplierItemCrud';
+import PurchaseRequestCrud from './assets/inventory/PurchaseRequestCrud';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -64,6 +65,7 @@ function App() {
           <Route path="/master3" element={<Master3 />} />
           <Route path="/leave" element={<ManageLeave />} />
           <Route path="/schedule" element={<ScheduleList />} />
+          <Route path="/purchase-request" element={<PurchaseRequestCrud />} />
           <Route path="/morning-shift" element={<MorningShift />} />
           <Route path="/evening-shift" element={<EveningShift />} />
           <Route path="/night-shift" element={<NightShift />} />
@@ -86,3 +88,4 @@ export default App;
 // npm install xlsx file-saver jspdf jspdf-autotable
 // npm install reactstrap bootstrap
 // npm install react-datepicker
+// npm install axios react-bootstrap moment
