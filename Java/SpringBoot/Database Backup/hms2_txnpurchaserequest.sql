@@ -29,12 +29,15 @@ CREATE TABLE `txnpurchaserequest` (
   `qty` int NOT NULL,
   `requestdate` date NOT NULL,
   `status` varchar(50) NOT NULL,
+  `podetailid` int DEFAULT NULL,
   `lastaddeditby` int NOT NULL,
   `lasteditdatetime` datetime NOT NULL,
   PRIMARY KEY (`prid`),
   KEY `itemid` (`itemid`),
-  CONSTRAINT `txnpurchaserequest_ibfk_1` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `txnpurchaserequest_ibfk_2` (`podetailid`),
+  CONSTRAINT `txnpurchaserequest_ibfk_1` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`),
+  CONSTRAINT `txnpurchaserequest_ibfk_2` FOREIGN KEY (`podetailid`) REFERENCES `txnpodetails` (`podetailid`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +46,7 @@ CREATE TABLE `txnpurchaserequest` (
 
 LOCK TABLES `txnpurchaserequest` WRITE;
 /*!40000 ALTER TABLE `txnpurchaserequest` DISABLE KEYS */;
-INSERT INTO `txnpurchaserequest` VALUES (3,15,1,10,'2025-05-01','Approve',1,'2025-05-01 17:36:22'),(4,16,1,21,'2025-05-01','Pending',15,'2025-05-01 19:00:59'),(6,16,3,23,'2025-05-01','Reject',15,'2025-05-01 19:14:12'),(7,16,4,24,'2025-05-01','Approve',15,'2025-05-01 19:14:07'),(8,15,3,13,'2025-05-01','Pending',15,'2025-05-01 19:11:39'),(9,15,4,14,'2025-05-01','Pending',15,'2025-05-01 19:16:00'),(10,15,2,12,'2025-05-01','Pending',15,'2025-05-01 19:26:50');
+INSERT INTO `txnpurchaserequest` VALUES (3,15,1,10,'2025-05-01','Approve',NULL,1,'2025-05-01 17:36:22'),(4,16,1,21,'2025-05-01','Pending',NULL,15,'2025-05-01 19:00:59'),(6,16,3,23,'2025-05-01','Reject',NULL,15,'2025-05-01 19:14:12'),(7,16,4,24,'2025-05-01','Approve',NULL,15,'2025-05-01 19:14:07'),(8,15,3,13,'2025-05-01','Pending',NULL,15,'2025-05-01 19:11:39'),(9,15,4,14,'2025-05-01','Pending',NULL,15,'2025-05-01 19:16:00'),(10,15,2,12,'2025-05-01','Pending',NULL,15,'2025-05-01 19:26:50'),(12,15,1,12,'2025-05-03','Pending',NULL,15,'2025-05-03 15:43:18');
 /*!40000 ALTER TABLE `txnpurchaserequest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-01 19:51:06
+-- Dump completed on 2025-05-04 16:24:00

@@ -16,33 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `mstsupplieritems`
+-- Table structure for table `txnpodetails`
 --
 
-DROP TABLE IF EXISTS `mstsupplieritems`;
+DROP TABLE IF EXISTS `txnpodetails`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `mstsupplieritems` (
-  `supplierid` int NOT NULL,
+CREATE TABLE `txnpodetails` (
+  `podetailid` int NOT NULL AUTO_INCREMENT,
+  `poid` int NOT NULL,
   `itemid` int NOT NULL,
-  `leadtimedays` int NOT NULL,
+  `qty` int NOT NULL,
+  `rate` decimal(10,2) NOT NULL,
+  `amount` decimal(12,2) NOT NULL,
+  `prid` int DEFAULT NULL,
   `lastaddeditby` int NOT NULL,
   `lasteditdatetime` datetime NOT NULL,
-  PRIMARY KEY (`supplierid`,`itemid`),
+  PRIMARY KEY (`podetailid`),
+  KEY `poid` (`poid`),
   KEY `itemid` (`itemid`),
-  CONSTRAINT `mstsupplieritems_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`),
-  CONSTRAINT `mstsupplieritems_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
+  KEY `prid` (`prid`),
+  CONSTRAINT `txnpodetails_ibfk_1` FOREIGN KEY (`poid`) REFERENCES `txnpoheader` (`poid`),
+  CONSTRAINT `txnpodetails_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`),
+  CONSTRAINT `txnpodetails_ibfk_3` FOREIGN KEY (`prid`) REFERENCES `txnpurchaserequest` (`prid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mstsupplieritems`
+-- Dumping data for table `txnpodetails`
 --
 
-LOCK TABLES `mstsupplieritems` WRITE;
-/*!40000 ALTER TABLE `mstsupplieritems` DISABLE KEYS */;
-INSERT INTO `mstsupplieritems` VALUES (2,1,10,15,'2025-04-30 18:45:02'),(2,2,10,102,'2025-04-30 18:03:37'),(2,3,10,15,'2025-04-30 18:45:16'),(2,4,10,15,'2025-04-30 18:45:43');
-/*!40000 ALTER TABLE `mstsupplieritems` ENABLE KEYS */;
+LOCK TABLES `txnpodetails` WRITE;
+/*!40000 ALTER TABLE `txnpodetails` DISABLE KEYS */;
+/*!40000 ALTER TABLE `txnpodetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-04 16:24:00
+-- Dump completed on 2025-05-04 16:24:01

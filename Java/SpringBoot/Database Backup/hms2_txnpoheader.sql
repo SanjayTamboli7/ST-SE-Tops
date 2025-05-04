@@ -16,33 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `mstsupplieritems`
+-- Table structure for table `txnpoheader`
 --
 
-DROP TABLE IF EXISTS `mstsupplieritems`;
+DROP TABLE IF EXISTS `txnpoheader`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `mstsupplieritems` (
+CREATE TABLE `txnpoheader` (
+  `poid` int NOT NULL AUTO_INCREMENT,
   `supplierid` int NOT NULL,
-  `itemid` int NOT NULL,
-  `leadtimedays` int NOT NULL,
+  `podate` date NOT NULL,
+  `deliverydate` date DEFAULT NULL,
+  `status` varchar(50) NOT NULL,
   `lastaddeditby` int NOT NULL,
   `lasteditdatetime` datetime NOT NULL,
-  PRIMARY KEY (`supplierid`,`itemid`),
-  KEY `itemid` (`itemid`),
-  CONSTRAINT `mstsupplieritems_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`),
-  CONSTRAINT `mstsupplieritems_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
+  PRIMARY KEY (`poid`),
+  KEY `supplierid` (`supplierid`),
+  CONSTRAINT `txnpoheader_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mstsupplieritems`
+-- Dumping data for table `txnpoheader`
 --
 
-LOCK TABLES `mstsupplieritems` WRITE;
-/*!40000 ALTER TABLE `mstsupplieritems` DISABLE KEYS */;
-INSERT INTO `mstsupplieritems` VALUES (2,1,10,15,'2025-04-30 18:45:02'),(2,2,10,102,'2025-04-30 18:03:37'),(2,3,10,15,'2025-04-30 18:45:16'),(2,4,10,15,'2025-04-30 18:45:43');
-/*!40000 ALTER TABLE `mstsupplieritems` ENABLE KEYS */;
+LOCK TABLES `txnpoheader` WRITE;
+/*!40000 ALTER TABLE `txnpoheader` DISABLE KEYS */;
+/*!40000 ALTER TABLE `txnpoheader` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

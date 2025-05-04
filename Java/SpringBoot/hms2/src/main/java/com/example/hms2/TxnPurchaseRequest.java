@@ -25,6 +25,8 @@ public class TxnPurchaseRequest {
     private String status;
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
+    private Integer podetailid;
+    
 	public Integer getPrid() {
 		return prid;
 	}
@@ -73,4 +75,11 @@ public class TxnPurchaseRequest {
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
 	}
+	public Integer getPodetailid() {
+		return podetailid;
+	}
+	public void setPodetailid(Integer podetailid) {
+		this.podetailid = podetailid;
+	}
+	
 }
