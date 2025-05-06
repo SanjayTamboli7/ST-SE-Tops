@@ -1,0 +1,84 @@
+// TxnPoDetailsDTO.java
+package com.example.hms2;
+
+//package com.example.dto;
+
+import lombok.Data;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Data
+public class TxnPoDetailsDTO {
+    private Integer podetailid;
+    private Integer poid;
+    private Integer itemid;
+    private String itemname;
+    private Integer qty;
+    private BigDecimal rate;
+    private BigDecimal amount;
+    private Integer prid;
+    private Integer lastaddeditby;
+    private LocalDateTime lasteditdatetime;
+	public Integer getPodetailid() {
+		return podetailid;
+	}
+	public void setPodetailid(Integer podetailid) {
+		this.podetailid = podetailid;
+	}
+	public Integer getPoid() {
+		return poid;
+	}
+	public void setPoid(Integer poid) {
+		this.poid = poid;
+	}
+	public Integer getItemid() {
+		return itemid;
+	}
+	public void setItemid(Integer itemid) {
+		this.itemid = itemid;
+	}
+	public String getItemname() {
+		return itemname;
+	}
+	public void setItemname(String itemname) {
+		this.itemname = itemname;
+	}
+	public Integer getQty() {
+		return qty;
+	}
+	public void setQty(Integer qty) {
+		this.qty = qty;
+	}
+	public BigDecimal getRate() {
+		return rate;
+	}
+	public void setRate(BigDecimal rate) {
+		this.rate = rate;
+	}
+	public BigDecimal getAmount() {
+		return amount;
+	}
+	public void setAmount(BigDecimal amount) {
+		this.amount = amount;
+	}
+	public Integer getPrid() {
+		return prid;
+	}
+	public void setPrid(Integer prid) {
+		this.prid = prid;
+	}
+	public Integer getLastaddeditby() {
+		return lastaddeditby;
+	}
+	public void setLastaddeditby(Integer lastaddeditby) {
+		this.lastaddeditby = lastaddeditby;
+	}
+	public LocalDateTime getLasteditdatetime() {
+		return lasteditdatetime;
+	}
+	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
+		this.lasteditdatetime = lasteditdatetime;
+	}
+        
+}
+
