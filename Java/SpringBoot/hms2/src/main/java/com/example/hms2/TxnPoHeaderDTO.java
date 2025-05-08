@@ -3,6 +3,8 @@ package com.example.hms2;
 //package com.example.dto;
 
 import lombok.Data;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,7 +17,7 @@ public class TxnPoHeaderDTO {
     private LocalDate podate;
     private LocalDate deliverydate;
     private String status;
-    private float totalAmount; 
+    private BigDecimal totalAmount; 
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
     private List<TxnPoDetailsDTO> details;
@@ -56,10 +58,10 @@ public class TxnPoHeaderDTO {
 		this.status = status;
 	}
 	
-	public float getTotalAmount() {
+	public BigDecimal getTotalAmount() {
 		return totalAmount;
 	}
-	public void setTotalAmount(float totalAmount) {
+	public void setTotalAmount(BigDecimal totalAmount) {
 		this.totalAmount = totalAmount;
 	}
 	public Integer getLastaddeditby() {
