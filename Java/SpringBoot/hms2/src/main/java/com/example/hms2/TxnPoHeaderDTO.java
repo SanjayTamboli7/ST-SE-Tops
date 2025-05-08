@@ -15,6 +15,7 @@ public class TxnPoHeaderDTO {
     private LocalDate podate;
     private LocalDate deliverydate;
     private String status;
+    private float totalAmount; 
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
     private List<TxnPoDetailsDTO> details;
@@ -53,6 +54,13 @@ public class TxnPoHeaderDTO {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public float getTotalAmount() {
+		return totalAmount;
+	}
+	public void setTotalAmount(float totalAmount) {
+		this.totalAmount = totalAmount;
 	}
 	public Integer getLastaddeditby() {
 		return lastaddeditby;

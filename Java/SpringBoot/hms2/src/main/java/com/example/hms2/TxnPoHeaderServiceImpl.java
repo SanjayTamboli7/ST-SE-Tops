@@ -39,6 +39,7 @@ public class TxnPoHeaderServiceImpl implements TxnPoHeaderService {
         header.setLastaddeditby(dto.getLastaddeditby());
         header.setPodate(dto.getPodate());
         header.setDeliverydate(dto.getDeliverydate());
+        header.setTotalAmount(dto.getTotalAmount());
 
         TxnPoHeader savedHeader = headerRepository.save(header);
 

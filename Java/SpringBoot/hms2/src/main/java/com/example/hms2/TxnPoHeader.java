@@ -24,6 +24,8 @@ public class TxnPoHeader {
 
     private String status;
 
+    private float totalAmount;
+    
     private Integer lastaddeditby;
 
     private LocalDateTime lasteditdatetime;
@@ -67,7 +69,20 @@ public class TxnPoHeader {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	public float getTotalAmount() {
+		return totalAmount;
+	}
 
+	public void setTotalAmount(float totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+//	public void setTotalAmount(float totalAmount2) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+	
 	public Integer getLastaddeditby() {
 		return lastaddeditby;
 	}
@@ -83,6 +98,7 @@ public class TxnPoHeader {
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
 	}
+
         
 }
 

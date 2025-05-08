@@ -12,6 +12,6 @@ public interface TxnPoDetailsRepository extends JpaRepository<TxnPoDetails, Inte
 //public interface TxnPoDetailRepository extends JpaRepository<TxnPoDetail, Integer> {	
 
     List<TxnPoDetails> findByPoid(Integer poid);
-
+ // List<TxnPoDetails> findByPoid(Integer poid);
     void deleteByPoid(Integer poid);
 }
