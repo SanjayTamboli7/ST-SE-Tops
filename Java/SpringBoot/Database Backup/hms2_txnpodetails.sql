@@ -39,7 +39,7 @@ CREATE TABLE `txnpodetails` (
   CONSTRAINT `txnpodetails_ibfk_1` FOREIGN KEY (`poid`) REFERENCES `txnpoheader` (`poid`),
   CONSTRAINT `txnpodetails_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`),
   CONSTRAINT `txnpodetails_ibfk_3` FOREIGN KEY (`prid`) REFERENCES `txnpurchaserequest` (`prid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,6 +48,7 @@ CREATE TABLE `txnpodetails` (
 
 LOCK TABLES `txnpodetails` WRITE;
 /*!40000 ALTER TABLE `txnpodetails` DISABLE KEYS */;
+INSERT INTO `txnpodetails` VALUES (1,3,1,5,5.00,25.00,NULL,1,'2025-05-06 16:36:45'),(2,4,1,5,5.00,25.00,NULL,1,'2025-05-06 16:40:16'),(4,6,1,5,5.00,25.00,NULL,1,'2025-05-06 16:41:06'),(5,7,1,5,5.00,25.00,NULL,1,'2025-05-06 16:41:44'),(6,8,1,5,5.00,25.00,NULL,1,'2025-05-06 16:47:20');
 /*!40000 ALTER TABLE `txnpodetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-04 16:24:01
+-- Dump completed on 2025-05-08 21:01:08

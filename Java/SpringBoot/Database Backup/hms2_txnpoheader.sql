@@ -28,12 +28,13 @@ CREATE TABLE `txnpoheader` (
   `podate` date NOT NULL,
   `deliverydate` date DEFAULT NULL,
   `status` varchar(50) NOT NULL,
+  `totalAmount` float DEFAULT NULL,
   `lastaddeditby` int NOT NULL,
   `lasteditdatetime` datetime NOT NULL,
   PRIMARY KEY (`poid`),
   KEY `supplierid` (`supplierid`),
   CONSTRAINT `txnpoheader_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +43,7 @@ CREATE TABLE `txnpoheader` (
 
 LOCK TABLES `txnpoheader` WRITE;
 /*!40000 ALTER TABLE `txnpoheader` DISABLE KEYS */;
+INSERT INTO `txnpoheader` VALUES (3,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(4,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:40:16'),(5,2,'2025-05-06','2025-05-10','Hold',NULL,15,'2025-05-08 14:53:14'),(6,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:41:06'),(7,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:46:41'),(8,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:47:20'),(10,2,'2025-05-06','2025-05-10','Pending',NULL,15,'2025-05-08 14:52:54'),(11,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:50:30'),(12,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:51:04');
 /*!40000 ALTER TABLE `txnpoheader` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-04 16:24:00
+-- Dump completed on 2025-05-08 21:01:09

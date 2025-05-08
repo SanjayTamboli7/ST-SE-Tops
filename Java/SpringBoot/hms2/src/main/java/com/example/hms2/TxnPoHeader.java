@@ -4,6 +4,8 @@ package com.example.hms2;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -24,7 +26,7 @@ public class TxnPoHeader {
 
     private String status;
 
-    private float totalAmount;
+    private BigDecimal totalAmount;
     
     private Integer lastaddeditby;
 
