@@ -4,36 +4,17 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "txnpoheader")
-public class TxnPoHeader {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PoHeaderDTO {
     private Integer poid;
-
-    @ManyToOne
-    @JoinColumn(name = "supplierid")
-    private Supplier supplier; // ✅ Renamed to camelCase for consistency
+    private Integer supplierid;
+    private String suppliername;
     private LocalDate podate;
     private LocalDate deliverydate;
     private String status;
-    private Float totalAmount; // ✅ Renamed to camelCase for consistency
+    private Float totalAmount; // ✅ Renamed to camelCase
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
-
-    @OneToMany(mappedBy = "poHeader", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<TxnPoDetails> details;
+    private List<PoDetailDTO> details;
 
     public Integer getPoid() {
         return poid;
@@ -41,6 +22,22 @@ public class TxnPoHeader {
 
     public void setPoid(Integer poid) {
         this.poid = poid;
+    }
+
+    public Integer getSupplierid() {
+        return supplierid;
+    }
+
+    public void setSupplierid(Integer supplierid) {
+        this.supplierid = supplierid;
+    }
+
+    public String getSuppliername() {
+        return suppliername;
+    }
+
+    public void setSuppliername(String suppliername) {
+        this.suppliername = suppliername;
     }
 
     public LocalDate getPodate() {
@@ -91,19 +88,11 @@ public class TxnPoHeader {
         this.lasteditdatetime = lasteditdatetime;
     }
 
-    public List<TxnPoDetails> getDetails() {
+    public List<PoDetailDTO> getDetails() {
         return details;
     }
 
-    public void setDetails(List<TxnPoDetails> details) {
+    public void setDetails(List<PoDetailDTO> details) {
         this.details = details;
-    }
-
-    public Supplier getSupplier() {
-        return supplier;
-    }
-
-    public void setSupplier(Supplier supplier) {
-        this.supplier = supplier;
     }
 }

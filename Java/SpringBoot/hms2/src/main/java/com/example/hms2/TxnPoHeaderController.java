@@ -1,52 +1,81 @@
 package com.example.hms2;
-//package com.example.hms2;
-//
-//import com.example.hms2.entity.TxnPoHeader;
-//import com.example.hms2.dto.TxnPoHeaderDTO;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/api/poheaders")
-@CrossOrigin
 public class TxnPoHeaderController {
 
     @Autowired
-    private TxnPoHeaderService txnPoHeaderService;
+    private TxnPoHeaderService service;
 
-    @PostMapping
-    public TxnPoHeaderDTO createPo(@RequestBody TxnPoHeaderDTO dto) {
-        return txnPoHeaderService.savePoHeaderWithDetails(dto);
-    }
+    @Autowired
+    private TxnPoDetailsService txnPoDetailsService;
 
-    @PutMapping("/{poid}")
-    public TxnPoHeaderDTO updatePo(@PathVariable Integer poid, @RequestBody TxnPoHeaderDTO dto) {
-        dto.setPoid(poid);
-        return txnPoHeaderService.savePoHeaderWithDetails(dto);
-    }
-
+    // Paginated list
     @GetMapping
-    public ResponseEntity<Page<TxnPoHeader>> getPagedPoHeaders(
-            @RequestParam(defaultValue = "") String search,
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size,
-            @RequestParam(defaultValue = "lasteditdatetime") String sortBy,
-            @RequestParam(defaultValue = "false") boolean asc
-    ) {
-        Page<TxnPoHeader> headers = txnPoHeaderService.getPagedHeaders(search.trim(), page, size, sortBy, asc);
-        return ResponseEntity.ok(headers);
+    public ResponseEntity<Page<PoHeaderListDTO>> getHeaders(
+        @RequestParam(defaultValue = "") String status,
+        @RequestParam(defaultValue = "0") Integer poid,
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "10") int size,
+        @RequestParam(defaultValue = "podate") String sortBy,
+        @RequestParam(defaultValue = "DESC") String direction) {
+
+        Page<PoHeaderListDTO> pageResult = service.getAllHeaders(status, poid, page, size, sortBy, direction);
+        return ResponseEntity.ok(pageResult);
     }
 
-    @GetMapping("/{poid}")
-    public TxnPoHeaderDTO getPo(@PathVariable Integer poid) {
-        return txnPoHeaderService.getPoHeaderWithDetails(poid);
+    // Get full DTO for view/edit
+    @GetMapping("/{id}")
+    public ResponseEntity<PoHeaderDTO> getById(@PathVariable Integer id) {
+        PoHeaderDTO dto = service.getPoHeaderById(id);
+        return ResponseEntity.ok(dto);
     }
 
-    @DeleteMapping("/{poid}")
-    public void deletePo(@PathVariable Integer poid) {
-        txnPoHeaderService.deletePo(poid);
+    @GetMapping("/details/{poid}")
+    public ResponseEntity<List<TxnPoDetailsDTO>> getPoDetails(@PathVariable Integer poid) {
+        List<TxnPoDetailsDTO> poDetailDTOs = txnPoDetailsService.getPoDetailsByPoid(poid);
+        return ResponseEntity.ok(poDetailDTOs);
     }
+
+ // POST - Create PO
+    @PostMapping
+    public ResponseEntity<PoHeaderDTO> createPo(@RequestBody PoHeaderDTO dto) {
+        PoHeaderDTO created = service.createPo(dto);
+        return ResponseEntity.ok(created);
+    }
+    
+ // PUT - Update PO
+    @PutMapping("/{id}")
+    public ResponseEntity<PoHeaderDTO> updatePo(@PathVariable Integer id, @RequestBody PoHeaderDTO dto) {
+        PoHeaderDTO updated = service.updatePo(id, dto);
+        return ResponseEntity.ok(updated);
+    }
+
+    // DELETE - Delete PO
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePo(@PathVariable Integer id) {
+        service.deletePo(id);
+        return ResponseEntity.noContent().build();
+    }
+    
 }
+
