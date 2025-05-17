@@ -39,6 +39,7 @@ CREATE TABLE `mstsupplier` (
 --
 -- Dumping data for table `mstsupplier`
 --
+-- ORDER BY:  `supplierid`
 
 LOCK TABLES `mstsupplier` WRITE;
 /*!40000 ALTER TABLE `mstsupplier` DISABLE KEYS */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-08 21:01:09
+-- Dump completed on 2025-05-17 11:35:03

@@ -11,8 +11,27 @@ public class TxnPoDetailsDTO {
     private Float rate;
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
+    
+    private String itemname;
+    private Float amount;
+        
+    public String getItemname() {
+		return itemname;
+	}
 
-    // No-argument constructor
+	public void setItemname(String itemname) {
+		this.itemname = itemname;
+	}
+
+	public Float getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Float amount) {
+		this.amount = amount;
+	}
+
+	// No-argument constructor
     public TxnPoDetailsDTO() {}
 
     // Constructor with parameters (optional, for convenience)
@@ -81,5 +100,5 @@ public class TxnPoDetailsDTO {
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
 	}
-    
+	
 }

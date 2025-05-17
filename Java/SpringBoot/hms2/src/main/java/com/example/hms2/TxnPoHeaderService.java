@@ -1,5 +1,6 @@
 package com.example.hms2;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -180,6 +181,10 @@ public class TxnPoHeaderService {
     @Transactional
     public void deletePo(Integer id) {
         repository.deleteById(id);
+    }
+    
+    public LocalDate getMaxPoDate() {
+        return repository.findMaxPoDate();
     }
     
 }

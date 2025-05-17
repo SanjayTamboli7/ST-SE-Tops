@@ -25,7 +25,7 @@ import ItemList from './assets/inventory/ItemList';
 import SupplierCrud from './assets/inventory/SupplierCrud';
 import SupplierItemCrud from './assets/inventory/SupplierItemCrud';
 import PurchaseRequestCrud from './assets/inventory/PurchaseRequestCrud';
-import POHeaderList from './assets/inventory/POHeaderList';
+import PurchaseOrderPage from './assets/inventory/PurchaseOrderPage';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -67,7 +67,7 @@ function App() {
           <Route path="/leave" element={<ManageLeave />} />
           <Route path="/schedule" element={<ScheduleList />} />
           <Route path="/purchase-request" element={<PurchaseRequestCrud />} />
-          <Route path="/purchase" element={<POHeaderList />} />
+          <Route path="/purchase" element={<PurchaseOrderPage />} />
           <Route path="/morning-shift" element={<MorningShift />} />
           <Route path="/evening-shift" element={<EveningShift />} />
           <Route path="/night-shift" element={<NightShift />} />

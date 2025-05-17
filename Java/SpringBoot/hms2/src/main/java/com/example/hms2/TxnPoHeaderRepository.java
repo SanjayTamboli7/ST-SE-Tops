@@ -1,5 +1,7 @@
 package com.example.hms2;
 
+import java.time.LocalDate;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,4 +26,8 @@ public interface TxnPoHeaderRepository extends JpaRepository<TxnPoHeader, Intege
 		       "LEFT JOIN FETCH d.item i " +
 		       "WHERE h.poid = :id")
 		TxnPoHeader findByIdWithDetails(@Param("id") Integer id);	
+	
+	@Query("SELECT MAX(p.podate) FROM TxnPoHeader p")
+	LocalDate findMaxPoDate();
+	
 }

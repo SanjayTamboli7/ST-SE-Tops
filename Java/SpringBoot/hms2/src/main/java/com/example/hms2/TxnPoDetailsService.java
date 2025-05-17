@@ -13,31 +13,29 @@ public class TxnPoDetailsService {
 
     @Autowired
     private TxnPoDetailsRepository txnPoDetailsRepository;
-    
-//    @Autowired
-//    private TxnPoDetailsRepository txnPoDetailsRepository;
 
     @Transactional
     public List<TxnPoDetailsDTO> getPoDetailsByPoid(Integer poid) {
-        // Fetch TxnPoDetails list from the repository based on POID
+        // Fetch PO details by header ID
         List<TxnPoDetails> txnPoDetailsList = txnPoDetailsRepository.findByPoHeader_Poid(poid);
 
-        // Map each TxnPoDetails entity to TxnPoDetailsDTO
+        // Convert to DTOs
         List<TxnPoDetailsDTO> txnPoDetailsDTOList = txnPoDetailsList.stream()
             .map(txnPoDetails -> {
-                // Create a new TxnPoDetailsDTO and populate it with data from TxnPoDetails
-                return new TxnPoDetailsDTO(
-                    txnPoDetails.getPodetailid(),
-                    txnPoDetails.getPoHeader().getPoid(), // Mapping POID from TxnPoHeader
-                    txnPoDetails.getItem().getItemid(),   // Mapping ItemID from Item
-                    txnPoDetails.getQty(),
-                    txnPoDetails.getRate()
-                );
+                TxnPoDetailsDTO dto = new TxnPoDetailsDTO();
+                dto.setPodetailid(txnPoDetails.getPodetailid());
+                dto.setPoid(txnPoDetails.getPoHeader().getPoid());
+                dto.setItemid(txnPoDetails.getItem().getItemid());
+                dto.setItemname(txnPoDetails.getItem().getItemname());
+                dto.setQty(txnPoDetails.getQty());
+                dto.setRate(txnPoDetails.getRate());
+                dto.setAmount(txnPoDetails.getQty() * txnPoDetails.getRate());
+                dto.setLastaddeditby(txnPoDetails.getLastaddeditby());
+                dto.setLasteditdatetime(txnPoDetails.getLasteditdatetime());
+                return dto;
             })
             .collect(Collectors.toList());
 
-        // Return the list of TxnPoDetailsDTO
         return txnPoDetailsDTOList;
     }
 }
-

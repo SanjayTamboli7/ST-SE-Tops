@@ -44,6 +44,7 @@ CREATE TABLE `mstitem` (
 --
 -- Dumping data for table `mstitem`
 --
+-- ORDER BY:  `itemid`
 
 LOCK TABLES `mstitem` WRITE;
 /*!40000 ALTER TABLE `mstitem` DISABLE KEYS */;
@@ -60,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-08 21:01:10
+-- Dump completed on 2025-05-17 11:35:02

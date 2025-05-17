@@ -33,6 +33,7 @@ CREATE TABLE `product` (
 --
 -- Dumping data for table `product`
 --
+-- ORDER BY:  `id`
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-08 21:01:07
+-- Dump completed on 2025-05-17 11:35:07

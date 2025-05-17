@@ -28,22 +28,23 @@ CREATE TABLE `txnpoheader` (
   `podate` date NOT NULL,
   `deliverydate` date DEFAULT NULL,
   `status` varchar(50) NOT NULL,
-  `totalAmount` float DEFAULT NULL,
-  `lastaddeditby` int NOT NULL,
+  `total_amount` float DEFAULT NULL,
+  `lastaddeditby` int NOT NULL DEFAULT '1',
   `lasteditdatetime` datetime NOT NULL,
   PRIMARY KEY (`poid`),
   KEY `supplierid` (`supplierid`),
   CONSTRAINT `txnpoheader_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `txnpoheader`
 --
+-- ORDER BY:  `poid`
 
 LOCK TABLES `txnpoheader` WRITE;
 /*!40000 ALTER TABLE `txnpoheader` DISABLE KEYS */;
-INSERT INTO `txnpoheader` VALUES (3,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(4,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:40:16'),(5,2,'2025-05-06','2025-05-10','Hold',NULL,15,'2025-05-08 14:53:14'),(6,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:41:06'),(7,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:46:41'),(8,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:47:20'),(10,2,'2025-05-06','2025-05-10','Pending',NULL,15,'2025-05-08 14:52:54'),(11,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:50:30'),(12,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:51:04');
+INSERT INTO `txnpoheader` VALUES (3,2,'2025-05-06','2025-05-10','Confirmed',50,1,'2025-05-14 10:45:00'),(4,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:40:16'),(5,2,'2025-05-06','2025-05-10','Hold',NULL,15,'2025-05-08 14:53:14'),(6,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:41:06'),(7,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:46:41'),(8,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:47:20'),(10,2,'2025-05-06','2025-05-10','Pending',NULL,15,'2025-05-08 14:52:54'),(11,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:50:30'),(12,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:51:04'),(21,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(22,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(25,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(26,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(27,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(28,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(30,2,'2025-05-08','2025-05-16','Pending',NULL,15,'2025-05-16 12:28:41'),(31,2,'2025-05-08','2025-05-16','Pending',NULL,15,'2025-05-16 14:30:14');
 /*!40000 ALTER TABLE `txnpoheader` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-08 21:01:09
+-- Dump completed on 2025-05-17 11:35:05

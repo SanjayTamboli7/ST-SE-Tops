@@ -37,6 +37,7 @@ CREATE TABLE `mstadminuser` (
 --
 -- Dumping data for table `mstadminuser`
 --
+-- ORDER BY:  `auserid`
 
 LOCK TABLES `mstadminuser` WRITE;
 /*!40000 ALTER TABLE `mstadminuser` DISABLE KEYS */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-08 21:01:08
+-- Dump completed on 2025-05-17 11:35:05
