@@ -92,7 +92,10 @@ public class TxnPoHeaderService {
                 txnPoDetails.getPoHeader().getPoid(), // Mapping poid from poHeader
                 txnPoDetails.getItem().getItemid(),   // Mapping itemid from item
                 txnPoDetails.getQty(),
-                txnPoDetails.getRate()
+                txnPoDetails.getRate(),
+                txnPoDetails.getAmount(),
+                txnPoDetails.getLastaddeditby(),
+                txnPoDetails.getLasteditdatetime()
             ))
             .collect(Collectors.toList());
 
@@ -156,8 +159,9 @@ public class TxnPoHeaderService {
         Supplier supplier = new Supplier();
         supplier.setSupplierid(dto.getSupplierid());
         existing.setSupplier(supplier);
-
-        // Clear existing details and set new ones
+        // existing.getPoid()
+        txnPoDetailsRepository.deleteByPoHeader_Poid(existing.getPoid());
+        // Clear existing details and set new ones        
         existing.getDetails().clear();
         List<TxnPoDetails> newDetails = dto.getDetails().stream().map(d -> {
             TxnPoDetails detail = new TxnPoDetails();

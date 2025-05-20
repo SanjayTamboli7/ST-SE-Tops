@@ -17,11 +17,11 @@ public class PoDetail {
 
     private Integer qty;
     private Float rate;
+    @Column(name="amount")
+    private Float amount;
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
-
-    // Getters and Setters
-    
+   
     public POItem getItem() {
         return item;
     }
@@ -42,16 +42,8 @@ public class PoDetail {
         return qty;
     }
 
-    public void setQty(Integer qty) {
-        this.qty = qty;
-    }
-
 	public Float getRate() {
 		return rate;
-	}
-
-	public void setRate(Float rate) {
-		this.rate = rate;
 	}
 
 	public Integer getLastaddeditby() {
@@ -70,4 +62,27 @@ public class PoDetail {
 		this.lasteditdatetime = lasteditdatetime;
 	}
 
+	public Float getAmount() {
+	    recalculateAmount();
+		return amount;
+	}
+
+	public void setAmount(Float amount) {
+		this.amount = amount;
+	}
+	public void setQty(Integer qty) {
+	    this.qty = qty;
+	    recalculateAmount();
+	}
+
+	public void setRate(Float rate) {
+	    this.rate = rate;
+	    recalculateAmount();
+	}
+
+	private void recalculateAmount() {
+	    if (qty != null && rate != null) {
+	        this.amount = qty * rate;
+	    }
+	}
 }

@@ -2,6 +2,8 @@ package com.example.hms2;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
+
 public class TxnPoDetailsDTO {
 
     private Integer podetailid;
@@ -9,11 +11,10 @@ public class TxnPoDetailsDTO {
     private Integer itemid; // from item
     private Integer qty;
     private Float rate;
-    private Integer lastaddeditby;
-    private LocalDateTime lasteditdatetime;
-    
-    private String itemname;
     private Float amount;
+    private Integer lastaddeditby;
+    private LocalDateTime lasteditdatetime;   
+    private String itemname;
         
     public String getItemname() {
 		return itemname;
@@ -24,26 +25,31 @@ public class TxnPoDetailsDTO {
 	}
 
 	public Float getAmount() {
-		return amount;
+	    if (qty != null && rate != null) {
+	        return qty * rate;
+	    }
+	    return amount; // fallback if amount is set directly
 	}
 
 	public void setAmount(Float amount) {
+	    recalculateAmount();
 		this.amount = amount;
 	}
 
 	// No-argument constructor
     public TxnPoDetailsDTO() {}
 
-    // Constructor with parameters (optional, for convenience)
-    public TxnPoDetailsDTO(Integer podetailid, Integer poid, Integer itemid, Integer qty, Float rate) {
+ // Constructor with all parameters (optional, for convenience)
+    public TxnPoDetailsDTO(Integer podetailid, Integer poid, Integer itemid, Integer qty, Float rate, Float amount, Integer lastaddeditby, LocalDateTime lasteditdatetime) {
         this.podetailid = podetailid;
         this.poid = poid;
         this.itemid = itemid;
         this.qty = qty;
         this.rate = rate;
+        this.amount = amount;
+        this.lastaddeditby = lastaddeditby;
+        this.lasteditdatetime = lasteditdatetime;
     }
-
-    // Getters and setters
 
     public Integer getPodetailid() {
         return podetailid;
@@ -73,16 +79,8 @@ public class TxnPoDetailsDTO {
         return qty;
     }
 
-    public void setQty(Integer qty) {
-        this.qty = qty;
-    }
-
 	public Float getRate() {
 		return rate;
-	}
-
-	public void setRate(Float rate) {
-		this.rate = rate;
 	}
 
 	public Integer getLastaddeditby() {
@@ -99,6 +97,21 @@ public class TxnPoDetailsDTO {
 
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
+	}
+	public void setQty(Integer qty) {
+	    this.qty = qty;
+	    recalculateAmount();
+	}
+
+	public void setRate(Float rate) {
+	    this.rate = rate;
+	    recalculateAmount();
+	}
+
+	private void recalculateAmount() {
+	    if (qty != null && rate != null) {
+	        this.amount = qty * rate;
+	    }
 	}
 	
 }

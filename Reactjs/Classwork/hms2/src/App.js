@@ -67,7 +67,7 @@ function App() {
           <Route path="/leave" element={<ManageLeave />} />
           <Route path="/schedule" element={<ScheduleList />} />
           <Route path="/purchase-request" element={<PurchaseRequestCrud />} />
-          <Route path="/purchase" element={<PurchaseOrderPage />} />
+          <Route path="/purchase-order" element={<PurchaseOrderPage />} />
           <Route path="/morning-shift" element={<MorningShift />} />
           <Route path="/evening-shift" element={<EveningShift />} />
           <Route path="/night-shift" element={<NightShift />} />

@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -28,6 +29,7 @@ public class TxnPoHeader {
     private LocalDate podate;
     private LocalDate deliverydate;
     private String status;
+    @Column(name = "total_amount")
     private Float totalAmount; // ✅ Renamed to camelCase for consistency
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
@@ -38,7 +40,7 @@ public class TxnPoHeader {
     public Integer getPoid() {
         return poid;
     }
-
+    
     public void setPoid(Integer poid) {
         this.poid = poid;
     }

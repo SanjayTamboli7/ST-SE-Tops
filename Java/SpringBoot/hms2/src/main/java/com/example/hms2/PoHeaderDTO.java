@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PoHeaderDTO {
     private Integer poid;
     private Integer supplierid;
@@ -11,6 +13,7 @@ public class PoHeaderDTO {
     private LocalDate podate;
     private LocalDate deliverydate;
     private String status;
+    @JsonProperty("total_amount")
     private Float totalAmount; // ✅ Renamed to camelCase
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;

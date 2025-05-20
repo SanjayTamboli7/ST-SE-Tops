@@ -12,7 +12,6 @@ function PurchaseOrderPage() {
   const [modalMode, setModalMode] = useState('view'); // view | add | edit
   const [currentHeader, setCurrentHeader] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-
   const {
     headers,
     pagination,
@@ -23,14 +22,39 @@ function PurchaseOrderPage() {
     handleFetchFromPR
   } = usePurchaseOrder(searchTerm);
 
+  const [localHeader, setLocalHeader] = useState(headers);
+  const [supplierList, setSupplierList] = useState([]);
+
   const userId = parseInt(sessionStorage.getItem('userid'));
+
+  const handleHeaderChange = (field, value) => {
+    setCurrentHeader(prev => ({
+      ...prev,
+      [field]: value
+    }));
+    console.log('Updated Header:', field, value);
+  };
+
   console.log(userId);
   let lastaddeditby = 0;
-  let lasteditdatetime = new Date().toISOString();  
+  let lasteditdatetime = new Date().toISOString();
+
+  useEffect(() => {
+    axios.get('/api/suppliers')
+      .then(res => setSupplierList(Array.isArray(res.data) ? res.data : res.data.content || []))
+      .catch(err => console.error('Failed to fetch suppliers', err));
+  }, []);
 
   useEffect(() => {
     fetchHeaders();
   }, [fetchHeaders]);
+
+  useEffect(() => {
+    if (headers) {
+      const total = (headers.details || []).reduce((sum, d) => sum + (d.qty * d.rate), 0);
+      setLocalHeader({ ...headers, total_amount: total });
+    }
+  }, [headers]);
 
   const handleShowModal = async (mode, header = null) => {
     setModalMode(mode);
@@ -60,13 +84,14 @@ function PurchaseOrderPage() {
     } else {
       // setCurrentHeader(header);
 
-    try {
-      const response = await axios.get(`/api/poheaders/${header.poid}`);
-      setCurrentHeader(response.data);
-    } catch (err) {
-      console.error('Failed to fetch full PO header with details', err);
-      alert('Could not load full PO data.');
-    }
+      try {
+        const response = await axios.get(`/api/poheaders/${header.poid}`);
+        console.log('Fetched PO for modal:', response.data); // ✅
+        setCurrentHeader(response.data);
+      } catch (err) {
+        console.error('Failed to fetch full PO header with details', err);
+        alert('Could not load full PO data.');
+      }
 
     }
     setShowModal(true);
@@ -87,6 +112,7 @@ function PurchaseOrderPage() {
       ...data,
       lastaddeditby: userId,
       lasteditdatetime: new Date().toISOString(),
+      total_amount: (data.details || []).reduce((sum, d) => sum + (d.qty * d.rate), 0),
       details: (data.details || []).map((d) => ({
         ...d,
         amount: d.qty * d.rate,
@@ -112,14 +138,28 @@ function PurchaseOrderPage() {
   };
 
   const handleFetchFromPRClick = async () => {
-    if (modalMode === 'view' || !currentHeader?.supplierid) return;
+    console.log('PR Fetch Clicked');
+    console.log('Current Header:', currentHeader);
+
+    if (!currentHeader?.supplierid) 
+    {
+      console.warn('Fetch aborted due to modal mode or missing supplier');
+      return;
+    }
+
     const items = await handleFetchFromPR(currentHeader.supplierid);
-    if (items) {
+    console.log('Fetched PR items:', items);
+
+    if (items.length > 0) {
       setCurrentHeader(prev => ({
         ...prev,
         details: items
       }));
+    } else {
+      alert('No PR items found for this supplier.');
     }
+    console.log('Current Header:', currentHeader);
+
   };
 
   return (
@@ -195,11 +235,14 @@ function PurchaseOrderPage() {
           show={showModal}
           mode={modalMode}
           header={currentHeader}
+          setHeader={setCurrentHeader}
           onClose={handleCloseModal}
           onSave={handleSave}
           onFetchFromPR={handleFetchFromPRClick}
           isFetchFromPROk={!!currentHeader?.supplierid && modalMode !== 'view'}
           isEditable={modalMode !== 'view' && (currentHeader?.status === 'Pending' || currentHeader?.status === 'Hold')}
+          onHeaderChange={handleHeaderChange}
+          supplierList={supplierList}
         />
       )}
     </Container>

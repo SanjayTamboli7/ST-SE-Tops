@@ -210,11 +210,11 @@ function PurchaseOrderModal({
           <Table striped bordered>
             <thead>
               <tr>
-                <th style={{ width: "500px" }}>Item</th>
-                <th style={{ width: "100px" }}>Qty</th>
-                <th style={{ width: "100px" }}>Rate</th>
+                <th style={{ width: "600px" }}>Item</th>
+                <th style={{ width: "30px" }}>Qty</th>
+                <th style={{ width: "30px" }}>Rate</th>
                 <th style={{ width: "50px" }}>Amount</th>
-                <th style={{ width: "150px" }}>Action</th>
+                <th style={{ width: "200px" }}>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -267,8 +267,8 @@ function PurchaseOrderModal({
                         <>
                           <Button
                             variant="warning"
-                            size="sm"
-                            // style={{ width: "150px" }}                            
+                            // size="sm"
+                            style={{ width: "70px" }}                            
                             className="me-1"
                             onClick={() => handleEditDetail(index)}
                           >
@@ -277,8 +277,8 @@ function PurchaseOrderModal({
                           {isEditable && (!detail.prid || detail.prid === 0) ? (
                             <Button
                               variant="danger"
-                              size="sm"
-                              // style={{ width: "150px" }}                            
+                              // size="sm"
+                              style={{ width: "70px" }}                            
                               onClick={() => handleRemoveDetail(index)}
                             >
                               Delete

@@ -29,7 +29,8 @@ public class TxnPoDetailsService {
                 dto.setItemname(txnPoDetails.getItem().getItemname());
                 dto.setQty(txnPoDetails.getQty());
                 dto.setRate(txnPoDetails.getRate());
-                dto.setAmount(txnPoDetails.getQty() * txnPoDetails.getRate());
+//                dto.setAmount(txnPoDetails.getQty() * txnPoDetails.getRate());
+                dto.setAmount(txnPoDetails.getAmount());
                 dto.setLastaddeditby(txnPoDetails.getLastaddeditby());
                 dto.setLasteditdatetime(txnPoDetails.getLasteditdatetime());
                 return dto;

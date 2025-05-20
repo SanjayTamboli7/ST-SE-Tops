@@ -65,6 +65,7 @@ export default function usePurchaseOrder(searchTerm) {
     if (!supplierid) return [];
     try {
       const response = await axios.get(`/api/pritems/${supplierid}`);
+      console.log('Fetched items from PR:', response);
       return response.data.map((pr) => ({
         itemid: pr.itemid,
         qty: pr.qty,

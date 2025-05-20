@@ -21,6 +21,9 @@ public class TxnPoDetails {
     
     @Column(name = "rate")
     private Float rate;
+    
+    @Column(name="amount")
+    private Float amount;
     private Integer lastaddeditby;
     private LocalDateTime lasteditdatetime;
     
@@ -45,14 +48,8 @@ public class TxnPoDetails {
 	public Integer getQty() {
 		return qty;
 	}
-	public void setQty(Integer qty) {
-		this.qty = qty;
-	}
 	public Float getRate() {
 		return rate;
-	}
-	public void setRate(Float rate) {
-		this.rate = rate;
 	}
 	public Integer getLastaddeditby() {
 		return lastaddeditby;
@@ -65,6 +62,28 @@ public class TxnPoDetails {
 	}
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
+	}
+	public Float getAmount() {
+		return amount;
+	}
+	public void setAmount(Float amount) {
+	    recalculateAmount();
+		this.amount = amount;
+	}
+	public void setQty(Integer qty) {
+	    this.qty = qty;
+	    recalculateAmount();
+	}
+
+	public void setRate(Float rate) {
+	    this.rate = rate;
+	    recalculateAmount();
+	}
+
+	private void recalculateAmount() {
+	    if (qty != null && rate != null) {
+	        this.amount = qty * rate;
+	    }
 	}
 	
 }

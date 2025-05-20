@@ -34,7 +34,7 @@ CREATE TABLE `txnpoheader` (
   PRIMARY KEY (`poid`),
   KEY `supplierid` (`supplierid`),
   CONSTRAINT `txnpoheader_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,9 +44,67 @@ CREATE TABLE `txnpoheader` (
 
 LOCK TABLES `txnpoheader` WRITE;
 /*!40000 ALTER TABLE `txnpoheader` DISABLE KEYS */;
-INSERT INTO `txnpoheader` VALUES (3,2,'2025-05-06','2025-05-10','Confirmed',50,1,'2025-05-14 10:45:00'),(4,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:40:16'),(5,2,'2025-05-06','2025-05-10','Hold',NULL,15,'2025-05-08 14:53:14'),(6,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:41:06'),(7,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:46:41'),(8,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:47:20'),(10,2,'2025-05-06','2025-05-10','Pending',NULL,15,'2025-05-08 14:52:54'),(11,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:50:30'),(12,2,'2025-05-08',NULL,'Pending',NULL,15,'2025-05-08 14:51:04'),(21,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(22,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(25,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(26,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(27,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(28,2,'2025-05-06','2025-05-10','Pending',NULL,1,'2025-05-06 16:36:45'),(30,2,'2025-05-08','2025-05-16','Pending',NULL,15,'2025-05-16 12:28:41'),(31,2,'2025-05-08','2025-05-16','Pending',NULL,15,'2025-05-16 14:30:14');
+INSERT INTO `txnpoheader` VALUES (1,2,'2025-05-19',NULL,'Approve',500,15,'2025-05-19 11:12:55');
 /*!40000 ALTER TABLE `txnpoheader` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `trg_after_po_approve` AFTER UPDATE ON `txnpoheader` FOR EACH ROW BEGIN
+  DECLARE varpoid INT;
+  DECLARE varpodetailid INT;
+  DECLARE varprid INT;
+  DECLARE done INT DEFAULT FALSE;
+
+  -- Cursor to get podetailid and prid for the current poid
+  DECLARE podetail CURSOR FOR 
+    SELECT podetailid, prid 
+    FROM txnpodetails 
+    WHERE poid = NEW.poid AND prid IS NOT NULL;
+
+  -- Handler to set the 'done' flag when no more rows
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+  IF NEW.status = 'Approve' AND OLD.status <> 'Approve' THEN
+    SET varpoid = NEW.poid;
+
+    OPEN podetail;
+	Insert into `debug_log` (`message`) values ('Cursor opened');
+    read_loop: LOOP
+      FETCH podetail INTO varpodetailid, varprid;
+	  Insert into `debug_log` (`message`) values ('After fetched');
+
+      -- Check if fetch reached the end before updating
+      IF done THEN
+		Insert into `debug_log` (`message`) values ('Leaving loop');
+        LEAVE read_loop;
+      END IF;
+
+      -- Only update if valid prid exists
+      IF varprid IS NOT NULL THEN
+		Insert into `debug_log` (`message`) values ('Before update');
+        UPDATE txnpurchaserequest
+        SET podetailid = varpodetailid
+        WHERE prid = varprid;
+		Insert into `debug_log` (`message`) values ('After update');
+      END IF;
+
+    END LOOP;
+
+    CLOSE podetail;
+  END IF;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -57,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-17 11:35:05
+-- Dump completed on 2025-05-20 11:11:45

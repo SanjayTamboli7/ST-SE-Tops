@@ -37,7 +37,7 @@ CREATE TABLE `txnpurchaserequest` (
   KEY `txnpurchaserequest_ibfk_2` (`podetailid`),
   CONSTRAINT `txnpurchaserequest_ibfk_1` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`),
   CONSTRAINT `txnpurchaserequest_ibfk_2` FOREIGN KEY (`podetailid`) REFERENCES `txnpodetails` (`podetailid`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `txnpurchaserequest` (
 
 LOCK TABLES `txnpurchaserequest` WRITE;
 /*!40000 ALTER TABLE `txnpurchaserequest` DISABLE KEYS */;
-INSERT INTO `txnpurchaserequest` VALUES (3,15,1,10,'2025-05-01','Approve',NULL,1,'2025-05-01 17:36:22'),(4,16,1,21,'2025-05-01','Pending',NULL,15,'2025-05-01 19:00:59'),(6,16,3,23,'2025-05-01','Reject',NULL,15,'2025-05-01 19:14:12'),(7,16,4,24,'2025-05-01','Approve',NULL,15,'2025-05-01 19:14:07'),(8,15,3,13,'2025-05-01','Pending',NULL,15,'2025-05-01 19:11:39'),(9,15,4,14,'2025-05-01','Pending',NULL,15,'2025-05-01 19:16:00'),(10,15,2,12,'2025-05-01','Pending',NULL,15,'2025-05-01 19:26:50'),(12,15,1,12,'2025-05-03','Pending',NULL,15,'2025-05-03 15:43:18');
+INSERT INTO `txnpurchaserequest` VALUES (1,15,1,10,'2025-05-17','Approve',1,15,'2025-05-17 20:26:21');
 /*!40000 ALTER TABLE `txnpurchaserequest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-17 11:35:04
+-- Dump completed on 2025-05-20 11:11:45

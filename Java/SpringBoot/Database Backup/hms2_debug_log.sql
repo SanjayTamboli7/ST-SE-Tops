@@ -27,7 +27,7 @@ CREATE TABLE `debug_log` (
   `message` varchar(255) DEFAULT NULL,
   `debug_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `debug_log` (
 
 LOCK TABLES `debug_log` WRITE;
 /*!40000 ALTER TABLE `debug_log` DISABLE KEYS */;
+INSERT INTO `debug_log` VALUES (74,'Cursor opened','2025-05-20 05:31:45'),(75,'After fetched','2025-05-20 05:31:45'),(76,'Before update','2025-05-20 05:31:45'),(77,'After update','2025-05-20 05:31:45'),(78,'After fetched','2025-05-20 05:31:45'),(79,'Leaving loop','2025-05-20 05:31:45');
 /*!40000 ALTER TABLE `debug_log` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-17 11:35:03
+-- Dump completed on 2025-05-20 11:11:43

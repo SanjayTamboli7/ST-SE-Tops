@@ -29,5 +29,4 @@ public interface TxnPoHeaderRepository extends JpaRepository<TxnPoHeader, Intege
 	
 	@Query("SELECT MAX(p.podate) FROM TxnPoHeader p")
 	LocalDate findMaxPoDate();
-	
 }
