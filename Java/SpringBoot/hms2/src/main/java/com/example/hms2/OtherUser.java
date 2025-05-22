@@ -85,6 +85,13 @@ public class OtherUser {
 	public void setLasteditdatetime(LocalDateTime lasteditdatetime) {
 		this.lasteditdatetime = lasteditdatetime;
 	}
+	public OtherUser(Integer ouserid) {
+	    this.ouserid = ouserid;
+	}
     
+	public Integer getUserId() {
+	    return this.ouserid;
+	}
+	
 }
 

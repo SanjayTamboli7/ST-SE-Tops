@@ -85,5 +85,12 @@ public class TxnPoDetails {
 	        this.amount = qty * rate;
 	    }
 	}
-	
+
+	public TxnPoDetails(Integer poDetailId) {
+	    this.podetailid = poDetailId;
+	}
+	public TxnPoDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
 }

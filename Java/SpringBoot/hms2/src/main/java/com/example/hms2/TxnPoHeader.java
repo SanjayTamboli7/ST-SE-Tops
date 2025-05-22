@@ -108,4 +108,12 @@ public class TxnPoHeader {
     public void setSupplier(Supplier supplier) {
         this.supplier = supplier;
     }
+    public TxnPoHeader(Integer poid) {
+        this.poid = poid;
+    }
+
+	public TxnPoHeader() {
+		// TODO Auto-generated constructor stub
+	}
+    
 }

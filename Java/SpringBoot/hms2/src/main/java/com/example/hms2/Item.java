@@ -109,5 +109,8 @@ public class Item {
 		this.lasteditdatetime = lasteditdatetime;
 	}
     
-    
+	public Item(Integer itemId) {
+	    this.itemid = itemId;
+	}
+
 }
