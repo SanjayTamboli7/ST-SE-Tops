@@ -3,6 +3,7 @@ package com.example.hms2;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,20 +29,35 @@ public class TxngrnDetails {
  @JoinColumn(name = "itemid", nullable = false)
  private Item item;
 
+ @Column(name = "orderedqty")
  private Integer orderedQty = 0;
+ 
+ @Column(name = "receivedqty")
  private Integer receivedQty = 0;
+ 
+ @Column(name = "acceptedqty")
  private Integer acceptedQty = 0;
+ 
+ @Column(name = "rejectedqty")
  private Integer rejectedQty = 0;
+ 
+ @Column(name = "batchno")
  private String batchNo;
+ 
+ @Column(name = "expirydate")
  private LocalDate expiryDate;
 
  @ManyToOne
  @JoinColumn(name = "podetailid")
  private TxnPoDetails poDetail;
-
+ 
+ @Column(name = "lastaddeditby")
  private Integer lastAddEditBy;
+
+ @Column(name = "lasteditdatetime")
  private LocalDateTime lastEditDateTime;
-public Integer getGrnDetailId() {
+
+ public Integer getGrnDetailId() {
 	return grnDetailId;
 }
 public void setGrnDetailId(Integer grnDetailId) {

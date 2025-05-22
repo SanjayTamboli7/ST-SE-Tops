@@ -3,6 +3,8 @@ package com.example.hms2;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+// TxnPoDetails.java
+
 @Entity
 public class TxnPoDetails {
     @Id

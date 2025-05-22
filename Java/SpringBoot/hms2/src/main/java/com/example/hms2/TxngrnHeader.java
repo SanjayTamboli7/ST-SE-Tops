@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,6 +29,7 @@ public class TxngrnHeader {
  @JoinColumn(name = "poid", nullable = false)
  private TxnPoHeader po;
 
+ @Column(name = "receiveddate")
  private LocalDate receivedDate;
 
  @ManyToOne
@@ -35,9 +37,10 @@ public class TxngrnHeader {
  private OtherUser receivedBy;
 
  private String status;
-
+ 
+ @Column(name = "lastaddeditby")
  private Integer lastAddEditBy;
-
+ @Column(name = "lasteditdatetime")
  private LocalDateTime lastEditDateTime;
 
  @OneToMany(mappedBy = "grnHeader", cascade = CascadeType.ALL, orphanRemoval = true)

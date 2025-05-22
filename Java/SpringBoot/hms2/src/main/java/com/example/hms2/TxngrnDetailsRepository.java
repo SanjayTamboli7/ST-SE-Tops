@@ -11,7 +11,7 @@ public interface TxngrnDetailsRepository extends JpaRepository<TxngrnDetails, In
     List<TxngrnDetails> findByGrnHeader_Grnid(Integer grnid);
     
     @Modifying
-    @Query("DELETE FROM TxngrnDetails d WHERE d.grn.grnid = :grnid")
-    void deleteByGrnid(@Param("grnid") Integer grnid);
+    @Query("DELETE FROM TxngrnDetails d WHERE d.grnHeader.grnid = :grnid")
+    void deleteByGrnHeader_Grnid(@Param("grnid") Integer grnid);
 
 }
