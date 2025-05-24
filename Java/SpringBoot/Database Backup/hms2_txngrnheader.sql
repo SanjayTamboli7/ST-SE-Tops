@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: localhost    Database: restapi
+-- Host: localhost    Database: hms2
 -- ------------------------------------------------------
 -- Server version	8.0.41
 
@@ -16,28 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `student`
+-- Table structure for table `txngrnheader`
 --
 
-DROP TABLE IF EXISTS `student`;
+DROP TABLE IF EXISTS `txngrnheader`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `student` (
-  `RollNo` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(30) NOT NULL,
-  `Branch` varchar(20) NOT NULL,
-  PRIMARY KEY (`RollNo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `txngrnheader` (
+  `grnid` int NOT NULL AUTO_INCREMENT,
+  `poid` int DEFAULT NULL,
+  `receiveddate` date DEFAULT NULL,
+  `receivedby` int DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  `lastaddeditby` int NOT NULL,
+  `lasteditdatetime` datetime NOT NULL,
+  PRIMARY KEY (`grnid`),
+  KEY `poid` (`poid`),
+  CONSTRAINT `txngrnheader_ibfk_1` FOREIGN KEY (`poid`) REFERENCES `txnpoheader` (`poid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `txngrnheader`
 --
--- ORDER BY:  `RollNo`
+-- ORDER BY:  `grnid`
 
-LOCK TABLES `student` WRITE;
-/*!40000 ALTER TABLE `student` DISABLE KEYS */;
-/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+LOCK TABLES `txngrnheader` WRITE;
+/*!40000 ALTER TABLE `txngrnheader` DISABLE KEYS */;
+INSERT INTO `txngrnheader` VALUES (1,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:36'),(2,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:37'),(3,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:38'),(4,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:39');
+/*!40000 ALTER TABLE `txngrnheader` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-24 16:08:39
+-- Dump completed on 2025-05-24 16:08:37

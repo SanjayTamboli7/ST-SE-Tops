@@ -16,34 +16,42 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `mstsupplieritems`
+-- Table structure for table `txngrndetails`
 --
 
-DROP TABLE IF EXISTS `mstsupplieritems`;
+DROP TABLE IF EXISTS `txngrndetails`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `mstsupplieritems` (
-  `supplierid` int NOT NULL,
+CREATE TABLE `txngrndetails` (
+  `grndetailid` int NOT NULL AUTO_INCREMENT,
+  `grnid` int NOT NULL,
   `itemid` int NOT NULL,
-  `leadtimedays` int NOT NULL,
+  `orderedqty` int NOT NULL DEFAULT '0',
+  `receivedqty` int NOT NULL DEFAULT '0',
+  `acceptedqty` int NOT NULL DEFAULT '0',
+  `rejectedqty` int NOT NULL DEFAULT '0',
+  `batchno` varchar(50) DEFAULT NULL,
+  `expirydate` date DEFAULT NULL,
+  `podetailid` int DEFAULT NULL,
   `lastaddeditby` int NOT NULL,
   `lasteditdatetime` datetime NOT NULL,
-  PRIMARY KEY (`supplierid`,`itemid`),
+  PRIMARY KEY (`grndetailid`),
+  KEY `grnid` (`grnid`),
   KEY `itemid` (`itemid`),
-  CONSTRAINT `mstsupplieritems_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `mstsupplier` (`supplierid`),
-  CONSTRAINT `mstsupplieritems_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `txngrndetails_ibfk_1` FOREIGN KEY (`grnid`) REFERENCES `txngrnheader` (`grnid`),
+  CONSTRAINT `txngrndetails_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mstsupplieritems`
+-- Dumping data for table `txngrndetails`
 --
--- ORDER BY:  `supplierid`,`itemid`
+-- ORDER BY:  `grndetailid`
 
-LOCK TABLES `mstsupplieritems` WRITE;
-/*!40000 ALTER TABLE `mstsupplieritems` DISABLE KEYS */;
-INSERT INTO `mstsupplieritems` VALUES (2,1,10,15,'2025-04-30 18:45:02'),(2,2,10,102,'2025-04-30 18:03:37'),(2,3,10,15,'2025-04-30 18:45:16'),(2,4,10,15,'2025-04-30 18:45:43');
-/*!40000 ALTER TABLE `mstsupplieritems` ENABLE KEYS */;
+LOCK TABLES `txngrndetails` WRITE;
+/*!40000 ALTER TABLE `txngrndetails` DISABLE KEYS */;
+INSERT INTO `txngrndetails` VALUES (1,1,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:36'),(2,2,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:37'),(3,3,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:38'),(4,4,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:39');
+/*!40000 ALTER TABLE `txngrndetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-24 16:08:36
+-- Dump completed on 2025-05-24 16:08:35

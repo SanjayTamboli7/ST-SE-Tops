@@ -113,4 +113,23 @@ public class Item {
 	    this.itemid = itemId;
 	}
 
+	public Item(Integer itemid, String itemname, String itemcode, Integer categoryid, Integer uomid,
+			Integer reorderlevel, Integer maxstock, Integer lastaddeditby, LocalDateTime lasteditdatetime) {
+		super();
+		this.itemid = itemid;
+		this.itemname = itemname;
+		this.itemcode = itemcode;
+		this.categoryid = categoryid;
+		this.uomid = uomid;
+		this.reorderlevel = reorderlevel;
+		this.maxstock = maxstock;
+		this.lastaddeditby = lastaddeditby;
+		this.lasteditdatetime = lasteditdatetime;
+	}
+
+	public Item() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 }

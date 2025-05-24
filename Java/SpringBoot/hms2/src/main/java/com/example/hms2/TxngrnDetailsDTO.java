@@ -5,128 +5,128 @@ import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-//TxngrnDetailsDTO.java
 public class TxngrnDetailsDTO {
- private Integer grnid;
- private Integer lastAddEditBy;
- private LocalDateTime lastEditDateTime;
 
- @JsonProperty("grnDetailId")
- private Integer grnDetailId;
+	@JsonProperty("orderedQty")
+	private Integer orderedQty;
 
- @JsonProperty("itemid")
- private Integer itemid;
+	@JsonProperty("receivedQty")
+	private Integer receivedQty;
 
- @JsonProperty("orderedqty")
- private Integer orderedQty;
+	@JsonProperty("acceptedQty")
+	private Integer acceptedQty;
 
- @JsonProperty("receivedqty")
- private Integer receivedQty;
+	@JsonProperty("rejectedQty")
+	private Integer rejectedQty;
 
- @JsonProperty("acceptedqty")
- private Integer acceptedQty;
+	@JsonProperty("batchNo")
+	private String batchNo;
 
- @JsonProperty("rejectedqty")
- private Integer rejectedQty;
+	@JsonProperty("expiryDate")
+	private LocalDate expiryDate;
 
- @JsonProperty("batchno")
- private String batchNo;
+	@JsonProperty("poDetailId")
+	private Integer poDetailId;
 
- @JsonProperty("expirydate")
- private LocalDate expiryDate;
+    @JsonProperty("grndetailid")
+    private Integer grnDetailId;
 
- @JsonProperty("poDetailId")
- private Integer poDetailId;
+    @JsonProperty("itemid")
+    private Integer itemid;
 
-public Integer getGrnid() {
-	return grnid;
-}
-public void setGrnid(Integer grnid) {
-	this.grnid = grnid;
-}
-public Integer getLastAddEditBy() {
-	return lastAddEditBy;
-}
-public void setLastAddEditBy(Integer lastAddEditBy) {
-	this.lastAddEditBy = lastAddEditBy;
-}
-public LocalDateTime getLastEditDateTime() {
-	return lastEditDateTime;
-}
-public void setLastEditDateTime(LocalDateTime lastEditDateTime) {
-	this.lastEditDateTime = lastEditDateTime;
-}
+    @JsonProperty("lastaddeditby")
+    private Integer lastAddEditBy;
 
-public Integer getGrnDetailId() {
-    return grnDetailId;
-}
+    @JsonProperty("lasteditdatetime")
+    private LocalDateTime lastEditDateTime;
 
-public void setGrnDetailId(Integer grnDetailId) {
-    this.grnDetailId = grnDetailId;
-}
+    // Getters and setters
+    public Integer getGrnDetailId() {
+        return grnDetailId;
+    }
 
-public Integer getItemid() {
-    return itemid;
-}
+    public void setGrnDetailId(Integer grnDetailId) {
+        this.grnDetailId = grnDetailId;
+    }
 
-public void setItemid(Integer itemid) {
-    this.itemid = itemid;
-}
+    public Integer getItemid() {
+        return itemid;
+    }
 
-public Integer getOrderedQty() {
-    return orderedQty;
-}
+    public void setItemid(Integer itemid) {
+        this.itemid = itemid;
+    }
 
-public void setOrderedQty(Integer orderedQty) {
-    this.orderedQty = orderedQty;
-}
+    public Integer getOrderedQty() {
+        return orderedQty;
+    }
 
-public Integer getReceivedQty() {
-    return receivedQty;
-}
+    public void setOrderedQty(Integer orderedQty) {
+        this.orderedQty = orderedQty;
+    }
 
-public void setReceivedQty(Integer receivedQty) {
-    this.receivedQty = receivedQty;
-}
+    public Integer getReceivedQty() {
+        return receivedQty;
+    }
 
-public Integer getAcceptedQty() {
-    return acceptedQty;
-}
+    public void setReceivedQty(Integer receivedQty) {
+        this.receivedQty = receivedQty;
+    }
 
-public void setAcceptedQty(Integer acceptedQty) {
-    this.acceptedQty = acceptedQty;
-}
+    public Integer getAcceptedQty() {
+        return acceptedQty;
+    }
 
-public Integer getRejectedQty() {
-    return rejectedQty;
-}
+    public void setAcceptedQty(Integer acceptedQty) {
+        this.acceptedQty = acceptedQty;
+    }
 
-public void setRejectedQty(Integer rejectedQty) {
-    this.rejectedQty = rejectedQty;
-}
+    public Integer getRejectedQty() {
+        return rejectedQty;
+    }
 
-public String getBatchNo() {
-    return batchNo;
-}
+    public void setRejectedQty(Integer rejectedQty) {
+        this.rejectedQty = rejectedQty;
+    }
 
-public void setBatchNo(String batchNo) {
-    this.batchNo = batchNo;
-}
+    public String getBatchNo() {
+        return batchNo;
+    }
 
-public LocalDate getExpiryDate() {
-    return expiryDate;
-}
+    public void setBatchNo(String batchNo) {
+        this.batchNo = batchNo;
+    }
 
-public void setExpiryDate(LocalDate expiryDate) {
-    this.expiryDate = expiryDate;
-}
+    public LocalDate getExpiryDate() {
+        return expiryDate;
+    }
 
-public Integer getPoDetailId() {
-    return poDetailId;
-}
+    public void setExpiryDate(LocalDate expiryDate) {
+        this.expiryDate = expiryDate;
+    }
 
-public void setPoDetailId(Integer poDetailId) {
-    this.poDetailId = poDetailId;
-}
- 
+    public Integer getPoDetailId() {
+        return poDetailId;
+    }
+
+    public void setPoDetailId(Integer poDetailId) {
+        this.poDetailId = poDetailId;
+    }
+
+	public Integer getLastAddEditBy() {
+		return lastAddEditBy;
+	}
+
+	public void setLastAddEditBy(Integer lastAddEditBy) {
+		this.lastAddEditBy = lastAddEditBy;
+	}
+
+	public LocalDateTime getLastEditDateTime() {
+		return lastEditDateTime;
+	}
+
+	public void setLastEditDateTime(LocalDateTime lastEditDateTime) {
+		this.lastEditDateTime = lastEditDateTime;
+	}
+    
 }

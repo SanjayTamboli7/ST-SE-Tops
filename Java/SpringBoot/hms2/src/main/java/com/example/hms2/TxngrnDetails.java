@@ -19,6 +19,7 @@ public class TxngrnDetails {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  
+ @Column(name = "grndetailid")
  private Integer grnDetailId;
 
  @ManyToOne

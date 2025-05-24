@@ -32,6 +32,7 @@ CREATE TABLE `txnpodetails` (
   `prid` int DEFAULT NULL,
   `lastaddeditby` int NOT NULL DEFAULT '1',
   `lasteditdatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `grndetailid` int DEFAULT NULL,
   PRIMARY KEY (`podetailid`),
   KEY `poid` (`poid`),
   KEY `itemid` (`itemid`),
@@ -39,7 +40,7 @@ CREATE TABLE `txnpodetails` (
   CONSTRAINT `txnpodetails_ibfk_1` FOREIGN KEY (`poid`) REFERENCES `txnpoheader` (`poid`),
   CONSTRAINT `txnpodetails_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`),
   CONSTRAINT `txnpodetails_ibfk_3` FOREIGN KEY (`prid`) REFERENCES `txnpurchaserequest` (`prid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,7 +50,7 @@ CREATE TABLE `txnpodetails` (
 
 LOCK TABLES `txnpodetails` WRITE;
 /*!40000 ALTER TABLE `txnpodetails` DISABLE KEYS */;
-INSERT INTO `txnpodetails` VALUES (1,1,1,10,10,100,1,15,'2025-05-19 11:12:55');
+INSERT INTO `txnpodetails` VALUES (1,1,1,10,10,100,1,15,'2025-05-19 11:12:55',NULL),(3,2,2,20,20,400,NULL,15,'2025-05-20 05:46:12',NULL),(4,3,1,10,10,100,NULL,15,'2025-05-20 07:27:23',NULL);
 /*!40000 ALTER TABLE `txnpodetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -62,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-20 11:11:44
+-- Dump completed on 2025-05-24 16:08:36

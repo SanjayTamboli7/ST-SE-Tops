@@ -13,16 +13,36 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.NamedAttributeNode;
+import jakarta.persistence.NamedEntityGraph;
+import jakarta.persistence.NamedSubgraph;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 //TxngrnHeader.java
 @Entity
 @Table(name = "txngrnheader")
+@NamedEntityGraph(
+	    name = "TxngrnHeader.withAllRelations",
+	    attributeNodes = {
+	        @NamedAttributeNode("po"),
+	        @NamedAttributeNode("receivedBy"),
+	        @NamedAttributeNode(value = "details", subgraph = "details-subgraph")
+	    },
+	    subgraphs = {
+	        @NamedSubgraph(
+	            name = "details-subgraph",
+	            attributeNodes = {
+	                @NamedAttributeNode("item"),
+	                @NamedAttributeNode("poDetail")
+	            }
+	        )
+	    }
+	)
+
 public class TxngrnHeader {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
- 
  private Integer grnid;
 
  @ManyToOne

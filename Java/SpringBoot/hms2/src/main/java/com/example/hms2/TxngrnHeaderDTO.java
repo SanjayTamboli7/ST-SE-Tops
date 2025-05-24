@@ -1,103 +1,101 @@
 package com.example.hms2;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-//TxngrnHeaderDTO.java
 public class TxngrnHeaderDTO {
- 
- @JsonProperty("grnid")
- private Integer grnid;
 
- @JsonProperty("poid")
- private Integer poid;
+    @JsonProperty("grnid")
+    private Integer grnid;
 
- @JsonProperty("receivedDate")
- private LocalDate receivedDate;
+    @JsonProperty("poid")
+    private Integer poid;
 
- @JsonProperty("receivedBy")
- private Integer receivedBy;
+    @JsonProperty("receivedDate")
+    private LocalDate receivedDate;
 
- @JsonProperty("status")
- private String status;
+    @JsonProperty("receivedBy")
+    private Integer receivedBy;
 
- @JsonProperty("lastAddEditBy")
- private Integer lastAddEditBy;
+    @JsonProperty("status")
+    private String status;
 
- @JsonProperty("lastEditDateTime")
- private LocalDateTime lastEditDateTime;
+    @JsonProperty("lastAddEditBy")
+    private Integer lastAddEditBy;
 
- @JsonProperty("details")
- private List<TxngrnDetailsDTO> details;
+    @JsonProperty("lastEditDateTime")
+    private LocalDateTime lastEditDateTime;
 
- // Getters and Setters
+    @JsonProperty("details")
+    private List<TxngrnDetailsDTO> details;
 
- public Integer getGrnid() {
-     return grnid;
- }
+    // Getters and Setters
 
- public void setGrnid(Integer grnid) {
-     this.grnid = grnid;
- }
+    public Integer getGrnid() {
+        return grnid;
+    }
 
- public Integer getPoid() {
-     return poid;
- }
+    public void setGrnid(Integer grnid) {
+        this.grnid = grnid;
+    }
 
- public void setPoid(Integer poid) {
-     this.poid = poid;
- }
+    public Integer getPoid() {
+        return poid;
+    }
 
- public LocalDate getReceivedDate() {
-     return receivedDate;
- }
+    public void setPoid(Integer poid) {
+        this.poid = poid;
+    }
 
- public void setReceivedDate(LocalDate receivedDate) {
-     this.receivedDate = receivedDate;
- }
+    public LocalDate getReceivedDate() {
+        return receivedDate;
+    }
 
- public Integer getReceivedBy() {
-     return receivedBy;
- }
+    public void setReceivedDate(LocalDate receivedDate) {
+        this.receivedDate = receivedDate;
+    }
 
- public void setReceivedBy(Integer receivedBy) {
-     this.receivedBy = receivedBy;
- }
+    public Integer getReceivedBy() {
+        return receivedBy;
+    }
 
- public String getStatus() {
-     return status;
- }
+    public void setReceivedBy(Integer receivedBy) {
+        this.receivedBy = receivedBy;
+    }
 
- public void setStatus(String status) {
-     this.status = status;
- }
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
- public Integer getLastAddEditBy() {
-	return lastAddEditBy;
-}
+    public Integer getLastAddEditBy() {
+        return lastAddEditBy;
+    }
 
-public void setLastAddEditBy(Integer lastAddEditBy) {
-	this.lastAddEditBy = lastAddEditBy;
-}
+    public void setLastAddEditBy(Integer lastAddEditBy) {
+        this.lastAddEditBy = lastAddEditBy;
+    }
 
-public LocalDateTime getLastEditDateTime() {
-     return lastEditDateTime;
- }
+    public LocalDateTime getLastEditDateTime() {
+        return lastEditDateTime;
+    }
 
- public void setLastEditDateTime(LocalDateTime lastEditDateTime) {
-     this.lastEditDateTime = lastEditDateTime;
- }
+    public void setLastEditDateTime(LocalDateTime lastEditDateTime) {
+        this.lastEditDateTime = lastEditDateTime;
+    }
 
- public List<TxngrnDetailsDTO> getDetails() {
-     return details;
- }
+    public List<TxngrnDetailsDTO> getDetails() {
+        return details;
+    }
 
- public void setDetails(List<TxngrnDetailsDTO> details) {
-     this.details = details;
- }
- 
+    public void setDetails(List<TxngrnDetailsDTO> details) {
+        this.details = details;
+    }
+    
 }

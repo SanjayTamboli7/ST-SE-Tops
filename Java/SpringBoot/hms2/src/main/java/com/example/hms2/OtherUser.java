@@ -92,6 +92,25 @@ public class OtherUser {
 	public Integer getUserId() {
 	    return this.ouserid;
 	}
+	public OtherUser(int ouserid, String ousername, String ouseremailid, String ousercontactno, int ouserdeptid,
+			int ouserdesignationid, int lastaddeditby, String ouserpassword, String ouserstatus,
+			LocalDateTime lasteditdatetime) {
+		super();
+		this.ouserid = ouserid;
+		this.ousername = ousername;
+		this.ouseremailid = ouseremailid;
+		this.ousercontactno = ousercontactno;
+		this.ouserdeptid = ouserdeptid;
+		this.ouserdesignationid = ouserdesignationid;
+		this.lastaddeditby = lastaddeditby;
+		this.ouserpassword = ouserpassword;
+		this.ouserstatus = ouserstatus;
+		this.lasteditdatetime = lasteditdatetime;
+	}
+	public OtherUser() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 }
 

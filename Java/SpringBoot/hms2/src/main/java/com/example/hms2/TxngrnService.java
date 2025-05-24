@@ -21,7 +21,6 @@ public class TxngrnService {
 
     @SuppressWarnings("unused")
 	@Autowired
-//    private MstItemRepository itemRepo;
     private ItemRepository itemRepo;
 
     @Transactional
@@ -29,9 +28,9 @@ public class TxngrnService {
         TxngrnHeader header;
 
         if (dto.getGrnid() != null) {
-//            header = grnHeaderRepo.findById(dto.getGrnid()).orElse(new TxngrnHeader());
             header = grnHeaderRepo.findById(dto.getGrnid())
                     .orElseThrow(() -> new RuntimeException("GRN not found with ID: " + dto.getGrnid()));
+            grnDetailRepo.deleteByGrnHeader_Grnid(dto.getGrnid());
         } else {
             header = new TxngrnHeader();
         }
@@ -40,7 +39,6 @@ public class TxngrnService {
         header.setReceivedDate(dto.getReceivedDate() != null ? dto.getReceivedDate() : LocalDate.now());
         header.setReceivedBy(new OtherUser(dto.getReceivedBy()));
         header.setStatus(dto.getStatus());
-//        header.setLastAddEditBy(dto.getLastAddEditBy());
         header.setLastAddEditBy(dto.getLastAddEditBy());
         header.setLastEditDateTime(LocalDateTime.now());
 
@@ -52,11 +50,9 @@ public class TxngrnService {
         }
 
         // Save new details
-        List<TxngrnDetails> savedDetails = dto.getDetails().stream().map(detailDto -> {
+        List<TxngrnDetails> details = dto.getDetails().stream().map(detailDto -> {
             TxngrnDetails detail = new TxngrnDetails();
-
-            detail.setGrnDetailId(detailDto.getGrnDetailId());
-            detail.setGrnHeader(savedHeader);
+            detail.setGrnHeader(header);
             detail.setItem(new Item(detailDto.getItemid()));
             detail.setOrderedQty(detailDto.getOrderedQty() != null ? detailDto.getOrderedQty() : 0);
             detail.setReceivedQty(detailDto.getReceivedQty() != null ? detailDto.getReceivedQty() : 0);
@@ -64,26 +60,36 @@ public class TxngrnService {
             detail.setRejectedQty(detailDto.getRejectedQty() != null ? detailDto.getRejectedQty() : 0);
             detail.setBatchNo(detailDto.getBatchNo());
             detail.setExpiryDate(detailDto.getExpiryDate());
-            detail.setPoDetail(detailDto.getPoDetailId() != null ? new TxnPoDetails(detailDto.getPoDetailId()) : null);
+            System.out.println(">>> DTO OrderedQty: " + detailDto.getOrderedQty());
+            System.out.println(">>> DTO ReceivedQty: " + detailDto.getReceivedQty());
+            System.out.println(">>> DTO AcceptedQty: " + detailDto.getAcceptedQty());
+            System.out.println(">>> DTO RejectedQty: " + detailDto.getRejectedQty());
+            System.out.println(">>> DTO BatchNo: " + detailDto.getBatchNo());
+            System.out.println(">>> DTO ExpiryDate: " + detailDto.getExpiryDate());
+
+            if (detailDto.getPoDetailId() != null) {
+                detail.setPoDetail(new TxnPoDetails(detailDto.getPoDetailId()));
+            }
+
             detail.setLastAddEditBy(dto.getLastAddEditBy());
             detail.setLastEditDateTime(LocalDateTime.now());
-            System.out.println("==== Incoming GRN Detail DTOs ====");
-            dto.getDetails().forEach(d -> {
-                System.out.printf("ItemID: %s | Ordered: %s | Received: %s | Accepted: %s | Rejected: %s | Batch: %s | Expiry: %s%n",
-                    d.getItemid(), d.getOrderedQty(), d.getReceivedQty(), d.getAcceptedQty(),
-                    d.getRejectedQty(), d.getBatchNo(), d.getExpiryDate());
-            });
-
             return detail;
         }).collect(Collectors.toList());
 
-        grnDetailRepo.saveAll(savedDetails);
+        // 5. Save all details
+        grnDetailRepo.saveAll(details);
 
         return getGrnById(savedHeader.getGrnid());
     }
-    
+       
     public TxngrnHeaderDTO getGrnById(Integer grnid) {
-        TxngrnHeader header = grnHeaderRepo.findById(grnid).orElseThrow();
+    	
+    	TxngrnHeader header = grnHeaderRepo.findByGrnid(grnid)
+    		    .orElseThrow(() -> new RuntimeException("GRN not found with ID " + grnid));
+    		System.out.println("Fetched GRN: " + header.getGrnid());
+
+//        TxngrnHeader header = grnHeaderRepo.findByGrnid(grnid)
+//            .orElseThrow(() -> new RuntimeException("GRN not found with ID " + grnid));
 
         TxngrnHeaderDTO dto = new TxngrnHeaderDTO();
         dto.setGrnid(header.getGrnid());
@@ -101,10 +107,12 @@ public class TxngrnService {
             d.setOrderedQty(detail.getOrderedQty());
             d.setReceivedQty(detail.getReceivedQty());
             d.setAcceptedQty(detail.getAcceptedQty());
-            d.setRejectedQty(detail.getRejectedQty()); // ✅ correct mapping
+            d.setRejectedQty(detail.getRejectedQty());
             d.setBatchNo(detail.getBatchNo());
             d.setExpiryDate(detail.getExpiryDate());
             d.setPoDetailId(detail.getPoDetail() != null ? detail.getPoDetail().getPodetailid() : null);
+            d.setLastAddEditBy(detail.getLastAddEditBy());
+            d.setLastEditDateTime(detail.getLastEditDateTime());
             return d;
         }).collect(Collectors.toList());
 
@@ -112,7 +120,7 @@ public class TxngrnService {
 
         return dto;
     }
-
+    
     public Page<TxngrnHeaderDTO> searchGrns(String keyword, int page, int size, String sortField, String sortDir) {
         Pageable pageable = PageRequest.of(page, size, Sort.Direction.fromString(sortDir), sortField);
         Page<TxngrnHeader> grnPage = grnHeaderRepo.searchByKeyword(keyword, pageable);
@@ -138,4 +146,5 @@ public class TxngrnService {
         grnDetailRepo.deleteByGrnHeader_Grnid(grnid);
         grnHeaderRepo.deleteById(grnid);
     }
+    
 }
