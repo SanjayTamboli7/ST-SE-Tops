@@ -1,14 +1,18 @@
 package com.example.hms2;
 
-import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
-import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class TxngrnService {
@@ -81,7 +85,52 @@ public class TxngrnService {
 
         return getGrnById(savedHeader.getGrnid());
     }
-       
+
+    @Transactional
+    public TxngrnHeaderDTO updateGrn(Integer grnId, TxngrnHeaderDTO dto) {
+        TxngrnHeader header = grnHeaderRepo.findByGrnid(grnId)
+                .orElseThrow(() -> new RuntimeException("GRN not found with ID: " + grnId));
+
+        // 1. Update header fields
+        header.setPo(new TxnPoHeader(dto.getPoid()));
+        header.setReceivedDate(dto.getReceivedDate() != null ? dto.getReceivedDate() : LocalDate.now());
+        header.setReceivedBy(new OtherUser(dto.getReceivedBy()));
+        header.setStatus(dto.getStatus());
+        header.setLastAddEditBy(dto.getLastAddEditBy());
+        header.setLastEditDateTime(LocalDateTime.now());
+
+        // 2. Save header
+        TxngrnHeader savedHeader = grnHeaderRepo.save(header);
+
+        // 3. Delete existing details linked to the GRN
+        grnDetailRepo.deleteByGrnHeader_Grnid(grnId);
+
+        // 4. Save new detail records
+        List<TxngrnDetails> details = dto.getDetails().stream().map(detailDto -> {
+            TxngrnDetails detail = new TxngrnDetails();
+            detail.setGrnHeader(header);
+            detail.setItem(new Item(detailDto.getItemid()));
+            detail.setOrderedQty(detailDto.getOrderedQty() != null ? detailDto.getOrderedQty() : 0);
+            detail.setReceivedQty(detailDto.getReceivedQty() != null ? detailDto.getReceivedQty() : 0);
+            detail.setAcceptedQty(detailDto.getAcceptedQty() != null ? detailDto.getAcceptedQty() : 0);
+            detail.setRejectedQty(detailDto.getRejectedQty() != null ? detailDto.getRejectedQty() : 0);
+            detail.setBatchNo(detailDto.getBatchNo());
+            detail.setExpiryDate(detailDto.getExpiryDate());
+
+            if (detailDto.getPoDetailId() != null) {
+                detail.setPoDetail(new TxnPoDetails(detailDto.getPoDetailId()));
+            }
+
+            detail.setLastAddEditBy(dto.getLastAddEditBy());
+            detail.setLastEditDateTime(LocalDateTime.now());
+            return detail;
+        }).collect(Collectors.toList());
+
+        grnDetailRepo.saveAll(details);
+
+        return getGrnById(savedHeader.getGrnid());
+    }
+    
     public TxngrnHeaderDTO getGrnById(Integer grnid) {
     	
     	TxngrnHeader header = grnHeaderRepo.findByGrnid(grnid)
