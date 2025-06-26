@@ -15,3 +15,7 @@ code {
 select.form-select option {
   color: #000 !important;
 }
+
+table {
+  display: table !important;
+}

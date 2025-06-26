@@ -564,3 +564,7 @@ select.form-select option {
   font-weight: 500;
   text-transform: uppercase;
 }
+
+table {
+  display: table !important;
+}

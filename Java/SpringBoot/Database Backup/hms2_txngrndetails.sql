@@ -40,7 +40,7 @@ CREATE TABLE `txngrndetails` (
   KEY `itemid` (`itemid`),
   CONSTRAINT `txngrndetails_ibfk_1` FOREIGN KEY (`grnid`) REFERENCES `txngrnheader` (`grnid`),
   CONSTRAINT `txngrndetails_ibfk_2` FOREIGN KEY (`itemid`) REFERENCES `mstitem` (`itemid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,9 +50,31 @@ CREATE TABLE `txngrndetails` (
 
 LOCK TABLES `txngrndetails` WRITE;
 /*!40000 ALTER TABLE `txngrndetails` DISABLE KEYS */;
-INSERT INTO `txngrndetails` VALUES (1,1,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:36'),(2,2,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:37'),(3,3,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:38'),(4,4,1,50,45,43,2,'BATCH123','2025-12-31',4,15,'2025-05-24 16:05:39');
+INSERT INTO `txngrndetails` VALUES (1,1,1,10,9,8,1,'BAT10981','2026-06-24',1,15,'2025-06-25 16:39:21');
 /*!40000 ALTER TABLE `txngrndetails` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `after_txngrndetails_update` AFTER UPDATE ON `txngrndetails` FOR EACH ROW BEGIN
+  -- Only update if podetailid is changed and not NULL
+  IF NEW.podetailid IS NOT NULL AND NEW.podetailid != OLD.podetailid THEN
+    UPDATE txnpodetails
+    SET grndetailid = NEW.grndetailid
+    WHERE podetailid = NEW.podetailid;
+  END IF;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -63,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-24 16:08:35
+-- Dump completed on 2025-06-25 16:45:52

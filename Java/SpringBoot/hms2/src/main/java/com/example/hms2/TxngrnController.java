@@ -1,5 +1,7 @@
 package com.example.hms2;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +23,13 @@ public class TxngrnController {
 
     @Autowired
     private TxngrnService grnService;
+    
+    @Autowired
+    private ItemRepository itemRepo;
 
+    @Autowired
+    private TxngrnPoHeaderRepository poRepo;
+     
     // POST or PUT: Save GRN
     @PostMapping
     public ResponseEntity<TxngrnHeaderDTO> saveGrn(@RequestBody TxngrnHeaderDTO dto) {
@@ -65,4 +73,26 @@ public class TxngrnController {
     public String test() {
         return "GRN endpoint working!";
     }    
+    
+    @PutMapping("/items/{id}/maxstock")
+    public ResponseEntity<Item> updateMaxStock(@PathVariable Integer id, @RequestBody MaxStockUpdateDTO dto) {
+        Item item = itemRepo.findById(id)
+            .orElseThrow(() -> new RuntimeException("Item not found"));
+
+        item.setMaxstock(dto.getMaxstock());
+        item.setLastaddeditby(dto.getLastaddeditby());
+        item.setLasteditdatetime(dto.getLasteditdatetime());
+
+        itemRepo.save(item);
+        return ResponseEntity.ok(item);
+    }
+    
+    @GetMapping("/approved")
+    public List<PoDropdownProjection> getApprovedPoDropdown() {
+        return poRepo.findApprovedPoDropdown();
+    }    
+    
+//    @GetMapping("/api/grns/search")
+//    public Page<TxngrnHeaderDTO> searchGrns(@RequestParam(required = false) String keyword, @RequestParam int page,         @RequestParam int size, @RequestParam(defaultValue = "grnid") String sortField, @RequestParam(defaultValue = "ASC") String sortDir)
+        
 }

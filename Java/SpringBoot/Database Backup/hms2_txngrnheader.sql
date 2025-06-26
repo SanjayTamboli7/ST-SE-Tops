@@ -33,7 +33,7 @@ CREATE TABLE `txngrnheader` (
   PRIMARY KEY (`grnid`),
   KEY `poid` (`poid`),
   CONSTRAINT `txngrnheader_ibfk_1` FOREIGN KEY (`poid`) REFERENCES `txnpoheader` (`poid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `txngrnheader` (
 
 LOCK TABLES `txngrnheader` WRITE;
 /*!40000 ALTER TABLE `txngrnheader` DISABLE KEYS */;
-INSERT INTO `txngrnheader` VALUES (1,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:36'),(2,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:37'),(3,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:38'),(4,3,'2025-05-21',15,'Draft',15,'2025-05-24 16:05:39');
+INSERT INTO `txngrnheader` VALUES (1,1,'2025-06-25',15,'Draft',15,'2025-06-25 16:39:21');
 /*!40000 ALTER TABLE `txngrnheader` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-24 16:08:37
+-- Dump completed on 2025-06-25 16:45:54

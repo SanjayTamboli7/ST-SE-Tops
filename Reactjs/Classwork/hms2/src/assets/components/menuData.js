@@ -32,6 +32,7 @@ export const menuItems = [
       submenus: [
         { label: "Purchase Request", path: "/purchase-request" },
         { label: "Purchase Order", path: "/purchase-order" },
+        { label: "Goods Received Note", path: "/goodsreceivednote" },
       ],
     },
     {
