@@ -34,6 +34,7 @@ export const menuItems = [
         { label: "Purchase Order", path: "/purchase-order" },
         { label: "Goods Received Note", path: "/goodsreceivednote" },
         { label: "Item Issue", path: "/itemissuetransaction" },
+        { label: "Stock Adjustment", path: "/stockadjustment" },
       ],
     },
     {
