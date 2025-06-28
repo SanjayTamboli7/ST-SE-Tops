@@ -28,6 +28,7 @@ import PurchaseRequestCrud from './assets/inventory/PurchaseRequestCrud';
 import PurchaseOrderPage from './assets/inventory/PurchaseOrderPage';
 import GrnList from './assets/inventory/GrnList';
 import GrnPrintView from './assets/inventory/GrnPrintView';
+import ItemIssueCrud from './assets/inventory/ItemIssueCrud';
 
 const RouteInfo = ({ componentName }) => (
   <div style={{ padding: '20px', backgroundColor: '#e3f2fd', marginBottom: '20px' }}>
@@ -72,6 +73,8 @@ function App() {
           <Route path="/purchase-order" element={<PurchaseOrderPage />} />
           <Route path="/grn/print/:grnid" element={<GrnPrintView />} />
           <Route path="/goodsreceivednote" element={<GrnList />} />
+          {/* <Route path="/itemissuetransaction" element={<ItemIssueTransaction />} /> */}
+          <Route path="/itemissuetransaction" element={<ItemIssueCrud />} />
           <Route path="/morning-shift" element={<MorningShift />} />
           <Route path="/evening-shift" element={<EveningShift />} />
           <Route path="/night-shift" element={<NightShift />} />

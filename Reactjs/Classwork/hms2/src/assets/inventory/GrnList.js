@@ -73,6 +73,14 @@ const GrnList = () => {
     fetchGrns(0);
   }, []);
 
+  useEffect(() => {
+    const delayDebounce = setTimeout(() => {
+      fetchGrns(0); // restart from page 0 on search
+    }, 500); // 500ms debounce
+
+    return () => clearTimeout(delayDebounce);
+  }, [search]);
+
   const openModal = async (mode, grn = null) => {
     setModalMode(mode);
 
