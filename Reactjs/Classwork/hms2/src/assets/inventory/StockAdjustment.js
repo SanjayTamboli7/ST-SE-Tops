@@ -448,7 +448,6 @@ const handleSave = async () => {
                                     <option value="Pending">Pending</option>
                                     <option value="Approved">Approved</option>
                                     <option value="Rejected">Rejected</option>
-                                    <option value="Posted">Posted</option>
                                 </Form.Select>
                             </Form.Group>
                         </Form>
