@@ -1,7 +1,6 @@
 import './App.css';
-
-import PostsList from "./features/posts/PostsList";
-import AddPostForm from "./features/posts/AddPostForm";
+import AddPostForm from './features/posts/AddPostForm';
+import PostsList from './features/posts/PostsList';
 
 function App() {
   return (
@@ -13,5 +12,3 @@ function App() {
 }
 
 export default App;
-
-// npm install @reduxjs/toolkit react-redux
